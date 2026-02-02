@@ -1,62 +1,49 @@
 import { Phone, Clock } from "lucide-react";
-import logoScfBlanc from "@/assets/logo-scf-blanc.png";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
     <section
       id="accueil"
-      className="relative min-h-screen flex items-center justify-center bg-primary overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/50" />
 
       <div className="container mx-auto px-6 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo */}
-          <div className="mb-12 animate-fade-in">
-            <img
-              src={logoScfBlanc}
-              alt="Service Catholique des Funérailles"
-              className="h-40 md:h-52 w-auto mx-auto"
-            />
-          </div>
-
           {/* Main heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-primary-foreground mb-8 animate-fade-in-up leading-tight">
-            Accompagner avec dignité,
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
+            Un service de pompes funèbres catholique
             <br />
-            <span className="opacity-90">servir avec humanité</span>
+            <span className="opacity-90">au service des familles</span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-primary-foreground/80 font-light mb-12 max-w-2xl mx-auto animate-fade-in-delay">
-            Association à but non lucratif au service des familles depuis 1947
-          </p>
-
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay mt-12">
             <a
               href="tel:0143722828"
-              className="flex items-center gap-3 bg-primary-foreground text-primary px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
+              className="flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
               <Phone className="w-5 h-5" />
               <span>Nous appeler</span>
             </a>
             <a
               href="#contact"
-              className="flex items-center gap-3 border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-primary-foreground hover:text-primary"
+              className="flex items-center gap-3 border-2 border-white text-white px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-white hover:text-primary"
             >
               <span>Nous contacter</span>
             </a>
           </div>
 
           {/* Availability badge */}
-          <div className="mt-16 inline-flex items-center gap-2 text-primary-foreground/70 text-sm animate-fade-in-delay">
+          <div className="mt-16 inline-flex items-center gap-2 text-white/80 text-sm animate-fade-in-delay">
             <Clock className="w-4 h-4" />
             <span>Disponible 24h/24, 7j/7</span>
           </div>
