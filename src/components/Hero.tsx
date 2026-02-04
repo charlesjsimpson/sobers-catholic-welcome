@@ -32,9 +32,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-delay">
-            Un service de pompes funèbres catholiques, sans esprit commercial
-            <br className="hidden md:block" />
-            — à vos côtés à chaque étape.
+            Un service de pompes funèbres catholiques, sans esprit commercial, à vos côtés à chaque étape de l'organisation des obsèques.
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay mt-12">
