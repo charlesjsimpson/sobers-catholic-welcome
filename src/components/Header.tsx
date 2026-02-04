@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import logoScf from "@/assets/logo-scf-bleu.gif";
+import logoScf from "@/assets/logo-scf-blanc.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary backdrop-blur-sm border-b border-primary-foreground/10">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -27,7 +27,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
+                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200 font-medium text-sm tracking-wide"
               >
                 {link.label}
               </a>
@@ -38,14 +38,14 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <a
               href="tel:0143722828"
-              className="hidden sm:flex items-center gap-2 text-primary font-semibold"
+              className="hidden sm:flex items-center gap-2 text-primary-foreground font-semibold"
             >
               <Phone className="w-4 h-4" />
               <span>01 43 72 28 28</span>
             </a>
 
             <button
-              className="md:hidden p-2 text-foreground"
+              className="md:hidden p-2 text-primary-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
@@ -56,13 +56,13 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-6 border-t border-border/50 animate-fade-in">
+          <nav className="md:hidden py-6 border-t border-primary-foreground/20 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-foreground/80 hover:text-primary transition-colors duration-200 font-medium py-2"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
@@ -70,7 +70,7 @@ const Header = () => {
               ))}
               <a
                 href="tel:0143722828"
-                className="flex items-center gap-2 text-primary font-semibold py-2"
+                className="flex items-center gap-2 text-primary-foreground font-semibold py-2"
               >
                 <Phone className="w-4 h-4" />
                 <span>01 43 72 28 28</span>
