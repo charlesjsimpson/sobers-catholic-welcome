@@ -7,9 +7,10 @@ const Header = () => {
 
   const navLinks = [
     { label: "Accueil", href: "#accueil" },
-    { label: "Notre différence", href: "#difference" },
     { label: "Nos services", href: "#services" },
-    { label: "Contact", href: "#contact" },
+    { label: "Le SCF", href: "#difference" },
+    { label: "Nos agences", href: "#agences" },
+    { label: "Actualité", href: "#actualite" },
   ];
 
   return (
