@@ -18,13 +18,24 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          {/* Subtitle */}
+          <p className="text-white/70 text-sm tracking-[0.3em] uppercase mb-6 animate-fade-in">
+            Service Catholique des Funérailles
+          </p>
+
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
-            Nous vous accompagnons
+            Nous vous accompagnons dans
             <br />
-            <span className="opacity-90">dans l'organisation d'obsèques catholiques</span>
+            l'organisation de vos obsèques
           </h1>
 
+          {/* Description */}
+          <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-delay">
+            Un service de pompes funèbres catholiques, sans esprit commercial
+            <br className="hidden md:block" />
+            — à vos côtés à chaque étape.
+          </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay mt-12">
             <a
