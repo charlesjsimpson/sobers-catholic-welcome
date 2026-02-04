@@ -20,9 +20,9 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
-            Un service de pompes funèbres catholique
+            Nous vous accompagnons
             <br />
-            <span className="opacity-90">au service des familles</span>
+            <span className="opacity-90">dans l'organisation d'obsèques catholiques</span>
           </h1>
 
           {/* CTA Buttons */}
