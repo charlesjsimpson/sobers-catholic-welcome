@@ -25,9 +25,9 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
-            Nous vous accompagnons dans
+            Nous vous accompagnons à chaque étape
             <br />
-            l'organisation de vos obsèques
+            dans l'organisation des obsèques
           </h1>
 
           {/* Description */}
