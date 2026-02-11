@@ -11,6 +11,7 @@ const Header = () => {
     { label: "Le SCF", href: "#difference" },
     { label: "Nos agences", href: "#agences" },
     { label: "Actualité", href: "#actualite" },
+    { label: "Avis de décès", href: "#avis-de-deces" },
   ];
 
   return (
