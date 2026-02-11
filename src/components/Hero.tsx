@@ -44,10 +44,10 @@ const Hero = () => {
               <span>Nous appeler</span>
             </a>
             <a
-              href="#contact"
+              href="#agences"
               className="flex items-center gap-3 border-2 border-white text-white px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-white hover:text-primary"
             >
-              <span>Nous contacter</span>
+              <span>Trouver une agence</span>
             </a>
           </div>
 
