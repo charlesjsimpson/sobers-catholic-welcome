@@ -25,14 +25,14 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
-            Nous vous accompagnons à chaque étape
+            Nous vous accompagnons dans
             <br />
-            dans l'organisation des obsèques
+            l'organisation de vos obsèques
           </h1>
 
           {/* Description */}
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-delay">
-            Un service de pompes funèbres catholiques, sans esprit commercial, à vos côtés à chaque étape de l'organisation des obsèques.
+            Un service de pompes funèbres catholiques, à vos côtés à chaque étape — sans esprit commercial.
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay mt-12">
