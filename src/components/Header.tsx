@@ -7,11 +7,11 @@ const Header = () => {
 
   const navLinks = [
     { label: "Accueil", href: "#accueil" },
-    { label: "Nos services", href: "#services" },
-    { label: "Le SCF", href: "#difference" },
+    { label: "Organiser", href: "#services" },
+    { label: "Anticiper", href: "#anticiper" },
     { label: "Nos agences", href: "#agences" },
-    { label: "Actualité", href: "#actualite" },
-    { label: "Avis de décès", href: "#avis-de-deces" },
+    { label: "Ressources", href: "#ressources" },
+    { label: "À propos", href: "#difference" },
   ];
 
   return (
