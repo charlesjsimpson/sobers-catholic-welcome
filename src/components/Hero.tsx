@@ -52,8 +52,8 @@ const Hero = () => {
           </div>
 
           {/* Availability badge */}
-          <div className="mt-16 inline-flex items-center gap-2 text-white/80 text-sm animate-fade-in-delay">
-            <Clock className="w-4 h-4" />
+          <div className="mt-16 inline-flex items-center gap-3 text-white text-lg md:text-xl font-semibold animate-fade-in-delay">
+            <Clock className="w-6 h-6" />
             <span>Disponible 24h/24, 7j/7</span>
           </div>
         </div>
