@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Subtitle */}
-          <p className="text-white/70 text-sm tracking-[0.3em] uppercase mb-6 animate-fade-in">
+          <p className="text-white/70 text-sm tracking-[0.1em] uppercase mb-6 animate-fade-in">
             Service Catholique des Funérailles
           </p>
 
