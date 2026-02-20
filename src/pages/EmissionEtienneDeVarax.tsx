@@ -29,7 +29,7 @@ const EmissionEtienneDeVarax = () => {
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              Dialogue sur la mort, avec Etienne de Varax, assistant funéraire
+              <em>Dialogue sur la mort</em>, avec Etienne de Varax, assistant funéraire
             </h1>
           </div>
         </section>
