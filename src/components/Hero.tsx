@@ -1,4 +1,4 @@
-import { Phone, Clock } from "lucide-react";
+import { Phone, Clock, MapPin } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -49,6 +49,7 @@ const Hero = () => {
               href="#agences"
               className="flex items-center gap-3 border-2 border-white text-white px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-white hover:text-primary"
             >
+              <MapPin className="w-5 h-5" />
               <span>Trouver une agence</span>
             </a>
           </div>
