@@ -25,9 +25,9 @@ const Hero = () => {
 
           {/* Main heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
-            Nous vous accompagnons dans
+            Pompes funèbres catholiques au service
             <br />
-            l'organisation de vos obsèques
+            des familles en deuil depuis 25 ans
           </h1>
 
           {/* Description */}
