@@ -38,7 +38,7 @@ const EmissionEtienneDeVarax = () => {
                 19 septembre 2025
               </span>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl leading-tight font-semibold" style={{ fontFamily: "'Raleway', sans-serif" }}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
               <em>Dialogue sur la mort</em> : émission sur le deuil avec Étienne de Varax, assistant funéraire
             </h1>
           </div>
