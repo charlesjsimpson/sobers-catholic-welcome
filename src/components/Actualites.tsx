@@ -1,4 +1,5 @@
 import { ArrowRight, Radio, Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 
 const articles = [
@@ -18,7 +19,8 @@ const articles = [
       "Christian de Cacqueray reçoit Etienne de Varax, assistant funéraire, gérant du Service Catholique des Funérailles, pour un échange sur le métier et l'accompagnement des familles.",
     date: "19 septembre 2025",
     category: "Émission",
-    url: "https://s-c-f.org/ressources/emissions/",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-etienne-de-varax-assistant-funeraire",
+    internal: true,
     image: etienneImg,
   },
   {
@@ -60,57 +62,64 @@ const Actualites = () => {
 
         {/* Articles grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {articles.map((article) => (
-            <a
-              key={article.id}
-              href={article.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              {/* Visual header */}
-              {article.image ? (
-                <div className="aspect-[3/2] overflow-hidden">
-                  <img
-                    src={article.image}
-                    alt={article.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                </div>
-              ) : (
-                <div className="bg-primary/10 flex items-center justify-center py-10">
-                  <Radio className="w-12 h-12 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
-                </div>
-              )}
+          {articles.map((article) => {
+            const cardClass = "group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1";
+            const cardContent = (
+              <>
+                {/* Visual header */}
+                {article.image ? (
+                  <div className="aspect-[3/2] overflow-hidden">
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                ) : (
+                  <div className="bg-primary/10 flex items-center justify-center py-10">
+                    <Radio className="w-12 h-12 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                )}
 
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center gap-3 text-muted-foreground text-xs mb-3">
-                  <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold">
-                    {article.category}
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 text-muted-foreground text-xs mb-3">
+                    <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold">
+                      {article.category}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Calendar className="w-3 h-3" />
+                      {article.date}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
+                    {article.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
+                    {article.excerpt}
+                  </p>
+
+                  <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-4 group-hover:gap-2 transition-all">
+                    Écouter l'émission
+                    <ArrowRight className="w-4 h-4" />
                   </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3 h-3" />
-                    {article.date}
-                  </span>
                 </div>
+              </>
+            );
 
-                <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
-                  {article.title}
-                </h3>
-
-                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
-                  {article.excerpt}
-                </p>
-
-                <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-4 group-hover:gap-2 transition-all">
-                  Écouter l'émission
-                  <ArrowRight className="w-4 h-4" />
-                </span>
-              </div>
-            </a>
-          ))}
+            return article.internal ? (
+              <Link key={article.id} to={article.url} className={cardClass}>
+                {cardContent}
+              </Link>
+            ) : (
+              <a key={article.id} href={article.url} target="_blank" rel="noopener noreferrer" className={cardClass}>
+                {cardContent}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
