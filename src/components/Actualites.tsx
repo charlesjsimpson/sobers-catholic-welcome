@@ -1,38 +1,32 @@
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight, Radio, Calendar } from "lucide-react";
 
 const articles = [
   {
     id: 1,
-    title: "Accompagner le deuil : nos conseils pour les familles",
+    title: "Dialogue sur la mort, avec Gaël Leiblang, réalisateur d'un seul-en-scène sur le deuil périnatal",
     excerpt:
-      "Le deuil est un chemin personnel. Découvrez nos conseils pour traverser cette épreuve avec sérénité et trouver le soutien dont vous avez besoin.",
-    date: "15 février 2026",
-    readTime: "3 min de lecture",
-    category: "Accompagnement",
-    image:
-      "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600&h=400&fit=crop",
+      "Christian de Cacqueray reçoit Gaël Leiblang, auteur du seul-en-scène autobiographique \"Tu seras un homme Papa\", un témoignage poignant sur le deuil périnatal.",
+    date: "23 septembre 2025",
+    category: "Émission",
+    url: "https://s-c-f.org/ressources/emissions/",
   },
   {
     id: 2,
-    title: "Prévoyance funéraire : pourquoi anticiper ?",
+    title: "Dialogue sur la mort, avec Etienne de Varax, assistant funéraire",
     excerpt:
-      "Organiser ses obsèques à l'avance permet de soulager ses proches et de s'assurer que ses volontés seront respectées.",
-    date: "8 février 2026",
-    readTime: "4 min de lecture",
-    category: "Prévoyance",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      "Christian de Cacqueray reçoit Etienne de Varax, assistant funéraire, gérant du Service Catholique des Funérailles, pour un échange sur le métier et l'accompagnement des familles.",
+    date: "19 septembre 2025",
+    category: "Émission",
+    url: "https://s-c-f.org/ressources/emissions/",
   },
   {
     id: 3,
-    title: "Les rites catholiques des funérailles expliqués",
+    title: "Dialogue sur la mort, avec Mathias Mlekuz, acteur et réalisateur du film \"A bicyclette\"",
     excerpt:
-      "De la veillée funèbre à la messe de requiem, chaque étape des obsèques catholiques porte un sens profond. Nous vous les expliquons.",
-    date: "1 février 2026",
-    readTime: "5 min de lecture",
-    category: "Ressources",
-    image:
-      "https://images.unsplash.com/photo-1438032005730-c779502df39b?w=600&h=400&fit=crop",
+      "Christian de Cacqueray reçoit Mathias Mlekuz, acteur et réalisateur du film \"A bicyclette\", dans lequel il aborde avec sensibilité le sujet de la fin de vie.",
+    date: "12 septembre 2025",
+    category: "Émission",
+    url: "https://s-c-f.org/ressources/emissions/",
   },
 ];
 
@@ -44,15 +38,20 @@ const Actualites = () => {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
           <div>
             <p className="text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2">
-              Blog
+              Ressources
             </p>
             <h2 className="section-title mb-0">Nos dernières actualités</h2>
+            <p className="text-muted-foreground mt-2">
+              Retrouvez l'émission hebdomadaire <strong>« Dialogue sur la mort »</strong> animée par Christian de Cacqueray sur Radio Notre Dame.
+            </p>
           </div>
           <a
-            href="#"
-            className="flex items-center gap-2 text-primary font-semibold hover:underline transition-colors"
+            href="https://s-c-f.org/ressources/emissions/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-primary font-semibold hover:underline transition-colors shrink-0"
           >
-            Voir tous nos articles
+            Toutes les émissions
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -62,17 +61,14 @@ const Actualites = () => {
           {articles.map((article) => (
             <a
               key={article.id}
-              href="#"
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              {/* Image */}
-              <div className="aspect-[3/2] overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
+              {/* Icon header */}
+              <div className="bg-primary/10 flex items-center justify-center py-10">
+                <Radio className="w-12 h-12 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Content */}
@@ -85,7 +81,6 @@ const Actualites = () => {
                     <Calendar className="w-3 h-3" />
                     {article.date}
                   </span>
-                  <span>· {article.readTime}</span>
                 </div>
 
                 <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
@@ -97,7 +92,7 @@ const Actualites = () => {
                 </p>
 
                 <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-4 group-hover:gap-2 transition-all">
-                  Lire l'article
+                  Écouter l'émission
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
