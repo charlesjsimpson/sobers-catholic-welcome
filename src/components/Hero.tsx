@@ -27,7 +27,9 @@ const Hero = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-display text-white mb-8 animate-fade-in-up leading-tight">
             Pompes funèbres catholiques
             <br />
-            au service des familles depuis 25 ans
+            au service des familles
+            <br />
+            depuis 25 ans
           </h1>
 
           {/* Description */}
