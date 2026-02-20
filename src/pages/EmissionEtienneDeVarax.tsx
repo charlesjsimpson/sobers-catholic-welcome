@@ -1,10 +1,20 @@
 import { ArrowLeft, Calendar, Radio, Play } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 
 const EmissionEtienneDeVarax = () => {
+  useEffect(() => {
+    document.title = "Dialogue sur la mort : émission sur le deuil avec Étienne de Varax | SCF";
+    const meta = document.querySelector('meta[name="description"]') || document.createElement('meta');
+    meta.setAttribute('name', 'description');
+    meta.setAttribute('content', 'Dialogue sur la mort, émission hebdomadaire sur Radio Notre Dame et RCF animée par Christian de Cacqueray. Découvrez le témoignage d\'Étienne de Varax, assistant funéraire catholique.');
+    if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
+    return () => { document.title = "Service Catholique des Funérailles"; };
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -29,10 +39,11 @@ const EmissionEtienneDeVarax = () => {
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              <em>Dialogue sur la mort</em>, avec Etienne de Varax, assistant funéraire
+              <em>Dialogue sur la mort</em> : émission sur le deuil avec Étienne de Varax, assistant funéraire
             </h1>
           </div>
         </section>
+
 
         {/* Content */}
         <article className="py-16">
@@ -41,7 +52,7 @@ const EmissionEtienneDeVarax = () => {
             <div className="float-right ml-8 mb-6 w-48 md:w-64 rounded-xl overflow-hidden shadow-md relative group">
               <img
                 src={etienneImg}
-                alt="Etienne de Varax, assistant funéraire"
+                alt="Étienne de Varax, assistant funéraire au Service Catholique des Funérailles"
                 className="w-full h-auto"
               />
               <a
@@ -58,18 +69,31 @@ const EmissionEtienneDeVarax = () => {
             </div>
 
             <div className="prose prose-lg max-w-none text-foreground">
-              <h2 className="text-primary"><em>Dialogue sur la mort</em>, une émission hebdomadaire animée par Christian de Cacqueray sur Radio Notre Dame et RCF</h2>
-
               <p>
-                Chaque semaine, Christian de Cacqueray, directeur du Service Catholique des Funérailles, reçoit un(e) invité(e) pour évoquer avec lui(elle) la question de la mort dans notre société et dans sa vie.
+                <em>Dialogue sur la mort</em> est une émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
               </p>
 
               <p>
-                D'un format volontairement court (12 minutes), cette émission est diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong> le vendredi à 15h et 22h45, puis rediffusée le dimanche à 20h45.
+                Chaque semaine, il reçoit un(e) invité(e) pour évoquer la question de la mort dans notre société et dans son expérience personnelle.
               </p>
 
               <p>
-                Le podcast est accessible sur :{" "}
+                Dans cet épisode, <strong>Étienne de Varax</strong>, assistant funéraire, partage son engagement auprès des familles en deuil. Il témoigne de :
+              </p>
+
+              <ul>
+                <li>l'accompagnement des proches lors des obsèques</li>
+                <li>l'importance des rites catholiques</li>
+                <li>la place de la foi face à l'épreuve</li>
+                <li>la réalité du métier d'assistant funéraire</li>
+              </ul>
+
+              <p>
+                D'un format volontairement court (12 minutes), l'émission est diffusée le vendredi à 15h et 22h45, puis rediffusée le dimanche à 20h45 sur Radio Notre Dame et RCF.
+              </p>
+
+              <p>
+                Le podcast est également accessible en ligne sur :{" "}
                 <a
                   href="https://www.rcf.fr/vie-spirituelle/dialogue-sur-la-mort"
                   target="_blank"
@@ -81,7 +105,7 @@ const EmissionEtienneDeVarax = () => {
               </p>
 
               <p>
-                Christian de Cacqueray reçoit <strong>Etienne de Varax</strong>, assistant funéraire, gérant du Service Catholique des Funérailles, pour un échange sur le métier et l'accompagnement des familles.
+                <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
               </p>
             </div>
 
