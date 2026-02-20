@@ -1,4 +1,5 @@
 import { ArrowRight, Radio, Calendar } from "lucide-react";
+import etienneImg from "@/assets/etienne-de-varax.jpeg";
 
 const articles = [
   {
@@ -18,6 +19,7 @@ const articles = [
     date: "19 septembre 2025",
     category: "Émission",
     url: "https://s-c-f.org/ressources/emissions/",
+    image: etienneImg,
   },
   {
     id: 3,
@@ -66,10 +68,21 @@ const Actualites = () => {
               rel="noopener noreferrer"
               className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              {/* Icon header */}
-              <div className="bg-primary/10 flex items-center justify-center py-10">
-                <Radio className="w-12 h-12 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
-              </div>
+              {/* Visual header */}
+              {article.image ? (
+                <div className="aspect-[3/2] overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+              ) : (
+                <div className="bg-primary/10 flex items-center justify-center py-10">
+                  <Radio className="w-12 h-12 text-primary opacity-60 group-hover:opacity-100 transition-opacity" />
+                </div>
+              )}
 
               {/* Content */}
               <div className="p-6">
