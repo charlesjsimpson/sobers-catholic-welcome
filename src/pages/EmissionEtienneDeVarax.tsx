@@ -68,18 +68,15 @@ const EmissionEtienneDeVarax = () => {
               </a>
             </div>
 
-            <div className="prose prose-lg max-w-none text-foreground space-y-6">
+            <div className="prose prose-lg max-w-none text-foreground">
               <p>
                 <em>Dialogue sur la mort</em> est une émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
               </p>
-
-              <br />
 
               <p>
                 Chaque semaine, il reçoit un(e) invité(e) pour évoquer la question de la mort dans notre société et dans son expérience personnelle.
               </p>
 
-              <br />
 
               <p>
                 Dans cet épisode, <strong>Étienne de Varax</strong>, assistant funéraire, partage son engagement auprès des familles en deuil. Il témoigne de :
