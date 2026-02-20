@@ -34,7 +34,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-delay">
-            Un service de pompes funèbres catholiques,<br />à vos côtés à chaque étape, sans esprit commercial.
+            Le SCF vous accompagne à chaque étape de l'organisation des obsèques<br />et de la prévoyance funéraire, avec des valeurs chrétiennes,<br />à travers 11 agences en France.
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay mt-12">
