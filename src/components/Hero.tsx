@@ -46,7 +46,7 @@ const Hero = () => {
               <span>Nous appeler</span>
             </a>
             <a
-              href="#agences"
+              href="/contacter-une-agence"
               className="flex items-center gap-3 border-2 border-white text-white px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-white hover:text-primary"
             >
               <MapPin className="w-5 h-5" />
