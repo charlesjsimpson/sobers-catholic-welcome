@@ -9,6 +9,7 @@ import EmissionEtienneDeVarax from "./pages/EmissionEtienneDeVarax";
 import EmissionGaelLeiblang from "./pages/EmissionGaelLeiblang";
 import EmissionMathiasMlekuz from "./pages/EmissionMathiasMlekuz";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
+import ContacterUneAgence from "./pages/ContacterUneAgence";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal" element={<EmissionGaelLeiblang />} />
           <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette" element={<EmissionMathiasMlekuz />} />
           <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
+          <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
