@@ -106,7 +106,7 @@ const EmissionMathiasMlekuz = () => {
               </p>
 
               <p>
-                🎧 <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
+                <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
               </p>
             </div>
 
