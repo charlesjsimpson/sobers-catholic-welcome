@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
 import mathiasImg from "@/assets/mathias-mlekuz-portrait.webp";
-import heroImg from "@/assets/christian-radio-notre-dame.jpg";
+import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
   {
