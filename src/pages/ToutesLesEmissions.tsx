@@ -34,10 +34,10 @@ const emissions = [
 
 const ToutesLesEmissions = () => {
   useEffect(() => {
-    document.title = "Toutes les émissions – Dialogue sur la mort | SCF";
+    document.title = "Dialogue sur la mort : toutes les émissions sur le deuil et l'espérance chrétienne | SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Retrouvez toutes les émissions « Dialogue sur la mort » animées par Christian de Cacqueray sur Radio Notre Dame et RCF.");
+    meta.setAttribute("content", "Dialogue sur la mort, émission animée par Christian de Cacqueray sur Radio Notre Dame et RCF. Podcasts sur le deuil, la fin de vie et l'accompagnement des familles.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
@@ -71,7 +71,13 @@ const ToutesLesEmissions = () => {
                   <em>Dialogue sur la mort</em>
                 </h1>
                 <p className="text-primary-foreground/80 mt-4 max-w-2xl text-lg">
-                  Émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
+                  Émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>. Chaque épisode de 12 minutes aborde des thèmes essentiels : deuil, mort, fin de vie, rites catholiques, accompagnement des familles, espérance chrétienne.
+                </p>
+                <p className="text-primary-foreground/70 mt-3 max-w-2xl text-base">
+                  Invités, témoins, artistes et professionnels partagent leur expérience pour éclairer la place de la mort dans notre société et aider chacun à mieux comprendre l'épreuve du deuil.
+                </p>
+                <p className="text-primary-foreground mt-4 font-semibold text-base flex items-center gap-2">
+                  🎧 Retrouvez ici toutes les émissions et écoutez les épisodes en replay.
                 </p>
               </div>
             </div>
