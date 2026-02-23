@@ -56,7 +56,7 @@ const ToutesLesEmissions = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex flex-col sm:flex-row items-start gap-8">
+            <div className="flex flex-col-reverse sm:flex-row-reverse items-center gap-8">
               <img
                 src={heroImg}
                 alt="Christian de Cacqueray au studio de Radio Notre Dame"
