@@ -67,16 +67,16 @@ const ToutesLesEmissions = () => {
                   <Radio className="w-6 h-6 text-primary-foreground/70" />
                   <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Émissions</span>
                 </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
+                <h1 className="text-2xl md:text-3xl font-display leading-tight">
                   <em>Dialogue sur la mort</em>
                 </h1>
-                <p className="text-primary-foreground/80 mt-4 max-w-2xl text-lg">
+                <p className="text-primary-foreground/80 mt-3 max-w-2xl text-sm">
                   Émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>. Chaque épisode de 12 minutes aborde des thèmes essentiels : deuil, mort, fin de vie, rites catholiques, accompagnement des familles, espérance chrétienne.
                 </p>
-                <p className="text-primary-foreground/70 mt-3 max-w-2xl text-base">
+                <p className="text-primary-foreground/70 mt-2 max-w-2xl text-sm">
                   Invités, témoins, artistes et professionnels partagent leur expérience pour éclairer la place de la mort dans notre société et aider chacun à mieux comprendre l'épreuve du deuil.
                 </p>
-                <p className="text-primary-foreground mt-4 font-semibold text-base">
+                <p className="text-primary-foreground mt-3 font-semibold text-sm">
                   Retrouvez ici toutes les émissions et écoutez les épisodes en replay.
                 </p>
               </div>
