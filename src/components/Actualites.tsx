@@ -2,6 +2,7 @@ import { ArrowRight, Radio, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
+import mathiasImg from "@/assets/mathias-mlekuz.jpg";
 
 const articles = [
   {
@@ -33,7 +34,9 @@ const articles = [
       "Christian de Cacqueray reçoit Mathias Mlekuz, acteur et réalisateur du film \"A bicyclette\", dans lequel il aborde avec sensibilité le sujet de la fin de vie.",
     date: "12 septembre 2025",
     category: "Émission",
-    url: "https://s-c-f.org/ressources/emissions/",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette",
+    internal: true,
+    image: mathiasImg,
   },
 ];
 
