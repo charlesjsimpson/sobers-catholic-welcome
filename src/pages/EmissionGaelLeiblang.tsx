@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PodcastImagePlayer from "@/components/PodcastImagePlayer";
 import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
+import spectacleImg from "@/assets/tu-seras-un-homme-papa.webp";
 
 const EmissionGaelLeiblang = () => {
   useEffect(() => {
@@ -50,8 +51,8 @@ const EmissionGaelLeiblang = () => {
           <div className="container mx-auto px-6 max-w-3xl">
             {/* Photo with play button */}
             <PodcastImagePlayer
-              src={gaelImg}
-              alt="Gaël Leiblang, auteur du seul-en-scène Tu seras un homme Papa"
+              src={spectacleImg}
+              alt="Affiche du spectacle Tu seras un homme Papa par Gaël Leiblang"
               audioUrl="https://s-c-f.org/wp-content/uploads/2025/10/20250926-DIAMORT-Gael-Leiblang_.mp3"
             />
 
