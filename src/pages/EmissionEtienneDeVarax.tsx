@@ -1,8 +1,9 @@
-import { ArrowLeft, Calendar, Radio, Play } from "lucide-react";
+import { ArrowLeft, Calendar, Radio } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PodcastImagePlayer from "@/components/PodcastImagePlayer";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 
 const EmissionEtienneDeVarax = () => {
@@ -49,24 +50,11 @@ const EmissionEtienneDeVarax = () => {
         <article className="py-16">
           <div className="container mx-auto px-6 max-w-3xl">
             {/* Photo with play button */}
-            <div className="float-right ml-8 mb-6 w-48 md:w-64 rounded-xl overflow-hidden shadow-md relative group">
-              <img
-                src={etienneImg}
-                alt="Étienne de Varax, assistant funéraire au Service Catholique des Funérailles"
-                className="w-full h-auto"
-              />
-              <a
-                href="https://www.rcf.fr/vie-spirituelle/dialogue-sur-la-mort"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute inset-0 flex flex-col items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center shadow-lg mb-2">
-                  <Play className="w-6 h-6 text-primary-foreground ml-0.5" fill="currentColor" />
-                </div>
-                <span className="text-white text-sm font-semibold">Écouter l'émission</span>
-              </a>
-            </div>
+            <PodcastImagePlayer
+              src={etienneImg}
+              alt="Étienne de Varax, assistant funéraire au Service Catholique des Funérailles"
+              audioUrl="https://s-c-f.org/wp-content/uploads/2025/10/20250919-DIAMORT-Etienne-de-Varax_.mp3"
+            />
 
             <div className="prose prose-lg max-w-none text-foreground [&>p]:mb-4 [&>p]:mt-0 [&>ul]:mb-4">
               <p>
