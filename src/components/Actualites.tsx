@@ -2,7 +2,7 @@ import { ArrowRight, Radio, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
-import mathiasImg from "@/assets/mathias-mlekuz.jpg";
+import mathiasImg from "@/assets/mathias-mlekuz-portrait.webp";
 
 const articles = [
   {
