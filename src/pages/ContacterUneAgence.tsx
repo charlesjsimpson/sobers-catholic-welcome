@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, MapPin, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -116,6 +116,14 @@ const regions: Region[] = [
 const ContacterUneAgence = () => {
   const [selectedRegion, setSelectedRegion] = useState<Region>("Toutes");
 
+  useEffect(() => {
+    document.title = "Contacter une agence | Service Catholique des Funérailles";
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", "Contactez une agence de pompes funèbres catholiques proche de chez vous. Organisation d'obsèques catholiques 24h/24 et 7j/7 à Paris, Lyon, Marseille, Bordeaux, Nice et partout en France.");
+    }
+  }, []);
+
   const filteredAgences =
     selectedRegion === "Toutes"
       ? agences
@@ -128,13 +136,8 @@ const ContacterUneAgence = () => {
         {/* Hero banner */}
         <section className="relative bg-primary pt-32 pb-20">
           <div className="container mx-auto px-6 text-center">
-            <p className="text-primary-foreground/60 text-sm tracking-[0.1em] uppercase mb-4">
-              Contact
-            </p>
-            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-6 leading-tight">
-              Contacter l'agence de pompes funèbres
-              <br className="hidden md:block" />
-              catholiques la plus proche de chez vous.
+            <h1 className="text-3xl md:text-4xl font-display text-primary-foreground mb-6 leading-tight">
+              Contacter l'agence de pompes funèbres catholiques la plus proche de chez vous
             </h1>
           </div>
         </section>
@@ -142,14 +145,14 @@ const ContacterUneAgence = () => {
         {/* Intro */}
         <section className="py-16 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
-            <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              Le Service Catholique des Funérailles vous accompagne avec humanité et professionnalisme dans l'organisation des obsèques catholiques. Notre réseau compte <strong className="text-foreground">10 agences</strong> réparties dans toute la France, <strong className="text-foreground">disponibles 24h/24 et 7j/7</strong> pour vous soutenir dans ces moments difficiles.
-            </p>
-            <h2 className="text-2xl md:text-3xl font-display text-foreground mb-4">
-              Nos agences de pompes funèbres partout en France
+            <h2 className="text-xl md:text-2xl font-display text-foreground mb-6">
+              Organisation d'obsèques catholiques – Contact 24h/24 et 7j/7
             </h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Que vous résidiez à Paris, Lyon, Marseille, Bordeaux, Nice, Fréjus, Toulon, Aix-en-Provence, Versailles, Boulogne-Billancourt ou dans leurs environs, nos agences de pompes funèbres catholiques vous accompagnent à toutes les étapes avec écoute, expertise et dignité.
+            <p className="text-muted-foreground text-base leading-relaxed mb-6">
+              Le Service Catholique des Funérailles vous accompagne avec humanité et professionnalisme dans l'organisation des obsèques catholiques.
+            </p>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              Nos agences de pompes funèbres catholiques sont disponibles 24h/24 et 7j/7 pour vous soutenir immédiatement, partout en France. Nous vous aidons à chaque étape : démarches administratives, organisation de la cérémonie, choix des rites catholiques et accompagnement des familles en deuil.
             </p>
           </div>
         </section>
