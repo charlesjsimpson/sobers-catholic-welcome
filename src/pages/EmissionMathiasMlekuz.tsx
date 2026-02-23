@@ -7,10 +7,10 @@ import mathiasImg from "@/assets/mathias-mlekuz.jpg";
 
 const EmissionMathiasMlekuz = () => {
   useEffect(() => {
-    document.title = "Dialogue sur la mort, avec Mathias Mlekuz, acteur et réalisateur du film \"A bicyclette\" | SCF";
+    document.title = "Dialogue sur la mort : Mathias Mlekuz, acteur et réalisateur du film À bicyclette | SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement('meta');
     meta.setAttribute('name', 'description');
-    meta.setAttribute('content', "Dialogue sur la mort sur Radio Notre Dame et RCF : Christian de Cacqueray reçoit Mathias Mlekuz, acteur et réalisateur du film \"A bicyclette\", pour évoquer la fin de vie avec sensibilité.");
+    meta.setAttribute('content', "Dialogue sur la mort sur Radio Notre Dame et RCF : Mathias Mlekuz, acteur et réalisateur du film À bicyclette, partage son témoignage sur le deuil et la création artistique.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
@@ -39,7 +39,7 @@ const EmissionMathiasMlekuz = () => {
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              <em>Dialogue sur la mort</em>, avec Mathias Mlekuz, acteur et réalisateur du film "A bicyclette"
+              <em>Dialogue sur la mort</em> : Mathias Mlekuz, acteur et réalisateur du film <em>À bicyclette</em>
             </h1>
           </div>
         </section>
@@ -69,19 +69,32 @@ const EmissionMathiasMlekuz = () => {
 
             <div className="prose prose-lg max-w-none text-foreground [&>p]:mb-4 [&>p]:mt-0 [&>ul]:mb-4">
               <p>
-                <em>Dialogue sur la mort</em>, une émission hebdomadaire animée par Christian de Cacqueray sur Radio Notre Dame et RCF.
+                <em>Dialogue sur la mort</em> est une émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
               </p>
 
               <p>
-                Chaque semaine, Christian de Cacqueray, directeur du Service Catholique des Funérailles, reçoit un(e) invité(e) pour évoquer avec lui(elle) la question de la mort dans notre société et dans sa vie.
+                Chaque semaine, un invité partage son regard sur la mort et le deuil dans notre société.
               </p>
 
               <p>
-                D'un format volontairement court (12 minutes), cette émission est diffusée sur Radio Notre Dame et RCF le vendredi à 15h et 22h45, puis rediffusée le dimanche à 20h45.
+                Dans cet épisode, <strong>Mathias Mlekuz</strong>, acteur et réalisateur du film <em>À bicyclette</em>, évoque son parcours et la manière dont le cinéma peut devenir un espace pour traverser l'épreuve du deuil.
+              </p>
+
+              <p>Il aborde notamment :</p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li>La perte et le cheminement intérieur</li>
+                <li>La création artistique face à la souffrance</li>
+                <li>La place du récit pour dire l'indicible</li>
+                <li>L'importance d'un accompagnement humain</li>
+              </ul>
+
+              <p>
+                D'un format court (12 minutes), l'émission est diffusée le vendredi à 15h et 22h45, puis rediffusée le dimanche à 20h45 sur Radio Notre Dame et RCF.
               </p>
 
               <p>
-                Le podcast est accessible sur :{" "}
+                Le podcast est accessible en ligne sur :{" "}
                 <a
                   href="https://www.rcf.fr/vie-spirituelle/dialogue-sur-la-mort"
                   target="_blank"
@@ -93,7 +106,7 @@ const EmissionMathiasMlekuz = () => {
               </p>
 
               <p>
-                <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
+                🎧 <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
               </p>
             </div>
 
