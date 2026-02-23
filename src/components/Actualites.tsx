@@ -10,7 +10,8 @@ const articles = [
       "Christian de Cacqueray reçoit Gaël Leiblang, auteur du seul-en-scène autobiographique \"Tu seras un homme Papa\", un témoignage poignant sur le deuil périnatal.",
     date: "23 septembre 2025",
     category: "Émission",
-    url: "https://s-c-f.org/ressources/emissions/",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal",
+    internal: true,
   },
   {
     id: 2,
