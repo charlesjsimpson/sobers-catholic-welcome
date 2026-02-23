@@ -63,7 +63,7 @@ const Hero = () => {
       </div>
 
       {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
+      <div className="absolute -bottom-px left-0 right-0">
         <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
           <path d="M0 100L60 92C120 84 240 68 360 62C480 56 600 60 720 66C840 72 960 80 1080 78C1200 76 1320 64 1380 58L1440 52V100H1380C1320 100 1200 100 1080 100C960 100 840 100 720 100C600 100 480 100 360 100C240 100 120 100 60 100H0Z" fill="hsl(var(--secondary))" />
         </svg>
