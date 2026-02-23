@@ -60,7 +60,7 @@ const ToutesLesEmissions = () => {
               <img
                 src={heroImg}
                 alt="Christian de Cacqueray au studio de Radio Notre Dame"
-                className="w-28 h-28 md:w-36 md:h-36 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+                className="w-40 h-40 md:w-52 md:h-52 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
               />
               <div>
                 <div className="flex items-center gap-3 mb-4">
