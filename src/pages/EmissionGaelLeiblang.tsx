@@ -7,10 +7,10 @@ import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
 
 const EmissionGaelLeiblang = () => {
   useEffect(() => {
-    document.title = "Dialogue sur la mort : avec Gaël Leiblang, réalisateur d'un seul-en-scène sur le deuil périnatal | SCF";
+    document.title = "Dialogue sur la mort : le deuil périnatal avec Gaël Leiblang | SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement('meta');
     meta.setAttribute('name', 'description');
-    meta.setAttribute('content', "Dialogue sur la mort, émission hebdomadaire sur Radio Notre Dame et RCF animée par Christian de Cacqueray. Découvrez l'échange avec Gaël Leiblang, auteur du seul-en-scène \"Tu seras un homme Papa\" sur le deuil périnatal.");
+    meta.setAttribute('content', "Dialogue sur la mort sur Radio Notre Dame et RCF : Gaël Leiblang évoque le deuil périnatal à travers son seul-en-scène. Un témoignage sensible sur la perte et l'accompagnement.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
@@ -39,7 +39,7 @@ const EmissionGaelLeiblang = () => {
               </span>
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              <em>Dialogue sur la mort</em>, avec Gaël Leiblang, réalisateur d'un seul-en-scène sur le deuil périnatal
+              <em>Dialogue sur la mort</em> : le deuil périnatal avec Gaël Leiblang
             </h1>
           </div>
         </section>
@@ -69,19 +69,30 @@ const EmissionGaelLeiblang = () => {
 
             <div className="prose prose-lg max-w-none text-foreground [&>p]:mb-4 [&>p]:mt-0 [&>ul]:mb-4">
               <p>
-                <em>Dialogue sur la mort</em>, une émission hebdomadaire animée par Christian de Cacqueray sur Radio Notre Dame et RCF.
+                <em>Dialogue sur la mort</em> est une émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
               </p>
 
               <p>
-                Chaque semaine, Christian de Cacqueray, directeur du Service Catholique des Funérailles, reçoit un(e) invité(e) pour évoquer avec lui(elle) la question de la mort dans notre société et dans sa vie.
+                Chaque semaine, un invité vient partager son expérience de la mort et du deuil dans notre société.
               </p>
 
               <p>
-                D'un format volontairement court (12 minutes), cette émission est diffusée sur Radio Notre Dame et RCF le vendredi à 15h et 22h45, puis rediffusée le dimanche à 20h45.
+                Dans cet épisode, <strong>Gaël Leiblang</strong>, réalisateur d'un seul-en-scène consacré au deuil périnatal, témoigne avec pudeur et profondeur. À travers son parcours artistique et personnel, il aborde :
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2">
+                <li>La réalité du deuil périnatal</li>
+                <li>La douleur souvent silencieuse des parents</li>
+                <li>La place de la parole et de l'art dans le processus de deuil</li>
+                <li>La nécessité d'un accompagnement humain et spirituel</li>
+              </ul>
+
+              <p>
+                D'un format court (12 minutes), l'émission est diffusée le vendredi à 15h et 22h45, puis rediffusée le dimanche à 20h45 sur Radio Notre Dame et RCF.
               </p>
 
               <p>
-                Le podcast est accessible sur :{" "}
+                Le podcast est accessible en ligne sur :{" "}
                 <a
                   href="https://www.rcf.fr/vie-spirituelle/dialogue-sur-la-mort"
                   target="_blank"
@@ -93,7 +104,7 @@ const EmissionGaelLeiblang = () => {
               </p>
 
               <p>
-                <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
+                🎧 <strong>Pour écouter l'émission, cliquez sur l'image ci-dessus.</strong>
               </p>
             </div>
 
