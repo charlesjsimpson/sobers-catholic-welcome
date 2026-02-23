@@ -47,17 +47,8 @@ const ToutesLesEmissions = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="relative overflow-hidden">
-          {/* Hero image */}
-          <div className="absolute inset-0">
-            <img
-              src={heroImg}
-              alt="Christian de Cacqueray au studio de Radio Notre Dame"
-              className="w-full h-full object-cover object-top"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-primary/30" />
-          </div>
-          <div className="relative container mx-auto px-6 max-w-4xl py-20 pt-24 text-primary-foreground">
+        <section className="bg-primary text-primary-foreground py-16">
+          <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
               className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
@@ -65,16 +56,25 @@ const ToutesLesEmissions = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex items-center gap-3 mb-4">
-              <Radio className="w-6 h-6 text-primary-foreground/70" />
-              <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Émissions</span>
+            <div className="flex flex-col sm:flex-row items-start gap-8">
+              <img
+                src={heroImg}
+                alt="Christian de Cacqueray au studio de Radio Notre Dame"
+                className="w-28 h-28 md:w-36 md:h-36 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+              />
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Radio className="w-6 h-6 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Émissions</span>
+                </div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
+                  <em>Dialogue sur la mort</em>
+                </h1>
+                <p className="text-primary-foreground/80 mt-4 max-w-2xl text-lg">
+                  Émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
+                </p>
+              </div>
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              <em>Dialogue sur la mort</em>
-            </h1>
-            <p className="text-primary-foreground/80 mt-4 max-w-2xl text-lg">
-              Émission hebdomadaire animée par Christian de Cacqueray, directeur du Service Catholique des Funérailles, diffusée sur <strong>Radio Notre Dame</strong> et <strong>RCF</strong>.
-            </p>
           </div>
         </section>
 
