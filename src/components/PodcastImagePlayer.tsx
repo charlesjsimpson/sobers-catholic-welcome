@@ -99,8 +99,8 @@ const PodcastImagePlayer = ({ src, alt, audioUrl }: PodcastImagePlayerProps) => 
 
       {/* Floating audio bar */}
       {showBar && (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-primary text-primary-foreground shadow-2xl animate-fade-in">
-          <div className="container mx-auto px-4 py-3 flex items-center gap-4">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 bg-primary text-primary-foreground shadow-2xl animate-fade-in rounded-full w-[90%] max-w-lg">
+          <div className="px-4 py-2.5 flex items-center gap-3">
             <button
               onClick={togglePlay}
               className="shrink-0 w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center hover:bg-primary-foreground/30 transition-colors cursor-pointer"
