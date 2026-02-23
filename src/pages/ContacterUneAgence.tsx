@@ -188,13 +188,19 @@ const ContacterUneAgence = () => {
                   key={agence.slug}
                   className="bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className="aspect-[4/3] overflow-hidden">
+                  <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={agence.image}
                       alt={`Service Catholique des Funérailles - ${agence.nom}`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
+                    <div className="absolute bottom-4 left-5 right-5">
+                      <span className="text-primary-foreground font-display text-2xl drop-shadow-lg">
+                        {agence.nom}
+                      </span>
+                    </div>
                   </div>
                   <div className="p-6">
                     <h4 className="text-xl font-display text-foreground mb-4">
