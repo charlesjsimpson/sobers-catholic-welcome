@@ -1,6 +1,7 @@
 import { ArrowRight, Radio, Calendar } from "lucide-react";
 import { Link } from "react-router-dom";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
+import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
 
 const articles = [
   {
@@ -12,6 +13,7 @@ const articles = [
     category: "Émission",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal",
     internal: true,
+    image: gaelImg,
   },
   {
     id: 2,
