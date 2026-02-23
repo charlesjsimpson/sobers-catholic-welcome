@@ -76,8 +76,8 @@ const ToutesLesEmissions = () => {
                 <p className="text-primary-foreground/70 mt-3 max-w-2xl text-base">
                   Invités, témoins, artistes et professionnels partagent leur expérience pour éclairer la place de la mort dans notre société et aider chacun à mieux comprendre l'épreuve du deuil.
                 </p>
-                <p className="text-primary-foreground mt-4 font-semibold text-base flex items-center gap-2">
-                  🎧 Retrouvez ici toutes les émissions et écoutez les épisodes en replay.
+                <p className="text-primary-foreground mt-4 font-semibold text-base">
+                  Retrouvez ici toutes les émissions et écoutez les épisodes en replay.
                 </p>
               </div>
             </div>
