@@ -55,15 +55,13 @@ const Actualites = () => {
               Retrouvez l'émission hebdomadaire <strong>« Dialogue sur la mort »</strong> animée par Christian de Cacqueray sur Radio Notre Dame.
             </p>
           </div>
-          <a
-            href="https://s-c-f.org/ressources/emissions/"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/ressources/emissions"
             className="flex items-center gap-2 text-primary font-semibold hover:underline transition-colors shrink-0"
           >
             Toutes les émissions
             <ArrowRight className="w-4 h-4" />
-          </a>
+          </Link>
         </div>
 
         {/* Articles grid */}
