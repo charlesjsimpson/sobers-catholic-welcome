@@ -143,7 +143,7 @@ const ContacterUneAgence = () => {
         </section>
 
         {/* Intro */}
-        <section className="py-16 bg-secondary">
+        <section className="py-10 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-xl md:text-2xl font-display text-foreground mb-6">
               Organisation d'obsèques – Contact 24h/24 et 7j/7
@@ -157,7 +157,7 @@ const ContacterUneAgence = () => {
         {/* Filters + Grid */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-6">
-            <h3 className="text-xl font-display text-foreground text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-display text-foreground text-center mb-8">
               Trouver l'agence de pompes funèbres la plus proche de chez vous
             </h3>
 
