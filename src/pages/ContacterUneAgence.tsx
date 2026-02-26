@@ -9,6 +9,7 @@ import agenceLyon from "@/assets/agence-lyon.png";
 import agenceAix from "@/assets/agence-aix.png";
 import agenceToulon from "@/assets/agence-toulon.png";
 import agenceMarseille from "@/assets/agence-marseille.png";
+import agenceFrejus from "@/assets/agence-frejus.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -101,7 +102,7 @@ const agences: Agence[] = [
     telephone: "04 94 83 46 51",
     adresse: "432 avenue De-Lattre-de-Tassigny",
     region: "Provence-Alpes-Côte d'Azur",
-    image: "https://s-c-f.org/wp-content/uploads/2023/02/Agence-Frejus-scaled.jpg",
+    image: agenceFrejus,
     slug: "frejus",
   },
   {
