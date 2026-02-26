@@ -11,6 +11,7 @@ import EmissionMathiasMlekuz from "./pages/EmissionMathiasMlekuz";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import AgenceNice from "./pages/AgenceNice";
+import AgenceParis15 from "./pages/AgenceParis15";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
           <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
           <Route path="/agences/nice" element={<AgenceNice />} />
+          <Route path="/agences/paris-15" element={<AgenceParis15 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
