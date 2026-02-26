@@ -137,7 +137,7 @@ const ContacterUneAgence = () => {
         <section className="relative bg-primary pt-32 pb-20">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-3xl md:text-4xl font-display text-primary-foreground mb-6 leading-tight">
-              Contacter l'agence de pompes funèbres catholiques la plus proche de chez vous
+              Contacter l'agence la plus proche de chez vous
             </h1>
           </div>
         </section>
