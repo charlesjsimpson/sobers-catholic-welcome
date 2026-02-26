@@ -134,7 +134,7 @@ const ContacterUneAgence = () => {
       <Header />
       <main>
         {/* Hero banner */}
-        <section className="relative bg-primary pt-32 pb-20">
+        <section className="relative bg-primary pt-28 pb-10">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-3xl md:text-4xl font-display text-primary-foreground mb-6 leading-tight">
               Nos agences
