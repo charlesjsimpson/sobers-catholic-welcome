@@ -5,6 +5,7 @@ import agenceParis15 from "@/assets/agence-paris-15.png";
 import agenceBoulogne from "@/assets/agence-boulogne.png";
 import agenceVersailles from "@/assets/agence-versailles.png";
 import agenceBordeaux from "@/assets/agence-bordeaux.png";
+import agenceLyon from "@/assets/agence-lyon.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
