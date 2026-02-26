@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Phone, MapPin, ChevronRight } from "lucide-react";
 import agenceParis17Cartoon from "@/assets/agence-paris-17-cartoon.jpg";
+import agenceParis15 from "@/assets/agence-paris-15.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -21,7 +22,7 @@ const agences: Agence[] = [
     telephone: "01 44 38 80 80",
     adresse: "66, rue Falguière",
     region: "Île-de-France",
-    image: "https://s-c-f.org/wp-content/uploads/2026/01/Design-sans-titre-6-scaled.png",
+    image: agenceParis15,
     slug: "paris-15",
   },
   {
