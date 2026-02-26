@@ -10,6 +10,7 @@ import agenceAix from "@/assets/agence-aix.png";
 import agenceToulon from "@/assets/agence-toulon.png";
 import agenceMarseille from "@/assets/agence-marseille.png";
 import agenceFrejus from "@/assets/agence-frejus.png";
+import agenceNice from "@/assets/agence-nice.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -110,7 +111,7 @@ const agences: Agence[] = [
     telephone: "04 89 94 62 32",
     adresse: "8, avenue de la République",
     region: "Provence-Alpes-Côte d'Azur",
-    image: "https://s-c-f.org/wp-content/uploads/2023/02/IMG_20260217_144429-1.jpg",
+    image: agenceNice,
     slug: "nice",
   },
 ];
