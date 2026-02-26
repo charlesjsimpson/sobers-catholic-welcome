@@ -66,7 +66,7 @@ const agences: Agence[] = [
     telephone: "04 72 16 29 08",
     adresse: "7 rue du Plat",
     region: "Auvergne-Rhône-Alpes",
-    image: "https://s-c-f.org/wp-content/uploads/2023/03/Lyon.jpg",
+    image: agenceLyon,
     slug: "lyon",
   },
   {
