@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Phone, MapPin, ChevronRight } from "lucide-react";
 import agenceParis17Cartoon from "@/assets/agence-paris-17-cartoon.jpg";
 import agenceParis15 from "@/assets/agence-paris-15.png";
+import agenceBoulogne from "@/assets/agence-boulogne.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -38,7 +39,7 @@ const agences: Agence[] = [
     telephone: "01 46 21 30 30",
     adresse: "56bis route de la Reine",
     region: "Île-de-France",
-    image: "https://s-c-f.org/wp-content/uploads/2026/01/Design-sans-titre-7-scaled.png",
+    image: agenceBoulogne,
     slug: "boulogne-billancourt",
   },
   {
