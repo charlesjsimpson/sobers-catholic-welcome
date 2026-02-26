@@ -5,6 +5,7 @@ import agenceParis15 from "@/assets/agence-paris-15.png";
 import agenceBoulogne from "@/assets/agence-boulogne.png";
 import agenceVersailles from "@/assets/agence-versailles.png";
 import agenceBordeaux from "@/assets/agence-bordeaux.png";
+import agenceLyon from "@/assets/agence-lyon.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -65,7 +66,7 @@ const agences: Agence[] = [
     telephone: "04 72 16 29 08",
     adresse: "7 rue du Plat",
     region: "Auvergne-Rhône-Alpes",
-    image: "https://s-c-f.org/wp-content/uploads/2023/03/Lyon.jpg",
+    image: agenceLyon,
     slug: "lyon",
   },
   {
