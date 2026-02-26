@@ -6,6 +6,7 @@ import agenceBoulogne from "@/assets/agence-boulogne.png";
 import agenceVersailles from "@/assets/agence-versailles.png";
 import agenceBordeaux from "@/assets/agence-bordeaux.png";
 import agenceLyon from "@/assets/agence-lyon.png";
+import agenceAix from "@/assets/agence-aix.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -82,7 +83,7 @@ const agences: Agence[] = [
     telephone: "07 69 53 35 35",
     adresse: "66 cours Sextius",
     region: "Provence-Alpes-Côte d'Azur",
-    image: "https://s-c-f.org/wp-content/uploads/2023/03/SCF_Aix_Facade-scaled.jpg",
+    image: agenceAix,
     slug: "aix-en-provence",
   },
   {
