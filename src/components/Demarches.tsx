@@ -30,7 +30,7 @@ const Demarches = () => {
               Des démarches
             </p>
             <h2 className="section-title">
-              Je viens de perdre un proche, <strong>que faire ?</strong>
+              Je viens de perdre un proche, que faire ?
             </h2>
             <p className="section-subtitle mx-auto">
               Le Service Catholique des Funérailles vous guide pas à pas.

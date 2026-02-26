@@ -34,7 +34,7 @@ const ParcoursObseques = () => {
             Un esprit chrétien
           </p>
           <h2 className="section-title">
-            Un accompagnement qui a <strong>du sens</strong>
+            Un accompagnement qui a du sens
           </h2>
           <p className="section-subtitle mx-auto">
             Vous venez de perdre un proche ? Vous ignorez tout du déroulement
