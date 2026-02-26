@@ -148,11 +148,8 @@ const ContacterUneAgence = () => {
             <h2 className="text-xl md:text-2xl font-display text-foreground mb-6">
               Organisation d'obsèques – Contact 24h/24 et 7j/7
             </h2>
-            <p className="text-muted-foreground text-base leading-relaxed mb-6">
-              Le Service Catholique des Funérailles vous accompagne avec humanité et professionnalisme dans l'organisation de vos obsèques.
-            </p>
             <p className="text-muted-foreground text-base leading-relaxed">
-              Nos agences de pompes funèbres catholiques sont disponibles 24h/24 et 7j/7 pour vous soutenir immédiatement, partout en France. Nous vous aidons à chaque étape : démarches administratives, organisation de la cérémonie, choix des rites catholiques et accompagnement des familles en deuil.
+              Le Service Catholique des Funérailles vous accompagne avec humanité et professionnalisme dans l'organisation de vos obsèques. Nos agences de pompes funèbres catholiques sont disponibles 24h/24 et 7j/7 pour vous soutenir immédiatement, partout en France. Nous vous aidons à chaque étape : démarches administratives, organisation de la cérémonie, choix des rites catholiques et accompagnement des familles en deuil.
             </p>
           </div>
         </section>
