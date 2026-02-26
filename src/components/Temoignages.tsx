@@ -46,8 +46,7 @@ const Temoignages = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="section-title">
-              Depuis 25 ans, le Service Catholique des Funérailles a accompagné{" "}
-              <strong>des milliers de familles.</strong>
+              Depuis 25 ans, le Service Catholique des Funérailles a accompagné des milliers de familles.
             </h2>
           </div>
 

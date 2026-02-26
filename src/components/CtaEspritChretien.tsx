@@ -6,8 +6,7 @@ const CtaEspritChretien = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-display mb-6">
-            Le Service Catholique des Funérailles vous accompagne dans{" "}
-            <strong>un esprit chrétien</strong>
+            Le Service Catholique des Funérailles vous accompagne dans un esprit chrétien
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-8">
             Familles et proches endeuillés, contactez-nous, nous apporterons une
