@@ -8,6 +8,7 @@ import agenceBordeaux from "@/assets/agence-bordeaux.png";
 import agenceLyon from "@/assets/agence-lyon.png";
 import agenceAix from "@/assets/agence-aix.png";
 import agenceToulon from "@/assets/agence-toulon.png";
+import agenceMarseille from "@/assets/agence-marseille.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -76,7 +77,7 @@ const agences: Agence[] = [
     telephone: "04 91 95 18 18",
     adresse: "2 place de la Préfecture",
     region: "Provence-Alpes-Côte d'Azur",
-    image: "https://s-c-f.org/wp-content/uploads/2023/03/SCF-Marseille-agence-2-scaled.jpg",
+    image: agenceMarseille,
     slug: "marseille",
   },
   {
