@@ -117,7 +117,7 @@ const ContacterUneAgence = () => {
   const [selectedRegion, setSelectedRegion] = useState<Region>("Toutes");
 
   useEffect(() => {
-    document.title = "Contacter une agence | Service Catholique des Funérailles";
+    document.title = "Nos agences | Service Catholique des Funérailles";
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute("content", "Contactez une agence de pompes funèbres catholiques proche de chez vous. Organisation d'obsèques catholiques 24h/24 et 7j/7 à Paris, Lyon, Marseille, Bordeaux, Nice et partout en France.");
@@ -137,7 +137,7 @@ const ContacterUneAgence = () => {
         <section className="relative bg-primary pt-32 pb-20">
           <div className="container mx-auto px-6 text-center">
             <h1 className="text-3xl md:text-4xl font-display text-primary-foreground mb-6 leading-tight">
-              Contacter l'agence la plus proche de chez vous
+              Nos agences
             </h1>
           </div>
         </section>
