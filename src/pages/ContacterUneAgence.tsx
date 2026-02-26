@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Phone, MapPin, ChevronRight } from "lucide-react";
+import agenceParis17Cartoon from "@/assets/agence-paris-17-cartoon.jpg";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -28,7 +29,7 @@ const agences: Agence[] = [
     telephone: "01 88 61 08 00",
     adresse: "10 rue Saint-Ferdinand",
     region: "Île-de-France",
-    image: "https://s-c-f.org/wp-content/uploads/2023/02/GUILLAUMEPOLI2025-LOCAUX-DU-SCF-53-scaled.jpg",
+    image: agenceParis17Cartoon,
     slug: "paris-17",
   },
   {
