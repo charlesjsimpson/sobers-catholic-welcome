@@ -146,7 +146,7 @@ const ContacterUneAgence = () => {
         <section className="py-16 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="text-xl md:text-2xl font-display text-foreground mb-6">
-              Organisation d'obsèques catholiques – Contact 24h/24 et 7j/7
+              Organisation d'obsèques – Contact 24h/24 et 7j/7
             </h2>
             <p className="text-muted-foreground text-base leading-relaxed mb-6">
               Le Service Catholique des Funérailles vous accompagne avec humanité et professionnalisme dans l'organisation des obsèques catholiques.
