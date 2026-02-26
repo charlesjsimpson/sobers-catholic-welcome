@@ -3,6 +3,7 @@ import { Phone, MapPin, ChevronRight } from "lucide-react";
 import agenceParis17Cartoon from "@/assets/agence-paris-17-cartoon.jpg";
 import agenceParis15 from "@/assets/agence-paris-15.png";
 import agenceBoulogne from "@/assets/agence-boulogne.png";
+import agenceVersailles from "@/assets/agence-versailles.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -47,7 +48,7 @@ const agences: Agence[] = [
     telephone: "01 39 20 14 83",
     adresse: "8 Rue Rameau",
     region: "Île-de-France",
-    image: "https://s-c-f.org/wp-content/uploads/2023/02/GUILLAUMEPOLI2025-LOCAUX-DU-SCF-66-scaled.jpg",
+    image: agenceVersailles,
     slug: "versailles",
   },
   {
