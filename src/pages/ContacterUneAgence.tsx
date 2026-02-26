@@ -8,6 +8,7 @@ import agenceBordeaux from "@/assets/agence-bordeaux.png";
 import agenceLyon from "@/assets/agence-lyon.png";
 import agenceAix from "@/assets/agence-aix.png";
 import agenceToulon from "@/assets/agence-toulon.png";
+import agenceMarseille from "@/assets/agence-marseille.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
