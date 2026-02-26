@@ -7,6 +7,7 @@ import agenceVersailles from "@/assets/agence-versailles.png";
 import agenceBordeaux from "@/assets/agence-bordeaux.png";
 import agenceLyon from "@/assets/agence-lyon.png";
 import agenceAix from "@/assets/agence-aix.png";
+import agenceToulon from "@/assets/agence-toulon.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -91,7 +92,7 @@ const agences: Agence[] = [
     telephone: "04 94 01 70 95",
     adresse: "6 rue Anatole France",
     region: "Provence-Alpes-Côte d'Azur",
-    image: "https://s-c-f.org/wp-content/uploads/2023/02/equipe-1.jpg",
+    image: agenceToulon,
     slug: "toulon",
   },
   {
