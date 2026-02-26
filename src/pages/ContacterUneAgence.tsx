@@ -4,6 +4,7 @@ import agenceParis17Cartoon from "@/assets/agence-paris-17-cartoon.jpg";
 import agenceParis15 from "@/assets/agence-paris-15.png";
 import agenceBoulogne from "@/assets/agence-boulogne.png";
 import agenceVersailles from "@/assets/agence-versailles.png";
+import agenceBordeaux from "@/assets/agence-bordeaux.png";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -56,7 +57,7 @@ const agences: Agence[] = [
     telephone: "05 56 30 20 10",
     adresse: "30 rue Ravez",
     region: "Nouvelle-Aquitaine",
-    image: "https://s-c-f.org/wp-content/uploads/2023/02/agence-Bdx-30-mai-24-scaled.jpg",
+    image: agenceBordeaux,
     slug: "bordeaux",
   },
   {
