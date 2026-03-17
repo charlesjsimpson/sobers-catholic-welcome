@@ -46,13 +46,15 @@ const EditoFondateur = () => {
             </div>
 
             {/* Photo */}
-            <div className="md:col-span-2 flex justify-center">
-              <div className="relative">
-                <img
-                  src={christianPortrait}
-                  alt="Christian de Cacqueray, fondateur et directeur du Service Catholique des Funérailles"
-                  className="rounded-xl shadow-lg w-full max-w-md object-cover"
-                />
+            <div className="md:col-span-2 flex flex-col items-center">
+              <img
+                src={christianPortrait}
+                alt="Christian de Cacqueray, fondateur et directeur du Service Catholique des Funérailles"
+                className="rounded-xl shadow-lg w-full max-w-sm object-cover"
+              />
+              <div className="mt-4 text-center">
+                <p className="font-semibold text-foreground text-lg">Christian de Cacqueray</p>
+                <p className="text-muted-foreground text-sm">Fondateur et directeur</p>
               </div>
             </div>
           </div>
