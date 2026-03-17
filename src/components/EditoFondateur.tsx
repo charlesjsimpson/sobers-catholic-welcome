@@ -7,10 +7,10 @@ const EditoFondateur = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2">
-              Édito du fondateur
+              L'édito
             </p>
             <h2 className="section-title">
-              Le mot de Christian de Cacqueray
+              Le mot du fondateur
             </h2>
           </div>
 
