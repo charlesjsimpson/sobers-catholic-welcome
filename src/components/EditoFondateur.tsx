@@ -43,10 +43,6 @@ const EditoFondateur = () => {
                 deuil. Le travail est ardu mais la reconnaissance des familles constitue
                 une source inépuisable d'énergie pour servir.
               </p>
-              <div className="pt-4 border-t border-border">
-                <p className="font-semibold text-foreground">Christian de Cacqueray</p>
-                <p className="text-sm">Fondateur et directeur</p>
-              </div>
             </div>
 
             {/* Photo */}
