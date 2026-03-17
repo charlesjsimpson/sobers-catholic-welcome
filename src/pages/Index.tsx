@@ -20,12 +20,12 @@ const Index = () => {
         <Hero />
         <EditoFondateur />
         <Actualites />
+        <Ressources />
         <ParcoursObseques />
         <Demarches />
         <CtaEspritChretien />
         <VousEtes />
         <Temoignages />
-        <Ressources />
         <LivresChristian />
         <Contact />
       </main>
