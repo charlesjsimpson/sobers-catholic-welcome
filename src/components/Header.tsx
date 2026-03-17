@@ -11,7 +11,7 @@ const Header = () => {
     { label: "Accueil", href: "/" },
     { label: "Organiser", href: "#services" },
     { label: "Anticiper", href: "#anticiper" },
-    { label: "Nos agences", href: "#agences" },
+    { label: "Nos agences", href: "/contacter-une-agence" },
     { label: "Ressources", href: "#ressources" },
     { label: "À propos", href: "#difference" },
   ];
@@ -31,7 +31,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
-                onClick={link.href === "/" ? (e) => { e.preventDefault(); navigate("/"); } : undefined}
+                onClick={link.href.startsWith("/") ? (e) => { e.preventDefault(); navigate(link.href); } : undefined}
                 className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold text-sm tracking-wide"
               >
                 {link.label}
@@ -69,7 +69,7 @@ const Header = () => {
                   href={link.href}
                   className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold py-2"
                   onClick={(e) => {
-                    if (link.href === "/") { e.preventDefault(); navigate("/"); }
+                    if (link.href.startsWith("/")) { e.preventDefault(); navigate(link.href); }
                     setIsMenuOpen(false);
                   }}
                 >
