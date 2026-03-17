@@ -21,12 +21,8 @@ const Index = () => {
         <EditoFondateur />
         <CtaEspritChretien />
         <Demarches />
-        <Ressources />
         <Actualites />
-        <ParcoursObseques />
-        <VousEtes />
-        <Temoignages />
-        <LivresChristian />
+        <Ressources />
         <Contact />
       </main>
       <Footer />
