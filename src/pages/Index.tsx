@@ -6,6 +6,7 @@ import Demarches from "@/components/Demarches";
 import CtaEspritChretien from "@/components/CtaEspritChretien";
 import VousEtes from "@/components/VousEtes";
 import Temoignages from "@/components/Temoignages";
+import EditoFondateur from "@/components/EditoFondateur";
 import Ressources from "@/components/Ressources";
 import LivresChristian from "@/components/LivresChristian";
 import Contact from "@/components/Contact";
