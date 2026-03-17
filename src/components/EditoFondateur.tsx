@@ -5,7 +5,7 @@ const EditoFondateur = () => {
     <section className="py-12 md:py-16 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <p className="text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2">
               L'édito
             </p>
