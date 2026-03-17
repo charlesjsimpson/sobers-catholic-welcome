@@ -24,7 +24,7 @@ const steps = [
     title: "L'inhumation ou la crémation",
     description:
       "Troisième étape du parcours rituel, l'étape de l'inhumation marque le détachement définitif des proches du corps de leur parent défunt.",
-    icon: Clock,
+    icon: Landmark,
   },
 ];
 
