@@ -69,7 +69,7 @@ const Header = () => {
                   href={link.href}
                   className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold py-2"
                   onClick={(e) => {
-                    if (link.href === "/") { e.preventDefault(); navigate("/"); }
+                    if (link.href.startsWith("/")) { e.preventDefault(); navigate(link.href); }
                     setIsMenuOpen(false);
                   }}
                 >
