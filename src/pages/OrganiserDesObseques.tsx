@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Phone, MapPin, ChevronRight, Clock, Heart, Cross, BookOpen, CreditCard } from "lucide-react";
+import { Phone, MapPin, ChevronRight, HandHeart, Church, Landmark, FileText, Wrench, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
