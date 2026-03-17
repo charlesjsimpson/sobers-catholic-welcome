@@ -23,7 +23,7 @@ const Index = () => {
         <Demarches />
         <Actualites />
         <Ressources />
-        <Contact />
+        
       </main>
       <Footer />
     </div>
