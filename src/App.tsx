@@ -11,6 +11,7 @@ import EmissionGaelLeiblang from "./pages/EmissionGaelLeiblang";
 import EmissionMathiasMlekuz from "./pages/EmissionMathiasMlekuz";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
+import OrganiserDesObseques from "./pages/OrganiserDesObseques";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import NotFound from "./pages/NotFound";
@@ -42,6 +43,7 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette" element={<EmissionMathiasMlekuz />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
+            <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
             <Route path="/agences/nice" element={<AgenceNice />} />
             <Route path="/agences/paris-15" element={<AgenceParis15 />} />
 
