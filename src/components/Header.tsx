@@ -9,7 +9,7 @@ const Header = () => {
 
   const navLinks = [
     { label: "Accueil", href: "/" },
-    { label: "Organiser", href: "#services" },
+    { label: "Organiser", href: "/organiser-des-obseques" },
     { label: "Anticiper", href: "/organiser-des-obseques" },
     { label: "Nos agences", href: "/contacter-une-agence" },
     { label: "Ressources", href: "#ressources" },
