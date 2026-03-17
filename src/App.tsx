@@ -11,6 +11,7 @@ import EmissionGaelLeiblang from "./pages/EmissionGaelLeiblang";
 import EmissionMathiasMlekuz from "./pages/EmissionMathiasMlekuz";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
+import OrganiserDesObseques from "./pages/OrganiserDesObseques";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import NotFound from "./pages/NotFound";
