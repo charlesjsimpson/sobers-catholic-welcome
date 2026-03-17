@@ -73,28 +73,45 @@ const OrganiserDesObseques = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative bg-primary pt-28 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-scf-blue-dark opacity-90" />
-          <div className="container mx-auto px-6 relative z-10 text-center max-w-3xl">
-            <nav aria-label="Fil d'Ariane" className="mb-6">
-              <ol className="flex items-center justify-center gap-2 text-sm text-primary-foreground/70">
+        <section className="relative bg-secondary pt-28 pb-20 overflow-hidden">
+          {/* Decorative watermark */}
+          <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
+            <svg viewBox="0 0 200 200" className="w-64 h-64 text-primary/[0.07]" fill="currentColor">
+              <circle cx="100" cy="100" r="30" />
+              {[...Array(12)].map((_, i) => (
+                <rect
+                  key={i}
+                  x="96"
+                  y="20"
+                  width="8"
+                  height="40"
+                  rx="4"
+                  transform={`rotate(${i * 30} 100 100)`}
+                />
+              ))}
+            </svg>
+          </div>
+          <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+            <nav aria-label="Fil d'Ariane" className="mb-8">
+              <ol className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                 <li>
-                  <Link to="/" className="hover:text-primary-foreground transition-colors">
+                  <Link to="/" className="hover:text-foreground transition-colors">
                     Accueil
                   </Link>
                 </li>
                 <li>
                   <ChevronRight className="w-3 h-3 inline" />
                 </li>
-                <li className="text-primary-foreground font-medium">
+                <li className="text-foreground font-medium">
                   Organiser des obsèques
                 </li>
               </ol>
             </nav>
-            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-6 leading-tight">
-              Organiser des obsèques
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display leading-tight mb-8">
+              <span className="text-foreground">Confier l'organisation des{" "}<br className="hidden md:block" />obsèques </span>
+              <span className="text-primary">au Service{" "}<br className="hidden md:block" />Catholique des Funérailles</span>
             </h1>
-            <p className="text-primary-foreground/90 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic">
               De l'organisation concrète à l'accompagnement pendant les
               obsèques, nous sommes à vos côtés pour vous conseiller, vous
               apporter le soutien nécessaire et mettre en place un parcours
