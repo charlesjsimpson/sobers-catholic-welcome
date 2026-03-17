@@ -10,7 +10,7 @@ const steps = [
     title: "L'adieu au visage",
     description:
       "Que ce soit à la maison, à l'hôpital ou au funérarium, la première étape est la présentation du corps. Qu'elle prenne la forme d'une veille ou d'une simple levée de corps, elle est l'occasion d'une rencontre entre les vivants et le mort.",
-    icon: Heart,
+    icon: HandHeart,
   },
   {
     number: "02",
