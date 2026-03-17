@@ -51,7 +51,7 @@ const sections = [
     description:
       "Quand on perd un proche, a-t-on le cœur à faire réaliser des devis chez plusieurs organismes de pompes funèbres pour les comparer poste à poste ? Conscient de cette difficulté, le SCF s'engage à pratiquer les tarifs les plus justes et à fuir toute surenchère commerciale.",
     cta: { label: "Découvrez nos tarifs", href: "/services/tarifs" },
-    icon: CreditCard,
+    icon: Scale,
   },
 ];
 
