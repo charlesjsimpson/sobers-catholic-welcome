@@ -2,7 +2,7 @@ import christianPortrait from "@/assets/christian-de-cacqueray-portrait.jpeg";
 
 const EditoFondateur = () => {
   return (
-    <section className="py-16 md:py-20 bg-secondary">
+    <section className="py-12 md:py-16 bg-secondary">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
