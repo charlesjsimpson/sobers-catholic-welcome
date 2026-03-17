@@ -21,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#accueil" className="flex items-center gap-3">
+          <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-3 cursor-pointer">
             <img src={logoScf} alt="Service Catholique des Funérailles" className="h-14 w-auto" />
           </a>
 
