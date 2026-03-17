@@ -31,6 +31,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={link.href === "/" ? (e) => { e.preventDefault(); navigate("/"); } : undefined}
                 className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold text-sm tracking-wide"
               >
                 {link.label}
