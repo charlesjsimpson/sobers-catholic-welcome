@@ -19,11 +19,11 @@ const Index = () => {
       <main>
         <Hero />
         <EditoFondateur />
-        <Actualites />
-        <Ressources />
-        <ParcoursObseques />
-        <Demarches />
         <CtaEspritChretien />
+        <Demarches />
+        <Ressources />
+        <Actualites />
+        <ParcoursObseques />
         <VousEtes />
         <Temoignages />
         <LivresChristian />
