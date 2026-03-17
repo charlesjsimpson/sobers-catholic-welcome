@@ -11,7 +11,7 @@ const Header = () => {
     { label: "Accueil", href: "/" },
     { label: "Organiser", href: "#services" },
     { label: "Anticiper", href: "#anticiper" },
-    { label: "Nos agences", href: "#agences" },
+    { label: "Nos agences", href: "/contacter-une-agence" },
     { label: "Ressources", href: "#ressources" },
     { label: "À propos", href: "#difference" },
   ];
