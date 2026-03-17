@@ -17,7 +17,7 @@ const steps = [
     title: "La célébration",
     description:
       "Si le chemin de la paroisse, pour assister à la messe dominicale, s'est largement perdu chez beaucoup de Français, ils sont nombreux à le retrouver pour une cérémonie d'obsèques.",
-    icon: Cross,
+    icon: Church,
   },
   {
     number: "03",
