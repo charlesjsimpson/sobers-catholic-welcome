@@ -24,6 +24,7 @@ const Index = () => {
         <CtaEspritChretien />
         <VousEtes />
         <Temoignages />
+        <EditoFondateur />
         <Ressources />
         <LivresChristian />
         <Contact />
