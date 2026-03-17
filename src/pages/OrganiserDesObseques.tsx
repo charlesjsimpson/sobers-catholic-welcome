@@ -43,7 +43,7 @@ const sections = [
     description:
       "Les démarches à remplir lors de l'organisation d'obsèques peuvent représenter une source de confusion et de frustration, d'autant plus lorsque le décès de l'être cher est arrivé de manière inattendue.",
     cta: { label: "En savoir plus", href: "#services" },
-    icon: Heart,
+    icon: Wrench,
   },
   {
     tag: "Tarifs",
