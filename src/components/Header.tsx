@@ -5,9 +5,10 @@ import logoScf from "@/assets/logo-scf-blanc.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
-    { label: "Accueil", href: "#accueil" },
+    { label: "Accueil", href: "/" },
     { label: "Organiser", href: "#services" },
     { label: "Anticiper", href: "#anticiper" },
     { label: "Nos agences", href: "#agences" },
