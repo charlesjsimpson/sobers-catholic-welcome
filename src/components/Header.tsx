@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import logoScf from "@/assets/logo-scf-blanc.png";
 
 const Header = () => {
