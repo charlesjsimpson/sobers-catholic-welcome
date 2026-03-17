@@ -55,7 +55,7 @@ const EditoFondateur = () => {
                 <img
                   src={christianPortrait}
                   alt="Christian de Cacqueray, fondateur et directeur du Service Catholique des Funérailles"
-                  className="rounded-xl shadow-lg w-full max-w-xs object-cover"
+                  className="rounded-xl shadow-lg w-full max-w-md object-cover"
                 />
               </div>
             </div>
