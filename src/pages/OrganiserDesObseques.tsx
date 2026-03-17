@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Phone, MapPin, ChevronRight, Clock, Heart, Cross, BookOpen, CreditCard } from "lucide-react";
+import { Phone, MapPin, ChevronRight, HandHeart, Church, Landmark, FileText, Wrench, Scale } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,21 +10,21 @@ const steps = [
     title: "L'adieu au visage",
     description:
       "Que ce soit à la maison, à l'hôpital ou au funérarium, la première étape est la présentation du corps. Qu'elle prenne la forme d'une veille ou d'une simple levée de corps, elle est l'occasion d'une rencontre entre les vivants et le mort.",
-    icon: Heart,
+    icon: HandHeart,
   },
   {
     number: "02",
     title: "La célébration",
     description:
       "Si le chemin de la paroisse, pour assister à la messe dominicale, s'est largement perdu chez beaucoup de Français, ils sont nombreux à le retrouver pour une cérémonie d'obsèques.",
-    icon: Cross,
+    icon: Church,
   },
   {
     number: "03",
     title: "L'inhumation ou la crémation",
     description:
       "Troisième étape du parcours rituel, l'étape de l'inhumation marque le détachement définitif des proches du corps de leur parent défunt.",
-    icon: Clock,
+    icon: Landmark,
   },
 ];
 
@@ -35,7 +35,7 @@ const sections = [
     description:
       "Les démarches à remplir lors de l'organisation d'obsèques peuvent représenter une source de confusion et de frustration, d'autant plus lorsque le décès de l'être cher est arrivé de manière inattendue.",
     cta: { label: "Je découvre les démarches", href: "/demarches" },
-    icon: BookOpen,
+    icon: FileText,
   },
   {
     tag: "Nos services",
@@ -43,7 +43,7 @@ const sections = [
     description:
       "Les démarches à remplir lors de l'organisation d'obsèques peuvent représenter une source de confusion et de frustration, d'autant plus lorsque le décès de l'être cher est arrivé de manière inattendue.",
     cta: { label: "En savoir plus", href: "#services" },
-    icon: Heart,
+    icon: Wrench,
   },
   {
     tag: "Tarifs",
@@ -51,7 +51,7 @@ const sections = [
     description:
       "Quand on perd un proche, a-t-on le cœur à faire réaliser des devis chez plusieurs organismes de pompes funèbres pour les comparer poste à poste ? Conscient de cette difficulté, le SCF s'engage à pratiquer les tarifs les plus justes et à fuir toute surenchère commerciale.",
     cta: { label: "Découvrez nos tarifs", href: "/services/tarifs" },
-    icon: CreditCard,
+    icon: Scale,
   },
 ];
 
