@@ -23,7 +23,7 @@ const EditoFondateur = () => {
                 je recevais de lui la mission de renouveler l'offre de services funéraires.
               </p>
               <p className="font-semibold text-foreground">Comment ?</p>
-              <ul className="space-y-3 list-none pl-0">
+              <ul className="space-y-2 list-none pl-0">
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
                   <span>En centrant tous nos efforts sur la qualité de l'accompagnement des familles à chaque étape du parcours des funérailles.</span>
