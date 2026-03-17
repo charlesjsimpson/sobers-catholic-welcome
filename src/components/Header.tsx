@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import logoScf from "@/assets/logo-scf-blanc.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
-    { label: "Accueil", href: "#accueil" },
+    { label: "Accueil", href: "/" },
     { label: "Organiser", href: "#services" },
     { label: "Anticiper", href: "#anticiper" },
     { label: "Nos agences", href: "#agences" },
@@ -19,7 +21,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#accueil" className="flex items-center gap-3">
+          <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-3 cursor-pointer">
             <img src={logoScf} alt="Service Catholique des Funérailles" className="h-14 w-auto" />
           </a>
 
@@ -29,6 +31,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={link.href === "/" ? (e) => { e.preventDefault(); navigate("/"); } : undefined}
                 className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold text-sm tracking-wide"
               >
                 {link.label}
@@ -65,7 +68,10 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    if (link.href === "/") { e.preventDefault(); navigate("/"); }
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {link.label}
                 </a>
