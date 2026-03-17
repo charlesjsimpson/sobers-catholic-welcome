@@ -10,7 +10,7 @@ const Header = () => {
   const navLinks = [
     { label: "Accueil", href: "/" },
     { label: "Organiser", href: "#services" },
-    { label: "Anticiper", href: "#anticiper" },
+    { label: "Anticiper", href: "/organiser-des-obseques" },
     { label: "Nos agences", href: "/contacter-une-agence" },
     { label: "Ressources", href: "#ressources" },
     { label: "À propos", href: "#difference" },
