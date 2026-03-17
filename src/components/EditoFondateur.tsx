@@ -7,10 +7,10 @@ const EditoFondateur = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-primary text-sm tracking-[0.1em] uppercase font-semibold mb-2">
-              Édito du fondateur
+              L'édito
             </p>
             <h2 className="section-title">
-              Le mot de Christian de Cacqueray
+              Le mot du fondateur
             </h2>
           </div>
 
@@ -43,20 +43,18 @@ const EditoFondateur = () => {
                 deuil. Le travail est ardu mais la reconnaissance des familles constitue
                 une source inépuisable d'énergie pour servir.
               </p>
-              <div className="pt-4 border-t border-border">
-                <p className="font-semibold text-foreground">Christian de Cacqueray</p>
-                <p className="text-sm">Fondateur et directeur</p>
-              </div>
             </div>
 
             {/* Photo */}
-            <div className="md:col-span-2 flex justify-center">
-              <div className="relative">
-                <img
-                  src={christianPortrait}
-                  alt="Christian de Cacqueray, fondateur et directeur du Service Catholique des Funérailles"
-                  className="rounded-xl shadow-lg w-full max-w-md object-cover"
-                />
+            <div className="md:col-span-2 flex flex-col items-center">
+              <img
+                src={christianPortrait}
+                alt="Christian de Cacqueray, fondateur et directeur du Service Catholique des Funérailles"
+                className="rounded-xl shadow-lg w-full max-w-sm object-cover"
+              />
+              <div className="mt-4 text-center">
+                <p className="font-semibold text-foreground text-lg">Christian de Cacqueray</p>
+                <p className="text-muted-foreground text-sm">Fondateur et directeur</p>
               </div>
             </div>
           </div>
