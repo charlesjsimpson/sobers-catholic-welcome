@@ -16,7 +16,7 @@ const EditoFondateur = () => {
 
           <div className="grid md:grid-cols-5 gap-10 items-center">
             {/* Text */}
-            <div className="md:col-span-3 space-y-5 text-muted-foreground leading-relaxed">
+            <div className="md:col-span-3 space-y-3 text-foreground leading-snug">
               <p>
                 Lorsqu'à la fin de 1999, le Cardinal Jean-Marie Lustiger, archevêque de
                 Paris, me demandait pour fonder le Service Catholique des Funérailles,
