@@ -18,30 +18,25 @@ const EditoFondateur = () => {
             {/* Text */}
             <div className="md:col-span-3 space-y-3 text-foreground leading-snug">
               <p>
-                Lorsqu'à la fin de 1999, le Cardinal Jean-Marie Lustiger, archevêque de
-                Paris, me demandait pour fonder le Service Catholique des Funérailles,
-                je recevais de lui la mission de renouveler l'offre de services funéraires.
+                À la fin de l'année 1999, le Cardinal Jean-Marie Lustiger, alors archevêque de Paris, me confiait la mission de fonder le Service Catholique des Funérailles, avec une ambition claire&nbsp;: renouveler l'accompagnement des familles en deuil.
               </p>
-              <p className="font-semibold text-foreground">Comment ?</p>
+              <p className="font-semibold text-foreground">Cette mission s'est construite autour de convictions fortes&nbsp;:</p>
               <ul className="space-y-2 list-none pl-0">
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
-                  <span>En centrant tous nos efforts sur la qualité de l'accompagnement des familles à chaque étape du parcours des funérailles.</span>
+                  <span>Placer la qualité de l'accompagnement humain au cœur de chaque étape des funérailles</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
-                  <span>En allégeant l'offre matérielle afin de permettre aux proches de se consacrer à l'essentiel&nbsp;: la quête du sens de la perte de l'être aimé.</span>
+                  <span>Simplifier l'offre matérielle pour permettre aux proches de se recentrer sur l'essentiel&nbsp;: donner du sens à la perte d'un être aimé</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
-                  <span>En choisissant un statut associatif, afin d'être affranchis des lois de la finance.</span>
+                  <span>Faire le choix d'un modèle associatif, indépendant des logiques financières</span>
                 </li>
               </ul>
               <p>
-                Vingt-cinq années après cet envoi en mission, je salue chaque jour la
-                qualité du collectif humain que nous formons au service des familles en
-                deuil. Le travail est ardu mais la reconnaissance des familles constitue
-                une source inépuisable d'énergie pour servir.
+                Vingt-cinq ans plus tard, je rends grâce chaque jour pour la qualité du collectif humain engagé au service des familles. Si la mission est exigeante, la reconnaissance que nous témoignent les familles constitue une source inépuisable d'énergie pour continuer à servir.
               </p>
             </div>
 
