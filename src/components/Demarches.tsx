@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const demarches = [
   {
     icon: Stethoscope,
-    label: "Faire constater le décès*",
+    label: "Faire constater le décès par un médecin (démarche à initier par la famille)",
   },
   {
     icon: FileText,
-    label: "Déclarer le décès",
+    label: "Déclarer le décès à la mairie",
   },
   {
     icon: MapPin,
@@ -16,7 +16,7 @@ const demarches = [
   },
   {
     icon: CalendarCheck,
-    label: "Organiser les obsèques",
+    label: "Organiser les obsèques catholiques",
   },
 ];
 
@@ -31,15 +31,10 @@ const Demarches = () => {
               Des démarches
             </p>
             <h2 className="text-3xl md:text-4xl font-display text-foreground mb-6 leading-tight">
-              Quelles sont les obligations légales et démarches à effectuer?
+              Les démarches après un décès&nbsp;: que faut-il faire&nbsp;?
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Le Service Catholique des Funérailles est à vos côtés pour accomplir
-              l'ensemble des démarches nécessaires à l'organisation des obsèques{" "}
-              <strong className="text-foreground">
-                une fois que le décès a été constaté par un médecin
-              </strong>
-              .
+              Le Service Catholique des Funérailles vous guide dans toutes les démarches administratives et pratiques à accomplir après la mort d'un proche, de la déclaration de décès jusqu'à l'organisation complète des obsèques.
             </p>
           </div>
 
@@ -61,9 +56,7 @@ const Demarches = () => {
           </div>
 
           <p className="text-muted-foreground text-sm italic mb-8">
-            *Le SCF vous accompagne sur l'ensemble de ces démarches SAUF pour le
-            constat du décès pour lequel il revient à la famille de faire venir
-            un médecin.
+            *Le SCF vous accompagne sur l'ensemble de ces étapes, à l'exception du constat médical du décès, qui revient à la famille.
           </p>
 
           <Link
