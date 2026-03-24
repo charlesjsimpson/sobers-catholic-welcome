@@ -44,9 +44,8 @@ const CtaEspritChretien = () => {
             <div className="grid md:grid-cols-3 gap-10">
               {parcours.map((item) => (
                 <div key={item.num}>
-                  <p className="text-muted-foreground text-sm mb-1">{item.num}.</p>
                   <h4 className="text-lg font-semibold text-foreground mb-3">
-                    {item.title}
+                    {item.num}. {item.title}
                   </h4>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {item.text}
