@@ -31,9 +31,8 @@ const CtaEspritChretien = () => {
               qui a <span className="text-primary">du sens</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              Vous venez de perdre un proche ? Vous ignorez tout du déroulement
-              des obsèques ? Le Service Catholique des Funérailles vous
-              accompagne à chaque étape de ce parcours dans un esprit chrétien.
+              Vous venez de perdre un proche ? Vous ignorez tout du déroulement des obsèques ?<br />
+              Le Service Catholique des Funérailles vous accompagne à chaque étape de ce parcours dans un esprit chrétien.
             </p>
           </div>
 
