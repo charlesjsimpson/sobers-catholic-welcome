@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Phone, Clock, MapPin, ChevronLeft, ChevronRight } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroTeam from "@/assets/hero-team.png";
+import heroTeam from "@/assets/equipe-scf.png";
 import heroCercueil from "@/assets/hero-cercueil.jpg";
 
 const images = [heroBg, heroCercueil, heroTeam];
