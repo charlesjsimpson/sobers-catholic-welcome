@@ -28,7 +28,7 @@ const CtaEspritChretien = () => {
             </p>
             <h2 className="text-3xl md:text-5xl font-display text-foreground mb-6 leading-tight">
               L'organisation des obsèques catholiques,<br />
-              étape par <span className="text-primary">étape</span>
+              <span className="text-primary">étape par étape</span>
             </h2>
             <p className="text-muted-foreground text-base max-w-2xl">
               Vous venez de perdre un proche&nbsp;? Le Service Catholique des Funérailles vous accompagne dans toutes les démarches funéraires, dans le respect des rites catholiques et avec une attention humaine sincère à chaque étape.
