@@ -18,25 +18,25 @@ const EditoFondateur = () => {
             {/* Text */}
             <div className="md:col-span-3 space-y-3 text-foreground leading-snug">
               <p>
-                À la fin de l'année 1999, le Cardinal Jean-Marie Lustiger, alors archevêque de Paris, me confiait la mission de fonder le Service Catholique des Funérailles, avec une ambition claire&nbsp;: renouveler l'accompagnement des familles en deuil.
+                À la fin de l'année 1999, le Cardinal Jean-Marie Lustiger, alors archevêque de Paris, me confiait la mission de fonder le Service Catholique des Funérailles, avec une ambition claire&nbsp;: renouveler l'accompagnement des familles en deuil dans un esprit profondément chrétien.
               </p>
-              <p className="font-semibold text-foreground">Cette mission s'est construite autour de convictions fortes&nbsp;:</p>
+              <p className="font-semibold text-foreground">Cette mission s'est construite autour de trois convictions fortes&nbsp;:</p>
               <ul className="space-y-2 list-none pl-0">
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
-                  <span>Placer la qualité de l'accompagnement humain au cœur de chaque étape des funérailles</span>
+                  <span>Placer la qualité de l'accompagnement humain au cœur de chaque étape des obsèques, de la levée de corps jusqu'à l'inhumation ou la crémation</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
-                  <span>Simplifier l'offre matérielle pour permettre aux proches de se recentrer sur l'essentiel&nbsp;: donner du sens à la perte d'un être aimé</span>
+                  <span>Simplifier l'organisation des funérailles pour permettre aux proches de se recentrer sur l'essentiel&nbsp;: donner du sens à la perte d'un être aimé</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-primary mt-1 shrink-0">•</span>
-                  <span>Faire le choix d'un modèle associatif, indépendant des logiques financières</span>
+                  <span>Faire le choix d'un modèle associatif, indépendant de toute logique financière, une singularité rare parmi les pompes funèbres en France</span>
                 </li>
               </ul>
               <p>
-                Vingt-cinq ans plus tard, je rends grâce chaque jour pour la qualité du collectif humain engagé au service des familles. Si la mission est exigeante, la reconnaissance que nous témoignent les familles constitue une source inépuisable d'énergie pour continuer à servir.
+                Vingt-cinq ans plus tard, je rends grâce chaque jour pour la qualité du collectif humain engagé au service des familles endeuillées. Si la mission est exigeante, la reconnaissance que nous témoignent les familles constitue une source inépuisable d'énergie pour continuer à servir.
               </p>
             </div>
 
