@@ -90,7 +90,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto animate-fade-in-delay">
-            Le SCF vous accompagne avec bienveillance à chaque étape de l'organisation des obsèques, dans le respect des rites catholiques. Présents à Paris et dans toute la France, à travers 11 agences.
+            Le SCF vous accompagne avec bienveillance à chaque étape de l'organisation des obsèques, dans le respect des rites catholiques.<br />Présents à Paris et dans toute la France, à travers 11 agences.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay mt-12">
