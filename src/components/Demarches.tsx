@@ -43,9 +43,9 @@ const Demarches = () => {
             {demarches.map((item, index) => (
               <div
                 key={index}
-                className="bg-primary/5 rounded-lg p-6 flex flex-col gap-3"
+                className="bg-primary/5 rounded-lg p-6 flex items-center gap-4"
               >
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <p className="text-foreground font-semibold text-sm">
