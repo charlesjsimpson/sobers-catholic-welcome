@@ -2,7 +2,7 @@ const parcours = [
   {
     num: 1,
     title: "L'adieu au visage",
-    text: "Que ce soit à la maison, à l'hôpital ou au funérarium, la première étape est la présentation du corps. Qu'elle prenne la forme d'une veillée funèbre ou d'une levée de corps, elle est l'occasion d'une rencontre entre les vivants et le défunt — un moment de recueillement avant la cérémonie.",
+    text: "Que ce soit à la maison, à l'hôpital ou au funérarium, la première étape est la présentation du corps. Qu'elle prenne la forme d'une veillée funèbre ou d'une levée de corps, elle est l'occasion d'une rencontre entre les vivants et le défunt, un moment de recueillement avant la cérémonie.",
   },
   {
     num: 2,
