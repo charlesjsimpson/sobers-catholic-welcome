@@ -1,56 +1,261 @@
-import { useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, Phone, ChevronDown, ChevronRight } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 import logoScf from "@/assets/logo-scf-blanc.png";
+import { cn } from "@/lib/utils";
+
+interface NavChild {
+  label: string;
+  href: string;
+}
+
+interface NavColumn {
+  title: string;
+  items: NavChild[];
+}
+
+interface NavItem {
+  label: string;
+  href?: string;
+  children?: NavChild[];
+  columns?: NavColumn[];
+  bottomLink?: { label: string; href: string };
+}
+
+const navItems: NavItem[] = [
+  {
+    label: "Organiser des obsèques",
+    children: [
+      { label: "Organiser des obsèques catholiques", href: "/organiser-des-obseques" },
+      { label: "Les démarches après un décès", href: "/demarches" },
+      { label: "Cercueils et fournitures", href: "/cercueils" },
+      { label: "Fleurs et faire-part", href: "/services/organiser-vos-obseques/faire-part-et-cartes-de-remerciement" },
+      { label: "Nos tarifs", href: "/services/tarifs" },
+    ],
+  },
+  {
+    label: "Anticiper",
+    children: [
+      { label: "Pourquoi anticiper ses obsèques", href: "/services/prevoyance/#s1" },
+      { label: "Déposer ses volontés", href: "/services/deposer-ses-volontes" },
+      { label: "Préfinancer ses obsèques", href: "/services/contrats" },
+    ],
+  },
+  {
+    label: "Ressources",
+    children: [
+      { label: "Articles et actualités", href: "/ressources/actualites" },
+      { label: "Prières", href: "/ressources/prieres" },
+      { label: "Émissions radio", href: "/ressources/emissions" },
+      { label: "Vidéos", href: "/ressources/videos" },
+      { label: "Livres", href: "/ressources/livres" },
+      { label: "Sessions \"Se réconcilier avec la mort\"", href: "/ressources/sessions/se-reconcilier-avec-la-mort" },
+    ],
+  },
+  {
+    label: "Nos agences",
+    columns: [
+      {
+        title: "Île-de-France",
+        items: [
+          { label: "Paris 15", href: "/agences/paris-15" },
+          { label: "Paris 17", href: "/agences/paris-17" },
+          { label: "Boulogne-Billancourt", href: "/agences/boulogne-billancourt" },
+          { label: "Versailles", href: "/agences/versailles" },
+        ],
+      },
+      {
+        title: "En France",
+        items: [
+          { label: "Bordeaux", href: "/agences/bordeaux" },
+          { label: "Lyon", href: "/agences/lyon" },
+          { label: "Marseille", href: "/agences/marseille" },
+          { label: "Aix-en-Provence", href: "/agences/aix-en-provence" },
+          { label: "Toulon", href: "/agences/toulon" },
+          { label: "Fréjus", href: "/agences/frejus" },
+          { label: "Nice", href: "/agences/nice" },
+        ],
+      },
+    ],
+    bottomLink: { label: "Voir toutes nos agences", href: "/contacter-une-agence" },
+  },
+  {
+    label: "À propos",
+    children: [
+      { label: "Qui sommes-nous", href: "/a-propos" },
+      { label: "FAQ", href: "/foire-aux-questions" },
+    ],
+  },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openMobileIndex, setOpenMobileIndex] = useState<number | null>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [openDesktopIndex, setOpenDesktopIndex] = useState<number | null>(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const navLinks = [
-    { label: "Accueil", href: "/" },
-    { label: "Organiser", href: "/organiser-des-obseques" },
-    { label: "Anticiper", href: "/services/prevoyance" },
-    { label: "Nos agences", href: "/contacter-une-agence" },
-    { label: "Ressources", href: "#ressources" },
-    { label: "À propos", href: "#difference" },
-  ];
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setOpenMobileIndex(null);
+  }, [location.pathname]);
+
+  const handleNavigate = (href: string) => {
+    if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")) {
+      window.location.href = href;
+    } else {
+      navigate(href);
+    }
+    setIsMenuOpen(false);
+    setOpenDesktopIndex(null);
+  };
+
+  const isActive = (href: string) => location.pathname === href || location.pathname.startsWith(href + "/");
+
+  const isParentActive = (item: NavItem) => {
+    if (item.children) return item.children.some((c) => isActive(c.href));
+    if (item.columns) return item.columns.some((col) => col.items.some((c) => isActive(c.href)));
+    return item.href ? isActive(item.href) : false;
+  };
+
+  const handleDesktopEnter = (index: number) => {
+    if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+    setOpenDesktopIndex(index);
+  };
+
+  const handleDesktopLeave = () => {
+    closeTimerRef.current = setTimeout(() => setOpenDesktopIndex(null), 150);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-primary backdrop-blur-sm">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 bg-primary transition-shadow duration-300",
+        scrolled && "shadow-lg"
+      )}
+    >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-3 cursor-pointer">
+          <a
+            href="/"
+            onClick={(e) => { e.preventDefault(); handleNavigate("/"); }}
+            className="flex items-center gap-3 cursor-pointer shrink-0"
+          >
             <img src={logoScf} alt="Service Catholique des Funérailles" className="h-14 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={link.href.startsWith("/") ? (e) => { e.preventDefault(); navigate(link.href); } : undefined}
-                className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold text-sm tracking-wide"
+          <nav className="hidden lg:flex items-center gap-1 ml-8">
+            {navItems.map((item, index) => (
+              <div
+                key={item.label}
+                className="relative"
+                onMouseEnter={() => handleDesktopEnter(index)}
+                onMouseLeave={handleDesktopLeave}
               >
-                {link.label}
-              </a>
+                <button
+                  className={cn(
+                    "flex items-center gap-1 px-3 py-2 text-primary-foreground text-sm font-semibold tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
+                    isParentActive(item) && "underline underline-offset-4 decoration-2"
+                  )}
+                  onClick={() => {
+                    if (item.href) handleNavigate(item.href);
+                  }}
+                >
+                  {item.label}
+                  {(item.children || item.columns) && (
+                    <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", openDesktopIndex === index && "rotate-180")} />
+                  )}
+                </button>
+
+                {/* Dropdown */}
+                {openDesktopIndex === index && (item.children || item.columns) && (
+                  <div className="absolute top-full left-0 pt-1 z-50">
+                    <div className="bg-background rounded-lg shadow-xl border border-border p-2 min-w-[240px] animate-fade-in">
+                      {item.children && (
+                        <div className="flex flex-col">
+                          {item.children.map((child) => (
+                            <a
+                              key={child.href}
+                              href={child.href}
+                              onClick={(e) => { e.preventDefault(); handleNavigate(child.href); }}
+                              className={cn(
+                                "px-4 py-2.5 text-sm text-foreground hover:bg-accent/10 hover:text-accent rounded-md transition-colors",
+                                isActive(child.href) && "bg-accent/10 text-accent font-semibold"
+                              )}
+                            >
+                              {child.label}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+
+                      {item.columns && (
+                        <div>
+                          <div className="flex gap-6 p-2 min-w-[420px]">
+                            {item.columns.map((col) => (
+                              <div key={col.title} className="flex-1">
+                                <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider px-2 pb-2">
+                                  {col.title}
+                                </p>
+                                {col.items.map((child) => (
+                                  <a
+                                    key={child.href}
+                                    href={child.href}
+                                    onClick={(e) => { e.preventDefault(); handleNavigate(child.href); }}
+                                    className={cn(
+                                      "block px-2 py-1.5 text-sm text-foreground hover:bg-accent/10 hover:text-accent rounded transition-colors",
+                                      isActive(child.href) && "bg-accent/10 text-accent font-semibold"
+                                    )}
+                                  >
+                                    {child.label}
+                                  </a>
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                          {item.bottomLink && (
+                            <div className="border-t border-border mt-2 pt-2 px-2">
+                              <a
+                                href={item.bottomLink.href}
+                                onClick={(e) => { e.preventDefault(); handleNavigate(item.bottomLink!.href); }}
+                                className="flex items-center gap-1 text-sm font-semibold text-accent hover:underline px-2 py-1.5"
+                              >
+                                {item.bottomLink.label}
+                                <ChevronRight className="w-3.5 h-3.5" />
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
-          {/* CTA & Mobile Menu */}
-          <div className="flex items-center gap-4">
+          {/* Right side: Phone CTA + Hamburger */}
+          <div className="flex items-center gap-3 shrink-0">
             <a
-              href="tel:0143722828"
-              className="hidden sm:flex items-center gap-2 text-primary-foreground font-semibold text-lg"
+              href="tel:+33144388080"
+              className="hidden sm:flex items-center gap-2 bg-primary-foreground text-primary font-bold text-sm px-5 py-2.5 rounded-full hover:bg-primary-foreground/90 transition-colors"
             >
-              <Phone className="w-5 h-5" />
-              <span>01 43 72 28 28</span>
+              <Phone className="w-4 h-4" />
+              <span>01 44 38 80 80</span>
             </a>
 
             <button
-              className="md:hidden p-2 text-primary-foreground"
+              className="lg:hidden p-2 text-primary-foreground"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Menu"
             >
@@ -61,27 +266,93 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden py-6 border-t border-primary-foreground/20 animate-fade-in">
-            <div className="flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-primary-foreground hover:text-primary-foreground/80 transition-colors duration-200 font-bold py-2"
-                  onClick={(e) => {
-                    if (link.href.startsWith("/")) { e.preventDefault(); navigate(link.href); }
-                    setIsMenuOpen(false);
-                  }}
-                >
-                  {link.label}
-                </a>
-              ))}
+          <nav className="lg:hidden py-4 border-t border-primary-foreground/20 animate-fade-in max-h-[calc(100vh-5rem)] overflow-y-auto">
+            <div className="flex flex-col gap-1">
+              {navItems.map((item, index) => {
+                const hasDropdown = item.children || item.columns;
+                const isOpen = openMobileIndex === index;
+
+                return (
+                  <div key={item.label}>
+                    <button
+                      className={cn(
+                        "flex items-center justify-between w-full px-3 py-3 text-primary-foreground font-bold text-base transition-colors rounded-md",
+                        isParentActive(item) && "bg-primary-foreground/10"
+                      )}
+                      onClick={() => {
+                        if (hasDropdown) {
+                          setOpenMobileIndex(isOpen ? null : index);
+                        } else if (item.href) {
+                          handleNavigate(item.href);
+                        }
+                      }}
+                    >
+                      {item.label}
+                      {hasDropdown && (
+                        <ChevronDown className={cn("w-4 h-4 transition-transform", isOpen && "rotate-180")} />
+                      )}
+                    </button>
+
+                    {isOpen && (
+                      <div className="pl-4 pb-2 animate-fade-in">
+                        {item.children?.map((child) => (
+                          <a
+                            key={child.href}
+                            href={child.href}
+                            onClick={(e) => { e.preventDefault(); handleNavigate(child.href); }}
+                            className={cn(
+                              "block px-3 py-2.5 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors",
+                              isActive(child.href) && "text-primary-foreground font-semibold underline underline-offset-4"
+                            )}
+                          >
+                            {child.label}
+                          </a>
+                        ))}
+
+                        {item.columns?.map((col) => (
+                          <div key={col.title} className="mt-2">
+                            <p className="px-3 py-1 text-xs font-bold text-primary-foreground/50 uppercase tracking-wider">
+                              {col.title}
+                            </p>
+                            {col.items.map((child) => (
+                              <a
+                                key={child.href}
+                                href={child.href}
+                                onClick={(e) => { e.preventDefault(); handleNavigate(child.href); }}
+                                className={cn(
+                                  "block px-3 py-2 text-primary-foreground/80 hover:text-primary-foreground text-sm transition-colors",
+                                  isActive(child.href) && "text-primary-foreground font-semibold underline underline-offset-4"
+                                )}
+                              >
+                                {child.label}
+                              </a>
+                            ))}
+                          </div>
+                        ))}
+
+                        {item.bottomLink && (
+                          <a
+                            href={item.bottomLink.href}
+                            onClick={(e) => { e.preventDefault(); handleNavigate(item.bottomLink!.href); }}
+                            className="flex items-center gap-1 px-3 py-2.5 text-primary-foreground font-semibold text-sm mt-1"
+                          >
+                            {item.bottomLink.label}
+                            <ChevronRight className="w-3.5 h-3.5" />
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+
+              {/* Phone CTA mobile */}
               <a
-                href="tel:0143722828"
-                className="flex items-center gap-2 text-primary-foreground font-semibold py-2"
+                href="tel:+33144388080"
+                className="flex items-center justify-center gap-2 mx-3 mt-3 bg-primary-foreground text-primary font-bold text-sm px-5 py-3 rounded-full"
               >
                 <Phone className="w-4 h-4" />
-                <span>01 43 72 28 28</span>
+                <span>01 44 38 80 80</span>
               </a>
             </div>
           </nav>
