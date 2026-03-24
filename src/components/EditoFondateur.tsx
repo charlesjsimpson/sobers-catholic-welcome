@@ -36,7 +36,7 @@ const EditoFondateur = () => {
                 </li>
               </ul>
               <p>
-                Vingt-cinq ans plus tard, je rends grâce chaque jour pour la qualité du collectif humain engagé au service des familles endeuillées. Si la mission est exigeante, la reconnaissance que nous témoignent les familles constitue une source inépuisable d'énergie pour continuer à servir.
+                Vingt-cinq ans plus tard, je rends grâce chaque jour pour la qualité du collectif humain engagé que nous formons, au service des familles endeuillées. Si la mission est exigeante, la reconnaissance que nous témoignent les familles constitue une source inépuisable d'énergie pour continuer à servir.
               </p>
             </div>
 
