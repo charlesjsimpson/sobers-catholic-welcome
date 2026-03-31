@@ -62,6 +62,9 @@ const Ressources = () => {
                 {index === 1 && (
                   <img src={radioNotreDame} alt="Dialogue sur la mort - Radio Notre Dame" className="w-full h-48 object-cover" />
                 )}
+                {index === 2 && (
+                  <img src={conversationsMort} alt="Conversations sur la mort, et donc sur la vie" className="w-full h-48 object-cover object-top" />
+                )}
                 <div className="p-6 flex flex-col flex-1">
                 <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit">
                   {item.category}
