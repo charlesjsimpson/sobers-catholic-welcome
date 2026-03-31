@@ -25,6 +25,12 @@ import jbPrimImg from "@/assets/jean-bernard-prim.webp";
 import laureDePierrefeuImg from "@/assets/laure-de-pierrefeu.jpg";
 import lucAdrianImg from "@/assets/luc-adrian.jpg";
 import dominiqueReyreImg from "@/assets/dominique-reyre.jpg";
+import remyNolletImg from "@/assets/remy-nollet.jpg";
+import anneClaireCassanImg from "@/assets/anne-claire-cassan.jpg";
+import mtHermangeImg from "@/assets/marie-therese-hermange.jpg";
+import frederiqueLemarchandImg from "@/assets/frederique-lemarchand.jpg";
+import geraudBurinImg from "@/assets/geraud-burin.jpg";
+import angelinPreljocajImg from "@/assets/angelin-preljocaj.jpg";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
@@ -315,6 +321,54 @@ const emissions = [
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-dominique-reyre",
     image: dominiqueReyreImg,
     keywords: ["vie éternelle", "foi", "espérance", "littérature"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Rémy Nollet",
+    excerpt: "Christian de Cacqueray reçoit Rémy Nollet, colonel de gendarmerie, auteur de \"Face à la mort\".",
+    date: "27 septembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-remy-nollet",
+    image: remyNolletImg,
+    keywords: ["gendarmerie", "témoignage", "mort violente", "résilience"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Anne-Claire Cassan",
+    excerpt: "Christian de Cacqueray reçoit Anne-Claire Cassan, autrice de \"Je me déploierai dans ta faiblesse\" (Artège).",
+    date: "20 septembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-anne-claire-cassan",
+    image: anneClaireCassanImg,
+    keywords: ["foi", "maladie", "témoignage", "espérance"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Marie-Thérèse Hermange",
+    excerpt: "Christian de Cacqueray reçoit Marie-Thérèse Hermange, ancienne sénatrice de Paris, autrice du livre \"Du Mediator au Coronavirus\".",
+    date: "13 septembre 2024",
+    url: "/ressources/emissions/conversation-sur-la-mort-avec-marie-therese-hermange",
+    image: mtHermangeImg,
+    keywords: ["éthique", "politique", "fin de vie", "bioéthique"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Frédérique Lemarchand",
+    excerpt: "Christian de Cacqueray reçoit Frédérique Lemarchand, artiste peintre et sculptrice.",
+    date: "6 septembre 2024",
+    url: "/ressources/emissions/conversation-sur-la-mort-avec-frederique-lemarchand",
+    image: frederiqueLemarchandImg,
+    keywords: ["art", "peinture", "sculpture", "création"],
+  },
+  {
+    title: "Conversation sur la mort, avec Géraud Burin des Roziers",
+    excerpt: "Christian de Cacqueray reçoit Géraud Burin des Roziers, reporter de guerre et réalisateur de documentaires.",
+    date: "18 juin 2024",
+    url: "/ressources/emissions/conversation-sur-la-mort-avec-geraud-burin-des-roziers",
+    image: geraudBurinImg,
+    keywords: ["guerre", "reportage", "documentaire", "témoignage"],
+  },
+  {
+    title: "Conversation sur la mort, avec Angelin Preljocaj",
+    excerpt: "Christian de Cacqueray reçoit Angelin Preljocaj, danseur, chorégraphe, créateur du ballet Requiem(s).",
+    date: "7 juin 2024",
+    url: "/ressources/emissions/conversation-sur-la-mort-avec-angelin-preljocaj",
+    image: angelinPreljocajImg,
+    keywords: ["danse", "chorégraphie", "art", "requiem"],
   },
 ];
 

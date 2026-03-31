@@ -42,6 +42,12 @@ import EmissionJeanBernardPrim from "./pages/EmissionJeanBernardPrim";
 import EmissionLaureDePierrefeu from "./pages/EmissionLaureDePierrefeu";
 import EmissionLucAdrian from "./pages/EmissionLucAdrian";
 import EmissionDominiqueReyre from "./pages/EmissionDominiqueReyre";
+import EmissionRemyNollet from "./pages/EmissionRemyNollet";
+import EmissionAnneClaireCassan from "./pages/EmissionAnneClaireCassan";
+import EmissionMarieThereseHermange from "./pages/EmissionMarieThereseHermange";
+import EmissionFrederiqueLemarchand from "./pages/EmissionFrederiqueLemarchand";
+import EmissionGeraudBurin from "./pages/EmissionGeraudBurin";
+import EmissionAngelinPreljocaj from "./pages/EmissionAngelinPreljocaj";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
@@ -110,6 +116,12 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-laure-de-pierrefeu" element={<EmissionLaureDePierrefeu />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-luc-adrian-journaliste-et-ecrivain" element={<EmissionLucAdrian />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-dominique-reyre" element={<EmissionDominiqueReyre />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-remy-nollet" element={<EmissionRemyNollet />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-anne-claire-cassan" element={<EmissionAnneClaireCassan />} />
+            <Route path="/ressources/emissions/conversation-sur-la-mort-avec-marie-therese-hermange" element={<EmissionMarieThereseHermange />} />
+            <Route path="/ressources/emissions/conversation-sur-la-mort-avec-frederique-lemarchand" element={<EmissionFrederiqueLemarchand />} />
+            <Route path="/ressources/emissions/conversation-sur-la-mort-avec-geraud-burin-des-roziers" element={<EmissionGeraudBurin />} />
+            <Route path="/ressources/emissions/conversation-sur-la-mort-avec-angelin-preljocaj" element={<EmissionAngelinPreljocaj />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
