@@ -84,7 +84,7 @@ const PriereEnfantMortNe = () => {
               <p>Merci à toi d'incarner à jamais l'espérance et de nous inviter à en vivre&nbsp;;</p>
               <p>Espérance d'être un jour réuni dans ce Royaume qui t'est déjà familier.</p>
 
-              <hr className="border-border my-6" />
+              <div className="my-8"><hr className="border-border" /></div>
 
               <h2 className="font-display text-2xl text-foreground">Oraison</h2>
               <p>Seigneur,</p>
