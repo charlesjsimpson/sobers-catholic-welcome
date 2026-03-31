@@ -9,7 +9,7 @@ import mathiasImg from "@/assets/mathias-mlekuz-portrait.webp";
 import philippeImg from "@/assets/philippe-baudasse.jpg";
 import catherineImg from "@/assets/catherine-bossaert.jpeg";
 import thomasImg from "@/assets/thomas-hug-de-larauze.jpg";
-import heleneImg from "@/assets/helene-risser.jpg";
+import heleneImg from "@/assets/helene-risser.webp";
 import elisabethImg from "@/assets/elisabeth-schmitt.jpg";
 import laurentImg from "@/assets/laurent-fremont.png";
 import radioImg from "@/assets/radio-notre-dame.png";
