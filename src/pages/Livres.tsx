@@ -41,14 +41,14 @@ const livres = [
 const Livres = () => {
   useEffect(() => {
     document.title =
-      "Livres – Christian de Cacqueray | Service Catholique des Funérailles";
+      "Livres sur la mort et le deuil – Sélection SCF";
     const meta =
       document.querySelector('meta[name="description"]') ||
       document.createElement("meta");
     meta.setAttribute("name", "description");
     meta.setAttribute(
       "content",
-      "Découvrez les livres de Christian de Cacqueray : Vivre en mortel, Conversations sur la mort, Parcours d'adieux et La mort confisquée."
+      "Découvrez notre sélection de livres pour mieux vivre son deuil et réfléchir à la mort. Des ouvrages choisis par le Service Catholique des Funérailles."
     );
     if (!document.querySelector('meta[name="description"]'))
       document.head.appendChild(meta);
@@ -72,11 +72,10 @@ const Livres = () => {
               Retour à l'accueil
             </Link>
             <h1 className="text-3xl md:text-4xl font-display leading-tight">
-              Livres
+              Livres sur la mort et le deuil : une sélection pour cheminer
             </h1>
-            <p className="text-primary-foreground/70 mt-3 max-w-2xl">
-              Les ouvrages de Christian de Cacqueray sur la mort, les
-              funérailles et le deuil.
+            <p className="text-primary-foreground/70 mt-3 max-w-3xl leading-relaxed">
+              Le Service Catholique des Funérailles a sélectionné des ouvrages de référence pour accompagner ceux qui traversent un deuil, souhaitent réfléchir à leur propre finitude ou cherchent des mots pour consoler un proche. Ces livres, écrits par des auteurs engagés — philosophes, soignants, témoins — offrent des éclairages profonds et accessibles sur notre rapport à la mort.
             </p>
           </div>
         </section>
@@ -111,6 +110,37 @@ const Livres = () => {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-12 md:py-16 bg-secondary">
+          <div className="container mx-auto px-6 max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+              Questions fréquentes sur ces livres
+            </h2>
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Quels livres lire pour traverser un deuil ?</h3>
+                <p className="text-muted-foreground leading-relaxed">Le SCF recommande plusieurs ouvrages pour accompagner le deuil : "Parcours d'adieux, chemins de vie" offre un guide concret pour les proches désemparés, tandis que "Conversations sur la mort, et donc sur la vie" rassemble les témoignages de 24 personnalités sur leur rapport personnel à la mort.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Existe-t-il des livres catholiques sur la mort et le deuil ?</h3>
+                <p className="text-muted-foreground leading-relaxed">Oui. Le Service Catholique des Funérailles propose une sélection d'ouvrages ancrés dans une perspective chrétienne, dont "Vivre en mortel" de Christian de Cacqueray, directeur du SCF, paru aux éditions Salvator.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Qu'est-ce que "La mort confisquée" ?</h3>
+                <p className="text-muted-foreground leading-relaxed">"La mort confisquée" est un livre-cri d'alarme né de dix ans d'expérience dans le secteur funéraire. Il interroge la façon dont notre société contemporaine écarte la mort du champ de la vie ordinaire.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Qui est Christian de Cacqueray ?</h3>
+                <p className="text-muted-foreground leading-relaxed">Christian de Cacqueray est le directeur du Service Catholique des Funérailles. Auteur et animateur de l'émission hebdomadaire "Dialogue sur la mort" sur Radio Notre Dame, il consacre son travail à réconcilier les personnes avec leur condition de mortel.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-foreground mb-2">Comment se procurer ces livres ?</h3>
+                <p className="text-muted-foreground leading-relaxed">Chaque livre référencé sur cette page dispose d'une fiche détaillée accessible en cliquant sur "Découvrir". Vous y trouverez le résumé complet et les informations pour vous le procurer.</p>
+              </div>
             </div>
           </div>
         </section>
