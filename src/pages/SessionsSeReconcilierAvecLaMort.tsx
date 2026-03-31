@@ -100,7 +100,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </ul>
 
             {/* Prochaine session */}
-            <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 mb-5">
+            <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 mb-5 mt-3">
               <h2 className="text-xl font-bold text-foreground mb-3">Prochaine session</h2>
               <div className="flex items-start gap-3">
                 <Calendar className="w-5 h-5 text-primary mt-0.5 shrink-0" />
