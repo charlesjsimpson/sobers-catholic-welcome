@@ -89,7 +89,7 @@ const Livres = () => {
                   key={i}
                   className="group bg-card rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-border"
                 >
-                  <div className="aspect-[3/4] overflow-hidden bg-muted">
+                  <div className="aspect-[3/4] max-h-48 overflow-hidden bg-muted">
                     <img
                       src={livre.image}
                       alt={`Couverture du livre ${livre.title}`}
