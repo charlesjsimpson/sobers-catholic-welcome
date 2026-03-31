@@ -20,7 +20,7 @@ const Index = () => {
         <EditoFondateur />
         <CtaEspritChretien />
         <Demarches />
-        <Actualites />
+        
         <Ressources />
         
       </main>
