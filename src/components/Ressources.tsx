@@ -37,7 +37,8 @@ const Ressources = () => {
               Ressources
             </p>
             <h2 className="section-title">
-              Réfléchir sur son rapport à la mort avec le Service Catholique des Funérailles
+              Réfléchir sur son rapport à la mort<br />
+              avec le Service Catholique des Funérailles
             </h2>
             <p className="section-subtitle mx-auto">
               Nous mettons à votre disposition des ressources pour vous
