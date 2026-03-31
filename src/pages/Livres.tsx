@@ -77,6 +77,10 @@ const Livres = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
+            <div className="flex items-center gap-3 mb-4">
+              <BookOpen className="w-6 h-6 text-primary-foreground/70" />
+              <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+            </div>
             <h1 className="text-3xl md:text-4xl font-display leading-tight">
               Les livres de Christian de Cacqueray sur la mort et le deuil
             </h1>
