@@ -98,7 +98,7 @@ const PriereEnfantMortNe = () => {
               <p>fais-le vivre auprès de toi</p>
               <p>pour les siècles des siècles.</p>
 
-              <hr className="border-border my-6" />
+              <div className="my-8"><hr className="border-border" /></div>
 
               <h2 className="font-display text-2xl text-foreground">Prière</h2>
               <p>Père, nous Te bénissons pour le don de la vie.</p>
