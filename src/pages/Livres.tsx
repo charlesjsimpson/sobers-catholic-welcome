@@ -41,14 +41,14 @@ const livres = [
 const Livres = () => {
   useEffect(() => {
     document.title =
-      "Livres – Christian de Cacqueray | Service Catholique des Funérailles";
+      "Livres sur la mort et le deuil – Sélection SCF";
     const meta =
       document.querySelector('meta[name="description"]') ||
       document.createElement("meta");
     meta.setAttribute("name", "description");
     meta.setAttribute(
       "content",
-      "Découvrez les livres de Christian de Cacqueray : Vivre en mortel, Conversations sur la mort, Parcours d'adieux et La mort confisquée."
+      "Découvrez notre sélection de livres pour mieux vivre son deuil et réfléchir à la mort. Des ouvrages choisis par le Service Catholique des Funérailles."
     );
     if (!document.querySelector('meta[name="description"]'))
       document.head.appendChild(meta);
