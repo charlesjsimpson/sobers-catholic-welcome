@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
 import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
 import mathiasImg from "@/assets/mathias-mlekuz-portrait.webp";
+import philippeImg from "@/assets/philippe-baudasse.jpg";
+import catherineImg from "@/assets/catherine-bossaert.jpeg";
+import radioImg from "@/assets/radio-notre-dame.png";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
@@ -29,6 +32,34 @@ const emissions = [
     date: "12 septembre 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette",
     image: mathiasImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Philippe Baudassé, coach et formateur",
+    excerpt: "Christian de Cacqueray reçoit Philippe Baudassé, coach et formateur, auteur de \"Deuil en nature\".",
+    date: "5 septembre 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-philippe-baudasse-coach-et-formateur",
+    image: philippeImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Emma Joux, psychologue clinicienne à l'AP-HP",
+    excerpt: "Christian de Cacqueray reçoit Emma Joux, psychologue clinicienne, au sein de l'équipe mobile de soins palliatifs de l'AP-HP.",
+    date: "23 mai 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-emma-joux-psychologue-clinicienne-a-lap-hp",
+    image: radioImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Catherine Bossaert, coach certifiée, accompagnante au deuil",
+    excerpt: "Christian de Cacqueray reçoit Catherine Bossaert, cheffe d'accompagnement des blessés de la police nationale, coach certifiée et accompagnante au deuil.",
+    date: "16 mai 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-catherine-bossaert-coach-certifiee-accompagnante-au-deuil",
+    image: catherineImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Marie Tout Court, créatrice de chansons pour patients en fin de vie",
+    excerpt: "Christian de Cacqueray reçoit Marie Tout Court, créatrice de chansons pour patients en fin de vie.",
+    date: "9 mai 2025",
+    url: "/ressources/emissions/marie-tout-court",
+    image: radioImg,
   },
 ];
 

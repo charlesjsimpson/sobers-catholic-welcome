@@ -9,6 +9,10 @@ import ScrollToTop from "./components/ScrollToTop";
 import EmissionEtienneDeVarax from "./pages/EmissionEtienneDeVarax";
 import EmissionGaelLeiblang from "./pages/EmissionGaelLeiblang";
 import EmissionMathiasMlekuz from "./pages/EmissionMathiasMlekuz";
+import EmissionPhilippeBaudasse from "./pages/EmissionPhilippeBaudasse";
+import EmissionEmmaJoux from "./pages/EmissionEmmaJoux";
+import EmissionCatherineBossaert from "./pages/EmissionCatherineBossaert";
+import EmissionMarieToutCourt from "./pages/EmissionMarieToutCourt";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
@@ -44,6 +48,10 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-etienne-de-varax-assistant-funeraire" element={<EmissionEtienneDeVarax />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal" element={<EmissionGaelLeiblang />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette" element={<EmissionMathiasMlekuz />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-philippe-baudasse-coach-et-formateur" element={<EmissionPhilippeBaudasse />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-emma-joux-psychologue-clinicienne-a-lap-hp" element={<EmissionEmmaJoux />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-catherine-bossaert-coach-certifiee-accompagnante-au-deuil" element={<EmissionCatherineBossaert />} />
+            <Route path="/ressources/emissions/marie-tout-court" element={<EmissionMarieToutCourt />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
