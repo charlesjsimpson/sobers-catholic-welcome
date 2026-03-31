@@ -76,17 +76,17 @@ const SessionsSeReconcilierAvecLaMort = () => {
         </section>
 
         {/* Content */}
-        <section className="py-8 md:py-12">
+        <section className="py-6 md:py-8">
           <div className="container mx-auto px-6 max-w-3xl">
-            <p className="text-lg text-foreground leading-relaxed mb-8">
+            <p className="text-lg text-foreground leading-relaxed mb-4">
               Depuis 2019, le Service Catholique des Funérailles propose une session d'une journée pour aider chacun à avancer vers un rapport à la mort plus apaisé. Cette journée de réflexion s'adresse à toute personne souhaitant cheminer dans ses deuils, ses renoncements, et redécouvrir en quoi notre finitude peut être source de sagesse.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl font-bold text-foreground mb-3">
               Une pédagogie fondée sur la parole et l'écoute
             </h2>
 
-            <ul className="space-y-4 mb-8">
+            <ul className="space-y-2 mb-5">
               {[
                 "Avancer vers un rapport à la mort apaisé",
                 "Cheminer dans ses propres deuils et renoncements",
@@ -100,7 +100,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </ul>
 
             {/* Prochaine session */}
-            <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 mb-8">
+            <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 mb-5">
               <h2 className="text-xl font-bold text-foreground mb-4">Prochaine session</h2>
               <div className="flex items-start gap-3">
                 <Calendar className="w-5 h-5 text-primary mt-0.5 shrink-0" />
