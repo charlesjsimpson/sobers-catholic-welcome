@@ -30,6 +30,12 @@ import EmissionPascalDupont from "./pages/EmissionPascalDupont";
 import EmissionVeroniqueSeite from "./pages/EmissionVeroniqueSeite";
 import EmissionPatriciaBlanc from "./pages/EmissionPatriciaBlanc";
 import EmissionAnnaNoziere from "./pages/EmissionAnnaNoziere";
+import EmissionFrereBenjamin from "./pages/EmissionFrereBenjamin";
+import EmissionMaximeBolou from "./pages/EmissionMaximeBolou";
+import EmissionInesDOysonville from "./pages/EmissionInesDOysonville";
+import EmissionEmmanuelleDeBoysson from "./pages/EmissionEmmanuelleDeBoysson";
+import EmissionValerieBruggemann from "./pages/EmissionValerieBruggemann";
+import EmissionBernardCouronne from "./pages/EmissionBernardCouronne";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
@@ -86,6 +92,12 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-veronique-seite-comedienne-clown-en-ehpad" element={<EmissionVeroniqueSeite />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-patricia-blanc-presidente-de-lassociation-imagine-for-margo" element={<EmissionPatriciaBlanc />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-anna-noziere-fondatrice-dune-troupe-de-theatre-et-scenariste" element={<EmissionAnnaNoziere />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-frere-benjamin-pretre-salesien-createur-de-contenu-et-auteur" element={<EmissionFrereBenjamin />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-maxime-bolou-president-de-lassociation-ambulance-des-reves" element={<EmissionMaximeBolou />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-ines-doysonville" element={<EmissionInesDOysonville />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-emmanuelle-de-boysson-autrice" element={<EmissionEmmanuelleDeBoysson />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-valerie-bruggemann" element={<EmissionValerieBruggemann />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-le-p-bernard-couronne" element={<EmissionBernardCouronne />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />

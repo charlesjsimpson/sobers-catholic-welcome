@@ -14,6 +14,11 @@ import elisabethImg from "@/assets/elisabeth-schmitt.jpg";
 import laurentImg from "@/assets/laurent-fremont.png";
 import radioImg from "@/assets/radio-notre-dame.png";
 import marieToutCourtImg from "@/assets/marie-tout-court.jpeg";
+import frereBenjaminImg from "@/assets/frere-benjamin.png";
+import maximeBolouImg from "@/assets/maxime-bolou.jpeg";
+import inesOysonvilleImg from "@/assets/ines-oysonville.jpeg";
+import emmanuelleDeBoryssonImg from "@/assets/emmanuelle-de-boysson.jpeg";
+import valerieBruggemannImg from "@/assets/valerie-bruggemann.png";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
@@ -208,6 +213,54 @@ const emissions = [
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-anna-noziere-fondatrice-dune-troupe-de-theatre-et-scenariste",
     image: radioImg,
     keywords: ["théâtre", "art", "fin de vie", "écriture"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Frère Benjamin, prêtre salésien, créateur de contenu et auteur",
+    excerpt: "Christian de Cacqueray reçoit Frère Benjamin, prêtre salésien, chanteur, créateur de contenu, directeur de collège.",
+    date: "28 décembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-frere-benjamin-pretre-salesien-createur-de-contenu-et-auteur",
+    image: frereBenjaminImg,
+    keywords: ["spiritualité", "réseaux sociaux", "jeunesse", "foi"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Maxime Bolou, président de l'association Ambulance des Rêves",
+    excerpt: "Christian de Cacqueray reçoit Maxime Bolou, ambulancier, fondateur et président de l'association Ambulance des rêves.",
+    date: "20 décembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-maxime-bolou-president-de-lassociation-ambulance-des-reves",
+    image: maximeBolouImg,
+    keywords: ["fin de vie", "accompagnement", "association", "derniers souhaits"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Inès d'Oysonville",
+    excerpt: "Christian de Cacqueray reçoit Inès d'Oysonville, autrice de \"Pour de vrai, c'est quoi la mort\".",
+    date: "13 décembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-ines-doysonville",
+    image: inesOysonvilleImg,
+    keywords: ["enfants", "littérature", "deuil", "éducation"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Emmanuelle de Boysson, autrice",
+    excerpt: "Christian de Cacqueray reçoit Emmanuelle de Boysson, autrice.",
+    date: "1 décembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-emmanuelle-de-boysson-autrice",
+    image: emmanuelleDeBoryssonImg,
+    keywords: ["littérature", "écriture", "deuil", "art"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Valérie Brüggemann, psychopraticienne",
+    excerpt: "Christian de Cacqueray reçoit Valérie Brüggemann, psychopraticienne, animatrice de groupes pour frères et sœurs en deuil.",
+    date: "22 novembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-valerie-bruggemann",
+    image: valerieBruggemannImg,
+    keywords: ["deuil", "fratrie", "psychologie", "accompagnement"],
+  },
+  {
+    title: "Dialogue sur la mort, avec le P. Bernard Couronne",
+    excerpt: "Christian de Cacqueray reçoit le P. Bernard Couronne, père de Picpus.",
+    date: "15 novembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-le-p-bernard-couronne",
+    image: radioImg,
+    keywords: ["spiritualité", "foi", "prière", "espérance"],
   },
 ];
 
