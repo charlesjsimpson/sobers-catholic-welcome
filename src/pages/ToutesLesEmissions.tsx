@@ -25,6 +25,12 @@ import jbPrimImg from "@/assets/jean-bernard-prim.webp";
 import laureDePierrefeuImg from "@/assets/laure-de-pierrefeu.jpg";
 import lucAdrianImg from "@/assets/luc-adrian.jpg";
 import dominiqueReyreImg from "@/assets/dominique-reyre.jpg";
+import remyNolletImg from "@/assets/remy-nollet.jpg";
+import anneClaireCassanImg from "@/assets/anne-claire-cassan.jpg";
+import mtHermangeImg from "@/assets/marie-therese-hermange.jpg";
+import frederiqueLemarchandImg from "@/assets/frederique-lemarchand.jpg";
+import geraudBurinImg from "@/assets/geraud-burin.jpg";
+import angelinPreljocajImg from "@/assets/angelin-preljocaj.jpg";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
