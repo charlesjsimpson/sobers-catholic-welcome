@@ -62,7 +62,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
               <img
                 src={reconcilierMort}
                 alt="Se réconcilier avec la mort"
-                className="w-40 h-40 md:w-52 md:h-52 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+                className="w-48 h-32 md:w-64 md:h-44 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
               />
               <div>
                 <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Session</span>
