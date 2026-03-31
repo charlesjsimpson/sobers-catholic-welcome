@@ -54,6 +54,7 @@ import OrganiserDesObseques from "./pages/OrganiserDesObseques";
 import Prevoyance from "./pages/Prevoyance";
 import Prieres from "./pages/Prieres";
 import PriereEnfantMortNe from "./pages/PriereEnfantMortNe";
+import PriereAdieuAuVisage from "./pages/PriereAdieuAuVisage";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
