@@ -49,11 +49,11 @@ const SessionsSeReconcilierAvecLaMort = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-16">
+        <section className="bg-primary text-primary-foreground py-10">
           <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-4 transition-colors text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
@@ -76,7 +76,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
         </section>
 
         {/* Content */}
-        <section className="py-12 md:py-16">
+        <section className="py-8 md:py-12">
           <div className="container mx-auto px-6 max-w-3xl">
             <p className="text-lg text-foreground leading-relaxed mb-8">
               Depuis 2019, le Service Catholique des Funérailles propose une session d'une journée pour aider chacun à avancer vers un rapport à la mort plus apaisé. Cette journée de réflexion s'adresse à toute personne souhaitant cheminer dans ses deuils, ses renoncements, et redécouvrir en quoi notre finitude peut être source de sagesse.
