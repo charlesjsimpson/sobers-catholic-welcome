@@ -130,7 +130,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </div>
 
             {/* Vidéo */}
-            <div className="mb-5">
+            <div className="mb-10">
               <h3 className="text-xl font-bold text-foreground mb-3">En vidéo</h3>
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
