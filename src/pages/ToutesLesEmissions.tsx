@@ -19,6 +19,12 @@ import maximeBolouImg from "@/assets/maxime-bolou.jpeg";
 import inesOysonvilleImg from "@/assets/ines-oysonville.jpeg";
 import emmanuelleDeBoryssonImg from "@/assets/emmanuelle-de-boysson.jpeg";
 import valerieBruggemannImg from "@/assets/valerie-bruggemann.png";
+import anneFuldaImg from "@/assets/anne-fulda.jpg";
+import nicolasRousselotImg from "@/assets/nicolas-rousselot.jpg";
+import jbPrimImg from "@/assets/jean-bernard-prim.webp";
+import laureDePierrefeuImg from "@/assets/laure-de-pierrefeu.jpg";
+import lucAdrianImg from "@/assets/luc-adrian.jpg";
+import dominiqueReyreImg from "@/assets/dominique-reyre.jpg";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
@@ -261,6 +267,54 @@ const emissions = [
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-le-p-bernard-couronne",
     image: radioImg,
     keywords: ["spiritualité", "foi", "prière", "espérance"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Anne Fulda, journaliste",
+    excerpt: "Christian de Cacqueray reçoit Anne Fulda, journaliste, co-auteur avec Olivier Goy du livre \"Invincible\" (Editions Albin Michel).",
+    date: "8 novembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-anne-fulda-journaliste",
+    image: anneFuldaImg,
+    keywords: ["journalisme", "littérature", "résilience", "espérance"],
+  },
+  {
+    title: "Dialogue sur la mort, avec le Père Nicolas Rousselot sj",
+    excerpt: "Christian de Cacqueray reçoit le Père Nicolas Rousselot sj, chapelain de l'église St-Ignace à Paris.",
+    date: "1 novembre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-le-pere-nicolas-rousselot-sj",
+    image: nicolasRousselotImg,
+    keywords: ["spiritualité", "jésuites", "foi", "accompagnement"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Jean-Bernard Prim (Alliance Siméon)",
+    excerpt: "Christian de Cacqueray reçoit Jean-Bernard Prim, délégué général de l'Alliance Siméon, regroupement d'EHPAD d'inspiration chrétienne.",
+    date: "26 octobre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-jean-bernard-prim-alliance-simeon",
+    image: jbPrimImg,
+    keywords: ["Ehpad", "personnes âgées", "fin de vie", "accompagnement"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Laure de Pierrefeu",
+    excerpt: "Christian de Cacqueray reçoit Laure de Pierrefeu, autrice de L'écharpe oubliée (Editions City).",
+    date: "19 octobre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-laure-de-pierrefeu",
+    image: laureDePierrefeuImg,
+    keywords: ["littérature", "deuil", "écriture", "mémoire"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Luc Adrian, journaliste et écrivain",
+    excerpt: "Christian de Cacqueray reçoit Luc Adrian, journaliste et écrivain, auteur de \"François d'Assise : le soleil levant\".",
+    date: "14 octobre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-luc-adrian-journaliste-et-ecrivain",
+    image: lucAdrianImg,
+    keywords: ["littérature", "spiritualité", "François d'Assise", "foi"],
+  },
+  {
+    title: "Dialogue sur la mort, avec Dominique Reyre",
+    excerpt: "Christian de Cacqueray reçoit Dominique Reyre, autrice de \"Oui, la vie éternelle existe\" (Mame).",
+    date: "4 octobre 2024",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-dominique-reyre",
+    image: dominiqueReyreImg,
+    keywords: ["vie éternelle", "foi", "espérance", "littérature"],
   },
 ];
 
