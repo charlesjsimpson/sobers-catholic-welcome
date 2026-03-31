@@ -58,18 +58,27 @@ const SessionsSeReconcilierAvecLaMort = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex items-center gap-3 text-primary-foreground/70 text-sm mb-4">
-              <span className="bg-primary-foreground/20 px-3 py-1 rounded-full font-semibold">
-                Session
-              </span>
-              <span className="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5" />
-                31 mars 2026
-              </span>
+            <div className="flex items-start gap-8">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 text-primary-foreground/70 text-sm mb-4">
+                  <span className="bg-primary-foreground/20 px-3 py-1 rounded-full font-semibold">
+                    Session
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5" />
+                    31 mars 2026
+                  </span>
+                </div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
+                  Se réconcilier avec la mort : une journée pour apprivoiser sa finitude
+                </h1>
+              </div>
+              <img
+                src={reconcilierMort}
+                alt="Se réconcilier avec la mort"
+                className="hidden sm:block w-48 h-32 md:w-64 md:h-44 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+              />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              Se réconcilier avec la mort : une journée pour apprivoiser sa finitude
-            </h1>
           </div>
         </section>
 
