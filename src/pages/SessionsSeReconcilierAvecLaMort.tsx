@@ -77,7 +77,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
 
         {/* Content */}
         <section className="py-6 md:py-8">
-          <div className="container mx-auto px-6 max-w-3xl">
+          <div className="container mx-auto px-6 max-w-3xl text-justify">
             <p className="text-lg text-foreground leading-relaxed mb-4">
               Depuis 2019, le Service Catholique des Funérailles propose une session d'une journée pour aider chacun à avancer vers un rapport à la mort plus apaisé. Cette journée de réflexion s'adresse à toute personne souhaitant cheminer dans ses deuils, ses renoncements, et redécouvrir en quoi notre finitude peut être source de sagesse.
             </p>
