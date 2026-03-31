@@ -72,11 +72,10 @@ const Livres = () => {
               Retour à l'accueil
             </Link>
             <h1 className="text-3xl md:text-4xl font-display leading-tight">
-              Livres
+              Livres sur la mort et le deuil : une sélection pour cheminer
             </h1>
-            <p className="text-primary-foreground/70 mt-3 max-w-2xl">
-              Les ouvrages de Christian de Cacqueray sur la mort, les
-              funérailles et le deuil.
+            <p className="text-primary-foreground/70 mt-3 max-w-3xl leading-relaxed">
+              Le Service Catholique des Funérailles a sélectionné des ouvrages de référence pour accompagner ceux qui traversent un deuil, souhaitent réfléchir à leur propre finitude ou cherchent des mots pour consoler un proche. Ces livres, écrits par des auteurs engagés — philosophes, soignants, témoins — offrent des éclairages profonds et accessibles sur notre rapport à la mort.
             </p>
           </div>
         </section>
