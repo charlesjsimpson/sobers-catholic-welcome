@@ -71,40 +71,22 @@ const PriereEnfantMortNe = () => {
               />
             </div>
 
-            <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-8">
+            <div className="prose prose-lg max-w-none text-foreground leading-snug space-y-1">
               <p className="italic text-muted-foreground font-display text-xl">
                 <strong>[prénom du défunt]</strong>,
               </p>
+              <p>Petite comète dans le ciel de tes parents,</p>
+              <p>Tu as pris un élan, celui d'une promesse de vie.</p>
+              <p>Et si maintenant cette promesse est cruellement déçue,</p>
+              <p>Il reste l'attachement que tu as fait naître dans l'attente.</p>
+              <p>Tu resteras promesse, et celle-ci, au-delà de la souffrance, devient déjà protectrice.</p>
+              <p>Oui <strong>[prénom du défunt]</strong>, veille sur chacun des membres de ta famille terrestre, jusqu'au jour où cette communion deviendra plus forte en Dieu.</p>
+              <p>Merci à toi d'incarner à jamais l'espérance et de nous inviter à en vivre&nbsp;;</p>
+              <p>Espérance d'être un jour réuni dans ce Royaume qui t'est déjà familier.</p>
 
-              <p>
-                Petite comète dans le ciel de tes parents,
-              </p>
-              <p>
-                Tu as pris un élan, celui d'une promesse de vie.
-              </p>
-              <p>
-                Et si maintenant cette promesse est cruellement déçue,
-              </p>
-              <p>
-                Il reste l'attachement que tu as fait naître dans l'attente.
-              </p>
-              <p>
-                Tu resteras promesse, et celle-ci, au-delà de la souffrance, devient déjà protectrice.
-              </p>
-              <p>
-                Oui <strong>[prénom du défunt]</strong>, veille sur chacun des membres de ta famille terrestre, jusqu'au jour où cette communion deviendra plus forte en Dieu.
-              </p>
-              <p>
-                Merci à toi d'incarner à jamais l'espérance et de nous inviter à en vivre&nbsp;;
-              </p>
-              <p>
-                Espérance d'être un jour réuni dans ce Royaume qui t'est déjà familier.
-              </p>
-
-              <hr className="border-border my-10" />
+              <hr className="border-border my-6" />
 
               <h2 className="font-display text-2xl text-foreground">Oraison</h2>
-
               <p>Seigneur,</p>
               <p>tu seras seul à connaître vivant</p>
               <p><strong>[prénom du défunt]</strong>, que la mort nous arrache à sa naissance.</p>
@@ -116,32 +98,17 @@ const PriereEnfantMortNe = () => {
               <p>fais-le vivre auprès de toi</p>
               <p>pour les siècles des siècles.</p>
 
-              <hr className="border-border my-10" />
+              <hr className="border-border my-6" />
 
               <h2 className="font-display text-2xl text-foreground">Prière</h2>
-
               <p>Père, nous Te bénissons pour le don de la vie.</p>
-              <p>
-                Nous savons que <strong>[prénom du défunt]</strong> a été créé par Ton Amour pour une vie entière d'Amour.
-              </p>
-              <p>
-                Aujourd'hui, nous venons déposer <strong>[prénom du défunt]</strong>, dont la vie s'est arrêtée de façon prématurée, dans ce caveau de sa famille…
-              </p>
-              <p>
-                Nous savons que Tu es le Dieu de la Vie et que tous Tes projets ne sont que des projets de Vie.
-              </p>
-              <p>
-                C'est pourquoi, Père, nous te prions en ce jour d'accueillir ton enfant auprès de toi et de ton Fils Jésus-Christ qui a triomphé de la mort.
-              </p>
-              <p>
-                <strong>[prénom du défunt]</strong>, nous croyons qu'aujourd'hui tu es dans la Lumière et dans la Paix.
-              </p>
-              <p>
-                Au soir de la vie, ceux qui t'aiment sans t'avoir vu, te retrouveront.
-              </p>
-              <p>
-                Pour l'heure, c'est le temps pour chacun de continuer sa route, accompagné de l'Amour de notre Père.
-              </p>
+              <p>Nous savons que <strong>[prénom du défunt]</strong> a été créé par Ton Amour pour une vie entière d'Amour.</p>
+              <p>Aujourd'hui, nous venons déposer <strong>[prénom du défunt]</strong>, dont la vie s'est arrêtée de façon prématurée, dans ce caveau de sa famille…</p>
+              <p>Nous savons que Tu es le Dieu de la Vie et que tous Tes projets ne sont que des projets de Vie.</p>
+              <p>C'est pourquoi, Père, nous te prions en ce jour d'accueillir ton enfant auprès de toi et de ton Fils Jésus-Christ qui a triomphé de la mort.</p>
+              <p><strong>[prénom du défunt]</strong>, nous croyons qu'aujourd'hui tu es dans la Lumière et dans la Paix.</p>
+              <p>Au soir de la vie, ceux qui t'aiment sans t'avoir vu, te retrouveront.</p>
+              <p>Pour l'heure, c'est le temps pour chacun de continuer sa route, accompagné de l'Amour de notre Père.</p>
               <p className="font-semibold text-primary">Amen.</p>
             </div>
           </div>
