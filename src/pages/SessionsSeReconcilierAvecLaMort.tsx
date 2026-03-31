@@ -161,8 +161,9 @@ const SessionsSeReconcilierAvecLaMort = () => {
                 ))}
               </Accordion>
             </div>
+            </div>
           </div>
-        </section>
+        </article>
       </main>
       <Footer />
     </div>
