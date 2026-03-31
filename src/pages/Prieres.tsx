@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 const prieres = [
   {
-    title: "Prière pour un enfant mort-né",
+    title: "Prière pour un enfant mort‑né",
     excerpt: "Prière pour un bébé né sans vie",
     image: "https://s-c-f.org/wp-content/uploads/2024/02/hands-1926414_1280.jpg",
     href: "/ressources/prieres/priere-pour-un-enfant-mort-ne",
