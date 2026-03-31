@@ -32,8 +32,17 @@ import frederiqueLemarchandImg from "@/assets/frederique-lemarchand.jpg";
 import geraudBurinImg from "@/assets/geraud-burin.jpg";
 import angelinPreljocajImg from "@/assets/angelin-preljocaj.jpg";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
+import delphinePajotImg from "@/assets/delphine-pajot.jpeg";
 
 const emissions = [
+  {
+    title: "Dialogue sur la mort, avec Delphine Pajot, au service des personnes en situation de veuvage précoce",
+    excerpt: "Elle-même veuve par deux fois, Delphine Pajot organise des week-ends de retraite dédiés aux personnes qui, comme elle, connaissent l'épreuve du veuvage précoce.",
+    date: "3 octobre 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-delphine-pajot-au-service-des-personnes-en-situation-de-veuvage-precoce",
+    image: delphinePajotImg,
+    keywords: ["veuvage", "retraite", "accompagnement", "deuil"],
+  },
   {
     title: "Dialogue sur la mort, avec Gaël Leiblang, réalisateur d'un seul-en-scène sur le deuil périnatal",
     excerpt: "Christian de Cacqueray reçoit Gaël Leiblang, auteur du seul-en-scène autobiographique \"Tu seras un homme Papa\", un témoignage poignant sur le deuil périnatal.",

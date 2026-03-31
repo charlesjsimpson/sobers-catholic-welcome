@@ -48,6 +48,7 @@ import EmissionMarieThereseHermange from "./pages/EmissionMarieThereseHermange";
 import EmissionFrederiqueLemarchand from "./pages/EmissionFrederiqueLemarchand";
 import EmissionGeraudBurin from "./pages/EmissionGeraudBurin";
 import EmissionAngelinPreljocaj from "./pages/EmissionAngelinPreljocaj";
+import EmissionDelphinePajot from "./pages/EmissionDelphinePajot";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
@@ -83,6 +84,7 @@ const App = () => (
           <Routes>
             {/* Public routes */}
             <Route path="/" element={<Index />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-delphine-pajot-au-service-des-personnes-en-situation-de-veuvage-precoce" element={<EmissionDelphinePajot />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-etienne-de-varax-assistant-funeraire" element={<EmissionEtienneDeVarax />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal" element={<EmissionGaelLeiblang />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette" element={<EmissionMathiasMlekuz />} />
