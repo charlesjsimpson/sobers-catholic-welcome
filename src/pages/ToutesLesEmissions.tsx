@@ -13,6 +13,7 @@ import heleneImg from "@/assets/helene-risser.webp";
 import elisabethImg from "@/assets/elisabeth-schmitt.jpg";
 import laurentImg from "@/assets/laurent-fremont.png";
 import radioImg from "@/assets/radio-notre-dame.png";
+import marieToutCourtImg from "@/assets/marie-tout-court.jpeg";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
@@ -69,7 +70,7 @@ const emissions = [
     excerpt: "Christian de Cacqueray reçoit Marie Tout Court, créatrice de chansons pour patients en fin de vie.",
     date: "9 mai 2025",
     url: "/ressources/emissions/marie-tout-court",
-    image: radioImg,
+    image: marieToutCourtImg,
     keywords: ["musique", "fin de vie", "art", "accompagnement"],
   },
   {

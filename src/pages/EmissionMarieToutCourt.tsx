@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PodcastImagePlayer from "@/components/PodcastImagePlayer";
-import radioImg from "@/assets/radio-notre-dame.png";
+import marieToutCourtImg from "@/assets/marie-tout-court.jpeg";
 
 const EmissionMarieToutCourt = () => {
   useEffect(() => {
@@ -47,7 +47,7 @@ const EmissionMarieToutCourt = () => {
         <article className="py-16">
           <div className="container mx-auto px-6 max-w-3xl">
             <PodcastImagePlayer
-              src={radioImg}
+              src={marieToutCourtImg}
               alt="Dialogue sur la mort – Radio Notre Dame"
               audioUrl="https://s-c-f.org/wp-content/uploads/2025/05/conversationmort_20250509.mp3"
             />
