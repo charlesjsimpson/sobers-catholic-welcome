@@ -68,6 +68,12 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-elisabeth-schmitt-mere-danne-lorraine-schmitt" element={<EmissionElisabethSchmitt />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-laurent-fremont-cofondateur-du-collectif-tenir-ta-main" element={<EmissionLaurentFremont />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-yvonne-sand-responsable-de-chambre-mortuaire" element={<EmissionYvonneSand />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-gregoire-lecalot-journaliste" element={<EmissionGregoireLecalot />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-sandra-meunier-art-therapeute" element={<EmissionSandraMeunier />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-suzanne-tartiere-medecin-anesthesiste-reanimateur" element={<EmissionSuzanneTartiere />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-tanguy-chatel-sociologue" element={<EmissionTanguyChatel />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-marion-waller" element={<EmissionMarionWaller />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-juliette-cazes" element={<EmissionJulietteCazes />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
