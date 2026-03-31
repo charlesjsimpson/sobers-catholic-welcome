@@ -104,6 +104,12 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-emmanuelle-de-boysson-autrice" element={<EmissionEmmanuelleDeBoysson />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-valerie-bruggemann" element={<EmissionValerieBruggemann />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-le-p-bernard-couronne" element={<EmissionBernardCouronne />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-anne-fulda-journaliste" element={<EmissionAnneFulda />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-le-pere-nicolas-rousselot-sj" element={<EmissionNicolasRousselot />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-jean-bernard-prim-alliance-simeon" element={<EmissionJeanBernardPrim />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-laure-de-pierrefeu" element={<EmissionLaureDePierrefeu />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-luc-adrian-journaliste-et-ecrivain" element={<EmissionLucAdrian />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-dominique-reyre" element={<EmissionDominiqueReyre />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
