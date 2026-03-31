@@ -49,29 +49,22 @@ const SessionsSeReconcilierAvecLaMort = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-16">
-          <div className="container mx-auto px-6 max-w-3xl">
+        <section className="bg-primary text-primary-foreground py-10">
+          <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-4 transition-colors text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
             <div className="flex items-start gap-8">
               <div className="flex-1">
-                <div className="flex items-center gap-3 text-primary-foreground/70 text-sm mb-4">
-                  <span className="bg-primary-foreground/20 px-3 py-1 rounded-full font-semibold">
-                    Session
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5" />
-                    31 mars 2026
-                  </span>
-                </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-                  Se réconcilier avec la mort : une journée pour apprivoiser sa finitude
+                <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Session</span>
+                <h1 className="text-2xl md:text-3xl font-display leading-tight mt-3">
+                  Se réconcilier avec la mort : une journée<br />pour apprivoiser sa finitude
                 </h1>
+                <p className="text-primary-foreground/70 text-sm mt-2">31/03/2026</p>
               </div>
               <img
                 src={reconcilierMort}
@@ -83,10 +76,9 @@ const SessionsSeReconcilierAvecLaMort = () => {
         </section>
 
         {/* Content */}
-        <article className="py-16">
-          <div className="container mx-auto px-6 max-w-3xl">
-            <div className="prose prose-lg max-w-none text-foreground [&>p]:mb-4 [&>p]:mt-0 [&>ul]:mb-4">
-            <p>
+        <section className="py-6 md:py-8">
+          <div className="container mx-auto px-6 max-w-3xl text-justify">
+            <p className="text-lg text-foreground leading-snug mb-6">
               Depuis 2019, le Service Catholique des Funérailles propose une session d'une journée pour aider chacun à avancer vers un rapport à la mort plus apaisé. Cette journée de réflexion s'adresse à toute personne souhaitant cheminer dans ses deuils, ses renoncements, et redécouvrir en quoi notre finitude peut être source de sagesse.
             </p>
 
@@ -132,7 +124,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </div>
 
             {/* Vidéo */}
-            <div className="mb-10">
+            <div className="mb-5">
               <h3 className="text-xl font-bold text-foreground mb-3">En vidéo</h3>
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
@@ -163,9 +155,8 @@ const SessionsSeReconcilierAvecLaMort = () => {
                 ))}
               </Accordion>
             </div>
-            </div>
           </div>
-        </article>
+        </section>
       </main>
       <Footer />
     </div>
