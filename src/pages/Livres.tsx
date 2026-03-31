@@ -126,23 +126,30 @@ const Livres = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
               Questions fréquentes
             </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Qui est Christian de Cacqueray ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Christian de Cacqueray est le fondateur et directeur du Service Catholique des Funérailles, réseau de pompes funèbres catholiques présent dans 11 villes en France. Auteur de plusieurs livres sur la mort et le deuil, il anime également l'émission hebdomadaire "Dialogue sur la mort" sur Radio Notre Dame.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Quels livres a écrit Christian de Cacqueray ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Christian de Cacqueray a publié plusieurs ouvrages sur la mort et le deuil : "Vivre en mortel" (Salvator, 2021), "Conversations sur la mort, et donc sur la vie", "Parcours d'adieux, chemins de vie" et "La mort confisquée", fruit de dix ans d'expérience dans le secteur funéraire.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Sur quels sujets écrit Christian de Cacqueray ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Ses livres abordent la mort sous plusieurs angles : l'accompagnement des proches en deuil, notre difficulté collective à regarder la mort en face, et la façon dont accepter sa finitude peut transformer positivement notre rapport à la vie.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Où acheter les livres de Christian de Cacqueray ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Chaque ouvrage dispose d'une fiche détaillée sur cette page. Cliquez sur "Découvrir" pour accéder au résumé complet et aux informations d'achat.</p>
-              </div>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="faq-1">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Qui est Christian de Cacqueray ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Christian de Cacqueray est le fondateur et directeur du Service Catholique des Funérailles, réseau de pompes funèbres catholiques présent dans 11 villes en France. Auteur de plusieurs livres sur la mort et le deuil, il anime également l'émission hebdomadaire "Dialogue sur la mort" sur Radio Notre Dame.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-2">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Quels livres a écrit Christian de Cacqueray ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Christian de Cacqueray a publié plusieurs ouvrages sur la mort et le deuil : "Vivre en mortel" (Salvator, 2021), "Conversations sur la mort, et donc sur la vie", "Parcours d'adieux, chemins de vie" et "La mort confisquée", fruit de dix ans d'expérience dans le secteur funéraire.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-3">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Sur quels sujets écrit Christian de Cacqueray ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Ses livres abordent la mort sous plusieurs angles : l'accompagnement des proches en deuil, notre difficulté collective à regarder la mort en face, et la façon dont accepter sa finitude peut transformer positivement notre rapport à la vie.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-4">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Où acheter les livres de Christian de Cacqueray ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Chaque ouvrage dispose d'une fiche détaillée sur cette page. Cliquez sur "Découvrir" pour accéder au résumé complet et aux informations d'achat.</AccordionContent>
+              </AccordionItem>
+            </Accordion>
+            {/* SEO: contenu FAQ visible par les crawlers mais masqué visuellement */}
+            <div className="sr-only" aria-hidden="true">
+              <p>Qui est Christian de Cacqueray ? Christian de Cacqueray est le fondateur et directeur du Service Catholique des Funérailles, réseau de pompes funèbres catholiques présent dans 11 villes en France. Auteur de plusieurs livres sur la mort et le deuil, il anime également l'émission hebdomadaire "Dialogue sur la mort" sur Radio Notre Dame.</p>
+              <p>Quels livres a écrit Christian de Cacqueray ? Christian de Cacqueray a publié plusieurs ouvrages sur la mort et le deuil : "Vivre en mortel" (Salvator, 2021), "Conversations sur la mort, et donc sur la vie", "Parcours d'adieux, chemins de vie" et "La mort confisquée", fruit de dix ans d'expérience dans le secteur funéraire.</p>
+              <p>Sur quels sujets écrit Christian de Cacqueray ? Ses livres abordent la mort sous plusieurs angles : l'accompagnement des proches en deuil, notre difficulté collective à regarder la mort en face, et la façon dont accepter sa finitude peut transformer positivement notre rapport à la vie.</p>
+              <p>Où acheter les livres de Christian de Cacqueray ? Chaque ouvrage dispose d'une fiche détaillée sur cette page. Cliquez sur "Découvrir" pour accéder au résumé complet et aux informations d'achat.</p>
             </div>
           </div>
         </section>
