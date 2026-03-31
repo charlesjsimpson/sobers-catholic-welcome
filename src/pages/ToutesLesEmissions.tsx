@@ -69,7 +69,7 @@ const emissions = [
     excerpt: "Christian de Cacqueray reçoit Marie Tout Court, créatrice de chansons pour patients en fin de vie.",
     date: "9 mai 2025",
     url: "/ressources/emissions/marie-tout-court",
-    image: radioImg,
+    image: marieToutCourtImg,
     keywords: ["musique", "fin de vie", "art", "accompagnement"],
   },
   {

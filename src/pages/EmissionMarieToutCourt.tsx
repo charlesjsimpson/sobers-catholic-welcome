@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PodcastImagePlayer from "@/components/PodcastImagePlayer";
-import radioImg from "@/assets/radio-notre-dame.png";
+import marieToutCourtImg from "@/assets/marie-tout-court.jpeg";
 
 const EmissionMarieToutCourt = () => {
   useEffect(() => {
