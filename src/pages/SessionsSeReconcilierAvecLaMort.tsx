@@ -101,16 +101,16 @@ const SessionsSeReconcilierAvecLaMort = () => {
 
             {/* Prochaine session */}
             <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 mb-5">
-              <h2 className="text-xl font-bold text-foreground mb-4">Prochaine session</h2>
+              <h2 className="text-xl font-bold text-foreground mb-3">Prochaine session</h2>
               <div className="flex items-start gap-3">
                 <Calendar className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <p className="text-foreground">Mardi 24 novembre 2026 – Mouvaux (59)</p>
               </div>
-              <p className="text-muted-foreground text-sm mt-4 flex items-center gap-2">
+              <p className="text-muted-foreground text-sm mt-3 flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 Renseignements et inscriptions : 07 82 57 26 72
               </p>
-              <p className="mt-3">
+              <p className="mt-2">
                 <a
                   href="http://www.billetweb.fr/sereconcilieraveclamort"
                   target="_blank"
@@ -124,8 +124,8 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </div>
 
             {/* Vidéo */}
-            <div className="mb-8">
-              <h3 className="text-xl font-bold text-foreground mb-4">En vidéo</h3>
+            <div className="mb-5">
+              <h3 className="text-xl font-bold text-foreground mb-3">En vidéo</h3>
               <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                 <iframe
                   src="https://www.youtube.com/embed/QmRIPiB1ORk"
