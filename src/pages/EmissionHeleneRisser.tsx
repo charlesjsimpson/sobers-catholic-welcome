@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PodcastImagePlayer from "@/components/PodcastImagePlayer";
-import heleneImg from "@/assets/helene-risser.jpg";
+import heleneImg from "@/assets/helene-risser.webp";
 
 const EmissionHeleneRisser = () => {
   useEffect(() => {
