@@ -13,6 +13,11 @@ import EmissionPhilippeBaudasse from "./pages/EmissionPhilippeBaudasse";
 import EmissionEmmaJoux from "./pages/EmissionEmmaJoux";
 import EmissionCatherineBossaert from "./pages/EmissionCatherineBossaert";
 import EmissionMarieToutCourt from "./pages/EmissionMarieToutCourt";
+import EmissionThomasHugDeLarauze from "./pages/EmissionThomasHugDeLarauze";
+import EmissionHeleneRisser from "./pages/EmissionHeleneRisser";
+import EmissionElisabethSchmitt from "./pages/EmissionElisabethSchmitt";
+import EmissionLaurentFremont from "./pages/EmissionLaurentFremont";
+import EmissionYvonneSand from "./pages/EmissionYvonneSand";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
@@ -52,6 +57,11 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-emma-joux-psychologue-clinicienne-a-lap-hp" element={<EmissionEmmaJoux />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-catherine-bossaert-coach-certifiee-accompagnante-au-deuil" element={<EmissionCatherineBossaert />} />
             <Route path="/ressources/emissions/marie-tout-court" element={<EmissionMarieToutCourt />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-thomas-hug-de-larauze-realisateur-du-film-promesse" element={<EmissionThomasHugDeLarauze />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-helene-risser-journaliste-autrice-de-apres-arthaud" element={<EmissionHeleneRisser />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-elisabeth-schmitt-mere-danne-lorraine-schmitt" element={<EmissionElisabethSchmitt />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-laurent-fremont-cofondateur-du-collectif-tenir-ta-main" element={<EmissionLaurentFremont />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-yvonne-sand-responsable-de-chambre-mortuaire" element={<EmissionYvonneSand />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />

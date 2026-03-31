@@ -8,6 +8,10 @@ import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
 import mathiasImg from "@/assets/mathias-mlekuz-portrait.webp";
 import philippeImg from "@/assets/philippe-baudasse.jpg";
 import catherineImg from "@/assets/catherine-bossaert.jpeg";
+import thomasImg from "@/assets/thomas-hug-de-larauze.jpg";
+import heleneImg from "@/assets/helene-risser.jpg";
+import elisabethImg from "@/assets/elisabeth-schmitt.jpg";
+import laurentImg from "@/assets/laurent-fremont.png";
 import radioImg from "@/assets/radio-notre-dame.png";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
@@ -59,6 +63,41 @@ const emissions = [
     excerpt: "Christian de Cacqueray reçoit Marie Tout Court, créatrice de chansons pour patients en fin de vie.",
     date: "9 mai 2025",
     url: "/ressources/emissions/marie-tout-court",
+    image: radioImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Thomas Hug de Larauze, réalisateur du film Promesse",
+    excerpt: "Christian de Cacqueray reçoit Thomas Hug de Larauze, réalisateur du film Promesse.",
+    date: "2 mai 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-thomas-hug-de-larauze-realisateur-du-film-promesse",
+    image: thomasImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Hélène Risser, journaliste, autrice de \"Après Arthaud\"",
+    excerpt: "Christian de Cacqueray reçoit Hélène Risser, journaliste et autrice de \"Après Arthaud\".",
+    date: "25 avril 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-helene-risser-journaliste-autrice-de-apres-arthaud",
+    image: heleneImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Elisabeth Schmitt, mère d'Anne-Lorraine Schmitt",
+    excerpt: "Christian de Cacqueray reçoit Elisabeth Schmitt, mère d'Anne-Lorraine Schmitt, pour un témoignage sur le deuil d'un enfant.",
+    date: "11 avril 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-elisabeth-schmitt-mere-danne-lorraine-schmitt",
+    image: elisabethImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Laurent Frémont, cofondateur du collectif \"Tenir ta main\"",
+    excerpt: "Christian de Cacqueray reçoit Laurent Frémont, cofondateur du collectif \"Tenir ta main\", engagé pour l'accompagnement des personnes en fin de vie.",
+    date: "4 avril 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-laurent-fremont-cofondateur-du-collectif-tenir-ta-main",
+    image: laurentImg,
+  },
+  {
+    title: "Dialogue sur la mort, avec Yvonne Sand, responsable de chambre mortuaire",
+    excerpt: "Christian de Cacqueray reçoit Yvonne Sand, responsable de chambre mortuaire.",
+    date: "28 mars 2025",
+    url: "/ressources/emissions/dialogue-sur-la-mort-avec-yvonne-sand-responsable-de-chambre-mortuaire",
     image: radioImg,
   },
 ];
