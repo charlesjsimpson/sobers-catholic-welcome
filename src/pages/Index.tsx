@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Actualites from "@/components/Actualites";
 import ParcoursObseques from "@/components/ParcoursObseques";
 import Demarches from "@/components/Demarches";
 import CtaEspritChretien from "@/components/CtaEspritChretien";
@@ -21,7 +20,7 @@ const Index = () => {
         <EditoFondateur />
         <CtaEspritChretien />
         <Demarches />
-        <Actualites />
+        
         <Ressources />
         
       </main>
