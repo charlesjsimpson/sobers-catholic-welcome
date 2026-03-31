@@ -47,7 +47,7 @@ const EmissionMarieToutCourt = () => {
         <article className="py-16">
           <div className="container mx-auto px-6 max-w-3xl">
             <PodcastImagePlayer
-              src={radioImg}
+              src={marieToutCourtImg}
               alt="Dialogue sur la mort – Radio Notre Dame"
               audioUrl="https://s-c-f.org/wp-content/uploads/2025/05/conversationmort_20250509.mp3"
             />

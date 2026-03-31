@@ -13,6 +13,7 @@ import heleneImg from "@/assets/helene-risser.webp";
 import elisabethImg from "@/assets/elisabeth-schmitt.jpg";
 import laurentImg from "@/assets/laurent-fremont.png";
 import radioImg from "@/assets/radio-notre-dame.png";
+import marieToutCourtImg from "@/assets/marie-tout-court.jpeg";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
