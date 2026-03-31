@@ -231,22 +231,6 @@ const ToutesLesEmissions = () => {
               )}
             </div>
 
-            {/* Keyword chips */}
-            <div className="flex flex-wrap gap-2 mt-4">
-              {allKeywords.map((kw) => (
-                <button
-                  key={kw}
-                  onClick={() => setActiveKeyword(activeKeyword === kw ? null : kw)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
-                    activeKeyword === kw
-                      ? "bg-primary text-primary-foreground shadow-sm"
-                      : "bg-secondary text-muted-foreground hover:bg-primary/10 hover:text-primary"
-                  }`}
-                >
-                  {kw}
-                </button>
-              ))}
-            </div>
           </div>
         </section>
 
