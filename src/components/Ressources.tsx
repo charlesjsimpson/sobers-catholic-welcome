@@ -13,7 +13,7 @@ const ressources = [
     href: "/contacter-une-agence",
   },
   {
-    category: "Ressource",
+    category: "Émission de radio",
     title:
       "Dialogue sur la mort : une émission hebdomadaire sur Radio Notre Dame - RCF",
     excerpt:
