@@ -411,11 +411,11 @@ const ToutesLesEmissions = () => {
                     to={emission.url}
                     className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-col sm:flex-row"
                   >
-                    <div className="sm:w-64 h-48 sm:h-44 shrink-0 overflow-hidden">
+                    <div className="sm:w-64 shrink-0 aspect-[3/2] sm:aspect-auto overflow-hidden">
                       <img
                         src={emission.image}
                         alt={emission.title}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         loading="lazy"
                       />
                     </div>
