@@ -52,6 +52,7 @@ import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
 import Prevoyance from "./pages/Prevoyance";
+import Prieres from "./pages/Prieres";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
@@ -123,6 +124,7 @@ const App = () => (
             <Route path="/ressources/emissions/conversation-sur-la-mort-avec-geraud-burin-des-roziers" element={<EmissionGeraudBurin />} />
             <Route path="/ressources/emissions/conversation-sur-la-mort-avec-angelin-preljocaj" element={<EmissionAngelinPreljocaj />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
+            <Route path="/ressources/prieres" element={<Prieres />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
             <Route path="/services/prevoyance" element={<Prevoyance />} />
