@@ -100,13 +100,13 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </ul>
 
             {/* Prochaine session */}
-            <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 mb-5 mt-3">
+            <div className="bg-accent/5 border border-accent/20 rounded-xl p-5 mb-5 mt-6 text-center">
               <h2 className="text-xl font-bold text-foreground mb-3">Prochaine session</h2>
-              <div className="flex items-start gap-3">
-                <Calendar className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+              <div className="flex items-center justify-center gap-3">
+                <Calendar className="w-5 h-5 text-primary shrink-0" />
                 <p className="text-foreground">Mardi 24 novembre 2026 – Mouvaux (59)</p>
               </div>
-              <p className="text-muted-foreground text-sm mt-3 flex items-center gap-2">
+              <p className="text-muted-foreground text-sm mt-3 flex items-center justify-center gap-2">
                 <Phone className="w-4 h-4" />
                 Renseignements et inscriptions : 07 82 57 26 72
               </p>
