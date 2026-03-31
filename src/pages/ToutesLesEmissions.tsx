@@ -14,6 +14,11 @@ import elisabethImg from "@/assets/elisabeth-schmitt.jpg";
 import laurentImg from "@/assets/laurent-fremont.png";
 import radioImg from "@/assets/radio-notre-dame.png";
 import marieToutCourtImg from "@/assets/marie-tout-court.jpeg";
+import frereBenjaminImg from "@/assets/frere-benjamin.png";
+import maximeBolouImg from "@/assets/maxime-bolou.jpeg";
+import inesOysonvilleImg from "@/assets/ines-oysonville.jpeg";
+import emmanuelleDeBoryssonImg from "@/assets/emmanuelle-de-boysson.jpeg";
+import valerieBruggemannImg from "@/assets/valerie-bruggemann.png";
 import heroImg from "@/assets/christian-radio-notre-dame.png";
 
 const emissions = [
