@@ -93,7 +93,7 @@ const Prieres = () => {
             <div className="flex items-start justify-between gap-8">
               <div>
                 <div className="flex items-center gap-3 mb-4">
-                  <BookHeart className="w-6 h-6 text-primary-foreground/70" />
+                  <Flame className="w-6 h-6 text-primary-foreground/70" />
                   <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
                 </div>
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
