@@ -89,7 +89,7 @@ const Livres = () => {
         {/* Grille de livres */}
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {livres.map((livre, i) => (
                 <article
                   key={i}
