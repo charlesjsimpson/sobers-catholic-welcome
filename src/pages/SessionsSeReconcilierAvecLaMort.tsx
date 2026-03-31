@@ -58,7 +58,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex flex-col-reverse sm:flex-row-reverse items-center gap-8">
+            <div className="flex flex-col-reverse sm:flex-row-reverse items-start gap-8">
               <img
                 src={reconcilierMort}
                 alt="Se réconcilier avec la mort"
