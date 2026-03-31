@@ -1,6 +1,6 @@
-import { ArrowLeft, ArrowRight, Calendar, Radio } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Radio, Search, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import etienneImg from "@/assets/etienne-de-varax.jpeg";
@@ -22,6 +22,7 @@ const emissions = [
     date: "23 septembre 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal",
     image: gaelImg,
+    keywords: ["deuil périnatal", "théâtre", "témoignage", "art"],
   },
   {
     title: "Dialogue sur la mort, avec Etienne de Varax, assistant funéraire",
@@ -29,6 +30,7 @@ const emissions = [
     date: "19 septembre 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-etienne-de-varax-assistant-funeraire",
     image: etienneImg,
+    keywords: ["métier funéraire", "accompagnement", "obsèques", "familles"],
   },
   {
     title: "Dialogue sur la mort, avec Mathias Mlekuz, acteur et réalisateur du film \"A bicyclette\"",
@@ -36,6 +38,7 @@ const emissions = [
     date: "12 septembre 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-mathias-mlekuz-acteur-et-realisateur-du-film-a-bicyclette",
     image: mathiasImg,
+    keywords: ["cinéma", "fin de vie", "art", "témoignage"],
   },
   {
     title: "Dialogue sur la mort, avec Philippe Baudassé, coach et formateur",
@@ -43,6 +46,7 @@ const emissions = [
     date: "5 septembre 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-philippe-baudasse-coach-et-formateur",
     image: philippeImg,
+    keywords: ["deuil", "nature", "coaching", "accompagnement"],
   },
   {
     title: "Dialogue sur la mort, avec Emma Joux, psychologue clinicienne à l'AP-HP",
@@ -50,6 +54,7 @@ const emissions = [
     date: "23 mai 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-emma-joux-psychologue-clinicienne-a-lap-hp",
     image: radioImg,
+    keywords: ["soins palliatifs", "psychologie", "fin de vie", "hôpital"],
   },
   {
     title: "Dialogue sur la mort, avec Catherine Bossaert, coach certifiée, accompagnante au deuil",
@@ -57,6 +62,7 @@ const emissions = [
     date: "16 mai 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-catherine-bossaert-coach-certifiee-accompagnante-au-deuil",
     image: catherineImg,
+    keywords: ["deuil", "coaching", "accompagnement", "police"],
   },
   {
     title: "Dialogue sur la mort, avec Marie Tout Court, créatrice de chansons pour patients en fin de vie",
@@ -64,6 +70,7 @@ const emissions = [
     date: "9 mai 2025",
     url: "/ressources/emissions/marie-tout-court",
     image: radioImg,
+    keywords: ["musique", "fin de vie", "art", "accompagnement"],
   },
   {
     title: "Dialogue sur la mort, avec Thomas Hug de Larauze, réalisateur du film Promesse",
@@ -71,6 +78,7 @@ const emissions = [
     date: "2 mai 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-thomas-hug-de-larauze-realisateur-du-film-promesse",
     image: thomasImg,
+    keywords: ["cinéma", "fin de vie", "art", "promesse"],
   },
   {
     title: "Dialogue sur la mort, avec Hélène Risser, journaliste, autrice de \"Après Arthaud\"",
@@ -78,6 +86,7 @@ const emissions = [
     date: "25 avril 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-helene-risser-journaliste-autrice-de-apres-arthaud",
     image: heleneImg,
+    keywords: ["littérature", "deuil", "écriture", "journalisme"],
   },
   {
     title: "Dialogue sur la mort, avec Elisabeth Schmitt, mère d'Anne-Lorraine Schmitt",
@@ -85,6 +94,7 @@ const emissions = [
     date: "11 avril 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-elisabeth-schmitt-mere-danne-lorraine-schmitt",
     image: elisabethImg,
+    keywords: ["deuil d'un enfant", "témoignage", "espérance", "familles"],
   },
   {
     title: "Dialogue sur la mort, avec Laurent Frémont, cofondateur du collectif \"Tenir ta main\"",
@@ -92,6 +102,7 @@ const emissions = [
     date: "4 avril 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-laurent-fremont-cofondateur-du-collectif-tenir-ta-main",
     image: laurentImg,
+    keywords: ["fin de vie", "accompagnement", "éthique", "engagement"],
   },
   {
     title: "Dialogue sur la mort, avec Yvonne Sand, responsable de chambre mortuaire",
@@ -99,10 +110,20 @@ const emissions = [
     date: "28 mars 2025",
     url: "/ressources/emissions/dialogue-sur-la-mort-avec-yvonne-sand-responsable-de-chambre-mortuaire",
     image: radioImg,
+    keywords: ["métier funéraire", "chambre mortuaire", "accompagnement", "familles"],
   },
 ];
 
+// Extract unique keywords for filter chips
+const allKeywords = Array.from(new Set(emissions.flatMap((e) => e.keywords))).sort();
+
+const PER_PAGE = 6;
+
 const ToutesLesEmissions = () => {
+  const [search, setSearch] = useState("");
+  const [activeKeyword, setActiveKeyword] = useState<string | null>(null);
+  const [page, setPage] = useState(1);
+
   useEffect(() => {
     document.title = "Dialogue sur la mort : toutes les émissions sur le deuil et l'espérance chrétienne | SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
@@ -111,6 +132,38 @@ const ToutesLesEmissions = () => {
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
+
+  const filtered = useMemo(() => {
+    let result = emissions;
+    if (activeKeyword) {
+      result = result.filter((e) => e.keywords.includes(activeKeyword));
+    }
+    if (search.trim()) {
+      const q = search.toLowerCase();
+      result = result.filter(
+        (e) =>
+          e.title.toLowerCase().includes(q) ||
+          e.excerpt.toLowerCase().includes(q) ||
+          e.keywords.some((k) => k.toLowerCase().includes(q))
+      );
+    }
+    return result;
+  }, [search, activeKeyword]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
+  const currentPage = Math.min(page, totalPages);
+  const paged = filtered.slice((currentPage - 1) * PER_PAGE, currentPage * PER_PAGE);
+
+  // Reset page when filters change
+  useEffect(() => {
+    setPage(1);
+  }, [search, activeKeyword]);
+
+  const clearFilters = () => {
+    setSearch("");
+    setActiveKeyword(null);
+    setPage(1);
+  };
 
   return (
     <div className="min-h-screen">
@@ -154,46 +207,151 @@ const ToutesLesEmissions = () => {
           </div>
         </section>
 
-        {/* Liste des émissions */}
-        <section className="py-16 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <div className="flex flex-col gap-6">
-              {emissions.map((emission, i) => (
-                <Link
-                  key={i}
-                  to={emission.url}
-                  className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-col sm:flex-row"
+        {/* Search & filters */}
+        <section className="bg-background border-b border-border">
+          <div className="container mx-auto px-6 max-w-4xl py-6">
+            {/* Search bar */}
+            <div className="relative">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+              <input
+                type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                placeholder="Rechercher une émission par nom, thème ou invité…"
+                className="w-full pl-10 pr-10 py-3 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
+              />
+              {(search || activeKeyword) && (
+                <button
+                  onClick={clearFilters}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="Effacer la recherche"
                 >
-                  <div className="sm:w-64 shrink-0 aspect-[3/2] sm:aspect-auto overflow-hidden">
-                    <img
-                      src={emission.image}
-                      alt={emission.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col justify-center">
-                    <div className="flex items-center gap-3 text-muted-foreground text-xs mb-3">
-                      <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold">Émission</span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3 h-3" />
-                        {emission.date}
-                      </span>
-                    </div>
-                    <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
-                      {emission.title}
-                    </h2>
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
-                      {emission.excerpt}
-                    </p>
-                    <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-3 group-hover:gap-2 transition-all">
-                      Écouter l'émission
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+
+            {/* Keyword chips */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              {allKeywords.map((kw) => (
+                <button
+                  key={kw}
+                  onClick={() => setActiveKeyword(activeKeyword === kw ? null : kw)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all ${
+                    activeKeyword === kw
+                      ? "bg-primary text-primary-foreground shadow-sm"
+                      : "bg-secondary text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                  }`}
+                >
+                  {kw}
+                </button>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Liste des émissions */}
+        <section className="py-12 bg-secondary">
+          <div className="container mx-auto px-6 max-w-4xl">
+            {/* Results count */}
+            <p className="text-muted-foreground text-sm mb-6">
+              {filtered.length} émission{filtered.length !== 1 ? "s" : ""}
+              {(search || activeKeyword) && (
+                <> — <button onClick={clearFilters} className="text-primary hover:underline">voir toutes les émissions</button></>
+              )}
+            </p>
+
+            {paged.length === 0 ? (
+              <div className="text-center py-16">
+                <Radio className="w-12 h-12 text-muted-foreground/40 mx-auto mb-4" />
+                <p className="text-muted-foreground">Aucune émission ne correspond à votre recherche.</p>
+                <button onClick={clearFilters} className="text-primary text-sm font-semibold mt-2 hover:underline">
+                  Réinitialiser les filtres
+                </button>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-6">
+                {paged.map((emission, i) => (
+                  <Link
+                    key={i}
+                    to={emission.url}
+                    className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-col sm:flex-row"
+                  >
+                    <div className="sm:w-64 shrink-0 aspect-[3/2] sm:aspect-auto overflow-hidden">
+                      <img
+                        src={emission.image}
+                        alt={emission.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="p-6 flex flex-col justify-center">
+                      <div className="flex items-center gap-3 text-muted-foreground text-xs mb-3">
+                        <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold">Émission</span>
+                        <span className="flex items-center gap-1">
+                          <Calendar className="w-3 h-3" />
+                          {emission.date}
+                        </span>
+                      </div>
+                      <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
+                        {emission.title}
+                      </h2>
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                        {emission.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between mt-3">
+                        <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold group-hover:gap-2 transition-all">
+                          Écouter l'émission
+                          <ArrowRight className="w-4 h-4" />
+                        </span>
+                        <div className="hidden sm:flex gap-1.5">
+                          {emission.keywords.slice(0, 2).map((kw) => (
+                            <span key={kw} className="text-[10px] text-muted-foreground bg-secondary px-2 py-0.5 rounded-full">
+                              {kw}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-10">
+                <button
+                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  disabled={currentPage === 1}
+                  className="p-2 rounded-lg border border-border bg-card text-foreground disabled:opacity-30 disabled:cursor-not-allowed hover:bg-secondary transition-colors"
+                  aria-label="Page précédente"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((n) => (
+                  <button
+                    key={n}
+                    onClick={() => setPage(n)}
+                    className={`w-9 h-9 rounded-lg text-sm font-semibold transition-all ${
+                      n === currentPage
+                        ? "bg-primary text-primary-foreground shadow-sm"
+                        : "border border-border bg-card text-foreground hover:bg-secondary"
+                    }`}
+                  >
+                    {n}
+                  </button>
+                ))}
+                <button
+                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                  disabled={currentPage === totalPages}
+                  className="p-2 rounded-lg border border-border bg-card text-foreground disabled:opacity-30 disabled:cursor-not-allowed hover:bg-secondary transition-colors"
+                  aria-label="Page suivante"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+            )}
           </div>
         </section>
       </main>
