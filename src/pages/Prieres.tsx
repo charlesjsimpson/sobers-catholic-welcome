@@ -1,4 +1,4 @@
-import { ArrowLeft, BookHeart, Cross } from "lucide-react";
+import { ArrowLeft, BookHeart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -103,7 +103,10 @@ const Prieres = () => {
                   Face à la mort d'un proche, les mots manquent souvent. La prière peut alors devenir un chemin pour exprimer la douleur, confier le défunt à Dieu et trouver un appui dans l'épreuve du deuil. Le Service Catholique des Funérailles propose ici une sélection de prières catholiques adaptées aux différentes situations de deuil&nbsp;: mort subite, perte d'un enfant, moment de l'inhumation, adieu au corps.
                 </p>
               </div>
-              <Cross className="hidden md:block w-24 h-24 lg:w-32 lg:h-32 text-primary-foreground/20 flex-shrink-0" strokeWidth={1} />
+              <svg className="hidden md:block w-24 h-24 lg:w-32 lg:h-32 text-primary-foreground/20 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="12" y1="2" x2="12" y2="22" />
+                <line x1="5" y1="7" x2="19" y2="7" />
+              </svg>
             </div>
           </div>
         </section>
