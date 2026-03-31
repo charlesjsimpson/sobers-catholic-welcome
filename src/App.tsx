@@ -52,6 +52,7 @@ import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
 import Prevoyance from "./pages/Prevoyance";
+import Prieres from "./pages/Prieres";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
