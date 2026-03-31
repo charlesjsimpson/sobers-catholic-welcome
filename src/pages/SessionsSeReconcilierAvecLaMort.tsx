@@ -58,31 +58,33 @@ const SessionsSeReconcilierAvecLaMort = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex items-center gap-3 text-primary-foreground/70 text-sm mb-4">
-              <span className="bg-primary-foreground/20 px-3 py-1 rounded-full font-semibold">
-                Session
-              </span>
-              <span className="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5" />
-                31 mars 2026
-              </span>
+            <div className="flex items-start gap-8">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 text-primary-foreground/70 text-sm mb-4">
+                  <span className="bg-primary-foreground/20 px-3 py-1 rounded-full font-semibold">
+                    Session
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Calendar className="w-3.5 h-3.5" />
+                    31 mars 2026
+                  </span>
+                </div>
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
+                  Se réconcilier avec la mort : une journée pour apprivoiser sa finitude
+                </h1>
+              </div>
+              <img
+                src={reconcilierMort}
+                alt="Se réconcilier avec la mort"
+                className="hidden sm:block w-48 h-32 md:w-64 md:h-44 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+              />
             </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display leading-tight">
-              Se réconcilier avec la mort : une journée pour apprivoiser sa finitude
-            </h1>
           </div>
         </section>
 
         {/* Content */}
         <article className="py-16">
           <div className="container mx-auto px-6 max-w-3xl">
-            {/* Image */}
-            <img
-              src={reconcilierMort}
-              alt="Se réconcilier avec la mort"
-              className="w-full rounded-2xl object-cover shadow-lg mb-10 max-h-80"
-            />
-
             <div className="prose prose-lg max-w-none text-foreground [&>p]:mb-4 [&>p]:mt-0 [&>ul]:mb-4">
             <p>
               Depuis 2019, le Service Catholique des Funérailles propose une session d'une journée pour aider chacun à avancer vers un rapport à la mort plus apaisé. Cette journée de réflexion s'adresse à toute personne souhaitant cheminer dans ses deuils, ses renoncements, et redécouvrir en quoi notre finitude peut être source de sagesse.
