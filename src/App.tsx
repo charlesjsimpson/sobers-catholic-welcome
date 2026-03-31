@@ -24,6 +24,12 @@ import EmissionSuzanneTartiere from "./pages/EmissionSuzanneTartiere";
 import EmissionTanguyChatel from "./pages/EmissionTanguyChatel";
 import EmissionMarionWaller from "./pages/EmissionMarionWaller";
 import EmissionJulietteCazes from "./pages/EmissionJulietteCazes";
+import EmissionAlixDeBonnieres from "./pages/EmissionAlixDeBonnieres";
+import EmissionElenVuidard from "./pages/EmissionElenVuidard";
+import EmissionPascalDupont from "./pages/EmissionPascalDupont";
+import EmissionVeroniqueSeite from "./pages/EmissionVeroniqueSeite";
+import EmissionPatriciaBlanc from "./pages/EmissionPatriciaBlanc";
+import EmissionAnnaNoziere from "./pages/EmissionAnnaNoziere";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
@@ -74,6 +80,12 @@ const App = () => (
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-tanguy-chatel-sociologue" element={<EmissionTanguyChatel />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-marion-waller" element={<EmissionMarionWaller />} />
             <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-juliette-cazes" element={<EmissionJulietteCazes />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-alix-de-bonnieres" element={<EmissionAlixDeBonnieres />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-elen-vuidard-officier-de-liaison-gendarmerie" element={<EmissionElenVuidard />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-pascal-dupont-aumonier-de-prison" element={<EmissionPascalDupont />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-veronique-seite-comedienne-clown-en-ehpad" element={<EmissionVeroniqueSeite />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-patricia-blanc-presidente-de-lassociation-imagine-for-margo" element={<EmissionPatriciaBlanc />} />
+            <Route path="/ressources/emissions/dialogue-sur-la-mort-avec-anna-noziere-fondatrice-dune-troupe-de-theatre-et-scenariste" element={<EmissionAnnaNoziere />} />
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
