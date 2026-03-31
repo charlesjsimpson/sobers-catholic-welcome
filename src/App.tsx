@@ -15,6 +15,7 @@ import OrganiserDesObseques from "./pages/OrganiserDesObseques";
 import Prevoyance from "./pages/Prevoyance";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
+import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/services/prevoyance" element={<Prevoyance />} />
             <Route path="/agences/nice" element={<AgenceNice />} />
             <Route path="/agences/paris-15" element={<AgenceParis15 />} />
+            <Route path="/ressources/sessions/se-reconcilier-avec-la-mort" element={<SessionsSeReconcilierAvecLaMort />} />
 
             {/* Admin routes */}
             <Route path="/admin/login" element={<AdminLogin />} />

@@ -10,7 +10,7 @@ const ressources = [
     title: "Une session pour avancer vers un rapport à la mort pacifié",
     excerpt:
       "Prochaines sessions prévues le 20 janvier 2026 à Aix-en-Provence et le 21 mars 2026...",
-    href: "/contacter-une-agence",
+    href: "/ressources/sessions/se-reconcilier-avec-la-mort",
   },
   {
     category: "Émissions radio",
