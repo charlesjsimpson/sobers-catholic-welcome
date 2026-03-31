@@ -70,6 +70,7 @@ const Ressources = () => {
                   Découvrir
                   <ArrowRight className="w-4 h-4" />
                 </span>
+                </div>
               </Link>
             ))}
           </div>
