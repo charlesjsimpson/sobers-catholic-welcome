@@ -138,7 +138,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
             </div>
 
             {/* FAQ */}
-            <div className="mb-8">
+            <div className="mb-8 mt-6">
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Questions fréquentes sur la session
               </h2>
