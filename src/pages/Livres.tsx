@@ -1,4 +1,10 @@
 import { ArrowLeft, BookOpen } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
@@ -120,28 +126,28 @@ const Livres = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
               Questions fréquentes sur ces livres
             </h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Quels livres lire pour traverser un deuil ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Le SCF recommande plusieurs ouvrages pour accompagner le deuil : "Parcours d'adieux, chemins de vie" offre un guide concret pour les proches désemparés, tandis que "Conversations sur la mort, et donc sur la vie" rassemble les témoignages de 24 personnalités sur leur rapport personnel à la mort.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Existe-t-il des livres catholiques sur la mort et le deuil ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Oui. Le Service Catholique des Funérailles propose une sélection d'ouvrages ancrés dans une perspective chrétienne, dont "Vivre en mortel" de Christian de Cacqueray, directeur du SCF, paru aux éditions Salvator.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Qu'est-ce que "La mort confisquée" ?</h3>
-                <p className="text-muted-foreground leading-relaxed">"La mort confisquée" est un livre-cri d'alarme né de dix ans d'expérience dans le secteur funéraire. Il interroge la façon dont notre société contemporaine écarte la mort du champ de la vie ordinaire.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Qui est Christian de Cacqueray ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Christian de Cacqueray est le directeur du Service Catholique des Funérailles. Auteur et animateur de l'émission hebdomadaire "Dialogue sur la mort" sur Radio Notre Dame, il consacre son travail à réconcilier les personnes avec leur condition de mortel.</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground mb-2">Comment se procurer ces livres ?</h3>
-                <p className="text-muted-foreground leading-relaxed">Chaque livre référencé sur cette page dispose d'une fiche détaillée accessible en cliquant sur "Découvrir". Vous y trouverez le résumé complet et les informations pour vous le procurer.</p>
-              </div>
-            </div>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="faq-1">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Quels livres lire pour traverser un deuil ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Le SCF recommande plusieurs ouvrages pour accompagner le deuil : "Parcours d'adieux, chemins de vie" offre un guide concret pour les proches désemparés, tandis que "Conversations sur la mort, et donc sur la vie" rassemble les témoignages de 24 personnalités sur leur rapport personnel à la mort.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-2">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Existe-t-il des livres catholiques sur la mort et le deuil ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Oui. Le Service Catholique des Funérailles propose une sélection d'ouvrages ancrés dans une perspective chrétienne, dont "Vivre en mortel" de Christian de Cacqueray, directeur du SCF, paru aux éditions Salvator.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-3">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Qu'est-ce que "La mort confisquée" ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">"La mort confisquée" est un livre-cri d'alarme né de dix ans d'expérience dans le secteur funéraire. Il interroge la façon dont notre société contemporaine écarte la mort du champ de la vie ordinaire.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-4">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Qui est Christian de Cacqueray ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Christian de Cacqueray est le directeur du Service Catholique des Funérailles. Auteur et animateur de l'émission hebdomadaire "Dialogue sur la mort" sur Radio Notre Dame, il consacre son travail à réconcilier les personnes avec leur condition de mortel.</AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="faq-5">
+                <AccordionTrigger className="text-left text-foreground font-semibold">Comment se procurer ces livres ?</AccordionTrigger>
+                <AccordionContent className="text-muted-foreground leading-relaxed">Chaque livre référencé sur cette page dispose d'une fiche détaillée accessible en cliquant sur "Découvrir". Vous y trouverez le résumé complet et les informations pour vous le procurer.</AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
       </main>
