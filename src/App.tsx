@@ -128,6 +128,7 @@ const App = () => (
             <Route path="/ressources/emissions" element={<ToutesLesEmissions />} />
             <Route path="/ressources/prieres" element={<Prieres />} />
             <Route path="/ressources/prieres/priere-pour-un-enfant-mort-ne" element={<PriereEnfantMortNe />} />
+            <Route path="/ressources/prieres/priere-pour-ladieu-au-visage" element={<PriereAdieuAuVisage />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
             <Route path="/services/prevoyance" element={<Prevoyance />} />
