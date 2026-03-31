@@ -48,6 +48,7 @@ import EmissionMarieThereseHermange from "./pages/EmissionMarieThereseHermange";
 import EmissionFrederiqueLemarchand from "./pages/EmissionFrederiqueLemarchand";
 import EmissionGeraudBurin from "./pages/EmissionGeraudBurin";
 import EmissionAngelinPreljocaj from "./pages/EmissionAngelinPreljocaj";
+import EmissionDelphinePajot from "./pages/EmissionDelphinePajot";
 import ToutesLesEmissions from "./pages/ToutesLesEmissions";
 import ContacterUneAgence from "./pages/ContacterUneAgence";
 import OrganiserDesObseques from "./pages/OrganiserDesObseques";
