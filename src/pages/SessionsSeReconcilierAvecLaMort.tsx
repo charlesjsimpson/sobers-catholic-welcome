@@ -49,7 +49,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-16">
+        <section className="bg-primary text-primary-foreground py-10">
           <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
