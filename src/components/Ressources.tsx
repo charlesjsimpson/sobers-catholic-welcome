@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import reconcilierMort from "@/assets/reconcilier-mort.png";
 
 const ressources = [
   {
@@ -50,9 +51,13 @@ const Ressources = () => {
               <Link
                 key={index}
                 to={item.href}
-                className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 p-6"
+                className="group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
               >
-                <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs">
+                {index === 0 && (
+                  <img src={reconcilierMort} alt="Se réconcilier avec la mort" className="w-full h-48 object-cover" />
+                )}
+                <div className="p-6 flex flex-col flex-1">
+                <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit">
                   {item.category}
                 </span>
                 <h3 className="text-lg font-semibold text-foreground mt-4 mb-2 group-hover:text-primary transition-colors leading-snug">
@@ -65,6 +70,7 @@ const Ressources = () => {
                   Découvrir
                   <ArrowRight className="w-4 h-4" />
                 </span>
+                </div>
               </Link>
             ))}
           </div>
