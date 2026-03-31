@@ -52,11 +52,11 @@ const SessionsSeReconcilierAvecLaMort = () => {
               Le Service Catholique des Funérailles a mis sur pied en 2019 un parcours d'une journée pour avancer vers un rapport à la mort apaisé et se réconcilier avec notre condition de mortel.
             </p>
 
-            <h2 className="text-2xl font-bold text-foreground mb-6 leading-snug">
+            <p className="text-foreground leading-relaxed mb-6">
               Une journée vivifiante, fondée sur une pédagogie sollicitant la prise de parole personnelle et l'écoute de l'autre jusqu'au bout, pour :
-            </h2>
+            </p>
 
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-4 mb-8">
               {[
                 "Avancer vers un rapport à la mort apaisé,",
                 "Cheminer dans ses propres deuils et renoncements,",
@@ -69,7 +69,7 @@ const SessionsSeReconcilierAvecLaMort = () => {
               ))}
             </ul>
 
-            <p className="text-foreground mb-6">
+            <p className="text-foreground mb-8">
               Pour connaître les dates des prochaines sessions ou pour programmer une session, consultez le site{" "}
               <a
                 href="http://www.billetweb.fr/sereconcilieraveclamort"
