@@ -197,6 +197,20 @@ const PriereAdieuAuVisage = () => {
               <p>Va vers ton Créateur, nous ne te retenons pas.</p>
               <p>Et lorsque dans un instant, ton visage nous sera à jamais enlevé, fais, Seigneur, que nous le retrouvions, au plus profond de notre être, comme une lueur qui nous guidera vers l'amour vrai.</p>
             </div>
+
+            {/* Navigation vers d'autres prières */}
+            <nav className="mt-12 pt-8 border-t border-border">
+              <p className="text-muted-foreground text-sm">
+                Voir aussi :{" "}
+                <Link to="/ressources/prieres/prieres" className="text-primary hover:underline font-medium">
+                  Prière au moment de l'inhumation
+                </Link>
+                {" · "}
+                <Link to="/ressources/prieres/priere-a-la-sainte-vierge" className="text-primary hover:underline font-medium">
+                  Prière à la Sainte Vierge
+                </Link>
+              </p>
+            </nav>
           </div>
         </section>
 
