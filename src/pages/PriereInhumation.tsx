@@ -57,7 +57,9 @@ const PriereInhumation = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière au moment de l'inhumation
             </h1>
-            
+            <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl">
+              L'inhumation est l'étape finale du parcours funéraire : le moment où le cercueil est confié à la terre. C'est un instant de détachement progressif, solennel et nécessaire. Cette prière peut être menée par un proche ou un célébrant, entouré de la famille et des amis, avant que chacun s'incline une dernière fois devant la tombe.
+            </p>
           </div>
         </section>
 
