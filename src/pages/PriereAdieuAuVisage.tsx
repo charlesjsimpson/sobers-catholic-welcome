@@ -71,7 +71,7 @@ const PriereAdieuAuVisage = () => {
               />
             </div>
 
-            <div className="prose prose-lg max-w-none text-foreground leading-snug space-y-1">
+            <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
               <p>
                 Le corps mis dans le cercueil, avant que ce dernier ne soit fermé, fait l'objet d'un premier temps de prière que l'on appelle «&nbsp;l'adieu au visage&nbsp;». Première étape du parcours rituel des funérailles, cet adieu marque la séparation définitive avec le corps de chair du défunt. Il ne sera plus visible dès lors que le cercueil sera fermé. L'émotion est grande et ce temps, quel que soit le lieu de son déroulement, reste un temps intime et familial, vécu différemment selon qu'il est organisé dans un domicile, un hôpital ou une chambre funéraire.
               </p>
