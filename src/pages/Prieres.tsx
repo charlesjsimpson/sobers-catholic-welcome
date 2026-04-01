@@ -14,37 +14,37 @@ import priereInhumationImg from "@/assets/priere-inhumation.jpg";
 const prieres = [
   {
     title: "Prière pour un enfant mort‑né",
-    excerpt: "Prière pour un bébé né sans vie",
+    excerpt: "Une prière pour confier à Dieu un bébé né sans vie et accompagner ses parents dans ce deuil silencieux.",
     image: "https://s-c-f.org/wp-content/uploads/2024/02/hands-1926414_1280.jpg",
     href: "/ressources/prieres/priere-pour-un-enfant-mort-ne",
   },
   {
     title: "Prière pour l'adieu au visage",
-    excerpt: "Le corps mis dans le cercueil, avant que ce dernier ne soit fermé, fait l'objet d'un dernier adieu.",
+    excerpt: "Une prière pour accompagner le dernier adieu au visage du défunt, avant la fermeture du cercueil.",
     image: "https://s-c-f.org/wp-content/uploads/2023/03/priere_adieu_au_visage-1.jpg",
     href: "/ressources/prieres/priere-pour-ladieu-au-visage",
   },
   {
     title: "Prière au moment de l'inhumation",
-    excerpt: "Sans ordonnancement prédéfini, l'étape de l'inhumation dans un cimetière revêt toutefois un relief particulier.",
+    excerpt: "Une prière pour accompagner la mise en terre du défunt, au cimetière, entouré de ses proches.",
     image: priereInhumationImg,
     href: "/ressources/prieres/prieres",
   },
   {
     title: "Prière pour une mort brutale",
-    excerpt: "Oh ! Seigneur, aide-nous ! Tu nous vois déchirés et abattus bien plus que nous ne pouvons le dire.",
+    excerpt: "Une prière pour traverser le choc d'une mort soudaine et trouver des mots quand ils manquent.",
     image: "https://s-c-f.org/wp-content/uploads/2023/01/home8.jpg",
     href: "/ressources/prieres/priere-pour-une-mort-brutale",
   },
   {
     title: "Prière pour la mort d'un enfant",
-    excerpt: "Seigneur, nous avons du mal à comprendre que l'on puisse mourir si jeune, qu'une vie si brève ait un sens.",
+    excerpt: "Une prière pour les parents et proches face à la perte insurmontable d'un enfant.",
     image: "https://s-c-f.org/wp-content/uploads/2023/01/priere_mort_enfant-1.jpg",
     href: "/ressources/prieres/priere-pour-la-mort-dun-enfant",
   },
   {
     title: "Prière à la Sainte Vierge",
-    excerpt: "Comme nous, tu as attendu ton fils avec tout ton amour de mère et tu l'as accompagné jusqu'au bout.",
+    excerpt: "Une prière à Marie pour confier un défunt et trouver un appui dans l'épreuve du deuil.",
     image: "https://s-c-f.org/wp-content/uploads/2023/03/priere_a_la_sainte_vierge.jpg",
     href: "/ressources/prieres/priere-a-la-sainte-vierge",
   },
