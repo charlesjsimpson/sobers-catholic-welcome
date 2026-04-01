@@ -11,7 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import priereInhumationImg from "@/assets/priere-inhumation.jpg";
 import priereMortBrutaleImg from "@/assets/priere-mort-brutale.jpg";
-import priereMortEnfantImg from "@/assets/priere-mort-enfant.jpg";
+
 
 const prieres = [
   {
