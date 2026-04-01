@@ -27,10 +27,10 @@ const autresPrieres = [
 
 const PriereAdieuAuVisage = () => {
   useEffect(() => {
-    document.title = "Prière pour l'adieu au visage – Service Catholique des Funérailles";
+    document.title = "Prière pour l'adieu au visage avant la fermeture du cercueil – SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Prière pour l'adieu au visage avant la fermeture du cercueil. Textes proposés par le Service Catholique des Funérailles.");
+    meta.setAttribute("content", "Une prière catholique au moment de l'adieu au visage du défunt, avant la fermeture du cercueil. Texte proposé par le Service Catholique des Funérailles.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
