@@ -59,6 +59,9 @@ const PriereAdieuAuVisage = () => {
             <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl">
               Avant que le cercueil ne soit fermé, la tradition catholique invite les proches à un dernier moment de prière auprès du visage du défunt. C'est un instant solennel et douloureux, l'ultime adieu au corps de l'être aimé. Cette prière peut être menée par un religieux ou un laïc, dans le calme et le recueillement, que ce soit au domicile, à l'hôpital ou en chambre funéraire.
             </p>
+            <p className="mt-3 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl">
+              Si les enfants ont fait le choix d'y assister, il peut leur être proposé de déposer un mot ou un dessin dans le cercueil avant qu'il ne soit fermé.
+            </p>
           </div>
         </section>
 
@@ -74,11 +77,6 @@ const PriereAdieuAuVisage = () => {
             </div>
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
-              <p>
-                Si les enfants ont fait le choix d'y assister, il peut leur être proposé de déposer un mot ou un dessin dans le cercueil avant qu'il ne soit fermé.
-              </p>
-
-              <div className="mt-6 mb-10"><hr className="border-border" /></div>
 
               <h2 className="font-display text-2xl text-foreground">Oraison</h2>
               <p>Les mots nous manquent Seigneur, nous sommes dans l'épreuve, accepte notre silence comme une prière pour <strong>[prénom du défunt]</strong> que Tu connais et que Tu aimes.</p>
