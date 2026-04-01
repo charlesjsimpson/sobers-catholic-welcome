@@ -27,10 +27,10 @@ const autresPrieres = [
 
 const PriereEnfantMortNe = () => {
   useEffect(() => {
-    document.title = "Prière pour un enfant mort-né – Service Catholique des Funérailles";
+    document.title = "Prière pour un bébé mort-né – Service Catholique des Funérailles";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Prière catholique pour accompagner un bébé né sans vie. Textes proposés par le Service Catholique des Funérailles pour traverser le deuil périnatal.");
+    meta.setAttribute("content", "Une prière catholique pour un bébé né sans vie. Texte proposé par le Service Catholique des Funérailles pour accompagner ce deuil particulier.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
