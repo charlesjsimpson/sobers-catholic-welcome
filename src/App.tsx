@@ -59,6 +59,7 @@ import PriereAdieuAuVisage from "./pages/PriereAdieuAuVisage";
 import PriereInhumation from "./pages/PriereInhumation";
 import PriereMortBrutale from "./pages/PriereMortBrutale";
 import PriereMortEnfant from "./pages/PriereMortEnfant";
+import PriereSainteVierge from "./pages/PriereSainteVierge";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
