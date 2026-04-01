@@ -80,12 +80,6 @@ const PriereInhumation = () => {
             </div>
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
-              <p>
-                L'inhumation est le dernier temps du parcours funéraire, celui où le cercueil est confié à la terre et où les proches vivent le nécessaire détachement de la dépouille mortelle. Un temps de prière au moment de l'inhumation peut être organisé autour du cercueil, au cimetière, avec ou sans l'aide d'un célébrant, avant qu'il ne soit définitivement enlevé à la vue de ceux qui l'ont accompagné.
-              </p>
-              <p>
-                À l'issue de l'inhumation, chaque membre de l'assistance est invité à s'incliner devant la tombe encore ouverte, par un signe de croix, un jeté de fleurs ou une aspersion d'eau bénite, manifestant son espérance de revoir un jour le défunt dans le Royaume de Dieu.
-              </p>
 
               <div className="mt-6 mb-10"><hr className="border-border" /></div>
 
