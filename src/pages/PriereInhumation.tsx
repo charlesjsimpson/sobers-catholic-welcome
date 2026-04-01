@@ -2,6 +2,7 @@ import { ArrowLeft, Flame } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
+import priereInhumationImg from "@/assets/priere-inhumation.jpg";
 import Footer from "@/components/Footer";
 
 const autresPrieres = [
