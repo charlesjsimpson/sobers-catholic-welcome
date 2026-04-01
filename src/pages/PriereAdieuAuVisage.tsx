@@ -27,10 +27,10 @@ const autresPrieres = [
 
 const PriereAdieuAuVisage = () => {
   useEffect(() => {
-    document.title = "Prière pour l'adieu au visage – Service Catholique des Funérailles";
+    document.title = "Prière pour l'adieu au visage avant la fermeture du cercueil – SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Prière pour l'adieu au visage avant la fermeture du cercueil. Textes proposés par le Service Catholique des Funérailles.");
+    meta.setAttribute("content", "Une prière catholique au moment de l'adieu au visage du défunt, avant la fermeture du cercueil. Texte proposé par le Service Catholique des Funérailles.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
@@ -56,7 +56,9 @@ const PriereAdieuAuVisage = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour l'adieu au visage
             </h1>
-            
+            <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl">
+              Avant que le cercueil ne soit fermé, la tradition catholique invite les proches à un dernier moment de prière auprès du visage du défunt. C'est un instant solennel et douloureux — l'ultime adieu au corps de l'être aimé. Cette prière peut être menée par un religieux ou un laïc, dans le calme et le recueillement, que ce soit au domicile, à l'hôpital ou en chambre funéraire.
+            </p>
           </div>
         </section>
 
@@ -195,6 +197,20 @@ const PriereAdieuAuVisage = () => {
               <p>Va vers ton Créateur, nous ne te retenons pas.</p>
               <p>Et lorsque dans un instant, ton visage nous sera à jamais enlevé, fais, Seigneur, que nous le retrouvions, au plus profond de notre être, comme une lueur qui nous guidera vers l'amour vrai.</p>
             </div>
+
+            {/* Navigation vers d'autres prières */}
+            <nav className="mt-12 pt-8 border-t border-border">
+              <p className="text-muted-foreground text-sm">
+                Voir aussi :{" "}
+                <Link to="/ressources/prieres/prieres" className="text-primary hover:underline font-medium">
+                  Prière au moment de l'inhumation
+                </Link>
+                {" · "}
+                <Link to="/ressources/prieres/priere-a-la-sainte-vierge" className="text-primary hover:underline font-medium">
+                  Prière à la Sainte Vierge
+                </Link>
+              </p>
+            </nav>
           </div>
         </section>
 
