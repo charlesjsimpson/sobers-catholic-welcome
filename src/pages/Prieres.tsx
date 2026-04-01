@@ -41,7 +41,7 @@ const prieres = [
   {
     title: "Prière pour la mort d'un enfant",
     excerpt: "Une prière pour les parents et proches face à la perte insurmontable d'un enfant.",
-    image: "https://s-c-f.org/wp-content/uploads/2023/01/priere_mort_enfant-1.jpg",
+    image: priereMortEnfantImg,
     href: "/ressources/prieres/priere-pour-la-mort-dun-enfant",
   },
   {
