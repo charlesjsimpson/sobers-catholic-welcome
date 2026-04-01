@@ -141,7 +141,7 @@ const Prieres = () => {
                     <h3 className="font-display text-lg mt-1 mb-2 text-foreground group-hover:text-primary transition-colors">
                       {priere.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{priere.excerpt}</p>
+                    <p className="text-sm text-muted-foreground">{priere.excerpt}</p>
                   </div>
                 </Link>
               ))}
