@@ -27,10 +27,10 @@ const autresPrieres = [
 
 const PriereEnfantMortNe = () => {
   useEffect(() => {
-    document.title = "Prière pour un enfant mort-né – Service Catholique des Funérailles";
+    document.title = "Prière pour un bébé mort-né – Service Catholique des Funérailles";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Prière catholique pour accompagner un bébé né sans vie. Textes proposés par le Service Catholique des Funérailles pour traverser le deuil périnatal.");
+    meta.setAttribute("content", "Une prière catholique pour un bébé né sans vie. Texte proposé par le Service Catholique des Funérailles pour accompagner ce deuil particulier.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
@@ -56,7 +56,7 @@ const PriereEnfantMortNe = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour un enfant mort‑né
             </h1>
-            <p className="text-primary-foreground/60 mt-3 text-sm">13 février 2024</p>
+            
           </div>
         </section>
 
@@ -70,6 +70,10 @@ const PriereEnfantMortNe = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+
+            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              La perte d'un bébé mort-né est un deuil souvent silencieux, peu reconnu par l'entourage, mais profondément douloureux pour les parents. Cette prière leur offre un espace de parole et de confiance en Dieu, pour dire leur amour à cet enfant qui n'aura pas vécu et confier son âme au Seigneur. Elle peut être dite lors des obsèques ou dans l'intimité des jours qui suivent.
+            </p>
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
               <p className="italic text-muted-foreground font-display text-xl">
@@ -111,6 +115,20 @@ const PriereEnfantMortNe = () => {
               <p>Pour l'heure, c'est le temps pour chacun de continuer sa route, accompagné de l'Amour de notre Père.</p>
               <p className="font-semibold text-primary">Amen.</p>
             </div>
+
+            {/* Navigation vers d'autres prières */}
+            <nav className="mt-12 pt-8 border-t border-border">
+              <p className="text-muted-foreground text-sm">
+                Voir aussi :{" "}
+                <Link to="/ressources/prieres/priere-pour-la-mort-dun-enfant" className="text-primary hover:underline font-medium">
+                  Prière pour la mort d'un enfant
+                </Link>
+                {" · "}
+                <Link to="/ressources/prieres/priere-a-la-sainte-vierge" className="text-primary hover:underline font-medium">
+                  Prière à la Sainte Vierge
+                </Link>
+              </p>
+            </nav>
           </div>
         </section>
 

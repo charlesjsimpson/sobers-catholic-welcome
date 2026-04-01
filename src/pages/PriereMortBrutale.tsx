@@ -57,7 +57,7 @@ const PriereMortBrutale = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour une mort brutale
             </h1>
-            <p className="text-primary-foreground/60 mt-3 text-sm">2 février 2023</p>
+            
           </div>
         </section>
 
