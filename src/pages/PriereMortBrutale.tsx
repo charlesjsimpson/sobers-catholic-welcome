@@ -57,7 +57,9 @@ const PriereMortBrutale = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour une mort brutale
             </h1>
-            
+            <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl text-justify">
+              La mort brutale laisse les proches sans préparation, dans un état de choc et d'incompréhension profonde. Cette prière pour une mort brutale est un appui pour ceux qui cherchent des mots quand tous les mots semblent insuffisants. Elle peut être dite seul ou en famille, dans les heures ou les jours qui suivent le décès.
+            </p>
           </div>
         </section>
 
