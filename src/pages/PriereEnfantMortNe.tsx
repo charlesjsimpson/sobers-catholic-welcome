@@ -71,7 +71,7 @@ const PriereEnfantMortNe = () => {
               />
             </div>
 
-            <div className="prose prose-lg max-w-none text-foreground leading-snug space-y-1">
+            <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
               <p className="italic text-muted-foreground font-display text-xl">
                 <strong>[prénom du défunt]</strong>,
               </p>
