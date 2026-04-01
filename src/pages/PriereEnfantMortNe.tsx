@@ -56,7 +56,9 @@ const PriereEnfantMortNe = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour un enfant mort‑né
             </h1>
-            
+            <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl">
+              La perte d'un bébé mort-né est un deuil souvent silencieux, peu reconnu par l'entourage, mais profondément douloureux pour les parents. Cette prière leur offre un espace de parole et de confiance en Dieu, pour dire leur amour à cet enfant qui n'aura pas vécu et confier son âme au Seigneur. Elle peut être dite lors des obsèques ou dans l'intimité des jours qui suivent.
+            </p>
           </div>
         </section>
 
