@@ -81,7 +81,7 @@ const PriereInhumation = () => {
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
 
-              <div className="mt-6 mb-10"><hr className="border-border" /></div>
+
 
               <h2 className="font-display text-2xl text-foreground">Invitation à la prière</h2>
               <p>Dans ce lieu où tant de défunts de nos familles ont précédé celui qui vient de nous quitter…</p>
