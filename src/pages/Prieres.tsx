@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import priereInhumationImg from "@/assets/priere-inhumation.jpg";
 import priereMortBrutaleImg from "@/assets/priere-mort-brutale.jpg";
+import priereMortEnfantImg from "@/assets/priere-mort-enfant.jpg";
 
 const prieres = [
   {
@@ -40,7 +41,7 @@ const prieres = [
   {
     title: "Prière pour la mort d'un enfant",
     excerpt: "Une prière pour les parents et proches face à la perte insurmontable d'un enfant.",
-    image: "https://s-c-f.org/wp-content/uploads/2023/01/priere_mort_enfant-1.jpg",
+    image: priereMortEnfantImg,
     href: "/ressources/prieres/priere-pour-la-mort-dun-enfant",
   },
   {
