@@ -28,10 +28,10 @@ const autresPrieres = [
 
 const PriereInhumation = () => {
   useEffect(() => {
-    document.title = "Prière au moment de l'inhumation – Service Catholique des Funérailles";
+    document.title = "Prière au moment de l'inhumation au cimetière – SCF";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Prière au moment de l'inhumation dans un cimetière. Textes proposés par le Service Catholique des Funérailles pour accompagner ce dernier temps de recueillement.");
+    meta.setAttribute("content", "Une prière catholique pour accompagner le moment de l'inhumation au cimetière. Texte du Service Catholique des Funérailles pour ce dernier adieu auprès du cercueil.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
