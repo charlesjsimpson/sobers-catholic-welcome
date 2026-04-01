@@ -154,6 +154,20 @@ const PriereInhumation = () => {
               <p>Au nom du Père et du Fils et du Saint-Esprit.</p>
               <p className="font-semibold text-primary">Amen.</p>
             </div>
+
+            {/* Navigation vers d'autres prières */}
+            <nav className="mt-12 pt-8 border-t border-border">
+              <p className="text-muted-foreground text-sm">
+                Voir aussi :{" "}
+                <Link to="/ressources/prieres/priere-pour-ladieu-au-visage" className="text-primary hover:underline font-medium">
+                  Prière pour l'adieu au visage
+                </Link>
+                {" · "}
+                <Link to="/ressources/prieres/priere-a-la-sainte-vierge" className="text-primary hover:underline font-medium">
+                  Prière à la Sainte Vierge
+                </Link>
+              </p>
+            </nav>
           </div>
         </section>
 
