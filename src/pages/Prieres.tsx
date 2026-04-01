@@ -155,11 +155,24 @@ const Prieres = () => {
             <h2 className="section-title text-2xl md:text-3xl mb-10">
               Questions fréquentes sur les prières pour les défunts
             </h2>
-            <div className="space-y-8">
+            <Accordion type="single" collapsible className="w-full space-y-3">
               {faq.map((item, i) => (
-                <div key={i} className="bg-background rounded-xl p-6 shadow-sm border border-border">
-                  <h3 className="font-display text-lg text-foreground mb-3">{item.question}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{item.answer}</p>
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-background rounded-xl px-6 shadow-sm border border-border">
+                  <AccordionTrigger className="text-left font-display text-lg text-foreground">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+            {/* SEO: contenu FAQ visible par les moteurs de recherche */}
+            <div className="sr-only" aria-hidden="true">
+              {faq.map((item, i) => (
+                <div key={i}>
+                  <h3>{item.question}</h3>
+                  <p>{item.answer}</p>
                 </div>
               ))}
             </div>
