@@ -115,6 +115,20 @@ const PriereEnfantMortNe = () => {
               <p>Pour l'heure, c'est le temps pour chacun de continuer sa route, accompagné de l'Amour de notre Père.</p>
               <p className="font-semibold text-primary">Amen.</p>
             </div>
+
+            {/* Navigation vers d'autres prières */}
+            <nav className="mt-12 pt-8 border-t border-border">
+              <p className="text-muted-foreground text-sm">
+                Voir aussi :{" "}
+                <Link to="/ressources/prieres/priere-pour-la-mort-dun-enfant" className="text-primary hover:underline font-medium">
+                  Prière pour la mort d'un enfant
+                </Link>
+                {" · "}
+                <Link to="/ressources/prieres/priere-a-la-sainte-vierge" className="text-primary hover:underline font-medium">
+                  Prière à la Sainte Vierge
+                </Link>
+              </p>
+            </nav>
           </div>
         </section>
 

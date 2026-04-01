@@ -56,7 +56,7 @@ const PriereAdieuAuVisage = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour l'adieu au visage
             </h1>
-            <p className="text-primary-foreground/60 mt-3 text-sm">16 mars 2023</p>
+            
           </div>
         </section>
 
