@@ -34,7 +34,7 @@ const prieres = [
   {
     title: "Prière pour une mort brutale",
     excerpt: "Une prière pour traverser le choc d'une mort soudaine et trouver des mots quand ils manquent.",
-    image: "https://s-c-f.org/wp-content/uploads/2023/01/home8.jpg",
+    image: priereMortBrutaleImg,
     href: "/ressources/prieres/priere-pour-une-mort-brutale",
   },
   {
