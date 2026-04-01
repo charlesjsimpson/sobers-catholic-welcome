@@ -78,16 +78,10 @@ const PriereInhumation = () => {
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
               <p>
-                Sans ordonnancement prédéfini, l'étape de l'inhumation dans un cimetière revêt toutefois un relief particulier.
+                L'inhumation est le dernier temps du parcours funéraire, celui où le cercueil est confié à la terre et où les proches vivent le nécessaire détachement de la dépouille mortelle. Un temps de prière au moment de l'inhumation peut être organisé autour du cercueil, au cimetière, avec ou sans l'aide d'un célébrant, avant qu'il ne soit définitivement enlevé à la vue de ceux qui l'ont accompagné.
               </p>
               <p>
-                Elle est en effet le terme du parcours rituel au cours duquel l'assistance vit, progressivement, le nécessaire détachement de la dépouille mortelle. Il importe donc qu'un temps de prière soit organisé, avec ou sans l'aide d'un célébrant extérieur à la famille.
-              </p>
-              <p>
-                Ce temps de prière se vit autour du cercueil, exposé dans une allée ou simplement posé sur la sépulture. Il est donc le dernier temps avant que le cercueil soit définitivement enlevé à la vue des proches.
-              </p>
-              <p>
-                A l'issue de l'inhumation, chaque membre de l'assistance est invité, à son tour, à venir s'incliner devant la tombe encore ouverte. Par un signe de croix, un jeté de fleurs ou une aspersion d'eau bénite, il manifeste une fois encore son respect pour le corps, temple de la vie de l'Esprit et son espérance de revoir un jour l'être décédé dans le Royaume de Dieu.
+                À l'issue de l'inhumation, chaque membre de l'assistance est invité à s'incliner devant la tombe encore ouverte, par un signe de croix, un jeté de fleurs ou une aspersion d'eau bénite, manifestant son espérance de revoir un jour le défunt dans le Royaume de Dieu.
               </p>
 
               <div className="mt-6 mb-10"><hr className="border-border" /></div>
