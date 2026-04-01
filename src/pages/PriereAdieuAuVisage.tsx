@@ -77,11 +77,6 @@ const PriereAdieuAuVisage = () => {
             </div>
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
-              <p>
-                Si les enfants ont fait le choix d'y assister, il peut leur être proposé de déposer un mot ou un dessin dans le cercueil avant qu'il ne soit fermé.
-              </p>
-
-              <div className="mt-6 mb-10"><hr className="border-border" /></div>
 
               <h2 className="font-display text-2xl text-foreground">Oraison</h2>
               <p>Les mots nous manquent Seigneur, nous sommes dans l'épreuve, accepte notre silence comme une prière pour <strong>[prénom du défunt]</strong> que Tu connais et que Tu aimes.</p>
