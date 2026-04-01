@@ -56,7 +56,7 @@ const PriereEnfantMortNe = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour un enfant mort‑né
             </h1>
-            <p className="text-primary-foreground/60 mt-3 text-sm">13 février 2024</p>
+            
           </div>
         </section>
 
