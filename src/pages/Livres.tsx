@@ -77,16 +77,21 @@ const Livres = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex items-center gap-3 mb-4">
-              <BookOpen className="w-6 h-6 text-primary-foreground/70" />
-              <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+            <div className="flex items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <BookOpen className="w-6 h-6 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+                </div>
+                <h1 className="text-3xl md:text-4xl font-display leading-tight">
+                  Les livres de Christian de Cacqueray sur la mort et le deuil
+                </h1>
+                <p className="text-primary-foreground/70 mt-3 max-w-3xl leading-relaxed">
+                  Christian de Cacqueray, fondateur du Service Catholique des Funérailles, est l'une des voix françaises les plus engagées sur la question du rapport à la mort. À travers ses ouvrages, il invite chacun à apprivoiser sa finitude, à traverser le deuil avec lucidité et à redécouvrir en quoi la mort peut être une source de sagesse pour les vivants.
+                </p>
+              </div>
+              <BookOpen className="hidden md:block w-24 h-24 lg:w-32 lg:h-32 text-primary-foreground/20 flex-shrink-0" strokeWidth={1} />
             </div>
-            <h1 className="text-3xl md:text-4xl font-display leading-tight">
-              Les livres de Christian de Cacqueray sur la mort et le deuil
-            </h1>
-            <p className="text-primary-foreground/70 mt-3 max-w-3xl leading-relaxed">
-              Christian de Cacqueray, fondateur du Service Catholique des Funérailles, est l'une des voix françaises les plus engagées sur la question du rapport à la mort. À travers ses ouvrages, il invite chacun à apprivoiser sa finitude, à traverser le deuil avec lucidité et à redécouvrir en quoi la mort peut être une source de sagesse pour les vivants.
-            </p>
           </div>
         </section>
 
