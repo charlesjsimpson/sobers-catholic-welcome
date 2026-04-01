@@ -21,7 +21,7 @@ const prieres = [
   {
     title: "Prière au moment de l'inhumation",
     excerpt: "Sans ordonnancement prédéfini, l'étape de l'inhumation dans un cimetière revêt toutefois un relief particulier.",
-    image: "https://s-c-f.org/wp-content/uploads/2023/03/priere_au_cimetierre.jpg",
+    image: priereInhumationImg,
     href: "/ressources/prieres/prieres",
   },
   {
