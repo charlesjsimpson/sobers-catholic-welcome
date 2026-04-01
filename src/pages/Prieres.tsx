@@ -1,4 +1,5 @@
 import { ArrowLeft, Flame } from "lucide-react";
+import priereSainteViergeImg from "@/assets/priere-sainte-vierge.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -47,7 +48,7 @@ const prieres = [
   {
     title: "Prière à la Sainte Vierge",
     excerpt: "Une prière à Marie pour confier un défunt et trouver un appui dans l'épreuve du deuil.",
-    image: "https://s-c-f.org/wp-content/uploads/2023/03/priere_a_la_sainte_vierge.jpg",
+    image: priereSainteViergeImg,
     href: "/ressources/prieres/priere-a-la-sainte-vierge",
   },
 ];
