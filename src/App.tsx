@@ -138,6 +138,7 @@ const App = () => (
             <Route path="/ressources/prieres/prieres" element={<PriereInhumation />} />
             <Route path="/ressources/prieres/priere-pour-une-mort-brutale" element={<PriereMortBrutale />} />
             <Route path="/ressources/prieres/priere-pour-la-mort-dun-enfant" element={<PriereMortEnfant />} />
+            <Route path="/ressources/prieres/priere-a-la-sainte-vierge" element={<PriereSainteVierge />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
             <Route path="/services/prevoyance" element={<Prevoyance />} />
