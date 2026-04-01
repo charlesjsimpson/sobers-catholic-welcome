@@ -1,4 +1,5 @@
 import { ArrowLeft, Flame } from "lucide-react";
+import priereSainteViergeImg from "@/assets/priere-sainte-vierge.jpg";
 import {
   Accordion,
   AccordionContent,
