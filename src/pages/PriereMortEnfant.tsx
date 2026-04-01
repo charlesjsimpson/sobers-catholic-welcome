@@ -57,7 +57,9 @@ const PriereMortEnfant = () => {
             <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
               Prière pour la mort d'un enfant
             </h1>
-            
+            <p className="mt-4 text-primary-foreground/80 text-base md:text-lg leading-relaxed max-w-3xl text-justify">
+              Perdre un enfant est une épreuve contre nature, que rien ne prépare et que les mots peinent à contenir. Cette prière pour la mort d'un enfant s'adresse aux parents, aux frères et sœurs, aux grands-parents, à tous ceux qui se retrouvent sans voix face à une vie brisée trop tôt. Elle peut accompagner les obsèques ou être dite dans l'intimité du deuil, seul ou en famille.
+            </p>
           </div>
         </section>
 
