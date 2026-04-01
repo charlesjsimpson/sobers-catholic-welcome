@@ -56,6 +56,7 @@ import Prevoyance from "./pages/Prevoyance";
 import Prieres from "./pages/Prieres";
 import PriereEnfantMortNe from "./pages/PriereEnfantMortNe";
 import PriereAdieuAuVisage from "./pages/PriereAdieuAuVisage";
+import PriereInhumation from "./pages/PriereInhumation";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
@@ -131,6 +132,7 @@ const App = () => (
             <Route path="/ressources/prieres" element={<Prieres />} />
             <Route path="/ressources/prieres/priere-pour-un-enfant-mort-ne" element={<PriereEnfantMortNe />} />
             <Route path="/ressources/prieres/priere-pour-ladieu-au-visage" element={<PriereAdieuAuVisage />} />
+            <Route path="/ressources/prieres/prieres" element={<PriereInhumation />} />
             <Route path="/contacter-une-agence" element={<ContacterUneAgence />} />
             <Route path="/organiser-des-obseques" element={<OrganiserDesObseques />} />
             <Route path="/services/prevoyance" element={<Prevoyance />} />
