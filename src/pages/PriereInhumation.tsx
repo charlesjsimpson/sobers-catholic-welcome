@@ -66,9 +66,11 @@ const PriereInhumation = () => {
           <div className="container mx-auto px-6 max-w-3xl">
             <div className="aspect-[16/9] overflow-hidden rounded-xl mb-10">
               <img
-                src="https://s-c-f.org/wp-content/uploads/2023/03/priere_au_cimetierre.jpg"
+                src={priereInhumationImg}
                 alt="Prière au moment de l'inhumation"
                 className="w-full h-full object-cover"
+                width={1280}
+                height={720}
               />
             </div>
 
