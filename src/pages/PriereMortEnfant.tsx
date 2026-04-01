@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import priereMortEnfantImg from "@/assets/priere-mort-enfant.jpg";
+
 
 const autresPrieres = [
   {
@@ -66,7 +66,7 @@ const PriereMortEnfant = () => {
           <div className="container mx-auto px-6 max-w-3xl">
             <div className="aspect-[16/9] overflow-hidden rounded-xl mb-10">
               <img
-                src={priereMortEnfantImg}
+                src="https://s-c-f.org/wp-content/uploads/2023/01/priere_mort_enfant-1.jpg"
                 alt="Prière pour la mort d'un enfant"
                 className="w-full h-full object-cover"
                 width={1280}
