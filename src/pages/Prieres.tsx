@@ -106,7 +106,7 @@ const Prieres = () => {
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
                   Prières catholiques pour accompagner un défunt<br /> et traverser le deuil
                 </h1>
-                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed">
+                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
                   Face à la mort d'un proche, les mots manquent souvent. La prière peut alors devenir un chemin pour exprimer la douleur, confier le défunt à Dieu et trouver un appui dans l'épreuve du deuil. Le Service Catholique des Funérailles propose ici une sélection de prières catholiques adaptées aux différentes situations de deuil&nbsp;: mort subite, perte d'un enfant, moment de l'inhumation, adieu au corps.
                 </p>
               </div>
