@@ -25,11 +25,11 @@ const Contact = () => {
                   </span>
                 </div>
                 <a
-                  href="tel:0143722828"
+                  href="tel:0144388080"
                   className="flex items-center gap-4 text-3xl md:text-4xl font-display hover:opacity-90 transition-opacity"
                 >
                   <Phone className="w-8 h-8" />
-                  01 43 72 28 28
+                  01 44 38 80 80
                 </a>
               </div>
 
@@ -57,9 +57,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Adresse</h3>
                     <p className="text-muted-foreground">
-                      3, rue du Marché Saint-Honoré
+                      66, rue Falguière
                       <br />
-                      75001 Paris
+                      75015 Paris
                     </p>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const Contact = () => {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="tel:0143722828"
+                  href="tel:0144388080"
                   className="btn-primary text-center"
                 >
                   Appeler maintenant
