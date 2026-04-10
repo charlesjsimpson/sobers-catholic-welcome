@@ -11,6 +11,7 @@ import photo5 from "@/assets/agence-paris-17-5.webp";
 const agencyPhotos = [photo1, photo2, photo3, photo4, photo5];
 
 const AgenceParis17 = () => {
+  const [currentPhoto, setCurrentPhoto] = useState(0);
   useEffect(() => {
     document.title = "Pompes funèbres Paris 17 | Service Catholique des Funérailles";
     const metaDesc = document.querySelector('meta[name="description"]');
