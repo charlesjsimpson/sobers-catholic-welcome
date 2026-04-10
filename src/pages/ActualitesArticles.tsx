@@ -1,9 +1,9 @@
-import { ArrowLeft, ArrowRight, Newspaper, Calendar, MapPin, Radio, BookOpen } from "lucide-react";
+import { ArrowLeft, ArrowRight, Newspaper, Calendar, MapPin, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
+
 
 interface ContentItem {
   title: string;
@@ -48,15 +48,6 @@ const actualites: ContentItem[] = [
     category: "Ressource",
     url: "/ressources/sessions/se-reconcilier-avec-la-mort",
     internal: true,
-  },
-  {
-    title: "Dialogue sur la mort, avec Gaël Leiblang, réalisateur d'un seul-en-scène sur le deuil périnatal",
-    excerpt: "Christian de Cacqueray reçoit Gaël Leiblang, auteur du seul-en-scène autobiographique \"Tu seras un homme Papa\".",
-    category: "Émission",
-    date: "23/09/2025",
-    url: "/ressources/emissions/dialogue-sur-la-mort-avec-gael-leiblang-realisateur-dun-seul-en-scene-sur-le-deuil-perinatal",
-    internal: true,
-    image: gaelImg,
   },
 ];
 
@@ -105,7 +96,6 @@ const allItems = [...actualites, ...articles];
 
 const getCategoryIcon = (category: string) => {
   switch (category) {
-    case "Émission": return <Radio className="w-3 h-3" />;
     case "Article": return <BookOpen className="w-3 h-3" />;
     default: return <Newspaper className="w-3 h-3" />;
   }
