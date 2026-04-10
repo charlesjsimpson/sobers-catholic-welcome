@@ -7,10 +7,10 @@ import cheminDeCroixImg from "@/assets/chemin-de-croix-bordeaux.webp";
 
 const ActualiteVendrediSaint = () => {
   useEffect(() => {
-    document.title = "Vendredi Saint : les assistants funéraires au Chemin de Croix – Service Catholique des Funérailles";
+    document.title = "Vendredi Saint à Bordeaux : nos assistants funéraires au Chemin de Croix";
     const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
     meta.setAttribute("name", "description");
-    meta.setAttribute("content", "Les assistants funéraires du SCF de Bordeaux ont participé au Chemin de Croix du centre-ville pour le Vendredi Saint 2026.");
+    meta.setAttribute("content", "Le Service Catholique des Funérailles de Bordeaux s'est joint au Chemin de Croix ce Vendredi Saint. Découvrez comment nos assistants funéraires vivent leur foi au quotidien.");
     if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
     return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
@@ -36,10 +36,10 @@ const ActualiteVendrediSaint = () => {
                   <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Actualité — Bordeaux</span>
                 </div>
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
-                  Vendredi Saint : les assistants funéraires<br />au Chemin de Croix
+                  Vendredi Saint à Bordeaux : nos assistants funéraires au Chemin de Croix
                 </h1>
                 <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
-                  Les assistants funéraires du Service Catholique des Funérailles de Bordeaux ont participé au Chemin de Croix du centre-ville à l'occasion du Vendredi Saint 2026.
+                  Ce Vendredi Saint 2026, Marie, Éric et Benoît, assistants funéraires du Service Catholique des Funérailles de Bordeaux, ont participé au Chemin de Croix organisé dans le centre-ville. Une démarche de foi qui résonne profondément avec leur mission d'accompagnement des familles en deuil.
                 </p>
               </div>
               <img
@@ -54,18 +54,40 @@ const ActualiteVendrediSaint = () => {
         {/* Contenu */}
         <section className="pb-16">
           <div className="container mx-auto px-6 max-w-3xl">
-            
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
+              <h2 className="font-display text-xl md:text-2xl text-foreground mt-10">Une tradition ancrée dans la vocation du SCF</h2>
               <p className="text-justify">
-                Comme les années précédentes pour le Vendredi Saint, les trois assistants funéraires du Service Catholique des Funérailles de Bordeaux, Marie, Éric et Benoît ont participé au Chemin de Croix du centre-ville.
+                Comme les années précédentes, les assistants funéraires du SCF Bordeaux ont rejoint la pérégrination populaire du Chemin de Croix à travers le centre-ville. Pour ces professionnels du soin aux défunts, le Vendredi Saint n'est pas un jour ordinaire&nbsp;: il touche au cœur même de leur engagement quotidien auprès des familles.
               </p>
+
+              <h2 className="font-display text-xl md:text-2xl text-foreground mt-10">Une intention de prière pour ceux qui prennent soin des morts</h2>
               <p className="text-justify">
-                Nous avons été particulièrement sensibles à une intention de prières lue devant le portail occidental de la cathédrale Saint-André lors de la dernière station de cette pérégrination populaire&nbsp;:
+                À la dernière station, devant le portail occidental de la cathédrale Saint-André de Bordeaux, une intention de prière a particulièrement retenu leur attention&nbsp;:
               </p>
               <blockquote className="border-l-4 border-primary/40 pl-6 italic text-muted-foreground my-6">
                 «&nbsp;Seigneur, toi qui as été l'objet de la miséricorde de Joseph d'Arimathie et des saintes femmes, nous te prions de bénir ceux qui prennent soin des morts et de nous donner de ne jamais oublier de prier pour nos chers défunts.&nbsp;»
               </blockquote>
+              <p className="text-justify">
+                Ces mots font écho à la mission du Service Catholique des Funérailles&nbsp;: accompagner chaque famille avec dignité, humanité et foi, à chaque étape des obsèques.
+              </p>
+
+              <h2 className="font-display text-xl md:text-2xl text-foreground mt-10">Le SCF Bordeaux, un accompagnement funéraire enraciné dans la foi</h2>
+              <p className="text-justify">
+                Le Service Catholique des Funérailles de Bordeaux propose un accompagnement funéraire respectueux, porté par des hommes et des femmes engagés. Que ce soit pour l'organisation des obsèques, la prévoyance funéraire ou le soutien au deuil, nos équipes sont disponibles 7&nbsp;jours sur&nbsp;7.
+              </p>
+              <ul className="space-y-2 text-base list-disc pl-6">
+                <li>
+                  <Link to="/contacter-une-agence" className="text-primary hover:underline">
+                    Contacter le SCF Bordeaux
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/ressources/le-parcours-des-funerailles" className="text-primary hover:underline">
+                    Découvrir le parcours des funérailles
+                  </Link>
+                </li>
+              </ul>
             </div>
 
             <hr className="my-10 border-border" />
