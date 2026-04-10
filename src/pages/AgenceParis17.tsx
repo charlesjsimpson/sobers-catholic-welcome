@@ -38,12 +38,12 @@ const AgenceParis17 = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-8">
               <a
                 href="tel:0188610800"
-                className="btn-primary inline-flex items-center gap-3 text-xl px-8 py-4"
+                className="btn-primary inline-flex items-center justify-center gap-3 text-lg px-8 py-4 min-w-[260px]"
               >
-                <Phone className="w-6 h-6" />
+                <Phone className="w-5 h-5" />
                 01 88 61 08 00
               </a>
-              <span className="text-primary-foreground/80 text-lg flex items-center gap-2">
+              <span className="inline-flex items-center justify-center gap-3 text-lg px-8 py-4 min-w-[260px] border border-primary-foreground/30 text-primary-foreground rounded-md">
                 <Clock className="w-5 h-5" />
                 Urgence décès 7j/7 24h/24
               </span>
