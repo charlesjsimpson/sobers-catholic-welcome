@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import reconcilierMort from "@/assets/reconcilier-mort.png";
-import radioNotreDame from "@/assets/radio-notre-dame.png";
+import radioNotreDame from "@/assets/christian-radio-notre-dame.png";
 import conversationsMort from "@/assets/conversations-mort.png";
 
 const ressources = [
