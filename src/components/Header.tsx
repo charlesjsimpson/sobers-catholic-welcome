@@ -185,7 +185,7 @@ const Header = () => {
               >
                 <button
                   className={cn(
-                    "flex items-center gap-1 px-4 py-2.5 text-primary-foreground text-[15px] font-medium tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
+                    "flex items-center gap-1 px-4 py-2.5 text-primary-foreground text-[15px] font-bold tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
                     isParentActive(item) && "underline underline-offset-4 decoration-2"
                   )}
                   onClick={() => handleNavigate(item.href)}
