@@ -1,10 +1,17 @@
-import { useEffect } from "react";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Phone, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import agenceParis17 from "@/assets/agence-paris-17.png";
+import photo1 from "@/assets/agence-paris-17-1.webp";
+import photo2 from "@/assets/agence-paris-17-2.webp";
+import photo3 from "@/assets/agence-paris-17-3.webp";
+import photo4 from "@/assets/agence-paris-17-4.webp";
+import photo5 from "@/assets/agence-paris-17-5.webp";
+
+const agencyPhotos = [photo1, photo2, photo3, photo4, photo5];
 
 const AgenceParis17 = () => {
+  const [currentPhoto, setCurrentPhoto] = useState(0);
   useEffect(() => {
     document.title = "Pompes funèbres Paris 17 | Service Catholique des Funérailles";
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -49,12 +56,37 @@ const AgenceParis17 = () => {
         <section className="py-16 bg-background">
           <div className="container mx-auto px-6 max-w-5xl">
             <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="rounded-xl overflow-hidden shadow-lg">
+              <div className="rounded-xl overflow-hidden shadow-lg relative">
                 <img
-                  src={agenceParis17}
-                  alt="Agence Service Catholique des Funérailles - Paris 17ème"
-                  className="w-full h-full object-cover"
+                  src={agencyPhotos[currentPhoto]}
+                  alt={`Agence Service Catholique des Funérailles - Paris 17ème - Photo ${currentPhoto + 1}`}
+                  className="w-full h-72 md:h-80 object-cover"
                 />
+                {agencyPhotos.length > 1 && (
+                  <>
+                    <button
+                      onClick={() => setCurrentPhoto((p) => (p - 1 + agencyPhotos.length) % agencyPhotos.length)}
+                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-1.5 shadow"
+                    >
+                      <ChevronLeft className="w-5 h-5 text-foreground" />
+                    </button>
+                    <button
+                      onClick={() => setCurrentPhoto((p) => (p + 1) % agencyPhotos.length)}
+                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-1.5 shadow"
+                    >
+                      <ChevronRight className="w-5 h-5 text-foreground" />
+                    </button>
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                      {agencyPhotos.map((_, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setCurrentPhoto(i)}
+                          className={`w-2 h-2 rounded-full transition-colors ${i === currentPhoto ? "bg-primary" : "bg-background/60"}`}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
               <div>
                 <h2 className="text-2xl font-display text-foreground mb-4">
