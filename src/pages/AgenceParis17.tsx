@@ -7,6 +7,7 @@ import photo2 from "@/assets/agence-paris-17-2.webp";
 import photo3 from "@/assets/agence-paris-17-3.webp";
 import photo4 from "@/assets/agence-paris-17-4.webp";
 import photo5 from "@/assets/agence-paris-17-5.webp";
+import novyPhoto from "@/assets/novy-garconnot.jpg";
 
 const agencyPhotos = [photo1, photo2, photo3, photo4, photo5];
 
@@ -272,6 +273,11 @@ const AgenceParis17 = () => {
                   key={i}
                   className="bg-card rounded-xl p-5 shadow-sm border border-border/50 text-center"
                 >
+                  <img
+                    src={novyPhoto}
+                    alt={`${collab.prenom} ${collab.nom}`}
+                    className="w-20 h-20 rounded-full object-cover mx-auto mb-3"
+                  />
                   <p className="text-primary font-medium text-xs uppercase tracking-wider mb-2">{collab.role}</p>
                   <p className="text-foreground font-display text-sm">{collab.prenom} {collab.nom}</p>
                 </div>
