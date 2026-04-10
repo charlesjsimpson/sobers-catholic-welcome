@@ -31,17 +31,11 @@ const AgenceParis17 = () => {
       <main>
         {/* Hero */}
         <section className="relative bg-primary pt-28 pb-16">
-          <div className="container mx-auto px-6 text-center">
-            <div className="flex items-center justify-center gap-3 mb-3">
-              <img src={logoPrefecture} alt="Logo Préfecture de Police de Paris" className="h-12 w-12 rounded-full bg-white/10 p-1" loading="lazy" width={512} height={512} />
-              <p className="text-primary-foreground/70 text-sm uppercase tracking-widest">
-                Pompes funèbres habilitées par la préfecture de Paris
-              </p>
-            </div>
-            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-6 leading-tight">
+           <div className="container mx-auto px-6 text-center">
+            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-8 leading-tight">
               Service Catholique des Funérailles – Paris 17
             </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
               <a
                 href="tel:0188610800"
                 className="btn-primary inline-flex items-center gap-2 text-lg"
@@ -53,6 +47,12 @@ const AgenceParis17 = () => {
                 <Clock className="w-4 h-4" />
                 Urgence décès 7j/7 24h/24
               </span>
+            </div>
+            <div className="flex items-center justify-center gap-3">
+              <p className="text-primary-foreground/70 text-sm">
+                Pompes funèbres habilitées par la préfecture de Paris
+              </p>
+              <img src={logoPrefecture} alt="Logo République Française - Préfecture de Paris" className="h-10 w-auto" loading="lazy" width={512} height={512} />
             </div>
           </div>
         </section>
