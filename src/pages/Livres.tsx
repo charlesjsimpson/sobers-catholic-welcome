@@ -83,7 +83,7 @@ const Livres = () => {
                   <BookOpen className="w-6 h-6 text-primary-foreground/70" />
                   <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
                 </div>
-                <h1 className="text-3xl md:text-4xl font-display leading-tight">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
                   Les livres de Christian de Cacqueray sur la mort et le deuil
                 </h1>
                 <p className="text-primary-foreground/70 mt-3 max-w-3xl leading-relaxed">
