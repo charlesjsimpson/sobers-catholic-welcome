@@ -64,6 +64,7 @@ import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
 import Livres from "./pages/Livres";
+import ActualitesArticles from "./pages/ActualitesArticles";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";

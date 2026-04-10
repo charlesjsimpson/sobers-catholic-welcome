@@ -3,9 +3,18 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import etienneImg from "@/assets/etienne-de-varax.jpeg";
 import gaelImg from "@/assets/gael-leiblang-portrait.jpeg";
-import mathiasImg from "@/assets/mathias-mlekuz-portrait.webp";
+
+interface ContentItem {
+  title: string;
+  excerpt: string;
+  category: string;
+  location?: string;
+  date?: string;
+  image?: string;
+  url?: string;
+  internal?: boolean;
+}
 
 const actualites = [
   {
