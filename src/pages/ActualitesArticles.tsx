@@ -24,6 +24,8 @@ const actualites: ContentItem[] = [
     category: "Actualité",
     location: "Bordeaux",
     image: cheminDeCroixImg,
+    url: "/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix",
+    internal: true,
   },
   {
     title: "Messes chaque lundi soir pendant six mois pour les défunts",
