@@ -48,6 +48,8 @@ const ActualiteVendrediSaint = () => {
                 className="hidden md:block w-40 h-40 lg:w-52 lg:h-52 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
               />
             </div>
+          </div>
+        </section>
 
         {/* Contenu */}
         <section className="pb-16">
