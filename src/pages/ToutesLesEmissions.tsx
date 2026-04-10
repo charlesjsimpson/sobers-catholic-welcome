@@ -457,7 +457,7 @@ const ToutesLesEmissions = () => {
                   <Radio className="w-6 h-6 text-primary-foreground/70" />
                   <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Émissions</span>
                 </div>
-                <h1 className="text-2xl md:text-3xl font-display leading-tight">
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
                   <em>Dialogue sur la mort</em>
                 </h1>
                 <p className="text-primary-foreground/80 mt-3 max-w-2xl text-sm">
