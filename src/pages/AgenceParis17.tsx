@@ -54,7 +54,6 @@ const AgenceParis17 = () => {
               </p>
               <img src={logoPrefecture} alt="Logo République Française - Préfecture de Paris" className="h-10 w-auto" loading="lazy" width={512} height={512} />
             </div>
-            </div>
           </div>
         </section>
 
