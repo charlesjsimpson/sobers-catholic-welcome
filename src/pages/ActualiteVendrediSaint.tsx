@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import cheminDeCroixImg from "@/assets/chemin-de-croix-bordeaux.webp";
+import cheminDeCroixImg from "@/assets/chemin-de-croix-bordeaux-v2.webp";
 
 const ActualiteVendrediSaint = () => {
   useEffect(() => {
