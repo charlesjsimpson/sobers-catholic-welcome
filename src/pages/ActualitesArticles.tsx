@@ -16,7 +16,7 @@ interface ContentItem {
   internal?: boolean;
 }
 
-const actualites = [
+const actualites: ContentItem[] = [
   {
     title: "Vendredi Saint : les assistants funéraires au Chemin de Croix",
     excerpt: "Vendredi Saint : les assistants funéraires au Chemin de Croix de Bordeaux.",
@@ -60,7 +60,7 @@ const actualites = [
   },
 ];
 
-const articles = [
+const articles: ContentItem[] = [
   {
     title: "\"Vivre en mortel\" de Christian de Cacqueray, présélectionné pour le Prix de la liberté intérieure 2022",
     excerpt: "Le livre de Christian de Cacqueray a été présélectionné pour le Prix de la liberté intérieure 2022.",
