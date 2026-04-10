@@ -284,9 +284,9 @@ const Header = () => {
             {/* Phone button — desktop only */}
             <a
               href="tel:+33144388080"
-              className="hidden lg:flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground font-medium text-[13px] px-4 py-2 rounded-md hover:bg-primary-foreground/10 transition-colors"
+              className="hidden lg:flex items-center gap-2 bg-white text-primary font-semibold text-[15px] px-5 py-2.5 rounded-md hover:bg-white/90 transition-colors"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <Phone className="w-4 h-4" />
               <span>01 44 38 80 80</span>
             </a>
           </div>
