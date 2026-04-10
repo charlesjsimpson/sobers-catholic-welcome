@@ -29,29 +29,25 @@ const ActualiteVendrediSaint = () => {
               <ArrowLeft className="w-4 h-4" />
               Retour aux actualités
             </Link>
-            <div className="flex items-center gap-3 mb-4">
-              <Newspaper className="w-6 h-6 text-primary-foreground/70" />
-              <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Actualité — Bordeaux</span>
+            <div className="flex items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Newspaper className="w-6 h-6 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Actualité — Bordeaux</span>
+                </div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
+                  Vendredi Saint : les assistants funéraires<br />au Chemin de Croix
+                </h1>
+                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
+                  Les assistants funéraires du Service Catholique des Funérailles de Bordeaux ont participé au Chemin de Croix du centre-ville à l'occasion du Vendredi Saint 2026.
+                </p>
+              </div>
+              <img
+                src={cheminDeCroixImg}
+                alt="Chemin de Croix dans le centre-ville de Bordeaux — Vendredi Saint 2026"
+                className="hidden md:block w-40 h-40 lg:w-52 lg:h-52 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+              />
             </div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
-              Vendredi Saint : les assistants funéraires<br />au Chemin de Croix
-            </h1>
-            <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
-              Les assistants funéraires du Service Catholique des Funérailles de Bordeaux ont participé au Chemin de Croix du centre-ville à l'occasion du Vendredi Saint 2026.
-            </p>
-          </div>
-        </section>
-
-        {/* Image */}
-        <section className="py-10">
-          <div className="container mx-auto px-6 max-w-3xl">
-            <img
-              src={cheminDeCroixImg}
-              alt="Chemin de Croix dans le centre-ville de Bordeaux — Vendredi Saint 2026"
-              className="w-full rounded-xl shadow-md"
-            />
-          </div>
-        </section>
 
         {/* Contenu */}
         <section className="pb-16">
