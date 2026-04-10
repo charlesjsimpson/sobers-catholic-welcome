@@ -68,11 +68,11 @@ const Livres = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-10">
-          <div className="container mx-auto px-6 max-w-5xl">
+        <section className="bg-primary text-primary-foreground py-16">
+          <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-4 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
@@ -86,7 +86,7 @@ const Livres = () => {
                 <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
                   Les livres de Christian de Cacqueray sur la mort et le deuil
                 </h1>
-                <p className="text-primary-foreground/70 mt-3 max-w-3xl leading-relaxed">
+                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
                   Christian de Cacqueray, fondateur du Service Catholique des Funérailles, est l'une des voix françaises les plus engagées sur la question du rapport à la mort. À travers ses ouvrages, il invite chacun à apprivoiser sa finitude, à traverser le deuil avec lucidité et à redécouvrir en quoi la mort peut être une source de sagesse pour les vivants.
                 </p>
               </div>
