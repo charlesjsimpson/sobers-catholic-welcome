@@ -66,6 +66,7 @@ import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLa
 import Livres from "./pages/Livres";
 import ActualitesArticles from "./pages/ActualitesArticles";
 import ActualiteVendrediSaint from "./pages/ActualiteVendrediSaint";
+import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";
