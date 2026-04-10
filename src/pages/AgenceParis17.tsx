@@ -8,6 +8,7 @@ import photo3 from "@/assets/agence-paris-17-3.webp";
 import photo4 from "@/assets/agence-paris-17-4.webp";
 import photo5 from "@/assets/agence-paris-17-5.webp";
 import novyPhoto from "@/assets/novy-garconnot.jpg";
+import logoPrefecture from "@/assets/logo-prefecture-police.png";
 
 const agencyPhotos = [photo1, photo2, photo3, photo4, photo5];
 
@@ -31,9 +32,12 @@ const AgenceParis17 = () => {
         {/* Hero */}
         <section className="relative bg-primary pt-28 pb-16">
           <div className="container mx-auto px-6 text-center">
-            <p className="text-primary-foreground/70 text-sm uppercase tracking-widest mb-3">
-              Pompes funèbres habilitées par la préfecture de Paris
-            </p>
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <img src={logoPrefecture} alt="Logo Préfecture de Police de Paris" className="h-12 w-12 rounded-full bg-white/10 p-1" loading="lazy" width={512} height={512} />
+              <p className="text-primary-foreground/70 text-sm uppercase tracking-widest">
+                Pompes funèbres habilitées par la préfecture de Paris
+              </p>
+            </div>
             <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-6 leading-tight">
               Service Catholique des Funérailles – Paris 17
             </h1>
