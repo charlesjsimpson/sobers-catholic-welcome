@@ -30,29 +30,29 @@ const AgenceParis17 = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative bg-primary pt-28 pb-16">
+        <section className="relative bg-primary pt-32 pb-20">
            <div className="container mx-auto px-6 text-center">
-            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-8 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-display text-primary-foreground mb-10 leading-tight">
               Service Catholique des Funérailles – Paris 17
             </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-8">
               <a
                 href="tel:0188610800"
-                className="btn-primary inline-flex items-center gap-2 text-lg"
+                className="btn-primary inline-flex items-center gap-3 text-xl px-8 py-4"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="w-6 h-6" />
                 01 88 61 08 00
               </a>
-              <span className="text-primary-foreground/80 text-sm flex items-center gap-2">
-                <Clock className="w-4 h-4" />
+              <span className="text-primary-foreground/80 text-lg flex items-center gap-2">
+                <Clock className="w-5 h-5" />
                 Urgence décès 7j/7 24h/24
               </span>
             </div>
-            <div className="flex items-center justify-center gap-3">
-              <p className="text-primary-foreground/70 text-sm">
+            <div className="flex items-center justify-center gap-4">
+              <p className="text-primary-foreground/70 text-base md:text-lg">
                 Pompes funèbres habilitées par la préfecture de Paris
               </p>
-              <img src={logoPrefecture} alt="Logo République Française - Préfecture de Paris" className="h-10 w-auto" loading="lazy" width={512} height={512} />
+              <img src={logoPrefecture} alt="Logo République Française - Préfecture de Paris" className="h-14 w-auto" loading="lazy" width={512} height={512} />
             </div>
           </div>
         </section>
