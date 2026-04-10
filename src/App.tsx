@@ -66,6 +66,7 @@ import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLa
 import Livres from "./pages/Livres";
 import ActualitesArticles from "./pages/ActualitesArticles";
 import ActualiteVendrediSaint from "./pages/ActualiteVendrediSaint";
+import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";
@@ -151,6 +152,7 @@ const App = () => (
             <Route path="/ressources/actualites" element={<ActualitesArticles />} />
             <Route path="/ressources/articles" element={<ActualitesArticles />} />
             <Route path="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix" element={<ActualiteVendrediSaint />} />
+            <Route path="/ressources/videos" element={<Videos />} />
 
             {/* Admin routes */}
             <Route path="/admin/login" element={<AdminLogin />} />
