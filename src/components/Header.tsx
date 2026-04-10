@@ -16,7 +16,7 @@ interface NavColumn {
 
 interface NavItem {
   label: string;
-  href?: string;
+  href: string;
   children?: NavChild[];
   columns?: NavColumn[];
   bottomLink?: { label: string; href: string };
@@ -25,41 +25,59 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     label: "Organiser des obsèques",
+    href: "/organiser-des-obseques",
     children: [
-      { label: "Organiser des obsèques catholiques", href: "/organiser-des-obseques" },
-      { label: "Les démarches après un décès", href: "/demarches" },
-      { label: "Cercueils et fournitures", href: "/cercueils" },
-      { label: "Fleurs et faire-part", href: "/services/organiser-vos-obseques/faire-part-et-cartes-de-remerciement" },
+      { label: "Organiser des obsèques", href: "/organiser-des-obseques" },
+      { label: "Démarches après un décès", href: "/demarches" },
+      { label: "Cercueils et fleurs", href: "/cercueils" },
+      { label: "Trouver une agence", href: "/contacter-une-agence" },
+      { label: "Le carnet du SCF", href: "/ressources" },
+    ],
+  },
+  {
+    label: "Nos prestations",
+    href: "/services",
+    children: [
+      { label: "Cercueils", href: "/cercueils" },
+      { label: "Compositions florales", href: "/services/organiser-vos-obseques/compositions-florales" },
+      { label: "Cartes de remerciements", href: "/services/organiser-vos-obseques/faire-part-et-cartes-de-remerciement" },
+      { label: "Monuments funéraires", href: "#" },
       { label: "Nos tarifs", href: "/services/tarifs" },
+      { label: "Qui sommes-nous", href: "/a-propos" },
     ],
   },
   {
     label: "Anticiper",
+    href: "/services/prevoyance",
     children: [
-      { label: "Pourquoi anticiper ses obsèques", href: "/services/prevoyance/#s1" },
+      { label: "Pourquoi anticiper", href: "/services/prevoyance" },
       { label: "Déposer ses volontés", href: "/services/deposer-ses-volontes" },
-      { label: "Préfinancer ses obsèques", href: "/services/contrats" },
+      { label: "Préfinancer mes obsèques", href: "/services/contrats" },
+      { label: "Trouver une agence", href: "/contacter-une-agence" },
     ],
   },
   {
     label: "Ressources",
+    href: "/ressources",
     children: [
       { label: "Articles et actualités", href: "/ressources/actualites" },
       { label: "Prières", href: "/ressources/prieres" },
       { label: "Émissions radio", href: "/ressources/emissions" },
-      { label: "Vidéos", href: "/ressources/videos" },
       { label: "Livres", href: "/ressources/livres" },
-      { label: "Sessions \"Se réconcilier avec la mort\"", href: "/ressources/sessions/se-reconcilier-avec-la-mort" },
+      { label: "Sessions deuil", href: "/ressources/sessions/se-reconcilier-avec-la-mort" },
+      { label: "FAQ", href: "/foire-aux-questions" },
+      { label: "Qui sommes-nous", href: "/a-propos" },
     ],
   },
   {
     label: "Nos agences",
+    href: "/contacter-une-agence",
     columns: [
       {
         title: "Île-de-France",
         items: [
-          { label: "Paris 15", href: "/agences/paris-15" },
-          { label: "Paris 17", href: "/agences/paris-17" },
+          { label: "Paris 15e", href: "/agences/paris-15" },
+          { label: "Paris 17e", href: "/agences/paris-17" },
           { label: "Boulogne-Billancourt", href: "/agences/boulogne-billancourt" },
           { label: "Versailles", href: "/agences/versailles" },
         ],
@@ -78,13 +96,6 @@ const navItems: NavItem[] = [
       },
     ],
     bottomLink: { label: "Voir toutes nos agences", href: "/contacter-une-agence" },
-  },
-  {
-    label: "À propos",
-    children: [
-      { label: "Qui sommes-nous", href: "/a-propos" },
-      { label: "FAQ", href: "/foire-aux-questions" },
-    ],
   },
 ];
 
@@ -109,6 +120,7 @@ const Header = () => {
   }, [location.pathname]);
 
   const handleNavigate = (href: string) => {
+    if (href === "#") return;
     if (href.startsWith("http") || href.startsWith("tel:") || href.startsWith("mailto:")) {
       window.location.href = href;
     } else {
@@ -118,7 +130,7 @@ const Header = () => {
     setOpenDesktopIndex(null);
   };
 
-  const isActive = (href: string) => location.pathname === href || location.pathname.startsWith(href + "/");
+  const isActive = (href: string) => href !== "#" && (location.pathname === href || location.pathname.startsWith(href + "/"));
 
   const isParentActive = (item: NavItem) => {
     if (item.children) return item.children.some((c) => isActive(c.href));
@@ -132,7 +144,7 @@ const Header = () => {
   };
 
   const handleDesktopLeave = () => {
-    closeTimerRef.current = setTimeout(() => setOpenDesktopIndex(null), 150);
+    closeTimerRef.current = setTimeout(() => setOpenDesktopIndex(null), 200);
   };
 
   return (
@@ -142,19 +154,28 @@ const Header = () => {
         scrolled && "shadow-lg"
       )}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+      <div className="container mx-auto px-4 lg:px-6">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Mobile: Burger left */}
+          <button
+            className="lg:hidden p-2 text-primary-foreground"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menu"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+
+          {/* Logo — left on desktop, center on mobile */}
           <a
             href="/"
             onClick={(e) => { e.preventDefault(); handleNavigate("/"); }}
-            className="flex items-center gap-3 cursor-pointer shrink-0"
+            className="flex items-center cursor-pointer shrink-0 lg:mr-8 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
           >
-            <img src={logoScf} alt="Service Catholique des Funérailles" className="h-14 w-auto" />
+            <img src={logoScf} alt="Service Catholique des Funérailles" className="h-10 lg:h-14 w-auto" />
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 ml-8">
+          {/* Desktop Navigation — centered */}
+          <nav className="hidden lg:flex items-center gap-0.5 flex-1 justify-center">
             {navItems.map((item, index) => (
               <div
                 key={item.label}
@@ -164,16 +185,14 @@ const Header = () => {
               >
                 <button
                   className={cn(
-                    "flex items-center gap-1 px-3 py-2 text-primary-foreground text-sm font-semibold tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
+                    "flex items-center gap-1 px-3 py-2 text-primary-foreground text-[13px] font-medium tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
                     isParentActive(item) && "underline underline-offset-4 decoration-2"
                   )}
-                  onClick={() => {
-                    if (item.href) handleNavigate(item.href);
-                  }}
+                  onClick={() => handleNavigate(item.href)}
                 >
                   {item.label}
                   {(item.children || item.columns) && (
-                    <ChevronDown className={cn("w-3.5 h-3.5 transition-transform", openDesktopIndex === index && "rotate-180")} />
+                    <ChevronDown className={cn("w-3 h-3 transition-transform", openDesktopIndex === index && "rotate-180")} />
                   )}
                 </button>
 
@@ -185,7 +204,7 @@ const Header = () => {
                         <div className="flex flex-col">
                           {item.children.map((child) => (
                             <a
-                              key={child.href}
+                              key={child.label + child.href}
                               href={child.href}
                               onClick={(e) => { e.preventDefault(); handleNavigate(child.href); }}
                               className={cn(
@@ -244,29 +263,38 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Right side: Phone CTA + Hamburger */}
-          <div className="flex items-center gap-3 shrink-0">
+          {/* Right side: Urgence + Phone */}
+          <div className="flex items-center gap-2 shrink-0">
+            {/* Urgence décès button */}
             <a
-              href="tel:+33144388080"
-              className="hidden sm:flex items-center gap-2 bg-primary-foreground text-primary font-bold text-sm px-5 py-2.5 rounded-full hover:bg-primary-foreground/90 transition-colors"
+              href="/organiser-des-obseques"
+              onClick={(e) => { e.preventDefault(); handleNavigate("/organiser-des-obseques"); }}
+              className="flex items-center gap-2 text-white font-medium text-[13px] px-3 lg:px-4 py-2 rounded-md transition-colors"
+              style={{ backgroundColor: "#B03020" }}
             >
-              <Phone className="w-4 h-4" />
-              <span>01 44 38 80 80</span>
+              {/* Pulsing dot */}
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-200"></span>
+              </span>
+              <span className="hidden sm:inline">Urgence décès</span>
+              <span className="sm:hidden">Urgence</span>
             </a>
 
-            <button
-              className="lg:hidden p-2 text-primary-foreground"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Menu"
+            {/* Phone button — desktop only */}
+            <a
+              href="tel:+33144388080"
+              className="hidden lg:flex items-center gap-2 border border-primary-foreground/30 text-primary-foreground font-medium text-[13px] px-4 py-2 rounded-md hover:bg-primary-foreground/10 transition-colors"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              <Phone className="w-3.5 h-3.5" />
+              <span>01 44 38 80 80</span>
+            </a>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-primary-foreground/20 animate-fade-in max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <nav className="lg:hidden py-4 border-t border-primary-foreground/20 animate-fade-in max-h-[calc(100vh-4rem)] overflow-y-auto">
             <div className="flex flex-col gap-1">
               {navItems.map((item, index) => {
                 const hasDropdown = item.children || item.columns;
@@ -282,7 +310,7 @@ const Header = () => {
                       onClick={() => {
                         if (hasDropdown) {
                           setOpenMobileIndex(isOpen ? null : index);
-                        } else if (item.href) {
+                        } else {
                           handleNavigate(item.href);
                         }
                       }}
@@ -297,7 +325,7 @@ const Header = () => {
                       <div className="pl-4 pb-2 animate-fade-in">
                         {item.children?.map((child) => (
                           <a
-                            key={child.href}
+                            key={child.label + child.href}
                             href={child.href}
                             onClick={(e) => { e.preventDefault(); handleNavigate(child.href); }}
                             className={cn(
@@ -349,7 +377,7 @@ const Header = () => {
               {/* Phone CTA mobile */}
               <a
                 href="tel:+33144388080"
-                className="flex items-center justify-center gap-2 mx-3 mt-3 bg-primary-foreground text-primary font-bold text-sm px-5 py-3 rounded-full"
+                className="flex items-center justify-center gap-2 mx-3 mt-3 border border-primary-foreground/30 text-primary-foreground font-medium text-sm px-5 py-3 rounded-md"
               >
                 <Phone className="w-4 h-4" />
                 <span>01 44 38 80 80</span>

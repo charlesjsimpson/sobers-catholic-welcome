@@ -80,6 +80,12 @@ const Footer = () => {
               <a href="#" className="hover:text-primary-foreground transition-colors">
                 Politique de confidentialité
               </a>
+              <a href="/a-propos" className="hover:text-primary-foreground transition-colors">
+                Qui sommes-nous
+              </a>
+              <a href="/plan-du-site" className="hover:text-primary-foreground transition-colors">
+                Plan du site
+              </a>
             </div>
           </div>
         </div>
