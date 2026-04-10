@@ -265,21 +265,21 @@ const AgenceParis17 = () => {
             <h2 className="text-2xl font-display text-foreground text-center mb-10">
               Nos collaborateurs
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {[
                 { role: "Assistante funéraire", prenom: "Novy", nom: "Garçonnot" },
               ].map((collab, i) => (
                 <div
                   key={i}
-                  className="bg-card rounded-xl p-5 shadow-sm border border-border/50 text-center"
+                  className="bg-card rounded-xl p-8 shadow-sm border border-border/50 text-center"
                 >
                   <img
                     src={novyPhoto}
                     alt={`${collab.prenom} ${collab.nom}`}
-                    className="w-32 h-32 rounded-full object-cover mx-auto mb-3"
+                    className="w-44 h-44 rounded-full object-cover mx-auto mb-4"
                   />
-                  <p className="text-primary font-medium text-xs uppercase tracking-wider mb-2">{collab.role}</p>
-                  <p className="text-foreground font-display text-sm">{collab.prenom} {collab.nom}</p>
+                  <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">{collab.role}</p>
+                  <p className="text-foreground font-display text-lg">{collab.prenom} {collab.nom}</p>
                 </div>
               ))}
             </div>
