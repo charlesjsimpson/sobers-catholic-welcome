@@ -23,7 +23,7 @@ const actualites: ContentItem[] = [
     excerpt: "Vendredi Saint : les assistants funéraires au Chemin de Croix de Bordeaux.",
     category: "Actualité",
     location: "Bordeaux",
-    image: "https://s-c-f.org/wp-content/uploads/2025/04/chemin-de-croix-bordeaux.jpg",
+    image: cheminDeCroixImg,
   },
   {
     title: "Messes chaque lundi soir pendant six mois pour les défunts",
