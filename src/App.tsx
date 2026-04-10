@@ -62,6 +62,7 @@ import PriereMortEnfant from "./pages/PriereMortEnfant";
 import PriereSainteVierge from "./pages/PriereSainteVierge";
 import AgenceNice from "./pages/AgenceNice";
 import AgenceParis15 from "./pages/AgenceParis15";
+import AgenceParis17 from "./pages/AgenceParis17";
 import SessionsSeReconcilierAvecLaMort from "./pages/SessionsSeReconcilierAvecLaMort";
 import Livres from "./pages/Livres";
 import ActualitesArticles from "./pages/ActualitesArticles";
@@ -147,6 +148,7 @@ const App = () => (
             <Route path="/services/prevoyance" element={<Prevoyance />} />
             <Route path="/agences/nice" element={<AgenceNice />} />
             <Route path="/agences/paris-15" element={<AgenceParis15 />} />
+            <Route path="/agences/paris-17" element={<AgenceParis17 />} />
             <Route path="/ressources/sessions/se-reconcilier-avec-la-mort" element={<SessionsSeReconcilierAvecLaMort />} />
             <Route path="/ressources/livres" element={<Livres />} />
             <Route path="/ressources/actualites" element={<ActualitesArticles />} />
