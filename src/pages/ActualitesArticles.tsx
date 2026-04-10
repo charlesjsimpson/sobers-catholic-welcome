@@ -160,12 +160,12 @@ const ActualitesArticles = () => {
               {allItems.length} publication{allItems.length !== 1 ? "s" : ""}
             </p>
 
-            <div className="flex flex-col gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {allItems.map((item, index) => {
                 const cardContent = (
                   <>
-                    {item.image && (
-                      <div className="sm:w-64 shrink-0 aspect-[3/2] sm:aspect-auto overflow-hidden">
+                    {item.image ? (
+                      <div className="aspect-[4/3] overflow-hidden">
                         <img
                           src={item.image}
                           alt={item.title}
@@ -173,14 +173,13 @@ const ActualitesArticles = () => {
                           loading="lazy"
                         />
                       </div>
-                    )}
-                    {!item.image && (
-                      <div className="sm:w-64 shrink-0 bg-primary/10 flex items-center justify-center aspect-[3/2] sm:aspect-auto sm:min-h-[140px]">
+                    ) : (
+                      <div className="aspect-[4/3] bg-primary/10 flex items-center justify-center">
                         <Newspaper className="w-12 h-12 text-primary opacity-40 group-hover:opacity-70 transition-opacity" />
                       </div>
                     )}
-                    <div className="p-6 flex flex-col justify-center">
-                      <div className="flex items-center gap-3 text-muted-foreground text-xs mb-3 flex-wrap">
+                    <div className="p-5 flex flex-col flex-1">
+                      <div className="flex items-center gap-2 text-muted-foreground text-xs mb-3 flex-wrap">
                         <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold inline-flex items-center gap-1">
                           {getCategoryIcon(item.category)}
                           {item.category}
@@ -201,7 +200,7 @@ const ActualitesArticles = () => {
                       <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
                         {item.title}
                       </h2>
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 flex-1">
                         {item.excerpt}
                       </p>
                       <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-3 group-hover:gap-2 transition-all">
@@ -213,7 +212,7 @@ const ActualitesArticles = () => {
                 );
 
                 const cardClass =
-                  "group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-col sm:flex-row";
+                  "group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col";
 
                 if (item.internal && item.url) {
                   return (
