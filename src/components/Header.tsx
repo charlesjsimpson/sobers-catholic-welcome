@@ -155,7 +155,7 @@ const Header = () => {
       )}
     >
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Mobile: Burger left */}
           <button
             className="lg:hidden p-2 text-primary-foreground"
@@ -171,7 +171,7 @@ const Header = () => {
             onClick={(e) => { e.preventDefault(); handleNavigate("/"); }}
             className="flex items-center cursor-pointer shrink-0 lg:mr-8 absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0"
           >
-            <img src={logoScf} alt="Service Catholique des Funérailles" className="h-10 lg:h-14 w-auto" />
+            <img src={logoScf} alt="Service Catholique des Funérailles" className="h-12 lg:h-16 w-auto" />
           </a>
 
           {/* Desktop Navigation — centered */}
@@ -185,7 +185,7 @@ const Header = () => {
               >
                 <button
                   className={cn(
-                    "flex items-center gap-1 px-3 py-2 text-primary-foreground text-[13px] font-medium tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
+                    "flex items-center gap-1 px-4 py-2.5 text-primary-foreground text-[15px] font-medium tracking-wide transition-colors rounded-md hover:bg-primary-foreground/10",
                     isParentActive(item) && "underline underline-offset-4 decoration-2"
                   )}
                   onClick={() => handleNavigate(item.href)}
@@ -269,7 +269,7 @@ const Header = () => {
             <a
               href="/organiser-des-obseques"
               onClick={(e) => { e.preventDefault(); handleNavigate("/organiser-des-obseques"); }}
-              className="flex items-center gap-2 text-white font-medium text-[13px] px-3 lg:px-4 py-2 rounded-md transition-colors"
+              className="flex items-center gap-2 text-white font-semibold text-sm lg:text-[15px] px-4 lg:px-5 py-2.5 rounded-md transition-colors"
               style={{ backgroundColor: "#B03020" }}
             >
               {/* Pulsing dot */}
