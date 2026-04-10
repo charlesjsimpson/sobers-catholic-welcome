@@ -1,8 +1,14 @@
-import { useEffect } from "react";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Phone, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import agenceParis17 from "@/assets/agence-paris-17.png";
+import photo1 from "@/assets/agence-paris-17-1.webp";
+import photo2 from "@/assets/agence-paris-17-2.webp";
+import photo3 from "@/assets/agence-paris-17-3.webp";
+import photo4 from "@/assets/agence-paris-17-4.webp";
+import photo5 from "@/assets/agence-paris-17-5.webp";
+
+const agencyPhotos = [photo1, photo2, photo3, photo4, photo5];
 
 const AgenceParis17 = () => {
   useEffect(() => {
