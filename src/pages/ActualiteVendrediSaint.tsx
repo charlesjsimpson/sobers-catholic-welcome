@@ -54,7 +54,7 @@ const ActualiteVendrediSaint = () => {
         {/* Contenu */}
         <section className="pb-16">
           <div className="container mx-auto px-6 max-w-3xl">
-            <div className="text-muted-foreground text-sm mb-6">09 avril 2026</div>
+            
 
             <div className="prose prose-lg max-w-none text-foreground leading-relaxed space-y-4">
               <p className="text-justify">
