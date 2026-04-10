@@ -45,7 +45,7 @@ const ActualiteVendrediSaint = () => {
               <img
                 src={cheminDeCroixImg}
                 alt="Chemin de Croix dans le centre-ville de Bordeaux — Vendredi Saint 2026"
-                className="hidden md:block w-40 lg:w-52 rounded-2xl object-contain shadow-lg border-2 border-primary-foreground/20 shrink-0"
+                className="hidden md:block w-40 h-40 lg:w-52 lg:h-52 rounded-2xl object-cover object-bottom shadow-lg border-2 border-primary-foreground/20 shrink-0"
               />
             </div>
           </div>
