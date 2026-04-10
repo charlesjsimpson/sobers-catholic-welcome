@@ -113,48 +113,59 @@ const getCategoryIcon = (category: string) => {
 
 const ActualitesArticles = () => {
   useEffect(() => {
-    document.title = "Actualités & Articles | Service Catholique des Funérailles";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) {
-      meta.setAttribute("content", "Retrouvez toutes les actualités et articles du Service Catholique des Funérailles : événements, messes, émissions et ressources.");
-    }
+    document.title = "Actualités & Articles – Service Catholique des Funérailles";
+    const meta = document.querySelector('meta[name="description"]') || document.createElement("meta");
+    meta.setAttribute("name", "description");
+    meta.setAttribute("content", "Retrouvez toutes les actualités et articles du Service Catholique des Funérailles : événements, messes, émissions et ressources.");
+    if (!document.querySelector('meta[name="description"]')) document.head.appendChild(meta);
+    return () => { document.title = "Service Catholique des Funérailles"; };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
+      <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-16 md:py-20">
-          <div className="container mx-auto px-6">
+        <section className="bg-primary text-primary-foreground py-16">
+          <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground mb-6 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              Actualités & Articles
-            </h1>
-            <p className="text-primary-foreground/80 text-lg max-w-2xl">
-              Retrouvez toutes les actualités du Service Catholique des Funérailles : événements dans nos agences, articles de fond et ressources spirituelles.
-            </p>
+            <div className="flex items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Newspaper className="w-6 h-6 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+                </div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
+                  Actualités & Articles
+                </h1>
+                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
+                  Retrouvez toutes les actualités du Service Catholique des Funérailles&nbsp;: événements dans nos agences, messes en mémoire des défunts, articles de fond et ressources spirituelles pour accompagner le deuil et la fin de vie.
+                </p>
+              </div>
+              <Newspaper className="hidden md:block w-24 h-24 lg:w-32 lg:h-32 text-primary-foreground/20 flex-shrink-0" strokeWidth={1} />
+            </div>
           </div>
         </section>
 
-        {/* Content */}
-        <section className="py-12 md:py-16">
-          <div className="container mx-auto px-6">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Liste des contenus */}
+        <section className="py-12 bg-secondary">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <p className="text-muted-foreground text-sm mb-6">
+              {allItems.length} publication{allItems.length !== 1 ? "s" : ""}
+            </p>
+
+            <div className="flex flex-col gap-6">
               {allItems.map((item, index) => {
-                const cardClass =
-                  "group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col";
-                
                 const cardContent = (
                   <>
-                    {item.image ? (
-                      <div className="aspect-[3/2] overflow-hidden">
+                    {item.image && (
+                      <div className="sm:w-64 shrink-0 aspect-[3/2] sm:aspect-auto overflow-hidden">
                         <img
                           src={item.image}
                           alt={item.title}
@@ -162,44 +173,47 @@ const ActualitesArticles = () => {
                           loading="lazy"
                         />
                       </div>
-                    ) : (
-                      <div className="bg-primary/10 flex items-center justify-center py-10">
-                        {getCategoryIcon(item.category)}
+                    )}
+                    {!item.image && (
+                      <div className="sm:w-64 shrink-0 bg-primary/10 flex items-center justify-center aspect-[3/2] sm:aspect-auto sm:min-h-[140px]">
                         <Newspaper className="w-12 h-12 text-primary opacity-40 group-hover:opacity-70 transition-opacity" />
                       </div>
                     )}
-                    <div className="p-6 flex flex-col flex-1">
-                      <div className="flex items-center gap-2 flex-wrap text-xs mb-3">
+                    <div className="p-6 flex flex-col justify-center">
+                      <div className="flex items-center gap-3 text-muted-foreground text-xs mb-3 flex-wrap">
                         <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold inline-flex items-center gap-1">
                           {getCategoryIcon(item.category)}
                           {item.category}
                         </span>
                         {item.location && (
-                          <span className="text-muted-foreground inline-flex items-center gap-1">
+                          <span className="flex items-center gap-1">
                             <MapPin className="w-3 h-3" />
                             {item.location}
                           </span>
                         )}
                         {item.date && (
-                          <span className="text-muted-foreground inline-flex items-center gap-1">
+                          <span className="flex items-center gap-1">
                             <Calendar className="w-3 h-3" />
                             {item.date}
                           </span>
                         )}
                       </div>
-                      <h2 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors leading-snug">
+                      <h2 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
                         {item.title}
                       </h2>
-                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 flex-1">
+                      <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
                         {item.excerpt}
                       </p>
-                      <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-4 group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-3 group-hover:gap-2 transition-all">
                         Découvrir
                         <ArrowRight className="w-4 h-4" />
                       </span>
                     </div>
                   </>
                 );
+
+                const cardClass =
+                  "group bg-card rounded-xl overflow-hidden shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-col sm:flex-row";
 
                 if (item.internal && item.url) {
                   return (
