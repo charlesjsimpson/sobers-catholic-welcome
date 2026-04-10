@@ -82,7 +82,7 @@ const Videos = () => {
                   Conférences, témoignages et présentations du Service Catholique des Funérailles autour de la mort, du deuil et des rites funéraires catholiques.
                 </p>
               </div>
-              <Video className="hidden md:block w-24 h-24 lg:w-32 lg:h-32 text-primary-foreground/20 flex-shrink-0" strokeWidth={1} />
+            </div>
           </div>
         </section>
 
