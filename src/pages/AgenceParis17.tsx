@@ -276,7 +276,7 @@ const AgenceParis17 = () => {
                   <img
                     src={novyPhoto}
                     alt={`${collab.prenom} ${collab.nom}`}
-                    className="w-20 h-20 rounded-full object-cover mx-auto mb-3"
+                    className="w-32 h-32 rounded-full object-cover mx-auto mb-3"
                   />
                   <p className="text-primary font-medium text-xs uppercase tracking-wider mb-2">{collab.role}</p>
                   <p className="text-foreground font-display text-sm">{collab.prenom} {collab.nom}</p>
