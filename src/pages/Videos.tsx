@@ -1,4 +1,5 @@
-import { ArrowRight, Video, MapPin } from "lucide-react";
+import { ArrowLeft, ArrowRight, Video, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -60,19 +61,29 @@ const Videos = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-16 relative overflow-hidden">
-          <Video className="absolute right-8 top-1/2 -translate-y-1/2 w-48 h-48 text-primary-foreground/20 hidden lg:block" />
-          <div className="container mx-auto px-6 max-w-4xl relative z-10">
-            <div className="flex items-center gap-3 mb-4">
-              <Video className="w-6 h-6 text-primary-foreground/70" />
-              <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+        <section className="bg-primary text-primary-foreground py-16">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Retour à l'accueil
+            </Link>
+            <div className="flex items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Video className="w-6 h-6 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+                </div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
+                  Vidéos
+                </h1>
+                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
+                  Conférences, témoignages et présentations du Service Catholique des Funérailles autour de la mort, du deuil et des rites funéraires catholiques.
+                </p>
+              </div>
             </div>
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
-              Vidéos
-            </h1>
-            <p className="text-primary-foreground/80 mt-3 max-w-2xl text-sm md:text-base leading-relaxed text-justify">
-              Conférences, témoignages et présentations du Service Catholique des Funérailles autour de la mort, du deuil et des rites funéraires catholiques.
-            </p>
           </div>
         </section>
 

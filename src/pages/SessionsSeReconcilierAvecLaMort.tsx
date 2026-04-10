@@ -49,27 +49,32 @@ const SessionsSeReconcilierAvecLaMort = () => {
       <Header />
       <main className="pt-20">
         {/* Hero */}
-        <section className="bg-primary text-primary-foreground py-10">
+        <section className="bg-primary text-primary-foreground py-16">
           <div className="container mx-auto px-6 max-w-4xl">
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-4 transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors text-sm"
             >
               <ArrowLeft className="w-4 h-4" />
               Retour à l'accueil
             </Link>
-            <div className="flex items-start gap-8">
-              <div className="flex-1">
-                <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Session</span>
-                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight mt-3">
+            <div className="flex items-start justify-between gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-4">
+                  <Calendar className="w-6 h-6 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/70 text-sm font-semibold tracking-wide uppercase">Ressources</span>
+                </div>
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-display leading-tight">
                   Se réconcilier avec la mort : une journée<br />pour apprivoiser sa finitude
                 </h1>
-                
+                <p className="text-primary-foreground/80 mt-4 max-w-3xl text-sm md:text-base leading-relaxed text-justify">
+                  Participez à une journée proposée par le Service Catholique des Funérailles pour avancer vers un rapport apaisé à la mort. Un temps de réflexion, de partage et de recueillement ouvert à tous.
+                </p>
               </div>
               <img
                 src={reconcilierMort}
                 alt="Se réconcilier avec la mort"
-                className="hidden sm:block w-48 h-32 md:w-64 md:h-44 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
+                className="hidden md:block w-48 h-32 lg:w-64 lg:h-44 rounded-2xl object-cover shadow-lg border-2 border-primary-foreground/20 shrink-0"
               />
             </div>
           </div>
