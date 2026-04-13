@@ -6,6 +6,13 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AgenceContactForm from "./AgenceContactForm";
 
+export interface AgenceAvis {
+  auteur: string;
+  note: number;
+  texte: string;
+  date: string;
+}
+
 export interface AgenceData {
   ville: string;
   arrondissement?: string;
@@ -19,12 +26,14 @@ export interface AgenceData {
   horaires: string;
   horairesSamedi?: string;
   googleMapsUrl: string;
+  googleReviewsUrl?: string;
   slug: string;
   photos: string[];
   collaborateurs?: { prenom: string; nom: string; role: string; photo?: string }[];
   logoPrefecture?: string;
   prefectureLabel?: string;
-  avis?: { auteur: string; note: number; texte: string; date: string }[];
+  avis?: AgenceAvis[];
+  noteGlobale?: number;
   sections: {
     presentation: string;
     prestations: string;
@@ -34,13 +43,15 @@ export interface AgenceData {
   };
   faq: { question: string; reponse: string }[];
   openingHoursSpec: { dayOfWeek: string | string[]; opens: string; closes: string }[];
+  contactFormTitle?: string;
+  contactMotifs?: { value: string; label: string }[];
 }
 
 const AgenceTemplate = ({ data }: { data: AgenceData }) => {
   const [currentPhoto, setCurrentPhoto] = useState(0);
   const villeLabel = data.arrondissement ? `${data.ville} ${data.arrondissement}` : data.ville;
-  const fullTitle = `Pompes funèbres catholiques à ${villeLabel} | Service Catholique des Funérailles`;
-  const metaDescription = `Pompes funèbres catholiques à ${villeLabel}. Obsèques catholiques, messe de funérailles, inhumation, crémation. Disponible 24h/24 7j/7. ${data.telephoneDisplay}.`;
+  const fullTitle = `Pompes funèbres catholiques ${villeLabel} — SCF | ${data.telephoneDisplay}`;
+  const metaDescription = `Obsèques catholiques à ${villeLabel}, disponibles 24h/24. Messe de funérailles, inhumation, crémation. Agence SCF, ${data.adresse}. Appelez le ${data.telephoneDisplay}.`;
   const canonicalUrl = `https://s-c-f.org/agences/${data.slug}/`;
 
   const jsonLdFuneralHome = {
@@ -83,6 +94,16 @@ const AgenceTemplate = ({ data }: { data: AgenceData }) => {
     ],
   };
 
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: data.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.reponse },
+    })),
+  };
+
   return (
     <div className="min-h-screen">
       <Helmet>
@@ -91,317 +112,350 @@ const AgenceTemplate = ({ data }: { data: AgenceData }) => {
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(jsonLdFuneralHome)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLdFaq)}</script>
       </Helmet>
 
       <Header />
 
-      <main>
+      <main className="pt-20">
         {/* Breadcrumb */}
-        <nav className="bg-muted border-b border-border pt-24 pb-3" aria-label="Fil d'Ariane">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+        <nav className="bg-muted border-b border-border py-1.5" aria-label="Fil d'Ariane">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <ol className="flex items-center gap-1.5 text-xs text-muted-foreground">
               <li><Link to="/" className="hover:text-primary transition-colors">Accueil</Link></li>
-              <li>/</li>
+              <li>›</li>
               <li><Link to="/contacter-une-agence" className="hover:text-primary transition-colors">Nos agences</Link></li>
-              <li>/</li>
+              <li>›</li>
               <li className="text-foreground font-medium">{villeLabel}</li>
             </ol>
           </div>
         </nav>
 
-        {/* Hero */}
-        <section className="relative bg-primary py-16 md:py-20">
-          <div className="container mx-auto px-6 max-w-5xl">
+        {/* Hero compact */}
+        <section className="bg-primary py-6">
+          <div className="container mx-auto px-4 max-w-6xl">
             {data.prefectureLabel && (
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <span className="inline-flex items-center gap-2 bg-primary-foreground/10 backdrop-blur-sm border border-primary-foreground/20 rounded-full px-5 py-2 text-primary-foreground text-sm font-semibold">
-                  <CheckCircle className="w-4 h-4" />
+              <div className="flex items-center gap-2 mb-3">
+                <span className="inline-flex items-center gap-1.5 bg-primary-foreground/10 border border-primary-foreground/20 rounded-full px-3 py-1 text-primary-foreground text-xs font-medium">
+                  <CheckCircle className="w-3 h-3" />
                   {data.prefectureLabel}
                 </span>
                 {data.logoPrefecture && (
-                  <img src={data.logoPrefecture} alt={data.prefectureLabel} className="h-12 w-auto" loading="lazy" />
+                  <img src={data.logoPrefecture} alt={data.prefectureLabel} className="h-8 w-auto" loading="lazy" />
                 )}
               </div>
             )}
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-primary-foreground text-center mb-8 leading-tight">
+            <h1 className="text-xl md:text-2xl font-display font-medium text-primary-foreground mb-3 leading-tight">
               Pompes funèbres catholiques à {villeLabel}
             </h1>
 
             {/* Info bar */}
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8 text-primary-foreground/90 text-sm md:text-base">
-              <a href={`tel:${data.telephone}`} className="flex items-center gap-2 hover:text-primary-foreground transition-colors">
-                <span className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse" />
-                <span className="font-bold">Urgence 7j/7 24h/24 — {data.telephoneDisplay}</span>
+            <div className="flex flex-wrap items-center gap-3 md:gap-4 mb-4 text-primary-foreground/90 text-xs">
+              <a href={`tel:${data.telephone}`} className="flex items-center gap-1.5 hover:text-primary-foreground transition-colors">
+                <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse" />
+                <span className="font-bold">{data.telephoneDisplay} — 7j/7 24h/24</span>
               </a>
               <span className="hidden md:inline text-primary-foreground/30">|</span>
-              <span className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-3 h-3" />
                 {data.adresse}, {data.codePostal} {data.ville}
               </span>
               <span className="hidden md:inline text-primary-foreground/30">|</span>
-              <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-3 h-3" />
                 {data.horaires}{data.horairesSamedi && ` · ${data.horairesSamedi}`}
               </span>
             </div>
 
             {/* CTA buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-start gap-2">
               <a
                 href={`tel:${data.telephone}`}
-                className="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors min-w-[280px]"
+                className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-5 py-2.5 rounded-md transition-colors"
               >
-                <Phone className="w-5 h-5" />
-                Nous appeler — {data.telephoneDisplay}
+                <Phone className="w-4 h-4" />
+                Appeler — {data.telephoneDisplay}
               </a>
               <a
-                href="#contact"
-                className="inline-flex items-center justify-center gap-3 border-2 border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground font-bold text-lg px-8 py-4 rounded-lg transition-colors min-w-[280px]"
+                href="#formulaire"
+                className="inline-flex items-center justify-center gap-2 border border-primary-foreground/40 hover:border-primary-foreground text-primary-foreground font-bold text-sm px-5 py-2.5 rounded-md transition-colors"
               >
-                Nous contacter
+                Être recontacté
               </a>
             </div>
           </div>
         </section>
 
-        {/* Carrousel photos */}
-        {data.photos.length > 0 && (
-          <section className="py-12 bg-background">
-            <div className="container mx-auto px-6 max-w-5xl">
-              <div className="rounded-xl overflow-hidden shadow-lg relative">
-                <img
-                  src={data.photos[currentPhoto]}
-                  alt={`Agence SCF ${villeLabel} - Photo ${currentPhoto + 1}`}
-                  className="w-full h-72 md:h-96 object-cover"
-                />
-                {data.photos.length > 1 && (
-                  <>
-                    <button
-                      onClick={() => setCurrentPhoto((p) => (p - 1 + data.photos.length) % data.photos.length)}
-                      className="absolute left-3 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-2 shadow-lg"
-                      aria-label="Photo précédente"
+        {/* 2-column layout */}
+        <div className="container mx-auto px-4 max-w-6xl py-5">
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Left column — 65% */}
+            <div className="lg:w-[65%] space-y-5">
+              {/* Photo */}
+              {data.photos.length > 0 && (
+                <div className="rounded-lg overflow-hidden relative">
+                  <img
+                    src={data.photos[currentPhoto]}
+                    alt={`Agence SCF ${villeLabel} - Photo ${currentPhoto + 1}`}
+                    className="w-full h-48 md:h-64 object-cover"
+                  />
+                  {data.photos.length > 1 && (
+                    <>
+                      <button
+                        onClick={() => setCurrentPhoto((p) => (p - 1 + data.photos.length) % data.photos.length)}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-1 shadow"
+                        aria-label="Photo précédente"
+                      >
+                        <ChevronLeft className="w-4 h-4 text-foreground" />
+                      </button>
+                      <button
+                        onClick={() => setCurrentPhoto((p) => (p + 1) % data.photos.length)}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-1 shadow"
+                        aria-label="Photo suivante"
+                      >
+                        <ChevronRight className="w-4 h-4 text-foreground" />
+                      </button>
+                      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                        {data.photos.map((_, i) => (
+                          <button
+                            key={i}
+                            onClick={() => setCurrentPhoto(i)}
+                            className={`w-2 h-2 rounded-full transition-colors ${i === currentPhoto ? "bg-primary" : "bg-background/60"}`}
+                            aria-label={`Photo ${i + 1}`}
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+              )}
+
+              {/* Presentation */}
+              <ContentSection
+                title={`Un accompagnement funéraire chrétien au cœur du ${data.arrondissement ? `${data.arrondissement} arrondissement` : villeLabel}`}
+                html={data.sections.presentation}
+              />
+
+              {/* Prestations */}
+              <ContentSection
+                title={`Organisation des obsèques catholiques à ${villeLabel}`}
+                html={data.sections.prestations}
+              />
+
+              {/* Demarches */}
+              <ContentSection
+                title={`Démarches après un décès à ${villeLabel}`}
+                html={data.sections.demarches}
+              />
+
+              {/* Prevoyance */}
+              <ContentSection
+                title="Préparer ses obsèques à l'avance"
+                html={data.sections.prevoyance}
+              />
+
+              {/* Identite */}
+              <ContentSection
+                title="Notre identité catholique"
+                html={data.sections.identite}
+              />
+
+              {/* Avis */}
+              {data.avis && data.avis.length > 0 && (
+                <div>
+                  <h2 className="text-[15px] font-display font-medium text-foreground mb-1">
+                    Avis des familles
+                    {data.noteGlobale && (
+                      <span className="ml-2 text-xs text-muted-foreground font-normal">
+                        {data.noteGlobale}/5
+                        <span className="ml-1 text-yellow-500">{"★".repeat(Math.round(data.noteGlobale))}</span>
+                      </span>
+                    )}
+                  </h2>
+                  <div className="space-y-2">
+                    {data.avis.map((avis, i) => (
+                      <div key={i} className="bg-card rounded-md p-3 border border-border/50">
+                        <div className="flex items-center gap-0.5 mb-1">
+                          {Array.from({ length: 5 }).map((_, j) => (
+                            <Star key={j} className={`w-3 h-3 ${j < avis.note ? "text-yellow-500 fill-yellow-500" : "text-muted-foreground/30"}`} />
+                          ))}
+                        </div>
+                        <p className="text-muted-foreground text-xs leading-relaxed mb-1">"{avis.texte}"</p>
+                        <p className="text-foreground font-medium text-xs">{avis.auteur} <span className="text-muted-foreground font-normal">· {avis.date}</span></p>
+                      </div>
+                    ))}
+                  </div>
+                  {data.googleReviewsUrl && (
+                    <a
+                      href={data.googleReviewsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 text-xs font-medium mt-2 transition-colors"
                     >
-                      <ChevronLeft className="w-5 h-5 text-foreground" />
-                    </button>
-                    <button
-                      onClick={() => setCurrentPhoto((p) => (p + 1) % data.photos.length)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-2 shadow-lg"
-                      aria-label="Photo suivante"
-                    >
-                      <ChevronRight className="w-5 h-5 text-foreground" />
-                    </button>
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-                      {data.photos.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setCurrentPhoto(i)}
-                          className={`w-2.5 h-2.5 rounded-full transition-colors ${i === currentPhoto ? "bg-primary" : "bg-background/60"}`}
-                          aria-label={`Photo ${i + 1}`}
-                        />
-                      ))}
+                      Voir tous nos avis sur Google
+                      <ArrowRight className="w-3 h-3" />
+                    </a>
+                  )}
+                </div>
+              )}
+
+              {/* FAQ */}
+              <div>
+                <h2 className="text-[15px] font-display font-medium text-foreground mb-2">
+                  Questions fréquentes — obsèques à {villeLabel}
+                </h2>
+                <div className="space-y-2">
+                  {data.faq.map((item, i) => (
+                    <div key={i} className="bg-secondary rounded-md px-3.5 py-2.5">
+                      <h3 className="text-[13px] font-medium text-foreground mb-1">
+                        {i + 1}. {item.question}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-[13px]">{item.reponse}</p>
                     </div>
-                  </>
-                )}
+                  ))}
+                </div>
+              </div>
+
+              {/* Map */}
+              <div>
+                <h2 className="text-[15px] font-display font-medium text-foreground mb-2">
+                  Localiser l'agence SCF {villeLabel}
+                </h2>
+                <div className="grid md:grid-cols-2 gap-4 items-start">
+                  <div className="space-y-2 text-xs text-muted-foreground">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-medium text-foreground">{data.adresse}</p>
+                        <p>{data.codePostal} {data.ville}</p>
+                      </div>
+                    </div>
+                    <a href={`tel:${data.telephone}`} className="flex items-center gap-2 hover:text-primary transition-colors">
+                      <Phone className="w-3.5 h-3.5 text-primary shrink-0" />
+                      <span className="font-medium">{data.telephoneDisplay}</span>
+                    </a>
+                    <div className="flex items-start gap-2">
+                      <Clock className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                      <div>
+                        <p>{data.horaires}</p>
+                        {data.horairesSamedi && <p>{data.horairesSamedi}</p>}
+                      </div>
+                    </div>
+                    <a
+                      href={data.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-primary hover:text-primary/80 font-medium transition-colors mt-1"
+                    >
+                      Obtenir l'itinéraire
+                      <ArrowRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                  <div className="rounded-lg overflow-hidden border border-border">
+                    <iframe
+                      title={`Carte agence SCF ${villeLabel}`}
+                      src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(data.adresse + ", " + data.codePostal + " " + data.ville)}`}
+                      width="100%"
+                      height="200"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Maillage interne */}
+              <div>
+                <h3 className="text-[13px] font-medium text-foreground mb-2">Voir aussi</h3>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { to: "/organiser-des-obseques", label: "Organiser des obsèques" },
+                    { to: "/organiser-des-obseques", label: "Démarches après un décès" },
+                    { to: "/services/prevoyance", label: "Anticiper ses obsèques" },
+                    { to: "/contacter-une-agence", label: "Toutes nos agences" },
+                  ].map((link, i) => (
+                    <Link
+                      key={i}
+                      to={link.to}
+                      className="inline-flex items-center gap-1 text-xs text-primary hover:text-primary/80 font-medium transition-colors"
+                    >
+                      {link.label}
+                      <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
-          </section>
-        )}
 
-        {/* Section 1 — Présentation */}
-        <section className="py-14 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-              Un accompagnement funéraire chrétien au cœur du {data.arrondissement ? `${data.arrondissement} arrondissement` : villeLabel}
-            </h2>
-            <div className="text-muted-foreground leading-relaxed space-y-4 text-base" dangerouslySetInnerHTML={{ __html: data.sections.presentation }} />
-          </div>
-        </section>
-
-        {/* Section 2 — Prestations */}
-        <section className="py-14 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-              Organisation des obsèques catholiques à {villeLabel}
-            </h2>
-            <div className="text-muted-foreground leading-relaxed space-y-4 text-base" dangerouslySetInnerHTML={{ __html: data.sections.prestations }} />
-          </div>
-        </section>
-
-        {/* Section 3 — Démarches */}
-        <section className="py-14 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-              Démarches après un décès à {villeLabel}
-            </h2>
-            <div className="text-muted-foreground leading-relaxed space-y-4 text-base" dangerouslySetInnerHTML={{ __html: data.sections.demarches }} />
-          </div>
-        </section>
-
-        {/* Section 4 — Prévoyance */}
-        <section className="py-14 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-              Prévoyance funéraire — préparer ses obsèques à l'avance
-            </h2>
-            <div className="text-muted-foreground leading-relaxed space-y-4 text-base" dangerouslySetInnerHTML={{ __html: data.sections.prevoyance }} />
-          </div>
-        </section>
-
-        {/* Section 5 — Identité catholique */}
-        <section className="py-14 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-              Le SCF {villeLabel} — notre identité catholique
-            </h2>
-            <div className="text-muted-foreground leading-relaxed space-y-4 text-base" dangerouslySetInnerHTML={{ __html: data.sections.identite }} />
-          </div>
-        </section>
-
-        {/* Section 6 — FAQ statique */}
-        <section className="py-14 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-10">
-              Questions fréquentes — obsèques à {villeLabel}
-            </h2>
-            <div className="space-y-6">
-              {data.faq.map((item, i) => (
-                <div key={i} className="bg-card rounded-xl p-6 shadow-sm border border-border/50">
-                  <h3 className="text-lg font-display font-bold text-foreground mb-3">
-                    {i + 1}. {item.question}
+            {/* Right column — 35% sticky */}
+            <div className="lg:w-[35%]">
+              <div className="lg:sticky lg:top-24 space-y-4">
+                {/* Infos pratiques card */}
+                <div className="bg-card rounded-lg border border-border p-4">
+                  <h3 className="text-sm font-display font-medium text-foreground mb-3">
+                    Agence {villeLabel}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">{item.reponse}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Section 7 — Formulaire de contact */}
-        <section id="contact" className="py-14 bg-secondary">
-          <div className="container mx-auto px-6 max-w-2xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-8">
-              Être recontacté par l'agence {villeLabel}
-            </h2>
-            <AgenceContactForm agenceLabel={villeLabel} />
-          </div>
-        </section>
-
-        {/* Section 8 — Carte + Adresse */}
-        <section className="py-14 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">
-              Localiser l'agence SCF {villeLabel}
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-start">
-              <div className="space-y-4">
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-foreground">{data.adresse}</p>
-                    <p>{data.codePostal} {data.ville}</p>
-                  </div>
-                </div>
-                <a href={`tel:${data.telephone}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                  <Phone className="w-5 h-5 text-primary shrink-0" />
-                  <span className="font-semibold">{data.telephoneDisplay}</span>
-                </a>
-                <div className="flex items-start gap-3 text-muted-foreground">
-                  <Clock className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                  <div>
-                    <p>{data.horaires}</p>
-                    {data.horairesSamedi && <p>{data.horairesSamedi}</p>}
-                  </div>
-                </div>
-                <a
-                  href={data.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors mt-2"
-                >
-                  Voir sur Google Maps
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-              <div className="rounded-xl overflow-hidden shadow-lg border border-border">
-                <iframe
-                  title={`Carte agence SCF ${villeLabel}`}
-                  src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(data.adresse + ", " + data.codePostal + " " + data.ville)}`}
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 9 — Avis Google */}
-        {data.avis && data.avis.length > 0 && (
-          <section className="py-14 bg-secondary">
-            <div className="container mx-auto px-6 max-w-4xl">
-              <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-10">
-                Avis de nos familles
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {data.avis.map((avis, i) => (
-                  <div key={i} className="bg-card rounded-xl p-6 shadow-sm border border-border/50">
-                    <div className="flex items-center gap-1 mb-3">
-                      {Array.from({ length: 5 }).map((_, j) => (
-                        <Star key={j} className={`w-4 h-4 ${j < avis.note ? "text-yellow-500 fill-yellow-500" : "text-muted-foreground/30"}`} />
-                      ))}
+                  <div className="space-y-2 text-xs text-muted-foreground">
+                    <div className="flex items-start gap-2">
+                      <MapPin className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                      <span>{data.adresse}, {data.codePostal} {data.ville}</span>
                     </div>
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-3">"{avis.texte}"</p>
-                    <p className="text-foreground font-semibold text-sm">{avis.auteur}</p>
-                    <p className="text-muted-foreground text-xs">{avis.date}</p>
+                    <div className="flex items-center gap-2">
+                      <Phone className="w-3.5 h-3.5 text-primary shrink-0" />
+                      <span className="font-medium">{data.telephoneDisplay}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse shrink-0" />
+                      <span>Urgence : 7j/7 — 24h/24</span>
+                    </div>
+                    <div className="flex items-start gap-2">
+                      <Clock className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                      <span>{data.horaires}{data.horairesSamedi && ` · ${data.horairesSamedi}`}</span>
+                    </div>
+                    {data.prefectureLabel && (
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="w-3.5 h-3.5 text-primary shrink-0" />
+                        <span>{data.prefectureLabel}</span>
+                      </div>
+                    )}
                   </div>
-                ))}
+                  <a
+                    href={`tel:${data.telephone}`}
+                    className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-xs px-4 py-2.5 rounded-md transition-colors w-full mt-3"
+                  >
+                    <Phone className="w-3.5 h-3.5" />
+                    Appeler maintenant
+                  </a>
+                </div>
+
+                {/* Contact form */}
+                <div id="formulaire">
+                  <AgenceContactForm
+                    agenceLabel={villeLabel}
+                    formTitle={data.contactFormTitle}
+                    motifs={data.contactMotifs}
+                  />
+                </div>
               </div>
             </div>
-          </section>
-        )}
-
-        {/* Section 10 — Maillage interne */}
-        <section className="py-14 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl font-display font-bold text-foreground text-center mb-8">
-              En savoir plus
-            </h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { to: "/organiser-des-obseques", label: "Organiser des obsèques" },
-                { to: "/organiser-des-obseques", label: "Démarches après un décès" },
-                { to: "/services/prevoyance", label: "Anticiper ses obsèques" },
-                { to: "/contacter-une-agence", label: "Toutes nos agences" },
-              ].map((link, i) => (
-                <Link
-                  key={i}
-                  to={link.to}
-                  className="flex items-center justify-center gap-2 bg-card border border-border/50 rounded-xl px-4 py-4 text-center font-semibold text-foreground hover:border-primary hover:text-primary transition-colors shadow-sm"
-                >
-                  {link.label}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              ))}
-            </div>
           </div>
-        </section>
+        </div>
 
-        {/* CTA urgence */}
-        <section className="py-10 bg-red-50 border-t border-red-200">
-          <div className="container mx-auto px-6 text-center">
-            <p className="flex items-center justify-center gap-2 text-foreground font-bold text-lg mb-4">
-              <AlertTriangle className="w-5 h-5 text-red-600" />
-              Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
+        {/* CTA urgence bottom */}
+        <section className="py-4 bg-red-50 border-t border-red-200">
+          <div className="container mx-auto px-4 text-center">
+            <p className="flex items-center justify-center gap-1.5 text-foreground font-bold text-xs mb-2">
+              <AlertTriangle className="w-3.5 h-3.5 text-red-600" />
+              Si le décès a déjà eu lieu, contactez-nous par téléphone
             </p>
             <a
               href={`tel:${data.telephone}`}
-              className="inline-flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white font-bold text-lg px-8 py-4 rounded-lg transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold text-sm px-5 py-2.5 rounded-md transition-colors"
             >
-              <Phone className="w-5 h-5" />
+              <Phone className="w-4 h-4" />
               Appeler le {data.telephoneDisplay}
             </a>
           </div>
@@ -412,5 +466,15 @@ const AgenceTemplate = ({ data }: { data: AgenceData }) => {
     </div>
   );
 };
+
+const ContentSection = ({ title, html }: { title: string; html: string }) => (
+  <div>
+    <h2 className="text-[15px] font-display font-medium text-foreground mb-1.5">{title}</h2>
+    <div
+      className="text-muted-foreground leading-relaxed text-[13px] space-y-2 [&_a]:text-primary [&_a]:font-medium [&_a:hover]:underline"
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  </div>
+);
 
 export default AgenceTemplate;
