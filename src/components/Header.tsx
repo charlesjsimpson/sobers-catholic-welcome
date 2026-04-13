@@ -24,7 +24,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: "Organiser des obsèques",
+    label: "Obsèques",
     href: "/organiser-des-obseques",
     children: [
       { label: "Organiser des obsèques", href: "/organiser-des-obseques" },
