@@ -1,313 +1,89 @@
-import { useEffect, useState } from "react";
-import { Phone, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { HelmetProvider } from "react-helmet-async";
+import AgenceTemplate, { type AgenceData } from "@/components/agence/AgenceTemplate";
 import photo1 from "@/assets/agence-paris-17-1.webp";
 import photo2 from "@/assets/agence-paris-17-2.webp";
 import photo3 from "@/assets/agence-paris-17-3.webp";
 import photo4 from "@/assets/agence-paris-17-4.webp";
 import photo5 from "@/assets/agence-paris-17-5.webp";
-import novyPhoto from "@/assets/novy-garconnot.jpg";
 import logoPrefecture from "@/assets/logo-prefecture-police.png";
 
-const agencyPhotos = [photo1, photo2, photo3, photo4, photo5];
-
-const AgenceParis17 = () => {
-  const [currentPhoto, setCurrentPhoto] = useState(0);
-  useEffect(() => {
-    document.title = "Pompes funèbres Paris 17 | Service Catholique des Funérailles";
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) {
-      metaDesc.setAttribute(
-        "content",
-        "Pompes funèbres à Paris 17. Service Catholique des Funérailles : organisation d'obsèques et prévoyance funéraire. Urgence décès 7j/7, 24h/24 au 01 88 61 08 00. 10 rue Saint-Ferdinand, 75017 Paris."
-      );
-    }
-  }, []);
-
-  return (
-    <div className="min-h-screen">
-      <Header />
-      <main>
-        {/* Hero */}
-        <section className="relative bg-primary pt-32 pb-20">
-           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-display text-primary-foreground mb-10 leading-tight">
-              Service Catholique des Funérailles – Paris 17
-            </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-8">
-              <a
-                href="tel:0188610800"
-                className="btn-primary inline-flex items-center justify-center gap-3 text-lg px-8 py-4 min-w-[260px]"
-              >
-                <Phone className="w-5 h-5" />
-                01 88 61 08 00
-              </a>
-              <span className="inline-flex items-center justify-center gap-3 text-lg px-8 py-4 min-w-[260px] border border-primary-foreground/30 text-primary-foreground rounded-md">
-                <Clock className="w-5 h-5" />
-                Urgence décès 7j/7 24h/24
-              </span>
-            </div>
-            <div className="flex items-center justify-center gap-4">
-              <p className="text-primary-foreground/70 text-base md:text-lg">
-                Pompes funèbres habilitées par la préfecture de Paris
-              </p>
-              <img src={logoPrefecture} alt="Logo République Française - Préfecture de Paris" className="h-14 w-auto" loading="lazy" width={512} height={512} />
-            </div>
-          </div>
-        </section>
-
-        {/* Image + infos */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
-              <div className="rounded-xl overflow-hidden shadow-lg relative">
-                <img
-                  src={agencyPhotos[currentPhoto]}
-                  alt={`Agence Service Catholique des Funérailles - Paris 17ème - Photo ${currentPhoto + 1}`}
-                  className="w-full h-72 md:h-80 object-cover"
-                />
-                {agencyPhotos.length > 1 && (
-                  <>
-                    <button
-                      onClick={() => setCurrentPhoto((p) => (p - 1 + agencyPhotos.length) % agencyPhotos.length)}
-                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-1.5 shadow"
-                    >
-                      <ChevronLeft className="w-5 h-5 text-foreground" />
-                    </button>
-                    <button
-                      onClick={() => setCurrentPhoto((p) => (p + 1) % agencyPhotos.length)}
-                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background rounded-full p-1.5 shadow"
-                    >
-                      <ChevronRight className="w-5 h-5 text-foreground" />
-                    </button>
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-                      {agencyPhotos.map((_, i) => (
-                        <button
-                          key={i}
-                          onClick={() => setCurrentPhoto(i)}
-                          className={`w-2 h-2 rounded-full transition-colors ${i === currentPhoto ? "bg-primary" : "bg-background/60"}`}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-              <div>
-                <h2 className="text-2xl font-display text-foreground mb-4">
-                  Agence SCF Paris 17 : accompagnement funéraire
-                </h2>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start gap-3 text-muted-foreground">
-                    <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <span>10, rue Saint-Ferdinand<br />75017 Paris</span>
-                  </div>
-                  <a
-                    href="tel:0188610800"
-                    className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Phone className="w-5 h-5 text-primary shrink-0" />
-                    <span>01 88 61 08 00</span>
-                  </a>
-                </div>
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-foreground">Horaires :</strong> Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Présentation */}
-        <section className="py-16 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Depuis l'ouverture de notre agence de <strong className="text-foreground">pompes funèbres à Paris 17</strong> en novembre 2023, le Service Catholique des Funérailles (SCF) a accompagné plus d'une centaine de familles dans toute la ville. Notre mission : offrir un accompagnement funéraire respectueux, digne et profondément humain.
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              <strong className="text-foreground">En cas de décès, contactez-nous 7 jours sur 7 :{" "}
-                <a href="tel:0188610800" className="text-primary hover:text-primary/80 transition-colors">01 88 61 08 00</a>
-              </strong>
-            </p>
-          </div>
-        </section>
-
-        {/* Notre agence */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display text-foreground mb-8">
-              Nos prestations à Paris 17
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Le Service Catholique des Funérailles de Paris est une <strong className="text-foreground">coopérative à gestion désintéressée</strong>. Notre agence accompagne chaque famille avec bienveillance et professionnalisme, quels que soient leur confession ou le type d'obsèques souhaité.
-            </p>
-          </div>
-        </section>
-
-        {/* Services */}
-        <section className="py-16 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-12">
-              Organisation des obsèques et prévoyance
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-card rounded-xl p-8 shadow-sm border border-border/50">
-                <h3 className="text-xl font-display text-foreground mb-4">
-                  Organisation complète des obsèques à Paris 17
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Nous proposons l'ensemble des services nécessaires lors du décès d'un proche. Nos conseillers mobilisent leur énergie et leur expertise pour soutenir moralement les familles et alléger les démarches.
-                </p>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Entretien initial</strong> avec un conseiller funéraire dédié</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Démarches administratives</strong> simplifiées</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Préparation et organisation</strong> complète des obsèques</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Coordination</strong> le jour de la cérémonie</span>
-                  </li>
-                </ul>
-                <p className="text-muted-foreground leading-relaxed mt-4 text-sm">
-                  Notre objectif est de réduire la charge matérielle et émotionnelle afin d'aider les familles à traverser cette période avec sérénité et dignité.
-                </p>
-              </div>
-              <div className="bg-card rounded-xl p-8 shadow-sm border border-border/50">
-                <h3 className="text-xl font-display text-foreground mb-4">
-                  Prévoyance funéraire : préparer ses obsèques
-                </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Nous accompagnons également les personnes qui souhaitent anticiper leurs obsèques pour soulager leurs proches.
-                </p>
-                <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Dépôt de volontés</strong></span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Estimation du coût des obsèques</strong></span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-primary mt-1">•</span>
-                    <span><strong className="text-foreground">Mise en place d'un contrat d'assurance obsèques</strong></span>
-                  </li>
-                </ul>
-                <p className="text-muted-foreground leading-relaxed mt-4 text-sm">
-                  Ces choix sont discutés en toute confidentialité lors d'un entretien personnalisé dans notre agence de Paris 17.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-10 bg-card rounded-xl p-8 shadow-sm border border-border/50">
-              <h3 className="text-xl font-display text-foreground mb-4">
-                Notre mission et notre engagement
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Le Service Catholique des Funérailles s'engage à fournir un service <strong className="text-foreground">fiable, simple et respectueux</strong>, sans surenchère commerciale, en plaçant les besoins des familles au cœur de sa mission et en accompagnant chaque étape des obsèques et de la prévoyance avec écoute, soutien et expertise.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-16 bg-background">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-12">
-              Informations importantes sur l'organisation des obsèques à Paris 17
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  q: "Quelles sont les différentes étapes d'organisation des obsèques ?",
-                  a: "L'organisation des obsèques de votre proche s'effectue depuis notre agence de Paris. Lors de cet entretien, l'objectif est de vous soulager sur les aspects logistiques, organisationnels et administratifs, et de rapidement vous permettre d'avoir une visibilité sur les jours suivants, en particulier le jour des obsèques. Pour cela, nous avons besoin du livret de famille de la personne décédée, de la carte d'identité du mandataire et des habits avec lesquels nous irons retrouver et prendre soin de votre proche."
-                },
-                {
-                  q: "Quels sont les avantages de souscrire un contrat d'assurance obsèques ?",
-                  a: "Lors d'un rendez-vous dans notre agence de Paris, nous pouvons vous accompagner dans la réflexion et la préparation de vos propres obsèques ou celles de votre proche. Effectuer une prévoyance funéraire à travers un dépôt de volontés et/ou un contrat obsèques permet de soulager vos proches le jour venu, et peut permettre aussi de garantir le respect de vos volontés."
-                },
-                {
-                  q: "Quelles sont les démarches à effectuer après un décès ?",
-                  a: "Les pompes funèbres vous remettront plusieurs originaux d'actes de décès (entre 10 et 15). Ces documents d'état civil représentent le document de référence pour les démarches à effectuer auprès de tous les organismes concernés : employeur, France Travail, banques, caisses d'assurance, mutuelles, notaire, centre des impôts, etc. Nous tenons à votre disposition un modèle de lettre à envoyer à ces divers organismes."
-                },
-                {
-                  q: "Vous faites face à un décès ?",
-                  a: "Lorsqu'un décès survient, un médecin ou un infirmier doit venir constater et émettre un certificat médical. La famille doit alors entrer en contact avec les pompes funèbres de son choix. Nous pouvons être appelés 24 heures sur 24 au 01 88 61 08 00 afin de répondre aux questions immédiates et d'assurer les éventuels services urgents. Notre accompagnement comprend le repos du corps du défunt et l'organisation complète des obsèques."
-                },
-                {
-                  q: "Comment organiser une crémation à Paris ?",
-                  a: "Il y a un crématorium à Paris : le crématorium du Père Lachaise. Un crématorium se situe également à moins de 15 minutes dans la commune d'Arcueil. Ce sont les pompes funèbres qui réservent les prestations adéquates : salon de recueillement ou salle de cérémonie. Le coût d'une crémation se situe autour de 1 000 € pour les crématoriums à Paris et à proximité."
-                },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-card rounded-xl p-6 shadow-sm border border-border/50"
-                >
-                  <h3 className="text-lg font-display text-foreground mb-3">
-                    {i + 1}. {item.q}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {item.a}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Collaborateurs */}
-        <section className="py-16 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl font-display text-foreground text-center mb-10">
-              Nos collaborateurs
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                { role: "Assistante funéraire", prenom: "Novy", nom: "Garçonnot" },
-              ].map((collab, i) => (
-                <div
-                  key={i}
-                  className="bg-card rounded-xl p-8 shadow-sm border border-border/50 text-center"
-                >
-                  <img
-                    src={novyPhoto}
-                    alt={`${collab.prenom} ${collab.nom}`}
-                    className="w-44 h-44 rounded-full object-cover mx-auto mb-4"
-                  />
-                  <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">{collab.role}</p>
-                  <p className="text-foreground font-display text-lg">{collab.prenom} {collab.nom}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-10 bg-background">
-          <div className="container mx-auto px-6 text-center">
-            <p className="text-foreground font-medium text-lg">
-              ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
-            </p>
-            <a
-              href="tel:0188610800"
-              className="btn-primary inline-block mt-4"
-            >
-              Appeler le 01 88 61 08 00
-            </a>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
-  );
+const paris17Data: AgenceData = {
+  ville: "Paris",
+  arrondissement: "17e",
+  adresse: "10 rue Saint-Ferdinand",
+  codePostal: "75017",
+  telephone: "+33188610800",
+  telephoneDisplay: "01 88 61 08 00",
+  coordonnees: { latitude: 48.8788349, longitude: 2.2900696 },
+  dateOuverture: "novembre 2023",
+  horaires: "Lun–Ven 9h–18h",
+  horairesSamedi: "Sam sur RDV",
+  googleMapsUrl: "https://www.google.fr/maps/place/10+Rue+Saint-Ferdinand,+75017+Paris",
+  slug: "paris-17",
+  photos: [photo1, photo2, photo3, photo4, photo5],
+  logoPrefecture,
+  prefectureLabel: "Habilité préfecture de Paris",
+  avis: [
+    {
+      auteur: "Marie L.",
+      note: 5,
+      texte: "Un accompagnement d'une grande humanité dans un moment très difficile. L'équipe a été disponible, à l'écoute et d'une grande délicatesse. Je recommande vivement.",
+      date: "Mars 2025",
+    },
+    {
+      auteur: "Philippe D.",
+      note: 5,
+      texte: "Nous avons été accompagnés avec beaucoup de professionnalisme et de bienveillance pour les obsèques de notre mère. Tout a été parfaitement organisé.",
+      date: "Janvier 2025",
+    },
+    {
+      auteur: "Catherine R.",
+      note: 5,
+      texte: "Service irréprochable, dans le respect de nos souhaits et de notre foi. La cérémonie était très belle. Merci à toute l'équipe du SCF.",
+      date: "Décembre 2024",
+    },
+  ],
+  sections: {
+    presentation: `<p>Le <strong>Service Catholique des Funérailles (SCF)</strong> est une coopérative de pompes funèbres catholiques fondée en 1999 à la demande du Cardinal Lustiger. Notre agence de <strong>Paris 17e</strong>, ouverte en novembre 2023 au 10 rue Saint-Ferdinand, accompagne les familles endeuillées dans l'organisation d'<strong>obsèques catholiques</strong> — messe de funérailles, veillée funèbre, inhumation ou crémation — avec bienveillance et sans surenchère commerciale.</p>
+<p>Nous intervenons dans tout Paris et les communes limitrophes, <strong>7 jours sur 7, 24 heures sur 24</strong>. En cas de décès, contactez-nous immédiatement au <a href="tel:+33188610800" class="text-primary font-semibold hover:underline">01 88 61 08 00</a>.</p>`,
+    prestations: `<p>Notre agence de Paris 17e prend en charge l'<strong>organisation complète des obsèques</strong> : entretien avec un conseiller funéraire dédié, démarches administratives, préparation du défunt, transport, choix du cercueil et des fleurs, coordination avec la paroisse pour la <strong>messe de funérailles</strong>, et accompagnement le jour de la cérémonie.</p>
+<p>Que vous souhaitiez une <strong>inhumation</strong> dans un cimetière parisien ou une <strong>crémation</strong> au crématorium du Père Lachaise ou d'Arcueil, nous organisons chaque étape avec soin. Notre tarification est transparente et sans surenchère commerciale, conformément à notre mission de coopérative à gestion désintéressée.</p>`,
+    demarches: `<p>Lors d'un décès à Paris, un médecin doit d'abord constater le décès et émettre un certificat médical. La famille contacte ensuite les pompes funèbres de son choix. Nous nous chargeons de la <strong>déclaration de décès en mairie</strong>, de l'obtention des <strong>actes de décès</strong> (10 à 15 originaux), et de la coordination avec les différents organismes. Nous mettons à votre disposition un modèle de courrier pour les démarches auprès de l'employeur, des banques, de la mutuelle, du notaire et du centre des impôts.</p>`,
+    prevoyance: `<p>Nous accompagnons les personnes qui souhaitent <strong>anticiper leurs obsèques</strong> pour soulager leurs proches le jour venu. Lors d'un rendez-vous confidentiel dans notre agence de Paris 17e, nous vous proposons : un <strong>dépôt de volontés</strong> détaillant vos souhaits (type de cérémonie, lieu d'inhumation, musiques, lectures), une <strong>estimation du coût des obsèques</strong>, et si vous le souhaitez, la mise en place d'un <strong>contrat d'assurance obsèques</strong> qui garantit le financement et le respect de vos volontés.</p>`,
+    identite: `<p>Le SCF est né de la volonté de proposer un accompagnement funéraire ancré dans la <strong>tradition catholique</strong>. Chaque cérémonie est pensée pour offrir un cadre de recueillement et d'espérance. Nous travaillons en lien étroit avec les paroisses de Paris pour organiser des <strong>messes de funérailles</strong> dignes et priantes. Notre équipe, formée à l'accompagnement du deuil, accueille néanmoins <strong>toutes les familles</strong>, quelle que soit leur confession, avec le même respect et la même bienveillance.</p>`,
+  },
+  faq: [
+    {
+      question: "Quelles sont les pompes funèbres catholiques à Paris 17e ?",
+      reponse: "Le Service Catholique des Funérailles (SCF) est la principale agence de pompes funèbres catholiques du 17e arrondissement de Paris, située au 10 rue Saint-Ferdinand. Fondé en 1999, le SCF est une coopérative à gestion désintéressée qui accompagne les familles dans l'organisation d'obsèques catholiques (messe, veillée, inhumation, crémation) avec bienveillance et transparence tarifaire.",
+    },
+    {
+      question: "Comment organiser une messe de funérailles à Paris 17e ?",
+      reponse: "Pour organiser une messe de funérailles, notre équipe se coordonne directement avec la paroisse de votre choix dans le 17e ou ailleurs à Paris. Nous prenons en charge l'ensemble de l'organisation : choix des lectures, des chants, coordination avec le prêtre, impression du livret de messe. La messe de funérailles peut être célébrée dans l'église de la paroisse du défunt ou dans toute autre église parisienne.",
+    },
+    {
+      question: "Quel est le délai pour organiser des obsèques à Paris ?",
+      reponse: "La loi impose que les obsèques aient lieu dans un délai de 6 jours ouvrables après le décès (sauf dérogation). En pratique, les obsèques sont généralement organisées entre 3 et 5 jours après le décès. Notre équipe est disponible 24h/24, 7j/7 pour prendre en charge l'organisation dès le premier appel et vous accompagner dans les meilleurs délais.",
+    },
+    {
+      question: "Où se trouve le crématorium le plus proche de Paris 17e ?",
+      reponse: "Le crématorium le plus proche est celui du Père Lachaise (20e arrondissement de Paris). Un second crématorium se situe à Arcueil, à moins de 15 minutes. Le coût d'une crémation se situe autour de 1 000 € dans ces établissements. Notre agence se charge de la réservation du crématorium et de l'organisation de la cérémonie associée.",
+    },
+    {
+      question: "Le SCF accompagne-t-il les familles non catholiques ?",
+      reponse: "Oui, le Service Catholique des Funérailles accueille toutes les familles, quelle que soit leur confession ou leurs convictions. Notre identité catholique guide notre approche — respect, bienveillance, absence de surenchère commerciale — mais nous organisons des obsèques civiles, interreligieuses ou selon d'autres rites si la famille le souhaite.",
+    },
+  ],
+  openingHoursSpec: [
+    { dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "18:00" },
+    { dayOfWeek: "Saturday", opens: "09:00", closes: "12:00" },
+  ],
 };
+
+const AgenceParis17 = () => (
+  <HelmetProvider>
+    <AgenceTemplate data={paris17Data} />
+  </HelmetProvider>
+);
 
 export default AgenceParis17;
