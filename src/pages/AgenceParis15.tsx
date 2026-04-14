@@ -71,7 +71,7 @@ const AgenceParis15 = () => {
               </span>
               <div className="flex items-center gap-3">
                 <span className="text-primary-foreground text-sm text-right leading-tight">
-                  Pompes funèbres habilitées par<br />la préfecture de Paris
+                  Pompes funèbres habilitées<br />par la préfecture de Paris
                 </span>
                 <img src={logoPrefecture} alt="Logo Préfecture de Paris" className="h-10 w-auto" />
               </div>
