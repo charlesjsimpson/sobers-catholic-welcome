@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AgenceContactForm from "@/components/agence/AgenceContactForm";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import agenceParis15 from "@/assets/agence-paris-15.png";
 import agenceParis15b from "@/assets/agence-paris-15-2.jpg";
 import agenceParis15c from "@/assets/agence-paris-15-3.jpg";
@@ -266,44 +267,6 @@ const AgenceParis15 = () => {
                 </p>
 
 
-                {/* FAQ */}
-                <h2 className="text-2xl md:text-3xl font-display text-foreground mt-10 mb-6">
-                  Organisation des obsèques à Paris 15 : guide pratique
-                </h2>
-                <div className="space-y-4">
-                  {[
-                    {
-                      q: "Quelles sont les différentes étapes d'organisation des obsèques ?",
-                      a: "L'organisation des obsèques de votre proche s'effectue depuis notre agence de Paris. Lors de cet entretien, l'objectif est de vous soulager sur les aspects logistiques, organisationnels et administratifs, et de rapidement vous permettre d'avoir une visibilité sur les jours suivants. Pour cela, nous avons besoin du livret de famille de la personne décédée, de la carte d'identité du mandataire et des habits avec lesquels nous irons retrouver et prendre soin de votre proche."
-                    },
-                    {
-                      q: "Quels sont les avantages de souscrire un contrat d'assurance obsèques ?",
-                      a: "Lors d'un rendez-vous dans notre agence de Paris, nous pouvons vous accompagner dans la réflexion et la préparation de vos propres obsèques ou celles de votre proche. Effectuer une prévoyance funéraire à travers un dépôt de volontés et/ou un contrat obsèques permet de soulager vos proches le jour venu, et peut permettre aussi de garantir le respect de vos volontés."
-                    },
-                    {
-                      q: "Quelles sont les démarches à effectuer après un décès ?",
-                      a: "Les pompes funèbres vous remettront plusieurs originaux d'actes de décès (entre 10 et 15). Ces documents d'état civil représentent le document de référence pour les démarches à effectuer auprès de tous les organismes concernés : employeur, France Travail, banques, caisses d'assurance, mutuelles, notaire, centre des impôts, etc. Nous tenons à votre disposition un modèle de lettre à envoyer à ces divers organismes."
-                    },
-                    {
-                      q: "Vous faites face à un décès ?",
-                      a: "Lorsqu'un décès survient, un médecin ou un infirmier doit venir constater et émettre un certificat médical. La famille doit alors entrer en contact avec les pompes funèbres de son choix. Nous pouvons être appelés 24 heures sur 24 au 01 44 38 80 80 afin de répondre aux questions immédiates et d'assurer les éventuels services urgents. Notre accompagnement comprend le repos du corps du défunt et l'organisation complète des obsèques."
-                    },
-                    {
-                      q: "Comment organiser une crémation à Paris ?",
-                      a: "Il y a un crématorium à Paris : le crématorium du Père Lachaise. Un crématorium se situe également à moins de 15 minutes dans la commune d'Arcueil. Ce sont les pompes funèbres qui réservent les prestations adéquates : salon de recueillement ou salle de cérémonie. Le coût d'une crémation se situe autour de 1 000 € pour les crématoriums à Paris et à proximité."
-                    },
-                  ].map((item, i) => (
-                    <div key={i}>
-                      <h3 className="text-lg font-display text-foreground mb-1">
-                        {i + 1}. {item.q}
-                      </h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm mb-4">
-                        {item.a}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-
                 {/* Collaborateurs */}
                 <h2 className="text-2xl font-display text-foreground mt-10 mb-6">
                   Nos collaborateurs
@@ -350,6 +313,50 @@ const AgenceParis15 = () => {
         <section className="py-8 bg-secondary lg:hidden">
           <div className="container mx-auto px-6 max-w-lg">
             <AgenceContactForm agenceLabel="Paris 15" />
+          </div>
+        </section>
+
+        {/* FAQ en bas de page */}
+        <section className="py-10 bg-secondary">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-8">
+              Organisation des obsèques à Paris 15 : guide pratique
+            </h2>
+            <Accordion type="multiple" className="space-y-3">
+              {[
+                {
+                  q: "Quelles sont les différentes étapes d'organisation des obsèques ?",
+                  a: "L'organisation des obsèques de votre proche s'effectue depuis notre agence de Paris. Lors de cet entretien, l'objectif est de vous soulager sur les aspects logistiques, organisationnels et administratifs, et de rapidement vous permettre d'avoir une visibilité sur les jours suivants. Pour cela, nous avons besoin du livret de famille de la personne décédée, de la carte d'identité du mandataire et des habits avec lesquels nous irons retrouver et prendre soin de votre proche."
+                },
+                {
+                  q: "Quels sont les avantages de souscrire un contrat d'assurance obsèques ?",
+                  a: "Lors d'un rendez-vous dans notre agence de Paris, nous pouvons vous accompagner dans la réflexion et la préparation de vos propres obsèques ou celles de votre proche. Effectuer une prévoyance funéraire à travers un dépôt de volontés et/ou un contrat obsèques permet de soulager vos proches le jour venu, et peut permettre aussi de garantir le respect de vos volontés."
+                },
+                {
+                  q: "Quelles sont les démarches à effectuer après un décès ?",
+                  a: "Les pompes funèbres vous remettront plusieurs originaux d'actes de décès (entre 10 et 15). Ces documents d'état civil représentent le document de référence pour les démarches à effectuer auprès de tous les organismes concernés : employeur, France Travail, banques, caisses d'assurance, mutuelles, notaire, centre des impôts, etc. Nous tenons à votre disposition un modèle de lettre à envoyer à ces divers organismes."
+                },
+                {
+                  q: "Vous faites face à un décès ?",
+                  a: "Lorsqu'un décès survient, un médecin ou un infirmier doit venir constater et émettre un certificat médical. La famille doit alors entrer en contact avec les pompes funèbres de son choix. Nous pouvons être appelés 24 heures sur 24 au 01 44 38 80 80 afin de répondre aux questions immédiates et d'assurer les éventuels services urgents. Notre accompagnement comprend le repos du corps du défunt et l'organisation complète des obsèques."
+                },
+                {
+                  q: "Comment organiser une crémation à Paris ?",
+                  a: "Il y a un crématorium à Paris : le crématorium du Père Lachaise. Un crématorium se situe également à moins de 15 minutes dans la commune d'Arcueil. Ce sont les pompes funèbres qui réservent les prestations adéquates : salon de recueillement ou salle de cérémonie. Le coût d'une crémation se situe autour de 1 000 € pour les crématoriums à Paris et à proximité."
+                },
+              ].map((item, i) => (
+                <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-5">
+                  <AccordionTrigger className="text-left font-display text-foreground hover:no-underline py-4">
+                    {i + 1}. {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed text-sm pb-4">
+                    {item.a}
+                  </AccordionContent>
+                  {/* Contenu sr-only pour le SEO */}
+                  <div className="sr-only">{item.a}</div>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
       </main>
