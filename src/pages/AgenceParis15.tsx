@@ -18,6 +18,9 @@ import collabBaudoin from "@/assets/collaborateurs/baudoin-drion.jpg";
 import collabSebastien from "@/assets/collaborateurs/sebastien-legrand.jpg";
 import collabFrederic from "@/assets/collaborateurs/frederic-barut.jpg";
 import collabMuriel from "@/assets/collaborateurs/muriel-lavergne.jpg";
+import collabRomain from "@/assets/collaborateurs/romain-martinot.png";
+import collabJeanPhilippe from "@/assets/collaborateurs/jean-philippe-rabaroux.png";
+import collabStephanie from "@/assets/collaborateurs/stephanie-dhebrail.png";
 import agenceParis15e from "@/assets/agence-paris15-bureau1.jpg";
 import agenceParis15f from "@/assets/agence-paris15-bureau2.jpg";
 
