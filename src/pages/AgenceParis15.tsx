@@ -286,10 +286,10 @@ const AgenceParis15 = () => {
                 <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 4, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
-                <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Le Service Catholique des Funérailles de Paris, <strong className="text-foreground">coopérative à gestion désintéressée</strong>, accompagne chaque famille avec bienveillance. Basée dans le 15ᵉ arrondissement, notre agence funéraire conçoit des parcours adaptés à chaque situation, dans le respect de la dignité humaine et avec une espérance chrétienne.
                 </p>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nos conseillers funéraires accueillent toutes les familles, quelle que soit leur confession, et organisent tous types d'obsèques dans Paris et sa région.
                 </p>
 
@@ -315,7 +315,7 @@ const AgenceParis15 = () => {
                 <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Organisation des obsèques : un accompagnement complet
                 </h2>
-                <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nous proposons l'ensemble des services nécessaires à l'<Link to="/organiser-des-obseques" className="text-primary underline hover:text-primary/80">organisation des funérailles</Link>. Un conseiller funéraire dédié vous accompagne à chaque étape :
                 </p>
                 <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -336,7 +336,7 @@ const AgenceParis15 = () => {
                     Coordination le jour de la cérémonie
                   </li>
                 </ul>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nous veillons à réduire au maximum la charge administrative et matérielle afin de permettre aux familles de traverser cette période avec sérénité.
                 </p>
 
@@ -344,7 +344,7 @@ const AgenceParis15 = () => {
                 <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Prévoir ses obsèques : contrats et prévoyance
                 </h2>
-                <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nous accompagnons également toutes les personnes souhaitant <Link to="/services/prevoyance" className="text-primary underline hover:text-primary/80">anticiper leurs obsèques</Link>. La <strong className="text-foreground">prévoyance funéraire</strong> peut prendre plusieurs formes :
                 </p>
                 <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -361,7 +361,7 @@ const AgenceParis15 = () => {
                     Mise en place d'un contrat d'assurance obsèques
                   </li>
                 </ul>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Ces questions peuvent être abordées en toute confidentialité lors d'un entretien dans notre agence de <strong className="text-foreground">pompes funèbres</strong> à Paris 15.
                 </p>
 
@@ -369,7 +369,7 @@ const AgenceParis15 = () => {
                 <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre engagement auprès des familles
                 </h2>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   La proposition du Service Catholique des Funérailles se veut simple, claire et fiable. Sans surenchère commerciale, nous plaçons les besoins des familles au centre de notre mission et veillons à respecter leurs souhaits comme la réalité de leur deuil.
                 </p>
 
@@ -377,7 +377,7 @@ const AgenceParis15 = () => {
                 <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre identité catholique
                 </h2>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
+                <p className="text-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Ce qui distingue le SCF des autres <strong className="text-foreground">pompes funèbres</strong> parisiennes, c'est une spiritualité chrétienne vécue concrètement : nos assistants funéraires accompagnent les familles dans la prière, coordonnent la cérémonie avec le prêtre officiant, et considèrent leur mission comme un service rendu à la dignité de la personne défunte et à la consolation des vivants. Le SCF accompagne toutes les familles, quelle que soit leur confession, avec le même respect et la même humanité.
                 </p>
 
