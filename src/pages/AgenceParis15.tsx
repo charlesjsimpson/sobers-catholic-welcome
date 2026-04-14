@@ -267,7 +267,7 @@ const AgenceParis15 = () => {
                   <p className="text-foreground font-medium mb-1.5" style={{ fontSize: 15 }}>
                     ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
                   </p>
-                  <a href="tel:0144388080" className="btn-primary inline-block" style={{ fontSize: 15 }}>
+                  <a href="tel:0144388080" className="btn-primary inline-block px-10 py-3" style={{ fontSize: 14 }}>
                     Appeler le 01 44 38 80 80
                   </a>
                 </div>
