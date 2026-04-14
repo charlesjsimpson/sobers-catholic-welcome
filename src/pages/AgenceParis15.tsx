@@ -21,15 +21,15 @@ const AgenceParis15 = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative bg-primary pt-28 pb-16">
+        <section className="relative bg-primary pt-24 pb-10">
           <div className="container mx-auto px-6 text-center">
-            <p className="text-primary-foreground/70 text-sm uppercase tracking-widest mb-3">
+            <p className="text-primary-foreground/70 text-sm uppercase tracking-widest mb-2">
               Pompes funèbres habilitées par la préfecture de Paris
             </p>
-            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-display text-primary-foreground mb-4 leading-tight">
               Service Catholique des Funérailles – Paris 15
             </h1>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
               <a
                 href="tel:0144388080"
                 className="btn-primary inline-flex items-center gap-2 text-lg"
@@ -46,9 +46,9 @@ const AgenceParis15 = () => {
         </section>
 
         {/* Image + infos */}
-        <section className="py-16 bg-background">
+        <section className="py-10 bg-background">
           <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
                   src={agenceParis15}
@@ -57,10 +57,10 @@ const AgenceParis15 = () => {
                 />
               </div>
               <div>
-                <h2 className="text-2xl font-display text-foreground mb-4">
+                <h2 className="text-2xl font-display text-foreground mb-3">
                   Agence SCF Paris 15 : accompagnement funéraire
                 </h2>
-                <div className="space-y-4 mb-6">
+                <div className="space-y-3 mb-4">
                   <div className="flex items-start gap-3 text-muted-foreground">
                     <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span>66, rue Falguière<br />75015 Paris</span>
@@ -82,12 +82,12 @@ const AgenceParis15 = () => {
         </section>
 
         {/* Présentation */}
-        <section className="py-16 bg-secondary">
+        <section className="py-10 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Depuis l'ouverture de son agence de <strong className="text-foreground">pompes funèbres à Paris 15</strong> en 2000, avec le soutien du cardinal Jean-Marie Lustiger, le Service Catholique des Funérailles (SCF) a accompagné plus de 3 000 familles dans toute la ville. Notre mission : offrir un accompagnement funéraire respectueux, digne et profondément humain.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed">
               <strong className="text-foreground">En cas de décès, contactez-nous 7 jours sur 7 :{" "}
                 <a href="tel:0144388080" className="text-primary hover:text-primary/80 transition-colors">01 44 38 80 80</a>
               </strong>
@@ -96,12 +96,12 @@ const AgenceParis15 = () => {
         </section>
 
         {/* Notre agence */}
-        <section className="py-16 bg-background">
+        <section className="py-10 bg-background">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display text-foreground mb-8">
+            <h2 className="text-2xl md:text-3xl font-display text-foreground mb-5">
               Notre agence de pompes funèbres à Paris 15
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
+            <p className="text-muted-foreground leading-relaxed mb-4">
               Le Service Catholique des Funérailles de Paris, coopérative à gestion désintéressée, accompagne chaque famille avec bienveillance. Basée dans le 15ᵉ arrondissement, notre agence funéraire conçoit <strong className="text-foreground">des parcours adaptés à chaque situation, dans le respect de la dignité humaine et avec une espérance chrétienne.</strong>
             </p>
             <p className="text-muted-foreground leading-relaxed">
@@ -111,20 +111,20 @@ const AgenceParis15 = () => {
         </section>
 
         {/* Services */}
-        <section className="py-16 bg-secondary">
+        <section className="py-10 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-8">
               Nos prestations
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-card rounded-xl p-8 shadow-sm border border-border/50">
-                <h3 className="text-xl font-display text-foreground mb-4">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-card rounded-xl p-6 shadow-sm border border-border/50">
+                <h3 className="text-xl font-display text-foreground mb-3">
                   Organisation des obsèques
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-3">
                   Nous proposons l'ensemble des services nécessaires à l'organisation des funérailles. Un conseiller funéraire dédié vous accompagne à chaque étape :
                 </p>
-                <ul className="space-y-2 text-muted-foreground text-sm">
+                <ul className="space-y-1.5 text-muted-foreground text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span><strong className="text-foreground">Entretien initial</strong></span>
@@ -142,18 +142,18 @@ const AgenceParis15 = () => {
                     <span><strong className="text-foreground">Coordination le jour de la cérémonie</strong></span>
                   </li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed mt-4 text-sm">
+                <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
                   Nous veillons à réduire au maximum la charge administrative et matérielle afin de permettre aux familles de traverser cette période avec sérénité.
                 </p>
               </div>
-              <div className="bg-card rounded-xl p-8 shadow-sm border border-border/50">
-                <h3 className="text-xl font-display text-foreground mb-4">
+              <div className="bg-card rounded-xl p-6 shadow-sm border border-border/50">
+                <h3 className="text-xl font-display text-foreground mb-3">
                   Prévoir ses obsèques
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
+                <p className="text-muted-foreground leading-relaxed mb-3">
                   Nous accompagnons également toutes les personnes souhaitant anticiper leurs obsèques. La prévoyance funéraire peut prendre plusieurs formes :
                 </p>
-                <ul className="space-y-2 text-muted-foreground text-sm">
+                <ul className="space-y-1.5 text-muted-foreground text-sm">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     <span><strong className="text-foreground">Simple dépôt de volontés</strong></span>
@@ -167,14 +167,14 @@ const AgenceParis15 = () => {
                     <span><strong className="text-foreground">Mise en place d'un contrat d'assurance obsèques</strong></span>
                   </li>
                 </ul>
-                <p className="text-muted-foreground leading-relaxed mt-4 text-sm">
+                <p className="text-muted-foreground leading-relaxed mt-3 text-sm">
                   Ces questions peuvent être abordées en toute confidentialité lors d'un entretien dans notre agence de pompes funèbres à Paris 15.
                 </p>
               </div>
             </div>
 
-            <div className="mt-10 bg-card rounded-xl p-8 shadow-sm border border-border/50">
-              <h3 className="text-xl font-display text-foreground mb-4">
+            <div className="mt-6 bg-card rounded-xl p-6 shadow-sm border border-border/50">
+              <h3 className="text-xl font-display text-foreground mb-3">
                 Notre engagement auprès des familles
               </h3>
               <p className="text-muted-foreground leading-relaxed">
@@ -185,12 +185,12 @@ const AgenceParis15 = () => {
         </section>
 
         {/* FAQ */}
-        <section className="py-16 bg-background">
+        <section className="py-10 bg-background">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-display text-foreground text-center mb-8">
               Organisation des obsèques à Paris 15 : guide pratique
             </h2>
-            <div className="space-y-6">
+            <div className="space-y-4">
               {[
                 {
                   q: "Quelles sont les différentes étapes d'organisation des obsèques ?",
@@ -215,9 +215,9 @@ const AgenceParis15 = () => {
               ].map((item, i) => (
                 <div
                   key={i}
-                  className="bg-card rounded-xl p-6 shadow-sm border border-border/50"
+                  className="bg-card rounded-xl p-5 shadow-sm border border-border/50"
                 >
-                  <h3 className="text-lg font-display text-foreground mb-3">
+                  <h3 className="text-lg font-display text-foreground mb-2">
                     {i + 1}. {item.q}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed text-sm">
@@ -230,12 +230,12 @@ const AgenceParis15 = () => {
         </section>
 
         {/* Collaborateurs */}
-        <section className="py-16 bg-secondary">
+        <section className="py-10 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl font-display text-foreground text-center mb-10">
+            <h2 className="text-2xl font-display text-foreground text-center mb-8">
               Nos collaborateurs
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
               {[
                 { role: "Directeur", prenom: "Christian", nom: "de Cacqueray" },
                 { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut" },
@@ -250,9 +250,9 @@ const AgenceParis15 = () => {
               ].map((collab, i) => (
                 <div
                   key={i}
-                  className="bg-card rounded-xl p-5 shadow-sm border border-border/50 text-center"
+                  className="bg-card rounded-xl p-4 shadow-sm border border-border/50 text-center"
                 >
-                  <p className="text-primary font-medium text-xs uppercase tracking-wider mb-2">{collab.role}</p>
+                  <p className="text-primary font-medium text-xs uppercase tracking-wider mb-1.5">{collab.role}</p>
                   <p className="text-foreground font-display text-sm">{collab.prenom} {collab.nom}</p>
                 </div>
               ))}
@@ -261,14 +261,14 @@ const AgenceParis15 = () => {
         </section>
 
         {/* CTA */}
-        <section className="py-10 bg-background">
+        <section className="py-8 bg-background">
           <div className="container mx-auto px-6 text-center">
             <p className="text-foreground font-medium text-lg">
               ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
             </p>
             <a
               href="tel:0144388080"
-              className="btn-primary inline-block mt-4"
+              className="btn-primary inline-block mt-3"
             >
               Appeler le 01 44 38 80 80
             </a>
