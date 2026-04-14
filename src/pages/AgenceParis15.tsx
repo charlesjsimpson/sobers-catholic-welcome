@@ -82,10 +82,10 @@ const AgenceParis15 = () => {
         {/* Image carousel + infos pratiques */}
         <section className="py-8 bg-background">
           <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-8 items-stretch">
               {/* Carousel */}
-              <div className="relative rounded-xl overflow-hidden shadow-lg group">
-                <div className="aspect-[16/10]">
+              <div className="relative rounded-xl overflow-hidden shadow-lg group min-h-[300px]">
+                <div className="absolute inset-0">
                   {agenceImages.map((img, i) => (
                     <img
                       key={i}
