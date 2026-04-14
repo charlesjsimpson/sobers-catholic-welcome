@@ -26,7 +26,7 @@ const AgenceContactForm = ({ agenceLabel, formTitle, motifs }: AgenceContactForm
   const [message, setMessage] = useState("");
 
   const usedMotifs = motifs || defaultMotifs;
-  const title = formTitle || `Vous souhaitez être contacté par l'agence de Service Catholique des Funérailles - ${agenceLabel} ?*`;
+  const title = formTitle || `Vous souhaitez être contacté\npar l'agence de Service Catholique\ndes Funérailles - ${agenceLabel} ?*`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,7 +44,7 @@ const AgenceContactForm = ({ agenceLabel, formTitle, motifs }: AgenceContactForm
 
   return (
     <form onSubmit={handleSubmit} className="rounded-lg p-5 space-y-4" style={{ backgroundColor: "#DCF4FF" }}>
-      <h3 className="text-lg font-display font-bold text-foreground text-center leading-snug">{title}</h3>
+      <h3 className="text-xl font-display font-bold text-foreground text-center leading-snug whitespace-pre-line">{title}</h3>
       <div>
         <label htmlFor="motif" className="block text-xs font-medium text-foreground mb-1.5">Je souhaite être recontacté : *</label>
         <Select value={motif} onValueChange={setMotif}>
