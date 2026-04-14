@@ -151,7 +151,7 @@ const AgenceParis15 = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative bg-primary pt-28" style={{ paddingBottom: 40 }}>
+        <section className="relative bg-primary pt-28 pb-5">
           <div className="container mx-auto px-6">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-3">
@@ -163,32 +163,27 @@ const AgenceParis15 = () => {
                 <li className="text-primary-foreground/90">Paris 15e</li>
               </ol>
             </nav>
-            <h1 className="font-display text-primary-foreground text-center" style={{ fontSize: 36, fontWeight: 600, lineHeight: 1.2, marginBottom: 8 }}>
+            <h1 className="font-display text-primary-foreground text-center mb-1" style={{ fontSize: 36, fontWeight: 600, lineHeight: 1.2 }}>
               Pompes funèbres catholiques à Paris 15e
             </h1>
-            <p className="text-primary-foreground/70 text-center" style={{ fontSize: 17, marginBottom: 24 }}>
+            <p className="text-primary-foreground/70 text-center mb-4" style={{ fontSize: 17 }}>
               Service Catholique des Funérailles – Paris 15
             </p>
-
-            {/* CTA Téléphone */}
-            <div className="flex justify-center" style={{ marginBottom: 16 }}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <a
                 href="tel:0144388080"
-                className="bg-primary-foreground text-primary rounded-lg inline-flex items-center gap-2 hover:shadow-lg transition-all"
-                style={{ fontSize: 20, fontWeight: 600, padding: '14px 32px' }}
+                className="bg-primary-foreground/10 border border-primary-foreground/30 text-primary-foreground rounded-lg px-5 py-2.5 inline-flex items-center gap-2 font-medium hover:bg-primary-foreground/20 transition-colors"
+                style={{ fontSize: 15 }}
               >
-                📞 01 44 38 80 80
+                <Phone className="w-4 h-4" />
+                01 44 38 80 80
               </a>
-            </div>
-
-            {/* Urgence + Habilitation */}
-            <div className="flex flex-col sm:flex-row items-center justify-center" style={{ gap: 48 }}>
-              <span className="flex items-center gap-2 text-primary-foreground" style={{ fontSize: 15, opacity: 0.9 }}>
-                ⏱ Urgence décès 7j/7 24h/24
+              <span className="text-primary-foreground/80 flex items-center gap-2" style={{ fontSize: 14 }}>
+                <Clock className="w-3.5 h-3.5" />
+                Urgence décès 7j/7 24h/24
               </span>
-              <span className="hidden sm:block text-primary-foreground/30">|</span>
-              <div className="flex items-center gap-3" style={{ opacity: 0.9 }}>
-                <span className="text-primary-foreground text-right leading-tight" style={{ fontSize: 15 }}>
+              <div className="flex items-center gap-3">
+                <span className="text-primary-foreground text-right leading-tight" style={{ fontSize: 14 }}>
                   Pompes funèbres habilitées<br />par la préfecture de Paris
                 </span>
                 <img src={logoPrefecture} alt="Logo Préfecture de Paris" className="h-9 w-auto" />
