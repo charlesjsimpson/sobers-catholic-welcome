@@ -21,7 +21,7 @@ const AgenceParis15 = () => {
       <Header />
       <main>
         {/* Hero */}
-        <section className="relative bg-primary pt-24 pb-10">
+        <section className="relative bg-primary pt-28 pb-12 flex items-center">
           <div className="container mx-auto px-6 text-center">
             <p className="text-primary-foreground/70 text-sm uppercase tracking-widest mb-2">
               Pompes funèbres habilitées par la préfecture de Paris
