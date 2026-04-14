@@ -160,7 +160,7 @@ const AgenceParis15 = () => {
             <p className="text-primary-foreground/70 text-center mb-4" style={{ fontSize: 17 }}>
               Service Catholique des Funérailles – Paris 15
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
               <a
                 href="tel:0144388080"
                 className="bg-primary-foreground/10 border border-primary-foreground/30 text-primary-foreground rounded-lg px-5 py-2.5 inline-flex items-center gap-2 font-medium hover:bg-primary-foreground/20 transition-colors"
