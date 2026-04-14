@@ -18,6 +18,9 @@ import collabBaudoin from "@/assets/collaborateurs/baudoin-drion.jpg";
 import collabSebastien from "@/assets/collaborateurs/sebastien-legrand.jpg";
 import collabFrederic from "@/assets/collaborateurs/frederic-barut.jpg";
 import collabMuriel from "@/assets/collaborateurs/muriel-lavergne.jpg";
+import collabRomain from "@/assets/collaborateurs/romain-martinot.png";
+import collabJeanPhilippe from "@/assets/collaborateurs/jean-philippe-rabaroux.png";
+import collabStephanie from "@/assets/collaborateurs/stephanie-dhebrail.png";
 import agenceParis15e from "@/assets/agence-paris15-bureau1.jpg";
 import agenceParis15f from "@/assets/agence-paris15-bureau2.jpg";
 
@@ -433,10 +436,10 @@ const AgenceParis15 = () => {
                     { role: "Assistant funéraire", prenom: "Christophe", nom: "Grimaud", photo: collabChristophe },
                     { role: "Assistante funéraire", prenom: "Muriel", nom: "Lavergne", photo: collabMuriel },
                     { role: "Assistant funéraire", prenom: "Sébastien", nom: "Legrand", photo: collabSebastien },
-                    { role: "Assistant funéraire", prenom: "Romain", nom: "Martinot", photo: null },
+                    { role: "Assistant funéraire", prenom: "Romain", nom: "Martinot", photo: collabRomain },
                     { role: "Chargée de prévoyance", prenom: "Catherine", nom: "Poincet", photo: collabCatherine },
-                    { role: "Responsable prévoyance", prenom: "Jean-Philippe", nom: "Rabaroux", photo: null },
-                    { role: "Maître de cérémonie", prenom: "Stéphanie", nom: "d'Hébrail", photo: null },
+                    { role: "Responsable prévoyance", prenom: "Jean-Philippe", nom: "Rabaroux", photo: collabJeanPhilippe },
+                    { role: "Maître de cérémonie", prenom: "Stéphanie", nom: "d'Hébrail", photo: collabStephanie },
                   ].map((collab, i) => (
                     <div key={i} className="flex flex-col items-center text-center">
                       <div className="w-24 h-24 rounded-full overflow-hidden bg-muted mb-2 shrink-0">
