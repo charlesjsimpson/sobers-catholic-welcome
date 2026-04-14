@@ -124,7 +124,7 @@ const HalfStarRating = () => (
 
 const AgenceParis15 = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null }[]>([]);
+  const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null; slug: string | null }[]>([]);
 
   const nextImage = useCallback(() => {
     setCurrentImage((prev) => (prev + 1) % agenceImages.length);
@@ -142,7 +142,7 @@ const AgenceParis15 = () => {
   useEffect(() => {
     supabase
       .from("death_notices")
-      .select("id, name, date_of_death, link")
+      .select("id, name, date_of_death, link, slug")
       .eq("agency_slug", "paris-15")
       .order("display_order", { ascending: true })
       .then(({ data }) => {
@@ -504,11 +504,15 @@ const AgenceParis15 = () => {
                     {notice.date_of_death && (
                       <p className="text-muted-foreground" style={{ fontSize: 14 }}>{notice.date_of_death}</p>
                     )}
-                    {notice.link && (
+                    {notice.slug ? (
+                      <Link to={`/avis/${notice.slug}`} className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
+                        Voir plus →
+                      </Link>
+                    ) : notice.link ? (
                       <a href={notice.link} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
                         Voir plus →
                       </a>
-                    )}
+                    ) : null}
                   </div>
                 ))}
               </div>

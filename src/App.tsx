@@ -70,6 +70,7 @@ import ActualitesArticles from "./pages/ActualitesArticles";
 import ActualiteVendrediSaint from "./pages/ActualiteVendrediSaint";
 import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
+import AvisDeDecesDetail from "./pages/AvisDeDecesDetail";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -157,6 +158,7 @@ const App = () => (
               <Route path="/ressources/articles" element={<ActualitesArticles />} />
               <Route path="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix" element={<ActualiteVendrediSaint />} />
               <Route path="/ressources/videos" element={<Videos />} />
+              <Route path="/avis/:slug" element={<AvisDeDecesDetail />} />
 
               {/* Admin routes */}
               <Route path="/admin/login" element={<AdminLogin />} />
