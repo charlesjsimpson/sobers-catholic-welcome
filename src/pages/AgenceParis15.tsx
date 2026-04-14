@@ -393,7 +393,7 @@ const AgenceParis15 = () => {
                   {avis.map((a, i) => (
                     <div key={i} className="bg-secondary rounded-lg shadow-sm text-center" style={{ padding: 14 }}>
                       <div className="mb-1.5">
-                        <span className="text-foreground font-medium" style={{ fontSize: 14 }}>{a.nom}</span>
+                        <span className="text-foreground font-bold" style={{ fontSize: 14 }}>{a.nom}</span>
                       </div>
                       <div className="flex items-center justify-center gap-2 mb-1.5">
                         <StarRating count={a.etoiles} size={12} />
