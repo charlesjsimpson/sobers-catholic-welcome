@@ -84,7 +84,7 @@ const AgenceParis15 = () => {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               {/* Carousel */}
               <div className="relative rounded-xl overflow-hidden shadow-lg group">
-                <div className="aspect-[4/3]">
+                <div className="aspect-[16/10]">
                   {agenceImages.map((img, i) => (
                     <img
                       key={i}
