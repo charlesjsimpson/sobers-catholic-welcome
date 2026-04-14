@@ -397,9 +397,9 @@ const AgenceParis15 = () => {
                       </div>
                       <div className="flex items-center justify-center gap-2 mb-1.5">
                         <StarRating count={a.etoiles} size={12} />
-                        <span className="text-muted-foreground" style={{ fontSize: 12 }}>{a.date}</span>
+                        <span className="text-foreground" style={{ fontSize: 12 }}>{a.date}</span>
                       </div>
-                      <p className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.6 }}>{a.texte}</p>
+                      <p className="text-foreground" style={{ fontSize: 14, lineHeight: 1.6 }}>{a.texte}</p>
                     </div>
                   ))}
                 </div>
