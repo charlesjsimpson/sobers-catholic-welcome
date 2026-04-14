@@ -124,6 +124,7 @@ const HalfStarRating = () => (
 
 const AgenceParis15 = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null }[]>([]);
 
   const nextImage = useCallback(() => {
     setCurrentImage((prev) => (prev + 1) % agenceImages.length);
@@ -137,6 +138,17 @@ const AgenceParis15 = () => {
     const timer = setInterval(nextImage, 5000);
     return () => clearInterval(timer);
   }, [nextImage]);
+
+  useEffect(() => {
+    supabase
+      .from("death_notices")
+      .select("id, name, date_of_death, link")
+      .eq("agency_slug", "paris-15")
+      .order("display_order", { ascending: true })
+      .then(({ data }) => {
+        if (data) setDeathNotices(data);
+      });
+  }, []);
 
   return (
     <div className="min-h-screen">
