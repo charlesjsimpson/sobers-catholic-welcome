@@ -48,7 +48,7 @@ const AgenceParis15 = () => {
         {/* Image + infos */}
         <section className="py-16 bg-background">
           <div className="container mx-auto px-6 max-w-5xl">
-            <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="rounded-xl overflow-hidden shadow-lg">
                 <img
                   src={agenceParis15}
@@ -232,7 +232,7 @@ const AgenceParis15 = () => {
         {/* Collaborateurs */}
         <section className="py-16 bg-secondary">
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="text-2xl font-display text-foreground text-center mb-10">
+            <h2 className="text-2xl font-display text-foreground text-center mb-8">
               Nos collaborateurs
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
