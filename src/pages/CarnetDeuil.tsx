@@ -129,13 +129,13 @@ const CarnetDeuil = () => {
                 placeholder="Nom ou prénom du défunt"
                 value={searchName}
                 onChange={(e) => { setSearchName(e.target.value); setPage(1); }}
-                className="flex-1"
+                className="flex-1 min-w-0"
               />
               <Input
                 placeholder="Paris, Lyon, Bordeaux…"
                 value={searchCity}
                 onChange={(e) => { setSearchCity(e.target.value); setPage(1); }}
-                className="flex-1"
+                className="flex-1 min-w-0"
               />
               <select
                 value={searchPeriod}
