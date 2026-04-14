@@ -511,27 +511,59 @@ const AgenceParis15 = () => {
                   style={{ fontSize: 15 }}
                 />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {deathNotices
-                  .filter((n) => n.name.toLowerCase().includes(searchQuery.toLowerCase()))
-                  .map((notice) => (
-                  <div key={notice.id} className="bg-card border border-border/50 rounded-lg px-5 py-4 flex flex-col gap-1">
-                    <p className="font-display text-foreground font-semibold" style={{ fontSize: 16 }}>{notice.name}</p>
-                    {notice.date_of_death && (
-                      <p className="text-muted-foreground" style={{ fontSize: 14 }}>{notice.date_of_death}</p>
+              {(() => {
+                const filtered = deathNotices.filter((n) => n.name.toLowerCase().includes(searchQuery.toLowerCase()));
+                const totalPages = Math.ceil(filtered.length / NOTICES_PER_PAGE);
+                const currentPage = searchQuery ? 1 : noticePage;
+                const paginated = filtered.slice((currentPage - 1) * NOTICES_PER_PAGE, currentPage * NOTICES_PER_PAGE);
+                return (
+                  <>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                      {paginated.map((notice) => (
+                        <div key={notice.id} className="bg-card border border-border/50 rounded-lg px-5 py-4 flex flex-col gap-1">
+                          <p className="font-display text-foreground font-semibold" style={{ fontSize: 16 }}>{notice.name}</p>
+                          {notice.date_of_death && (
+                            <p className="text-muted-foreground" style={{ fontSize: 14 }}>{notice.date_of_death}</p>
+                          )}
+                          {notice.slug ? (
+                            <Link to={`/avis/${notice.slug}`} className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
+                              Voir plus →
+                            </Link>
+                          ) : notice.link ? (
+                            <a href={notice.link} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
+                              Voir plus →
+                            </a>
+                          ) : null}
+                        </div>
+                      ))}
+                    </div>
+                    {!searchQuery && totalPages > 1 && (
+                      <div className="flex items-center justify-center gap-2 mt-6">
+                        <button
+                          onClick={() => setNoticePage((p) => Math.max(1, p - 1))}
+                          disabled={noticePage === 1}
+                          className="px-3 py-1.5 rounded-md border border-border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
+                        >
+                          ← Précédent
+                        </button>
+                        <span className="text-muted-foreground" style={{ fontSize: 14 }}>
+                          Page {noticePage} / {totalPages}
+                        </span>
+                        <button
+                          onClick={() => setNoticePage((p) => Math.min(totalPages, p + 1))}
+                          disabled={noticePage === totalPages}
+                          className="px-3 py-1.5 rounded-md border border-border text-sm font-medium disabled:opacity-40 hover:bg-muted transition-colors"
+                        >
+                          Suivant →
+                        </button>
+                      </div>
                     )}
-                    {notice.slug ? (
-                      <Link to={`/avis/${notice.slug}`} className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
-                        Voir plus →
-                      </Link>
-                    ) : notice.link ? (
-                      <a href={notice.link} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
-                        Voir plus →
-                      </a>
-                    ) : null}
-                  </div>
-                ))}
-              </div>
+                    {filtered.length === 0 && (
+                      <p className="text-center text-muted-foreground mt-4" style={{ fontSize: 15 }}>Aucun résultat pour « {searchQuery} »</p>
+                    )}
+                  </>
+                );
+              })()}
             </div>
           </section>
         )}
