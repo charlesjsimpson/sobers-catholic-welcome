@@ -165,21 +165,6 @@ const AgenceParis15 = () => {
                   </a>
                 </div>
 
-                {/* Boutons maillage interne */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    to="/organiser-des-obseques"
-                    className="flex-1 text-center border-2 border-foreground text-foreground font-medium py-3 px-6 rounded-lg hover:bg-foreground hover:text-background transition-colors"
-                  >
-                    Organiser des obsèques
-                  </Link>
-                  <Link
-                    to="/services/prevoyance"
-                    className="flex-1 text-center bg-primary text-primary-foreground font-medium py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    Anticiper ses obsèques
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -198,9 +183,25 @@ const AgenceParis15 = () => {
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   Le Service Catholique des Funérailles de Paris, coopérative à gestion désintéressée, accompagne chaque famille avec bienveillance. Basée dans le 15ᵉ arrondissement, notre agence funéraire conçoit <strong className="text-foreground">des parcours adaptés à chaque situation, dans le respect de la dignité humaine et avec une espérance chrétienne.</strong>
                 </p>
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   Nos conseillers funéraires accueillent toutes les familles, quelle que soit leur confession, et organisent tous types d'obsèques dans Paris et sa région.
                 </p>
+
+                {/* Boutons maillage interne */}
+                <div className="flex flex-col sm:flex-row gap-3 mb-8">
+                  <Link
+                    to="/organiser-des-obseques"
+                    className="flex-1 text-center border-2 border-foreground text-foreground font-medium py-3 px-6 rounded-lg hover:bg-foreground hover:text-background transition-colors"
+                  >
+                    Organiser des obsèques
+                  </Link>
+                  <Link
+                    to="/services/prevoyance"
+                    className="flex-1 text-center bg-primary text-primary-foreground font-medium py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    Anticiper ses obsèques
+                  </Link>
+                </div>
 
                 {/* Organisation des obsèques */}
                 <h3 className="text-xl md:text-2xl font-display text-foreground mb-3">
