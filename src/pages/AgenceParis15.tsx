@@ -283,7 +283,7 @@ const AgenceParis15 = () => {
               {/* Colonne éditoriale */}
               <div>
                 {/* Présentation */}
-                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 16, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
