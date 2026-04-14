@@ -382,20 +382,20 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Avis des familles */}
-                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Avis des familles
                 </h2>
-                <div className="flex items-center gap-2 mb-4">
+                <div className="flex items-center justify-center gap-2 mb-4">
                   <span className="text-foreground font-medium" style={{ fontSize: 16 }}>4,5/5</span>
                   <HalfStarRating />
                 </div>
                 <div className="grid sm:grid-cols-3 gap-3 mb-3">
                   {avis.map((a, i) => (
-                    <div key={i} className="bg-secondary rounded-lg shadow-sm" style={{ padding: 14 }}>
-                      <div className="flex items-center justify-between mb-1.5">
+                    <div key={i} className="bg-secondary rounded-lg shadow-sm text-center" style={{ padding: 14 }}>
+                      <div className="mb-1.5">
                         <span className="text-foreground font-medium" style={{ fontSize: 14 }}>{a.nom}</span>
                       </div>
-                      <div className="flex items-center gap-2 mb-1.5">
+                      <div className="flex items-center justify-center gap-2 mb-1.5">
                         <StarRating count={a.etoiles} size={12} />
                         <span className="text-muted-foreground" style={{ fontSize: 12 }}>{a.date}</span>
                       </div>
@@ -403,18 +403,20 @@ const AgenceParis15 = () => {
                     </div>
                   ))}
                 </div>
-                <a
-                  href={GOOGLE_REVIEWS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 transition-colors"
-                  style={{ fontSize: 15 }}
-                >
-                  Voir tous nos avis sur Google →
-                </a>
+                <div className="text-center">
+                  <a
+                    href={GOOGLE_REVIEWS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors"
+                    style={{ fontSize: 15 }}
+                  >
+                    Voir tous nos avis sur Google →
+                  </a>
+                </div>
 
                 {/* Collaborateurs */}
-                <h2 className="font-display text-primary text-center" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Nos collaborateurs
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
