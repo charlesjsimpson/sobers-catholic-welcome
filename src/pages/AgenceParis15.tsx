@@ -154,27 +154,27 @@ const AgenceParis15 = () => {
                 <li className="text-primary-foreground/90">Paris 15e</li>
               </ol>
             </nav>
-            <h1 className="font-display text-primary-foreground text-center mb-1 leading-tight" style={{ fontSize: 26, fontWeight: 500 }}>
+            <h1 className="font-display text-primary-foreground text-center mb-1" style={{ fontSize: 32, fontWeight: 500, lineHeight: 1.2 }}>
               Pompes funèbres catholiques à Paris 15e
             </h1>
-            <p className="text-primary-foreground/70 text-center mb-4" style={{ fontSize: 15 }}>
+            <p className="text-primary-foreground/70 text-center mb-4" style={{ fontSize: 17 }}>
               Service Catholique des Funérailles – Paris 15
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               <a
                 href="tel:0144388080"
                 className="bg-primary-foreground/10 border border-primary-foreground/30 text-primary-foreground rounded-lg px-5 py-2.5 inline-flex items-center gap-2 font-medium hover:bg-primary-foreground/20 transition-colors"
-                style={{ fontSize: 14 }}
+                style={{ fontSize: 15 }}
               >
                 <Phone className="w-4 h-4" />
                 01 44 38 80 80
               </a>
-              <span className="text-primary-foreground/80 flex items-center gap-2" style={{ fontSize: 12 }}>
+              <span className="text-primary-foreground/80 flex items-center gap-2" style={{ fontSize: 14 }}>
                 <Clock className="w-3.5 h-3.5" />
                 Urgence décès 7j/7 24h/24
               </span>
               <div className="flex items-center gap-3">
-                <span className="text-primary-foreground text-right leading-tight" style={{ fontSize: 12 }}>
+                <span className="text-primary-foreground text-right leading-tight" style={{ fontSize: 14 }}>
                   Pompes funèbres habilitées<br />par la préfecture de Paris
                 </span>
                 <img src={logoPrefecture} alt="Logo Préfecture de Paris" className="h-9 w-auto" />
@@ -235,7 +235,7 @@ const AgenceParis15 = () => {
 
               {/* Infos pratiques */}
               <div>
-                <h2 className="font-display text-foreground mb-3 whitespace-nowrap" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-3 whitespace-nowrap" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Agence SCF Paris 15 : accompagnement funéraire
                 </h2>
                 <div className="space-y-2 mb-3">
@@ -244,7 +244,7 @@ const AgenceParis15 = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-3 text-muted-foreground hover:text-primary transition-colors"
-                    style={{ fontSize: 14 }}
+                    style={{ fontSize: 16 }}
                   >
                     <MapPin className="w-4 h-4 text-primary shrink-0 mt-0.5" />
                     <span>66, rue Falguière<br />75015 Paris</span>
@@ -252,22 +252,22 @@ const AgenceParis15 = () => {
                   <a
                     href="tel:0144388080"
                     className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                    style={{ fontSize: 14 }}
+                    style={{ fontSize: 16 }}
                   >
                     <Phone className="w-4 h-4 text-primary shrink-0" />
                     <span>01 44 38 80 80</span>
                   </a>
                 </div>
-                <p className="text-muted-foreground mb-4" style={{ fontSize: 12 }}>
+                <p className="text-muted-foreground mb-4" style={{ fontSize: 14 }}>
                   <strong className="text-foreground">Horaires :</strong> Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous
                 </p>
 
                 {/* CTA urgence */}
                 <div className="bg-secondary rounded-lg p-3 mb-3 text-center">
-                  <p className="text-foreground font-medium mb-1.5" style={{ fontSize: 13 }}>
+                  <p className="text-foreground font-medium mb-1.5" style={{ fontSize: 15 }}>
                     ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
                   </p>
-                  <a href="tel:0144388080" className="btn-primary inline-block" style={{ fontSize: 13 }}>
+                  <a href="tel:0144388080" className="btn-primary inline-block" style={{ fontSize: 15 }}>
                     Appeler le 01 44 38 80 80
                   </a>
                 </div>
@@ -283,13 +283,13 @@ const AgenceParis15 = () => {
               {/* Colonne éditoriale */}
               <div>
                 {/* Présentation */}
-                <h2 className="font-display text-foreground mb-3" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-3" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
-                <p className="text-muted-foreground mb-2" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Le Service Catholique des Funérailles de Paris, <strong className="text-foreground">coopérative à gestion désintéressée</strong>, accompagne chaque famille avec bienveillance. Basée dans le 15ᵉ arrondissement, notre agence funéraire conçoit des parcours adaptés à chaque situation, dans le respect de la dignité humaine et avec une espérance chrétienne.
                 </p>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nos conseillers funéraires accueillent toutes les familles, quelle que soit leur confession, et organisent tous types d'obsèques dans Paris et sa région.
                 </p>
 
@@ -298,27 +298,27 @@ const AgenceParis15 = () => {
                   <Link
                     to="/organiser-des-obseques"
                     className="text-center border-2 border-foreground text-foreground font-medium py-2 px-4 rounded-lg hover:bg-foreground hover:text-background transition-colors"
-                    style={{ fontSize: 13 }}
+                    style={{ fontSize: 15 }}
                   >
                     Organiser des obsèques catholiques
                   </Link>
                   <Link
                     to="/services/prevoyance"
                     className="text-center bg-primary text-primary-foreground font-medium py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
-                    style={{ fontSize: 13 }}
+                    style={{ fontSize: 15 }}
                   >
                     Préfinancer mes obsèques
                   </Link>
                 </div>
 
                 {/* Organisation des obsèques */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Organisation des obsèques : un accompagnement complet
                 </h2>
-                <p className="text-muted-foreground mb-2" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nous proposons l'ensemble des services nécessaires à l'<Link to="/organiser-des-obseques" className="text-primary underline hover:text-primary/80">organisation des funérailles</Link>. Un conseiller funéraire dédié vous accompagne à chaque étape :
                 </p>
-                <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 14 }}>
+                <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     Entretien initial
@@ -336,18 +336,18 @@ const AgenceParis15 = () => {
                     Coordination le jour de la cérémonie
                   </li>
                 </ul>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nous veillons à réduire au maximum la charge administrative et matérielle afin de permettre aux familles de traverser cette période avec sérénité.
                 </p>
 
                 {/* Prévoir ses obsèques */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Prévoir ses obsèques : contrats et prévoyance
                 </h2>
-                <p className="text-muted-foreground mb-2" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Nous accompagnons également toutes les personnes souhaitant <Link to="/services/prevoyance" className="text-primary underline hover:text-primary/80">anticiper leurs obsèques</Link>. La <strong className="text-foreground">prévoyance funéraire</strong> peut prendre plusieurs formes :
                 </p>
-                <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 14 }}>
+                <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     Simple dépôt de volontés
@@ -361,45 +361,45 @@ const AgenceParis15 = () => {
                     Mise en place d'un contrat d'assurance obsèques
                   </li>
                 </ul>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Ces questions peuvent être abordées en toute confidentialité lors d'un entretien dans notre agence de <strong className="text-foreground">pompes funèbres</strong> à Paris 15.
                 </p>
 
                 {/* Engagement */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Notre engagement auprès des familles
                 </h2>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   La proposition du Service Catholique des Funérailles se veut simple, claire et fiable. Sans surenchère commerciale, nous plaçons les besoins des familles au centre de notre mission et veillons à respecter leurs souhaits comme la réalité de leur deuil.
                 </p>
 
                 {/* Identité catholique */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Notre identité catholique
                 </h2>
-                <p className="text-muted-foreground mb-5" style={{ fontSize: 14, lineHeight: 1.6 }}>
+                <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
                   Ce qui distingue le SCF des autres <strong className="text-foreground">pompes funèbres</strong> parisiennes, c'est une spiritualité chrétienne vécue concrètement : nos assistants funéraires accompagnent les familles dans la prière, coordonnent la cérémonie avec le prêtre officiant, et considèrent leur mission comme un service rendu à la dignité de la personne défunte et à la consolation des vivants. Le SCF accompagne toutes les familles, quelle que soit leur confession, avec le même respect et la même humanité.
                 </p>
 
                 {/* Avis des familles */}
-                <h2 className="font-display text-foreground mb-3" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mb-3" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Avis des familles
                 </h2>
                 <div className="flex items-center gap-2 mb-4">
-                  <span className="text-foreground font-medium" style={{ fontSize: 14 }}>4,5/5</span>
+                  <span className="text-foreground font-medium" style={{ fontSize: 16 }}>4,5/5</span>
                   <HalfStarRating />
                 </div>
                 <div className="grid sm:grid-cols-3 gap-3 mb-3">
                   {avis.map((a, i) => (
                     <div key={i} className="bg-secondary rounded-lg shadow-sm" style={{ padding: 14 }}>
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-foreground font-medium" style={{ fontSize: 13 }}>{a.nom}</span>
+                        <span className="text-foreground font-medium" style={{ fontSize: 14 }}>{a.nom}</span>
                       </div>
                       <div className="flex items-center gap-2 mb-1.5">
                         <StarRating count={a.etoiles} size={12} />
-                        <span className="text-muted-foreground" style={{ fontSize: 11 }}>{a.date}</span>
+                        <span className="text-muted-foreground" style={{ fontSize: 12 }}>{a.date}</span>
                       </div>
-                      <p className="text-muted-foreground" style={{ fontSize: 13, lineHeight: 1.5 }}>{a.texte}</p>
+                      <p className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.6 }}>{a.texte}</p>
                     </div>
                   ))}
                 </div>
@@ -408,13 +408,13 @@ const AgenceParis15 = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:text-primary/80 transition-colors"
-                  style={{ fontSize: 13 }}
+                  style={{ fontSize: 15 }}
                 >
                   Voir tous nos avis sur Google →
                 </a>
 
                 {/* Collaborateurs */}
-                <h2 className="font-display text-foreground mt-8 mb-5 text-center" style={{ fontSize: 18, fontWeight: 500 }}>
+                <h2 className="font-display text-foreground mt-8 mb-5 text-center" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
                   Nos collaborateurs
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
@@ -440,8 +440,8 @@ const AgenceParis15 = () => {
                           </div>
                         )}
                       </div>
-                      <p className="font-semibold uppercase tracking-wider text-primary mb-0.5" style={{ fontSize: 11 }}>{collab.role}</p>
-                      <p className="font-display text-foreground" style={{ fontSize: 14 }}>{collab.prenom} {collab.nom}</p>
+                      <p className="font-semibold uppercase tracking-wider text-primary mb-0.5" style={{ fontSize: 12 }}>{collab.role}</p>
+                      <p className="font-display text-foreground" style={{ fontSize: 15 }}>{collab.prenom} {collab.nom}</p>
                     </div>
                   ))}
                 </div>
@@ -451,7 +451,7 @@ const AgenceParis15 = () => {
               <div className="hidden lg:block">
                 <div className="sticky top-24">
                   <AgenceContactForm agenceLabel="Paris 15" />
-                  <p className="text-primary font-medium mt-2" style={{ fontSize: 13 }}>
+                  <p className="text-primary font-medium mt-2" style={{ fontSize: 14 }}>
                     <strong>(*) Horaires de l'agence :</strong><br />
                     <span className="text-primary">Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous</span>
                   </p>
@@ -471,7 +471,7 @@ const AgenceParis15 = () => {
         {/* FAQ */}
         <section className="bg-secondary" style={{ paddingTop: 24, paddingBottom: 24 }}>
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="font-display text-foreground text-center mb-5" style={{ fontSize: 18, fontWeight: 500 }}>
+            <h2 className="font-display text-foreground text-center mb-5" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
               Organisation des obsèques à Paris 15 : guide pratique
             </h2>
             <Accordion type="multiple" className="space-y-2">
@@ -498,10 +498,10 @@ const AgenceParis15 = () => {
                 },
               ].map((item, i) => (
                 <AccordionItem key={i} value={`faq-${i}`} className="bg-card rounded-lg border border-border/50 px-4">
-                  <AccordionTrigger className="text-left font-display text-foreground hover:no-underline py-3" style={{ fontSize: 14 }}>
+                  <AccordionTrigger className="text-left font-display text-foreground hover:no-underline py-3" style={{ fontSize: 17, fontWeight: 500 }}>
                     {i + 1}. {item.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground leading-relaxed pb-3" style={{ fontSize: 13 }}>
+                  <AccordionContent className="text-muted-foreground leading-relaxed pb-3" style={{ fontSize: 16, lineHeight: 1.75 }}>
                     {item.a}
                   </AccordionContent>
                   <div className="sr-only">{item.a}</div>
