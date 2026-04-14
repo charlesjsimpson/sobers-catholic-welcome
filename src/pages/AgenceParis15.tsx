@@ -76,22 +76,16 @@ const AgenceParis15 = () => {
                 <p className="text-sm text-muted-foreground">
                   <strong className="text-foreground">Horaires :</strong> Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous
                 </p>
+                <p className="text-sm text-muted-foreground mt-4 leading-relaxed">
+                  Depuis l'ouverture de son agence de <strong className="text-foreground">pompes funèbres à Paris 15</strong> en 2000, avec le soutien du cardinal Jean-Marie Lustiger, le Service Catholique des Funérailles (SCF) a accompagné plus de 3 000 familles dans toute la ville. Notre mission : offrir un accompagnement funéraire respectueux, digne et profondément humain.
+                </p>
+                <p className="text-sm text-muted-foreground mt-2">
+                  <strong className="text-foreground">En cas de décès, contactez-nous 7 jours sur 7 :{" "}
+                    <a href="tel:0144388080" className="text-primary hover:text-primary/80 transition-colors">01 44 38 80 80</a>
+                  </strong>
+                </p>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Présentation */}
-        <section className="py-10 bg-secondary">
-          <div className="container mx-auto px-6 max-w-4xl">
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Depuis l'ouverture de son agence de <strong className="text-foreground">pompes funèbres à Paris 15</strong> en 2000, avec le soutien du cardinal Jean-Marie Lustiger, le Service Catholique des Funérailles (SCF) a accompagné plus de 3 000 familles dans toute la ville. Notre mission : offrir un accompagnement funéraire respectueux, digne et profondément humain.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              <strong className="text-foreground">En cas de décès, contactez-nous 7 jours sur 7 :{" "}
-                <a href="tel:0144388080" className="text-primary hover:text-primary/80 transition-colors">01 44 38 80 80</a>
-              </strong>
-            </p>
           </div>
         </section>
 
