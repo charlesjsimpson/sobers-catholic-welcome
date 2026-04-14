@@ -360,21 +360,6 @@ const AgenceParis15 = () => {
             <AgenceContactForm agenceLabel="Paris 15" />
           </div>
         </section>
-
-        {/* CTA urgence */}
-        <section className="py-6 bg-background">
-          <div className="container mx-auto px-6 text-center">
-            <p className="text-foreground font-medium text-lg">
-              ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
-            </p>
-            <a
-              href="tel:0144388080"
-              className="btn-primary inline-block mt-3"
-            >
-              Appeler le 01 44 38 80 80
-            </a>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
