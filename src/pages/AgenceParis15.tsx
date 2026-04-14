@@ -494,8 +494,9 @@ const AgenceParis15 = () => {
         {deathNotices.length > 0 && (
           <section className="bg-background" style={{ paddingTop: 32, paddingBottom: 32 }}>
             <div className="container mx-auto px-6 max-w-4xl">
-              <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginBottom: 20 }}>
-                Avis de décès <span className="font-normal">sur Paris 15<sup>ème</sup></span>
+              <h2 className="font-display text-primary text-center font-bold" style={{ fontSize: 26, lineHeight: 1.3, marginBottom: 20 }}>
+                Avis de décès sur Paris 15<sup>ème</sup>
+              </h2>
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {deathNotices.map((notice) => (
