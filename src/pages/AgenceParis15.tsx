@@ -504,11 +504,15 @@ const AgenceParis15 = () => {
                     {notice.date_of_death && (
                       <p className="text-muted-foreground" style={{ fontSize: 14 }}>{notice.date_of_death}</p>
                     )}
-                    {notice.link && (
+                    {notice.slug ? (
+                      <Link to={`/avis/${notice.slug}`} className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
+                        Voir plus →
+                      </Link>
+                    ) : notice.link ? (
                       <a href={notice.link} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
                         Voir plus →
                       </a>
-                    )}
+                    ) : null}
                   </div>
                 ))}
               </div>
