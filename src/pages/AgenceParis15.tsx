@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
-import { Phone, MapPin, Clock, ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { Phone, MapPin, Clock, ChevronLeft, ChevronRight, Star, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
@@ -125,6 +125,7 @@ const HalfStarRating = () => (
 const AgenceParis15 = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null; slug: string | null }[]>([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const nextImage = useCallback(() => {
     setCurrentImage((prev) => (prev + 1) % agenceImages.length);
