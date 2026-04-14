@@ -178,7 +178,7 @@ const AgenceParis15 = () => {
               {/* Colonne éditoriale */}
               <div>
                 {/* Présentation */}
-                <h2 className="text-2xl md:text-3xl font-display text-foreground mb-4">
+                <h2 className="text-3xl md:text-4xl font-display text-foreground mb-4">
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-3">
