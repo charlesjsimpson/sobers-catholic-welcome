@@ -155,6 +155,16 @@ const AgenceParis15 = () => {
                   <strong className="text-foreground">Horaires :</strong> Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous
                 </p>
 
+                {/* CTA urgence */}
+                <div className="bg-secondary rounded-lg p-4 mb-4 text-center">
+                  <p className="text-foreground font-medium text-sm mb-2">
+                    ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
+                  </p>
+                  <a href="tel:0144388080" className="btn-primary inline-block text-sm">
+                    Appeler le 01 44 38 80 80
+                  </a>
+                </div>
+
                 {/* Boutons maillage interne */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
@@ -348,21 +358,6 @@ const AgenceParis15 = () => {
         <section className="py-8 bg-secondary lg:hidden">
           <div className="container mx-auto px-6 max-w-lg">
             <AgenceContactForm agenceLabel="Paris 15" />
-          </div>
-        </section>
-
-        {/* CTA urgence */}
-        <section className="py-6 bg-background">
-          <div className="container mx-auto px-6 text-center">
-            <p className="text-foreground font-medium text-lg">
-              ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
-            </p>
-            <a
-              href="tel:0144388080"
-              className="btn-primary inline-block mt-3"
-            >
-              Appeler le 01 44 38 80 80
-            </a>
           </div>
         </section>
       </main>
