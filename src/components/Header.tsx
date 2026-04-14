@@ -31,7 +31,7 @@ const navItems: NavItem[] = [
       { label: "Démarches après un décès", href: "/demarches" },
       { label: "Cercueils et fleurs", href: "/cercueils" },
       { label: "Trouver une agence", href: "/contacter-une-agence" },
-      { label: "Le carnet du SCF", href: "/ressources" },
+      { label: "Le carnet du SCF", href: "/carnet-deuil" },
     ],
   },
   {
