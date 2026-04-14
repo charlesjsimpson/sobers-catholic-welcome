@@ -469,8 +469,8 @@ const AgenceParis15 = () => {
                       </div>
                     )}
                   </div>
-                  <p className="font-display text-foreground font-medium" style={{ fontSize: 15 }}>{collab.prenom} {collab.nom}</p>
-                  <p className="text-muted-foreground" style={{ fontSize: 12 }}>{collab.role}</p>
+                  <p className="font-display text-foreground font-semibold" style={{ fontSize: 17 }}>{collab.prenom} {collab.nom}</p>
+                  <p className="text-muted-foreground font-medium" style={{ fontSize: 14 }}>{collab.role}</p>
                 </div>
               ))}
             </div>
