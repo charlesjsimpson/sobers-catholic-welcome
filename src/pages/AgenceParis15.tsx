@@ -498,8 +498,21 @@ const AgenceParis15 = () => {
               <h2 className="font-display text-primary text-center font-bold" style={{ fontSize: 26, lineHeight: 1.3, marginBottom: 20 }}>
                 Avis de décès sur Paris 15<sup>ème</sup>
               </h2>
+              <div className="relative max-w-md mx-auto mb-6">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" style={{ width: 18, height: 18 }} />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Rechercher une personne…"
+                  className="w-full bg-card border border-border rounded-lg pl-10 pr-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
+                  style={{ fontSize: 15 }}
+                />
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                {deathNotices.map((notice) => (
+                {deathNotices
+                  .filter((n) => n.name.toLowerCase().includes(searchQuery.toLowerCase()))
+                  .map((notice) => (
                   <div key={notice.id} className="bg-card border border-border/50 rounded-lg px-5 py-4 flex flex-col gap-1">
                     <p className="font-display text-foreground font-semibold" style={{ fontSize: 16 }}>{notice.name}</p>
                     {notice.date_of_death && (
