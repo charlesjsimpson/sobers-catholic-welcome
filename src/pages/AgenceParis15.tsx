@@ -15,6 +15,9 @@ import collabChristian from "@/assets/collab-christian-de-cacqueray.png";
 import collabChristophe from "@/assets/collaborateurs/christophe-grimaud.jpg";
 import collabCatherine from "@/assets/collaborateurs/catherine-poincet.jpg";
 import collabBaudoin from "@/assets/collaborateurs/baudoin-drion.jpg";
+import collabSebastien from "@/assets/collaborateurs/sebastien-legrand.jpg";
+import collabFrederic from "@/assets/collaborateurs/frederic-barut.jpg";
+import collabMuriel from "@/assets/collaborateurs/muriel-lavergne.jpg";
 import agenceParis15e from "@/assets/agence-paris15-bureau1.jpg";
 import agenceParis15f from "@/assets/agence-paris15-bureau2.jpg";
 
@@ -425,11 +428,11 @@ const AgenceParis15 = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
                   {[
                     { role: "Directeur", prenom: "Christian", nom: "de Cacqueray", photo: collabChristian },
-                    { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut", photo: null },
+                    { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut", photo: collabFrederic },
                     { role: "Assistant funéraire", prenom: "Baudoin", nom: "Drion", photo: collabBaudoin },
                     { role: "Assistant funéraire", prenom: "Christophe", nom: "Grimaud", photo: collabChristophe },
-                    { role: "Assistante funéraire", prenom: "Muriel", nom: "Lavergne", photo: null },
-                    { role: "Assistant funéraire", prenom: "Sébastien", nom: "Legrand", photo: null },
+                    { role: "Assistante funéraire", prenom: "Muriel", nom: "Lavergne", photo: collabMuriel },
+                    { role: "Assistant funéraire", prenom: "Sébastien", nom: "Legrand", photo: collabSebastien },
                     { role: "Assistant funéraire", prenom: "Romain", nom: "Martinot", photo: null },
                     { role: "Chargée de prévoyance", prenom: "Catherine", nom: "Poincet", photo: collabCatherine },
                     { role: "Responsable prévoyance", prenom: "Jean-Philippe", nom: "Rabaroux", photo: null },
