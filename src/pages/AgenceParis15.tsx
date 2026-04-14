@@ -446,7 +446,7 @@ const AgenceParis15 = () => {
             <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
               Nos collaborateurs
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {[
                 { role: "Directeur", prenom: "Christian", nom: "de Cacqueray", photo: collabChristian },
                 { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut", photo: collabFrederic },
@@ -460,17 +460,17 @@ const AgenceParis15 = () => {
                 { role: "Maître de cérémonie", prenom: "Stéphanie", nom: "d'Hébrail", photo: collabStephanie },
               ].map((collab, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
-                  <div className="w-24 h-24 rounded-full overflow-hidden bg-muted mb-2 shrink-0">
+                  <div className="w-40 h-52 rounded-lg overflow-hidden bg-muted mb-3 shrink-0 shadow-sm">
                     {collab.photo ? (
-                      <img src={collab.photo} alt={`${collab.prenom} ${collab.nom}`} className="w-full h-full object-cover" />
+                      <img src={collab.photo} alt={`${collab.prenom} ${collab.nom}`} className="w-full h-full object-cover object-top" />
                     ) : (
-                      <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground font-display" style={{ fontSize: 18 }}>
+                      <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground font-display" style={{ fontSize: 24 }}>
                         {collab.prenom[0]}{collab.nom[0]}
                       </div>
                     )}
                   </div>
-                  <p className="font-semibold uppercase tracking-wider text-primary mb-0.5" style={{ fontSize: 12 }}>{collab.role}</p>
-                  <p className="font-display text-foreground" style={{ fontSize: 15 }}>{collab.prenom} {collab.nom}</p>
+                  <p className="font-display text-foreground font-medium" style={{ fontSize: 15 }}>{collab.prenom} {collab.nom}</p>
+                  <p className="text-muted-foreground" style={{ fontSize: 12 }}>{collab.role}</p>
                 </div>
               ))}
             </div>
