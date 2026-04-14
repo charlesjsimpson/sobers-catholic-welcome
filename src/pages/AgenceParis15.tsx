@@ -154,7 +154,7 @@ const AgenceParis15 = () => {
                 <li className="text-primary-foreground/90">Paris 15e</li>
               </ol>
             </nav>
-            <h1 className="font-display text-primary-foreground text-center mb-1" style={{ fontSize: 32, fontWeight: 500, lineHeight: 1.2 }}>
+            <h1 className="font-display text-primary-foreground text-center mb-1" style={{ fontSize: 36, fontWeight: 600, lineHeight: 1.2 }}>
               Pompes funèbres catholiques à Paris 15e
             </h1>
             <p className="text-primary-foreground/70 text-center mb-4" style={{ fontSize: 17 }}>
@@ -235,7 +235,7 @@ const AgenceParis15 = () => {
 
               {/* Infos pratiques */}
               <div>
-                <h2 className="font-display text-primary whitespace-nowrap" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary whitespace-nowrap" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Agence SCF Paris 15 : accompagnement funéraire
                 </h2>
                 <div className="space-y-2 mb-3">
@@ -283,7 +283,7 @@ const AgenceParis15 = () => {
               {/* Colonne éditoriale */}
               <div>
                 {/* Présentation */}
-                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -312,7 +312,7 @@ const AgenceParis15 = () => {
                 </div>
 
                 {/* Organisation des obsèques */}
-                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Organisation des obsèques : un accompagnement complet
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -341,7 +341,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Prévoir ses obsèques */}
-                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Prévoir ses obsèques : contrats et prévoyance
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -366,7 +366,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Engagement */}
-                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre engagement auprès des familles
                 </h2>
                 <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -374,7 +374,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Identité catholique */}
-                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
                   Notre identité catholique
                 </h2>
                 <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
