@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { Phone, MapPin, Clock, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
