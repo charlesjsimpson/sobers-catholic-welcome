@@ -386,7 +386,7 @@ const AgenceParis15 = () => {
                   Avis des familles
                 </h2>
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <span className="text-foreground font-medium" style={{ fontSize: 16 }}>4,5/5</span>
+                  <span className="text-foreground font-medium" style={{ fontSize: 16 }}>4,6/5</span>
                   <HalfStarRating />
                 </div>
                 <div className="grid sm:grid-cols-3 gap-3 mb-3">
