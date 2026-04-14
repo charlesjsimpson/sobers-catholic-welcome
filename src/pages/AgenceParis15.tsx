@@ -12,12 +12,16 @@ import agenceParis15c from "@/assets/agence-paris-15-3.jpg";
 import agenceParis15d from "@/assets/agence-paris-15-4.jpg";
 import logoPrefecture from "@/assets/logo-prefecture-police.png";
 import collabChristian from "@/assets/collab-christian-de-cacqueray.png";
+import agenceParis15e from "@/assets/agence-paris15-bureau1.jpg";
+import agenceParis15f from "@/assets/agence-paris15-bureau2.jpg";
 
 const agenceImages = [
   { src: agenceParis15, alt: "Agence SCF Paris 15 - Façade rue Falguière" },
   { src: agenceParis15b, alt: "Agence SCF Paris 15 - Vitrine et fleurs" },
   { src: agenceParis15c, alt: "Agence SCF Paris 15 - Entrée intérieure" },
   { src: agenceParis15d, alt: "Agence SCF Paris 15 - Accueil et icône" },
+  { src: agenceParis15e, alt: "Agence SCF Paris 15 - Entretien avec une famille" },
+  { src: agenceParis15f, alt: "Agence SCF Paris 15 - Bureau et accueil téléphonique" },
 ];
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Pompes+Fun%C3%A8bres+-+Service+Catholique+des+Fun%C3%A9railles+de+Paris+15/@48.8408302,2.3129986,20.51z/data=!3m1!5s0x47e67036c4ad173d:0x363b8af8da95306d!4m15!1m8!3m7!1s0x47e67036c356f657:0xe67c11a6abdeb351!2s66+Rue+Falgui%C3%A8re,+75015+Paris!3b1!8m2!3d48.8408037!4d2.313031!16s%2Fg%2F11snpzlv3j!3m5!1s0x47e66e5c70ae092f:0xc5a2f3b66c4ddf9f!8m2!3d48.8408338!4d2.313026!16s%2Fg%2F11hyl63n3z?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D";
