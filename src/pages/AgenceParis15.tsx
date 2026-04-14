@@ -5,8 +5,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AgenceContactForm from "@/components/agence/AgenceContactForm";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import Footer from "@/components/Footer";
-import AgenceContactForm from "@/components/agence/AgenceContactForm";
 import agenceParis15 from "@/assets/agence-paris-15.png";
 import agenceParis15b from "@/assets/agence-paris-15-2.jpg";
 import agenceParis15c from "@/assets/agence-paris-15-3.jpg";
