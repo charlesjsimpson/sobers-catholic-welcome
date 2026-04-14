@@ -165,21 +165,6 @@ const AgenceParis15 = () => {
                   </a>
                 </div>
 
-                {/* Boutons maillage interne */}
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Link
-                    to="/organiser-des-obseques"
-                    className="flex-1 text-center border-2 border-foreground text-foreground font-medium py-3 px-6 rounded-lg hover:bg-foreground hover:text-background transition-colors"
-                  >
-                    Organiser des obsèques
-                  </Link>
-                  <Link
-                    to="/services/prevoyance"
-                    className="flex-1 text-center bg-primary text-primary-foreground font-medium py-3 px-6 rounded-lg hover:bg-primary/90 transition-colors"
-                  >
-                    Anticiper ses obsèques
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
