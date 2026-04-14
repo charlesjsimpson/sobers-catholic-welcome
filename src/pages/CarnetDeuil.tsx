@@ -82,10 +82,10 @@ const CarnetDeuil = () => {
       {/* Hero */}
       <section
         className="bg-[hsl(var(--scf-cream))]"
-        style={{ paddingTop: 48, paddingBottom: 48 }}
+        style={{ paddingTop: 56, paddingBottom: 56 }}
       >
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          <nav className="text-muted-foreground mb-6" style={{ fontSize: 13 }}>
+          <nav className="text-muted-foreground mb-8" style={{ fontSize: 13 }}>
             <Link to="/" className="hover:text-primary">Accueil</Link>
             <span className="mx-2">›</span>
             <span className="text-foreground">Le Carnet du SCF</span>
@@ -93,16 +93,16 @@ const CarnetDeuil = () => {
 
           <h1
             className="font-display text-foreground"
-            style={{ fontSize: 32, fontWeight: 600, lineHeight: 1.2, marginBottom: 12 }}
+            style={{ fontSize: 32, fontWeight: 600, lineHeight: 1.2, marginBottom: 20 }}
           >
             Le Carnet du SCF
           </h1>
-          <p className="text-muted-foreground" style={{ fontSize: 18, marginBottom: 16 }}>
+          <p className="text-muted-foreground" style={{ fontSize: 18, marginBottom: 28 }}>
             Avis de décès publiés par le Service Catholique des Funérailles — Paris et toute la France
           </p>
           <p
             className="text-foreground mx-auto"
-            style={{ fontSize: 16, maxWidth: 600, lineHeight: 1.7 }}
+            style={{ fontSize: 16, maxWidth: 600, lineHeight: 1.8 }}
           >
             Chaque nom inscrit dans ce carnet est une vie qui mérite d'être honorée.
             Retrouvez ici les avis de décès des familles accompagnées par le SCF, rendez
