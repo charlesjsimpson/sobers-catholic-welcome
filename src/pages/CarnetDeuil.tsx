@@ -124,18 +124,16 @@ const CarnetDeuil = () => {
             >
               Rechercher un avis de décès
             </h2>
-            <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-3">
+            <form onSubmit={handleSearch} className="grid grid-cols-1 md:grid-cols-[1fr_1fr_auto_auto] gap-3">
               <Input
                 placeholder="Nom ou prénom du défunt"
                 value={searchName}
                 onChange={(e) => { setSearchName(e.target.value); setPage(1); }}
-                className="flex-1"
               />
               <Input
                 placeholder="Paris, Lyon, Bordeaux…"
                 value={searchCity}
                 onChange={(e) => { setSearchCity(e.target.value); setPage(1); }}
-                className="flex-1"
               />
               <select
                 value={searchPeriod}
