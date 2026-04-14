@@ -131,7 +131,7 @@ const AgenceParis15 = () => {
 
               {/* Infos pratiques */}
               <div>
-                <h2 className="text-2xl font-display text-foreground mb-4">
+                <h2 className="text-3xl font-display text-foreground mb-4 whitespace-nowrap">
                   Agence SCF Paris 15 : accompagnement funéraire
                 </h2>
                 <div className="space-y-3 mb-4">
