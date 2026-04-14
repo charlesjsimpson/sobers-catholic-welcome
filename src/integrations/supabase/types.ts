@@ -169,33 +169,42 @@ export type Database = {
       }
       death_notices: {
         Row: {
+          agency_name: string | null
           agency_slug: string
+          content: string | null
           created_at: string
           date_of_death: string | null
           display_order: number
           id: string
           link: string | null
           name: string
+          slug: string | null
           updated_at: string
         }
         Insert: {
+          agency_name?: string | null
           agency_slug?: string
+          content?: string | null
           created_at?: string
           date_of_death?: string | null
           display_order?: number
           id?: string
           link?: string | null
           name: string
+          slug?: string | null
           updated_at?: string
         }
         Update: {
+          agency_name?: string | null
           agency_slug?: string
+          content?: string | null
           created_at?: string
           date_of_death?: string | null
           display_order?: number
           id?: string
           link?: string | null
           name?: string
+          slug?: string | null
           updated_at?: string
         }
         Relationships: []
