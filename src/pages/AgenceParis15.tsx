@@ -475,6 +475,7 @@ const AgenceParis15 = () => {
               ))}
             </div>
           </div>
+        </section>
 
         {/* Formulaire mobile */}
         <section className="bg-secondary lg:hidden" style={{ paddingTop: 24, paddingBottom: 24 }}>
