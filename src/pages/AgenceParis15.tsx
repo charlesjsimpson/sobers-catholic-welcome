@@ -299,7 +299,7 @@ const AgenceParis15 = () => {
               <div className="hidden lg:block">
                 <div className="sticky top-24">
                   <AgenceContactForm agenceLabel="Paris 15" />
-                  <p className="text-xs text-primary font-medium mt-3">
+                  <p className="text-sm text-primary font-medium mt-3">
                     <strong>(*) Horaires de l'agence :</strong><br />
                     <span className="text-primary">Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous</span>
                   </p>
