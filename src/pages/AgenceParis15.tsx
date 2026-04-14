@@ -497,7 +497,7 @@ const AgenceParis15 = () => {
               <h2 className="font-display text-primary text-center font-bold" style={{ fontSize: 26, lineHeight: 1.3, marginBottom: 20 }}>
                 Avis de décès sur Paris 15<sup>ème</sup>
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {deathNotices.map((notice) => (
                   <div key={notice.id} className="bg-card border border-border/50 rounded-lg px-5 py-4 flex flex-col gap-1">
                     <p className="font-display text-foreground font-semibold" style={{ fontSize: 16 }}>{notice.name}</p>
