@@ -10,6 +10,7 @@ import agenceParis15b from "@/assets/agence-paris-15-2.jpg";
 import agenceParis15c from "@/assets/agence-paris-15-3.jpg";
 import agenceParis15d from "@/assets/agence-paris-15-4.jpg";
 import logoPrefecture from "@/assets/logo-prefecture-police.png";
+import collabChristian from "@/assets/collab-christian-de-cacqueray.png";
 
 const agenceImages = [
   { src: agenceParis15, alt: "Agence SCF Paris 15 - Façade rue Falguière" },
@@ -268,28 +269,37 @@ const AgenceParis15 = () => {
 
 
                 {/* Collaborateurs */}
-                <h2 className="text-2xl font-display text-foreground mt-10 mb-6">
+                <h1 className="text-3xl md:text-4xl font-display text-foreground mt-10 mb-8 text-center">
                   Nos collaborateurs
-                </h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                </h1>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
                   {[
-                    { role: "Directeur", prenom: "Christian", nom: "de Cacqueray" },
-                    { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut" },
-                    { role: "Assistant funéraire", prenom: "Baudoin", nom: "Drion" },
-                    { role: "Assistant funéraire", prenom: "Christophe", nom: "Grimaud" },
-                    { role: "Assistante funéraire", prenom: "Muriel", nom: "Lavergne" },
-                    { role: "Assistant funéraire", prenom: "Sébastien", nom: "Legrand" },
-                    { role: "Assistant funéraire", prenom: "Romain", nom: "Martinot" },
-                    { role: "Chargée de prévoyance", prenom: "Catherine", nom: "Poincet" },
-                    { role: "Responsable prévoyance", prenom: "Jean-Philippe", nom: "Rabaroux" },
-                    { role: "Maître de cérémonie", prenom: "Stéphanie", nom: "d'Hébrail" },
+                    { role: "Directeur", prenom: "Christian", nom: "de Cacqueray", photo: collabChristian },
+                    { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut", photo: null },
+                    { role: "Assistant funéraire", prenom: "Baudoin", nom: "Drion", photo: null },
+                    { role: "Assistant funéraire", prenom: "Christophe", nom: "Grimaud", photo: null },
+                    { role: "Assistante funéraire", prenom: "Muriel", nom: "Lavergne", photo: null },
+                    { role: "Assistant funéraire", prenom: "Sébastien", nom: "Legrand", photo: null },
+                    { role: "Assistant funéraire", prenom: "Romain", nom: "Martinot", photo: null },
+                    { role: "Chargée de prévoyance", prenom: "Catherine", nom: "Poincet", photo: null },
+                    { role: "Responsable prévoyance", prenom: "Jean-Philippe", nom: "Rabaroux", photo: null },
+                    { role: "Maître de cérémonie", prenom: "Stéphanie", nom: "d'Hébrail", photo: null },
                   ].map((collab, i) => (
                     <div
                       key={i}
-                      className="bg-card rounded-lg p-3 shadow-sm border border-border/50 text-center"
+                      className="flex flex-col items-center text-center"
                     >
-                      <p className="text-primary font-medium text-xs uppercase tracking-wider mb-1">{collab.role}</p>
-                      <p className="text-foreground font-display text-sm">{collab.prenom} {collab.nom}</p>
+                      <div className="w-28 h-28 rounded-full overflow-hidden bg-muted mb-3 shrink-0">
+                        {collab.photo ? (
+                          <img src={collab.photo} alt={`${collab.prenom} ${collab.nom}`} className="w-full h-full object-cover" />
+                        ) : (
+                          <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground text-2xl font-display">
+                            {collab.prenom[0]}{collab.nom[0]}
+                          </div>
+                        )}
+                      </div>
+                      <p className="text-sm font-semibold uppercase tracking-wider text-primary mb-0.5">{collab.role}</p>
+                      <p className="text-lg font-display text-foreground">{collab.prenom} {collab.nom}</p>
                     </div>
                   ))}
                 </div>
