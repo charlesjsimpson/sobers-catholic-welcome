@@ -450,8 +450,8 @@ const AgenceParis15 = () => {
               </div>
 
               {/* Sidebar sticky : formulaire */}
-              <div className="hidden lg:block">
-                <div className="sticky top-24">
+              <div className="hidden lg:block self-start">
+                <div className="sticky top-6">
                   <AgenceContactForm agenceLabel="Paris 15" />
                   <p className="text-primary font-medium mt-2" style={{ fontSize: 14 }}>
                     <strong>(*) Horaires de l'agence :</strong><br />
