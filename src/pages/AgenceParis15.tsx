@@ -235,7 +235,7 @@ const AgenceParis15 = () => {
 
               {/* Infos pratiques */}
               <div>
-                <h2 className="font-display text-foreground mb-3 whitespace-nowrap" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary whitespace-nowrap" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Agence SCF Paris 15 : accompagnement funéraire
                 </h2>
                 <div className="space-y-2 mb-3">
@@ -283,7 +283,7 @@ const AgenceParis15 = () => {
               {/* Colonne éditoriale */}
               <div>
                 {/* Présentation */}
-                <h2 className="font-display text-foreground mb-3" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -312,7 +312,7 @@ const AgenceParis15 = () => {
                 </div>
 
                 {/* Organisation des obsèques */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Organisation des obsèques : un accompagnement complet
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -341,7 +341,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Prévoir ses obsèques */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Prévoir ses obsèques : contrats et prévoyance
                 </h2>
                 <p className="text-muted-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -366,7 +366,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Engagement */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Notre engagement auprès des familles
                 </h2>
                 <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -374,7 +374,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Identité catholique */}
-                <h2 className="font-display text-foreground mb-2" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Notre identité catholique
                 </h2>
                 <p className="text-muted-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.75 }}>
@@ -382,7 +382,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Avis des familles */}
-                <h2 className="font-display text-foreground mb-3" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Avis des familles
                 </h2>
                 <div className="flex items-center gap-2 mb-4">
@@ -414,7 +414,7 @@ const AgenceParis15 = () => {
                 </a>
 
                 {/* Collaborateurs */}
-                <h2 className="font-display text-foreground mt-8 mb-5 text-center" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+                <h2 className="font-display text-primary text-center" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
                   Nos collaborateurs
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
@@ -471,7 +471,7 @@ const AgenceParis15 = () => {
         {/* FAQ */}
         <section className="bg-secondary" style={{ paddingTop: 24, paddingBottom: 24 }}>
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="font-display text-foreground text-center mb-5" style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.3 }}>
+            <h2 className="font-display text-primary text-center" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
               Organisation des obsèques à Paris 15 : guide pratique
             </h2>
             <Accordion type="multiple" className="space-y-2">
