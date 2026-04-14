@@ -204,9 +204,9 @@ const AgenceParis15 = () => {
                 </div>
 
                 {/* Organisation des obsèques */}
-                <h3 className="text-xl md:text-2xl font-display text-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-display text-foreground mb-3">
                   Organisation des obsèques : un accompagnement complet
-                </h3>
+                </h2>
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   Nous proposons l'ensemble des services nécessaires à l'<Link to="/organiser-des-obseques" className="text-primary underline hover:text-primary/80">organisation des funérailles</Link>. Un conseiller funéraire dédié vous accompagne à chaque étape :
                 </p>
@@ -233,9 +233,9 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Prévoir ses obsèques */}
-                <h3 className="text-xl md:text-2xl font-display text-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-display text-foreground mb-3">
                   Prévoir ses obsèques : contrats et prévoyance
-                </h3>
+                </h2>
                 <p className="text-muted-foreground leading-relaxed mb-3">
                   Nous accompagnons également toutes les personnes souhaitant <Link to="/services/prevoyance" className="text-primary underline hover:text-primary/80">anticiper leurs obsèques</Link>. La prévoyance funéraire peut prendre plusieurs formes :
                 </p>
@@ -258,22 +258,13 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Engagement */}
-                <h3 className="text-xl md:text-2xl font-display text-foreground mb-3">
+                <h2 className="text-2xl md:text-3xl font-display text-foreground mb-3">
                   Notre engagement auprès des familles
-                </h3>
+                </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   La proposition du Service Catholique des Funérailles se veut simple, claire et fiable. Sans surenchère commerciale, <strong className="text-foreground">nous plaçons les besoins des familles au centre de notre mission et veillons à respecter leurs souhaits</strong> comme la réalité de leur deuil.
                 </p>
 
-                {/* Texte historique */}
-                <p className="text-muted-foreground leading-relaxed mb-3">
-                  Depuis l'ouverture de son agence de <strong className="text-foreground">pompes funèbres à Paris 15</strong> en 2000, avec le soutien du cardinal Jean-Marie Lustiger, le Service Catholique des Funérailles (SCF) a accompagné plus de 3 000 familles dans toute la ville. Notre mission : offrir un accompagnement funéraire respectueux, digne et profondément humain.
-                </p>
-                <p className="text-muted-foreground">
-                  <strong className="text-foreground">En cas de décès, contactez-nous 7 jours sur 7 :{" "}
-                    <a href="tel:0144388080" className="text-primary hover:text-primary/80 transition-colors">01 44 38 80 80</a>
-                  </strong>
-                </p>
 
                 {/* FAQ */}
                 <h2 className="text-2xl md:text-3xl font-display text-foreground mt-10 mb-6">
