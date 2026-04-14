@@ -26,7 +26,7 @@ const AgenceContactForm = ({ agenceLabel, formTitle, motifs }: AgenceContactForm
   const [message, setMessage] = useState("");
 
   const usedMotifs = motifs || defaultMotifs;
-  const title = formTitle || `Vous souhaitez être contacté par l'agence de Service Catholique des Funérailles - ${agenceLabel} ?`;
+  const title = formTitle || `Vous souhaitez être contacté par l'agence de Service Catholique des Funérailles - ${agenceLabel} ?*`;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,12 +43,12 @@ const AgenceContactForm = ({ agenceLabel, formTitle, motifs }: AgenceContactForm
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-card rounded-lg p-4 border border-border space-y-3">
-      <h3 className="text-sm font-display font-medium text-foreground leading-snug">{title}</h3>
+    <form onSubmit={handleSubmit} className="rounded-lg p-5 space-y-4" style={{ backgroundColor: "#DCF4FF" }}>
+      <h3 className="text-sm font-display font-bold text-foreground text-center leading-snug">{title}</h3>
       <div>
-        <label htmlFor="motif" className="block text-xs font-medium text-foreground mb-1">Je souhaite être recontacté *</label>
+        <label htmlFor="motif" className="block text-xs font-medium text-foreground mb-1.5">Je souhaite être recontacté : *</label>
         <Select value={motif} onValueChange={setMotif}>
-          <SelectTrigger id="motif" className="text-xs h-8">
+          <SelectTrigger id="motif" className="text-xs h-9 bg-white border-border">
             <SelectValue placeholder="Sélectionnez un motif" />
           </SelectTrigger>
           <SelectContent>
@@ -59,25 +59,24 @@ const AgenceContactForm = ({ agenceLabel, formTitle, motifs }: AgenceContactForm
         </Select>
       </div>
       <div>
-        <label htmlFor="nom" className="block text-xs font-medium text-foreground mb-1">Votre nom *</label>
-        <Input id="nom" value={nom} onChange={(e) => setNom(e.target.value)} placeholder="Votre nom" required maxLength={100} className="text-xs h-8" />
+        <label htmlFor="nom" className="block text-xs font-medium text-foreground mb-1.5">Votre nom *</label>
+        <Input id="nom" value={nom} onChange={(e) => setNom(e.target.value)} placeholder="Votre nom" required maxLength={100} className="text-xs h-9 bg-white border-border" />
       </div>
       <div>
-        <label htmlFor="tel" className="block text-xs font-medium text-foreground mb-1">Téléphone</label>
-        <Input id="tel" type="tel" value={telephone} onChange={(e) => setTelephone(e.target.value)} placeholder="06 00 00 00 00" maxLength={20} className="text-xs h-8" />
+        <label htmlFor="tel" className="block text-xs font-medium text-foreground mb-1.5">Tél</label>
+        <Input id="tel" type="tel" value={telephone} onChange={(e) => setTelephone(e.target.value)} placeholder="Votre téléphone" maxLength={20} className="text-xs h-9 bg-white border-border" />
       </div>
       <div>
-        <label htmlFor="email" className="block text-xs font-medium text-foreground mb-1">Email *</label>
-        <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="votre@email.fr" required maxLength={255} className="text-xs h-8" />
+        <label htmlFor="email" className="block text-xs font-medium text-foreground mb-1.5">E-mail *</label>
+        <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="votre@email.fr" required maxLength={255} className="text-xs h-9 bg-white border-border" />
       </div>
       <div>
-        <label htmlFor="message" className="block text-xs font-medium text-foreground mb-1">Message</label>
-        <Textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Votre message..." rows={3} maxLength={1000} className="text-xs" />
+        <label htmlFor="message" className="block text-xs font-medium text-foreground mb-1.5">Message</label>
+        <Textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Votre message..." rows={4} maxLength={1000} className="text-xs bg-white border-border" />
       </div>
-      <Button type="submit" className="w-full text-xs py-2 font-bold">
+      <Button type="submit" className="w-full text-xs py-2.5 font-bold uppercase tracking-wide">
         Être rappelé
       </Button>
-      <p className="text-[11px] text-muted-foreground">(*) Du lundi au vendredi 9h-18h, et le samedi sur rendez-vous</p>
     </form>
   );
 };
