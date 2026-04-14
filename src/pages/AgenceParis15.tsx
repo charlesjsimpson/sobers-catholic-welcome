@@ -26,7 +26,7 @@ const agenceImages = [
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/place/Pompes+Fun%C3%A8bres+-+Service+Catholique+des+Fun%C3%A9railles+de+Paris+15/@48.8408302,2.3129986,20.51z/data=!3m1!5s0x47e67036c4ad173d:0x363b8af8da95306d!4m15!1m8!3m7!1s0x47e67036c356f657:0xe67c11a6abdeb351!2s66+Rue+Falgui%C3%A8re,+75015+Paris!3b1!8m2!3d48.8408037!4d2.313031!16s%2Fg%2F11snpzlv3j!3m5!1s0x47e66e5c70ae092f:0xc5a2f3b66c4ddf9f!8m2!3d48.8408338!4d2.313026!16s%2Fg%2F11hyl63n3z?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D";
 
-const GOOGLE_REVIEWS_URL = "https://maps.google.com/?cid=15212962876070792810";
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/place/Pompes+Fun%C3%A8bres+-+Service+Catholique+des+Fun%C3%A9railles+de+Paris+15/@48.8408338,2.3104511,17z/data=!3m1!5s0x47e67036c4ad173d:0x363b8af8da95306d!4m18!1m9!3m8!1s0x47e66e5c70ae092f:0xc5a2f3b66c4ddf9f!2sPompes+Fun%C3%A8bres+-+Service+Catholique+des+Fun%C3%A9railles+de+Paris+15!8m2!3d48.8408338!4d2.313026!9m1!1b1!16s%2Fg%2F11hyl63n3z!3m7!1s0x47e66e5c70ae092f:0xc5a2f3b66c4ddf9f!8m2!3d48.8408338!4d2.313026!9m1!1b1!16s%2Fg%2F11hyl63n3z?entry=ttu&g_ep=EgoyMDI2MDQwOC4wIKXMDSoASAFQAw%3D%3D";
 
 const avis = [
   {
