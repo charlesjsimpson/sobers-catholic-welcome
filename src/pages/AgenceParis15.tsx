@@ -131,10 +131,10 @@ const AgenceParis15 = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>Pompes funèbres catholiques Paris 15 | Obsèques, messe, inhumation – SCF</title>
+        <title>Pompes funèbres catholiques Paris 15e — SCF | 01 44 38 80 80</title>
         <meta
           name="description"
-          content="Pompes funèbres catholiques à Paris 15e. Organisation d'obsèques catholiques, messe de funérailles, inhumation, crémation. Urgence décès 7j/7 24h/24 — 01 44 38 80 80."
+          content="Pompes funèbres catholiques à Paris 15e, disponibles 24h/24. Obsèques catholiques, messe de funérailles, inhumation, crémation. 66 rue Falguière. 01 44 38 80 80."
         />
         <script type="application/ld+json">{JSON.stringify(jsonLdFuneralHome)}</script>
         <script type="application/ld+json">{JSON.stringify(jsonLdBreadcrumb)}</script>
@@ -154,9 +154,12 @@ const AgenceParis15 = () => {
                 <li className="text-primary-foreground/90">Paris 15e</li>
               </ol>
             </nav>
-            <h1 className="font-display text-primary-foreground text-center mb-4 leading-tight" style={{ fontSize: 26, fontWeight: 500 }}>
+            <h1 className="font-display text-primary-foreground text-center mb-1 leading-tight" style={{ fontSize: 26, fontWeight: 500 }}>
               Pompes funèbres catholiques à Paris 15e
             </h1>
+            <p className="text-primary-foreground/70 text-center mb-4" style={{ fontSize: 15 }}>
+              Service Catholique des Funérailles – Paris 15
+            </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
               <a
                 href="tel:0144388080"
