@@ -5,12 +5,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AgenceContactForm from "@/components/agence/AgenceContactForm";
 import agenceParis15 from "@/assets/agence-paris-15.png";
+import agenceParis15b from "@/assets/agence-paris-15-2.jpg";
+import agenceParis15c from "@/assets/agence-paris-15-3.jpg";
+import agenceParis15d from "@/assets/agence-paris-15-4.jpg";
 import logoPrefecture from "@/assets/logo-prefecture-police.png";
 
 const agenceImages = [
   { src: agenceParis15, alt: "Agence SCF Paris 15 - Façade rue Falguière" },
-  { src: agenceParis15, alt: "Agence SCF Paris 15 - Accueil" },
-  { src: agenceParis15, alt: "Agence SCF Paris 15 - Salle de recueillement" },
+  { src: agenceParis15b, alt: "Agence SCF Paris 15 - Vitrine et fleurs" },
+  { src: agenceParis15c, alt: "Agence SCF Paris 15 - Entrée intérieure" },
+  { src: agenceParis15d, alt: "Agence SCF Paris 15 - Accueil et icône" },
 ];
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=66+rue+Falguière+75015+Paris";
@@ -80,7 +84,7 @@ const AgenceParis15 = () => {
             <div className="grid md:grid-cols-2 gap-8 items-start">
               {/* Carousel */}
               <div className="relative rounded-xl overflow-hidden shadow-lg group">
-                <div className="aspect-[4/3]">
+                <div className="aspect-[16/10]">
                   {agenceImages.map((img, i) => (
                     <img
                       key={i}
