@@ -167,6 +167,39 @@ export type Database = {
         }
         Relationships: []
       }
+      death_notices: {
+        Row: {
+          agency_slug: string
+          created_at: string
+          date_of_death: string | null
+          display_order: number
+          id: string
+          link: string | null
+          name: string
+          updated_at: string
+        }
+        Insert: {
+          agency_slug?: string
+          created_at?: string
+          date_of_death?: string | null
+          display_order?: number
+          id?: string
+          link?: string | null
+          name: string
+          updated_at?: string
+        }
+        Update: {
+          agency_slug?: string
+          created_at?: string
+          date_of_death?: string | null
+          display_order?: number
+          id?: string
+          link?: string | null
+          name?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       page_versions: {
         Row: {
           content: string | null

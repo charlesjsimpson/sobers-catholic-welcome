@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import { supabase } from "@/integrations/supabase/client";
 import { Phone, MapPin, Clock, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -123,6 +124,7 @@ const HalfStarRating = () => (
 
 const AgenceParis15 = () => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null }[]>([]);
 
   const nextImage = useCallback(() => {
     setCurrentImage((prev) => (prev + 1) % agenceImages.length);
@@ -136,6 +138,17 @@ const AgenceParis15 = () => {
     const timer = setInterval(nextImage, 5000);
     return () => clearInterval(timer);
   }, [nextImage]);
+
+  useEffect(() => {
+    supabase
+      .from("death_notices")
+      .select("id, name, date_of_death, link")
+      .eq("agency_slug", "paris-15")
+      .order("display_order", { ascending: true })
+      .then(({ data }) => {
+        if (data) setDeathNotices(data);
+      });
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -476,6 +489,32 @@ const AgenceParis15 = () => {
             </div>
           </div>
         </section>
+
+        {/* Avis de décès */}
+        {deathNotices.length > 0 && (
+          <section className="bg-background" style={{ paddingTop: 32, paddingBottom: 32 }}>
+            <div className="container mx-auto px-6 max-w-4xl">
+              <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginBottom: 20 }}>
+                Avis de décès <span className="font-normal">sur Paris 15<sup>ème</sup></span>
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {deathNotices.map((notice) => (
+                  <div key={notice.id} className="bg-card border border-border/50 rounded-lg px-5 py-4 flex flex-col gap-1">
+                    <p className="font-display text-foreground font-semibold" style={{ fontSize: 16 }}>{notice.name}</p>
+                    {notice.date_of_death && (
+                      <p className="text-muted-foreground" style={{ fontSize: 14 }}>{notice.date_of_death}</p>
+                    )}
+                    {notice.link && (
+                      <a href={notice.link} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline mt-1" style={{ fontSize: 13 }}>
+                        Voir plus →
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Formulaire mobile */}
         <section className="bg-secondary lg:hidden" style={{ paddingTop: 24, paddingBottom: 24 }}>
