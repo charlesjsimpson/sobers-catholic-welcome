@@ -518,26 +518,26 @@ const AgenceParis15 = () => {
                 const paginated = filtered.slice((currentPage - 1) * NOTICES_PER_PAGE, currentPage * NOTICES_PER_PAGE);
                 return (
                   <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {paginated.map((notice) => (
-                        <div key={notice.id} className="bg-card border border-border/40 rounded-xl px-6 py-5 flex flex-col gap-2 shadow-sm">
-                          <div className="flex items-center gap-2 text-muted-foreground uppercase tracking-wider" style={{ fontSize: 12 }}>
+                        <div key={notice.id} className="bg-card border border-border/40 rounded-xl px-4 py-4 flex flex-col gap-1.5 shadow-sm">
+                          <div className="flex items-center gap-1.5 text-muted-foreground uppercase tracking-wider" style={{ fontSize: 11 }}>
                             <span className="text-primary">✝</span>
                             <span className="font-semibold">Avis de décès</span>
                           </div>
-                          <p className="font-display text-foreground font-bold" style={{ fontSize: 20 }}>{notice.name}</p>
+                          <p className="font-display text-foreground font-bold" style={{ fontSize: 16 }}>{notice.name}</p>
                           {notice.date_of_death && (
-                            <p className="text-muted-foreground" style={{ fontSize: 14 }}>Survenu le {notice.date_of_death}</p>
+                            <p className="text-muted-foreground" style={{ fontSize: 13 }}>Survenu le {notice.date_of_death}</p>
                           )}
                           {notice.agency_name && (
-                            <p className="text-primary font-medium" style={{ fontSize: 14 }}>{notice.agency_name}</p>
+                            <p className="text-primary font-medium" style={{ fontSize: 13 }}>{notice.agency_name}</p>
                           )}
                           {notice.slug ? (
-                            <Link to={`/avis/${notice.slug}`} className="inline-flex items-center gap-1 border border-border rounded-full px-4 py-2 text-foreground font-medium hover:bg-muted transition-colors mt-2 w-fit" style={{ fontSize: 14 }}>
+                            <Link to={`/avis/${notice.slug}`} className="inline-flex items-center gap-1 border border-border rounded-full px-3 py-1.5 text-foreground font-medium hover:bg-muted transition-colors mt-1 w-fit" style={{ fontSize: 13 }}>
                               Voir l'hommage →
                             </Link>
                           ) : notice.link ? (
-                            <a href={notice.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 border border-border rounded-full px-4 py-2 text-foreground font-medium hover:bg-muted transition-colors mt-2 w-fit" style={{ fontSize: 14 }}>
+                            <a href={notice.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 border border-border rounded-full px-3 py-1.5 text-foreground font-medium hover:bg-muted transition-colors mt-1 w-fit" style={{ fontSize: 13 }}>
                               Voir l'hommage →
                             </a>
                           ) : null}
