@@ -219,107 +219,21 @@ const AvisDeDecesDetail = () => {
             {/* Left column */}
             <div className="flex-1 lg:w-[65%] space-y-6">
 
-              {/* Faire-part */}
+              {/* Faire-part — contenu intégral */}
               <div
-                className="bg-card border border-border/30 text-center"
-                style={{ borderRadius: 12, padding: "32px 40px" }}
+                className="bg-card border-2 border-[hsl(var(--scf-blue)/0.2)]"
+                style={{ borderRadius: 12, padding: "36px 40px" }}
               >
-                {familyText && (
-                  <p
-                    className="text-foreground mx-auto"
-                    style={{ fontSize: 16, lineHeight: 1.9, maxWidth: 480, whiteSpace: "pre-line" }}
-                  >
-                    {familyText}
-                  </p>
-                )}
-
-                {familyText && (
-                  <p className="text-muted-foreground mt-6 mb-2" style={{ fontSize: 16 }}>
-                    ont la tristesse de vous faire part du rappel à Dieu de
-                  </p>
-                )}
-
-                <p
-                  className="font-display text-primary font-semibold my-4"
-                  style={{ fontSize: 28 }}
-                >
-                  {notice.name}
-                </p>
-
-                {dateShort && (
-                  <p className="text-muted-foreground" style={{ fontSize: 16 }}>
-                    survenu le {dateShort}
+                {notice.content ? (
+                  <div className="whitespace-pre-line text-foreground" style={{ fontSize: 16, lineHeight: 1.8 }}>
+                    {notice.content}
+                  </div>
+                ) : (
+                  <p className="font-display text-primary font-semibold text-center" style={{ fontSize: 28 }}>
+                    {notice.name}
                   </p>
                 )}
               </div>
-
-              {/* Cérémonies */}
-              {ceremonies.length > 0 && (
-                <div>
-                  <h2
-                    className="font-display text-foreground"
-                    style={{ fontSize: 20, fontWeight: 600, marginBottom: 12 }}
-                  >
-                    Cérémonie et obsèques
-                  </h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {ceremonies.map((c, i) => (
-                      <div
-                        key={i}
-                        className="bg-card border border-border/50 shadow-sm"
-                        style={{ borderRadius: 10, padding: "20px 24px" }}
-                      >
-                        <div className="flex items-center gap-2 mb-2">
-                          {c.icon === "church" ? (
-                            <Church className="w-5 h-5 text-primary" />
-                          ) : (
-                            <Flame className="w-5 h-5 text-primary" />
-                          )}
-                          <span className="font-semibold text-foreground" style={{ fontSize: 16 }}>
-                            {c.title}
-                          </span>
-                        </div>
-                        <div className="flex items-center gap-2 text-muted-foreground mb-1" style={{ fontSize: 14 }}>
-                          <Clock className="w-4 h-4" />
-                          <span>{c.detail}</span>
-                        </div>
-                        <div className="flex items-start gap-2 text-muted-foreground" style={{ fontSize: 14 }}>
-                          <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                          <span>{c.lieu}</span>
-                        </div>
-                        {c.lienMaps && (
-                          <a
-                            href={c.lienMaps}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-primary hover:underline mt-2 inline-block"
-                            style={{ fontSize: 13 }}
-                          >
-                            Voir sur Google Maps →
-                          </a>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                  {fairepartNote && (
-                    <p className="text-muted-foreground italic mt-3" style={{ fontSize: 14 }}>
-                      {fairepartNote}
-                    </p>
-                  )}
-                </div>
-              )}
-
-              {/* Raw content fallback */}
-              {ceremonies.length === 0 && notice.content && (
-                <div
-                  className="bg-card border border-border/50 shadow-sm"
-                  style={{ borderRadius: 10, padding: "24px 28px" }}
-                >
-                  <div className="whitespace-pre-line text-foreground leading-relaxed" style={{ fontSize: 16 }}>
-                    {notice.content}
-                  </div>
-                </div>
-              )}
 
               {/* Agency credit */}
               <div className="text-muted-foreground" style={{ fontSize: 15 }}>
