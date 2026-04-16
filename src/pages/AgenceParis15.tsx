@@ -462,7 +462,7 @@ const AgenceParis15 = () => {
             <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginTop: 32, marginBottom: 10 }}>
               Nos collaborateurs
             </h2>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 justify-items-center">
               {[
                 { role: "Directeur", prenom: "Christian", nom: "de Cacqueray", photo: collabChristian },
                 { role: "Directeur adjoint", prenom: "Frédéric", nom: "Barut", photo: collabFrederic },
