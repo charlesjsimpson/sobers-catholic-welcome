@@ -649,7 +649,7 @@ const AgenceParis15 = () => {
         {/* FAQ */}
         <section className="bg-secondary" style={{ paddingTop: 24, paddingBottom: 48 }}>
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="font-display text-primary text-center" style={{ fontSize: 22, fontWeight: 500, lineHeight: 1.3, marginTop: 8, marginBottom: 24 }}>
+            <h2 className="font-display text-primary text-center font-bold" style={{ fontSize: 22, lineHeight: 1.3, marginTop: 8, marginBottom: 24 }}>
               Organisation des obsèques à Paris 15 : guide pratique
             </h2>
             <Accordion type="multiple" className="space-y-2">
