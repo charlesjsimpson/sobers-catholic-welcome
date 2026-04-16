@@ -19,7 +19,6 @@ interface DeathNotice {
   agency_name: string | null;
 }
 
-// Parse ceremony info from content
 interface Ceremony {
   type: string;
   icon: "church" | "flame";
@@ -33,7 +32,6 @@ function parseCeremonies(content: string | null): Ceremony[] {
   if (!content) return [];
   const ceremonies: Ceremony[] = [];
 
-  // Look for religious ceremony
   const religiousMatch = content.match(
     /cérémonie religieuse.*?(?:le\s+)?(lundi|mardi|mercredi|jeudi|vendredi|samedi|dimanche)?\s*(\d{1,2}\s+\w+)(?:\s+à\s+(\d{1,2}h\d{0,2}))?.*?(?:en\s+l['']|à\s+l[''])?(?:église\s+)?([\w\s\-']+?)(?:\s*\(([^)]+)\))?(?:\.|$)/i
   );
@@ -48,7 +46,6 @@ function parseCeremonies(content: string | null): Ceremony[] {
     });
   }
 
-  // Look for cremation/recueillement
   const cremMatch = content.match(
     /recueillement.*?(?:à\s+)?(\d{1,2}h\d{0,2}).*?(?:au\s+)?(crématorium[^.\n]*)/i
   );
@@ -130,6 +127,7 @@ const AvisDeDecesDetail = () => {
   }
 
   const agenceUrl = notice.agency_slug ? `/agences/${notice.agency_slug}` : "/contacter-une-agence";
+  const agenceLabel = notice.agency_name || "";
   const agencePhone = notice.agency_slug === "paris-15" ? "01 44 38 80 80" : "01 46 22 42 42";
   const ceremonies = parseCeremonies(notice.content);
   const { familyText, note: fairepartNote } = parseFairePart(notice.content, notice.name);
@@ -150,7 +148,7 @@ const AvisDeDecesDetail = () => {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Accueil", item: "https://s-c-f.org/" },
-      { "@type": "ListItem", position: 2, name: "Le Carnet du SCF", item: "https://s-c-f.org/carnet-deuil/" },
+      { "@type": "ListItem", position: 2, name: agenceLabel, item: `https://s-c-f.org/agences/${notice.agency_slug}/` },
       { "@type": "ListItem", position: 3, name: notice.name },
     ],
   };
@@ -175,49 +173,69 @@ const AvisDeDecesDetail = () => {
   return (
     <>
       <Helmet>
-        <title>Avis de décès — {notice.name} — SCF {notice.agency_name || ""}</title>
+        <title>Avis de décès — {notice.name} — SCF {agenceLabel}</title>
         <meta
           name="description"
-          content={`Avis de décès de ${notice.name}, ${notice.date_of_death || ""}. Service Catholique des Funérailles ${notice.agency_name || ""}.`}
+          content={`Avis de décès de ${notice.name}, ${notice.date_of_death || ""}. Service Catholique des Funérailles ${agenceLabel}.`}
         />
+        <link rel="canonical" href={`https://s-c-f.org/avis/${slug}/`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
       </Helmet>
 
       <Header />
 
-      {/* Hero breadcrumb */}
-      <section className="bg-[hsl(var(--scf-cream))]" style={{ paddingTop: 24, paddingBottom: 24 }}>
-        <div className="container mx-auto px-6 max-w-5xl">
-          <nav className="text-muted-foreground" style={{ fontSize: 13 }}>
-            <Link to="/" className="hover:text-primary">Accueil</Link>
+      {/* ── Blue Hero ── */}
+      <section className="relative overflow-hidden bg-[hsl(var(--scf-blue))]" style={{ minHeight: 320 }}>
+        <div
+          className="relative z-10 flex flex-col items-center justify-center text-center px-6"
+          style={{ minHeight: 320, paddingTop: 96, paddingBottom: 48 }}
+        >
+          {/* Breadcrumb */}
+          <nav aria-label="Fil d'Ariane" className="text-white/70 mb-8" style={{ fontSize: 13 }}>
+            <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
             <span className="mx-2">›</span>
-            <Link to="/carnet-deuil" className="hover:text-primary">Le Carnet du SCF</Link>
+            <Link to={agenceUrl} className="hover:text-white transition-colors">{agenceLabel}</Link>
             <span className="mx-2">›</span>
-            <span className="text-foreground">{notice.name}</span>
+            <span className="text-white/90">{notice.name}</span>
           </nav>
+
+          <h1
+            className="font-display text-white"
+            style={{ fontSize: 36, fontWeight: 600, lineHeight: 1.25, marginBottom: 0 }}
+          >
+            Avis de décès de
+            <br />
+            {notice.name}
+          </h1>
         </div>
       </section>
 
-      {/* Main content */}
-      <section className="bg-background" style={{ paddingTop: 32, paddingBottom: 48 }}>
+      {/* ── Main content ── */}
+      <section className="bg-background" style={{ paddingTop: 40, paddingBottom: 56 }}>
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="flex flex-col lg:flex-row gap-8">
+
             {/* Left column */}
             <div className="flex-1 lg:w-[65%] space-y-6">
-              {/* Bloc 1 — Faire-part */}
+
+              {/* Faire-part */}
               <div
-                className="bg-[hsl(var(--scf-cream))] border border-border/30 text-center"
+                className="bg-card border border-border/30 text-center"
                 style={{ borderRadius: 12, padding: "32px 40px" }}
               >
-                <span className="text-primary" style={{ fontSize: 24 }}>✝</span>
-
                 {familyText && (
                   <p
-                    className="text-muted-foreground italic mx-auto mt-4"
-                    style={{ fontSize: 16, lineHeight: 1.8, maxWidth: 420, whiteSpace: "pre-line" }}
+                    className="text-foreground mx-auto"
+                    style={{ fontSize: 16, lineHeight: 1.9, maxWidth: 480, whiteSpace: "pre-line" }}
                   >
                     {familyText}
+                  </p>
+                )}
+
+                {familyText && (
+                  <p className="text-muted-foreground mt-6 mb-2" style={{ fontSize: 16 }}>
+                    ont la tristesse de vous faire part du rappel à Dieu de
                   </p>
                 )}
 
@@ -230,14 +248,12 @@ const AvisDeDecesDetail = () => {
 
                 {dateShort && (
                   <p className="text-muted-foreground" style={{ fontSize: 16 }}>
-                    {dateShort}
+                    survenu le {dateShort}
                   </p>
                 )}
-
-                <div className="border-t border-border/40 mt-6 pt-1" />
               </div>
 
-              {/* Bloc 2 — Cérémonies */}
+              {/* Cérémonies */}
               {ceremonies.length > 0 && (
                 <div>
                   <h2
@@ -293,7 +309,7 @@ const AvisDeDecesDetail = () => {
                 </div>
               )}
 
-              {/* If no ceremonies parsed but has content, show raw */}
+              {/* Raw content fallback */}
               {ceremonies.length === 0 && notice.content && (
                 <div
                   className="bg-card border border-border/50 shadow-sm"
@@ -305,54 +321,54 @@ const AvisDeDecesDetail = () => {
                 </div>
               )}
 
-              {/* Bloc 3 — Agence */}
+              {/* Agency credit */}
               <div className="text-muted-foreground" style={{ fontSize: 15 }}>
-                Obsèques organisées par le Service Catholique des Funérailles —{" "}
+                Service Catholique des Funérailles —{" "}
                 <Link to={agenceUrl} className="text-primary hover:underline font-medium">
-                  Agence SCF {notice.agency_name || ""}
+                  Agence {agenceLabel}
                 </Link>
               </div>
 
-              {/* Bloc 4 — Partage */}
+              {/* Partager */}
               <div>
                 <h2
                   className="font-display text-foreground"
-                  style={{ fontSize: 18, fontWeight: 600, marginBottom: 8 }}
+                  style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}
                 >
-                  Partager cet avis
+                  Partager sur :
                 </h2>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   <a
                     href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 border border-border rounded-md px-3 py-1.5 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
-                    style={{ fontSize: 13 }}
+                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    aria-label="Partager sur Facebook"
                   >
-                    <Facebook className="w-4 h-4" /> Facebook
+                    <Facebook className="w-5 h-5" />
                   </a>
                   <a
                     href={`https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 border border-border rounded-md px-3 py-1.5 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
-                    style={{ fontSize: 13 }}
+                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    aria-label="Partager sur WhatsApp"
                   >
-                    <Share2 className="w-4 h-4" /> WhatsApp
+                    <Share2 className="w-5 h-5" />
                   </a>
                   <a
                     href={`mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`}
-                    className="inline-flex items-center gap-1.5 border border-border rounded-md px-3 py-1.5 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
-                    style={{ fontSize: 13 }}
+                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    aria-label="Partager par email"
                   >
-                    <Mail className="w-4 h-4" /> Email
+                    <Mail className="w-5 h-5" />
                   </a>
                   <button
                     onClick={handleCopyLink}
-                    className="inline-flex items-center gap-1.5 border border-border rounded-md px-3 py-1.5 text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
-                    style={{ fontSize: 13 }}
+                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                    aria-label="Copier le lien"
                   >
-                    <Copy className="w-4 h-4" /> Copier le lien
+                    <Copy className="w-5 h-5" />
                   </button>
                 </div>
               </div>
@@ -361,6 +377,7 @@ const AvisDeDecesDetail = () => {
             {/* Right column — sticky */}
             <div className="lg:w-[35%]">
               <div className="lg:sticky lg:top-24 space-y-5">
+
                 {/* Condolences form */}
                 <div
                   className="bg-card border border-border/50 shadow-sm"
@@ -401,9 +418,6 @@ const AvisDeDecesDetail = () => {
                     Rendre hommage
                   </h3>
                   <div className="flex flex-col gap-2">
-                    <Button variant="outline" className="w-full justify-start">
-                      🕯 Allumer une bougie
-                    </Button>
                     <Button variant="outline" className="w-full justify-start" asChild>
                       <Link to="/ressources/prieres">🙏 S'unir dans la prière</Link>
                     </Button>
@@ -422,7 +436,7 @@ const AvisDeDecesDetail = () => {
                     Obsèques organisées par
                   </p>
                   <p className="text-foreground font-semibold" style={{ fontSize: 15 }}>
-                    SCF {notice.agency_name} — {agencePhone}
+                    SCF {agenceLabel} — {agencePhone}
                   </p>
                   <Link
                     to={agenceUrl}
@@ -435,6 +449,18 @@ const AvisDeDecesDetail = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── CTA — Contact urgent ── */}
+      <section className="bg-[hsl(var(--scf-cream))]" style={{ paddingTop: 32, paddingBottom: 32 }}>
+        <div className="container mx-auto px-6 max-w-3xl text-center">
+          <p className="text-muted-foreground" style={{ fontSize: 14, marginBottom: 8 }}>
+            ⚠️ Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
+          </p>
+          <Button asChild>
+            <Link to="/contacter-une-agence">Contacter une agence</Link>
+          </Button>
         </div>
       </section>
 
