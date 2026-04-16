@@ -595,7 +595,7 @@ const AgenceParis15 = () => {
                 to="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix"
                 className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
               >
-                <div className="aspect-[3/2] overflow-hidden">
+                <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src={cheminDeCroixCardImg}
                     alt="Chemin de Croix — Vendredi Saint"
@@ -623,8 +623,8 @@ const AgenceParis15 = () => {
                 to="/ressources/actualites"
                 className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
               >
-                <div className="aspect-[3/2] overflow-hidden bg-primary/10 flex items-center justify-center">
-                  <Search className="w-12 h-12 text-primary opacity-40 group-hover:opacity-70 transition-opacity" />
+                <div className="aspect-[16/9] overflow-hidden bg-primary/10 flex items-center justify-center">
+                  <Search className="w-16 h-16 text-primary opacity-40 group-hover:opacity-70 transition-opacity" />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit mb-3">
