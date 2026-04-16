@@ -325,7 +325,7 @@ const AgenceParis15 = () => {
                     className="inline-flex items-center justify-center gap-2 text-center font-medium py-2 px-4 rounded-lg transition-colors"
                     style={{ fontSize: 15, backgroundColor: '#DCF4FF', color: '#000', border: '2px solid #DCF4FF' }}
                   >
-                    <HeartHandshake className="w-5 h-5 shrink-0" />
+                    <Handshake className="w-5 h-5 shrink-0" />
                     Organiser des obsèques catholiques
                   </Link>
                   <Link
