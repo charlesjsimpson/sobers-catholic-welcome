@@ -322,18 +322,18 @@ const AgenceParis15 = () => {
                 <div className="flex flex-col sm:flex-row gap-3 mb-5 max-w-md">
                   <Link
                     to="/organiser-des-obseques"
-                    className="inline-flex items-center justify-center gap-2 text-center font-medium py-2 px-4 rounded-lg transition-colors"
+                    className="inline-flex items-start justify-center gap-2 text-center font-medium py-2 px-4 rounded-lg transition-colors"
                     style={{ fontSize: 15, backgroundColor: '#DCF4FF', color: '#000', border: '2px solid #DCF4FF' }}
                   >
-                    <Handshake className="w-5 h-5 shrink-0" />
+                    <Handshake className="w-5 h-5 shrink-0 mt-0.5" />
                     Organiser des obsèques catholiques
                   </Link>
                   <Link
                     to="/services/prevoyance"
-                    className="inline-flex items-center justify-center gap-2 text-center bg-primary text-primary-foreground font-medium py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
+                    className="inline-flex items-start justify-center gap-2 text-center bg-primary text-primary-foreground font-medium py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
                     style={{ fontSize: 15 }}
                   >
-                    <ClipboardCheck className="w-5 h-5 shrink-0" />
+                    <ClipboardCheck className="w-5 h-5 shrink-0 mt-0.5" />
                     Préfinancer mes obsèques
                   </Link>
                 </div>
