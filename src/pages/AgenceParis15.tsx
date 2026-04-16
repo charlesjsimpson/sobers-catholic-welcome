@@ -526,12 +526,9 @@ const AgenceParis15 = () => {
                             <span className="font-semibold">Avis de décès</span>
                           </div>
                           <p className="font-display text-foreground font-bold" style={{ fontSize: 16 }}>{notice.name}</p>
-                          {notice.date_of_death && (
-                            <p className="text-muted-foreground" style={{ fontSize: 13 }}>Survenu le {notice.date_of_death}</p>
-                          )}
-                          {notice.agency_name && (
-                            <p className="text-primary font-medium" style={{ fontSize: 13 }}>{notice.agency_name}</p>
-                          )}
+                          <p className="text-muted-foreground" style={{ fontSize: 13 }}>
+                            {notice.date_of_death ? `Survenu le ${notice.date_of_death}` : "Date non communiquée"}
+                          </p>
                           {notice.slug ? (
                             <Link to={`/avis/${notice.slug}`} className="inline-flex items-center gap-1 border border-border rounded-full px-3 py-1.5 text-foreground font-medium hover:bg-muted transition-colors mt-1 w-fit" style={{ fontSize: 13 }}>
                               Voir l'hommage →
