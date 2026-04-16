@@ -423,7 +423,7 @@ const AgenceParis15 = () => {
         </section>
 
         {/* Avis des familles — pleine largeur, centré */}
-        <section className="bg-background" style={{ paddingTop: 24, paddingBottom: 24 }}>
+        <section className="bg-background" style={{ paddingTop: 8, paddingBottom: 24 }}>
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="font-display text-primary text-center" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginBottom: 10 }}>
               Avis des familles
