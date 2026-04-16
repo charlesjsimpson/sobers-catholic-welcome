@@ -587,13 +587,21 @@ const AgenceParis15 = () => {
         <section className="bg-background" style={{ paddingTop: 32, paddingBottom: 32 }}>
           <div className="container mx-auto px-6 max-w-4xl">
             <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 600, lineHeight: 1.3, marginBottom: 20, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
-              Actualités locales
+              Actualités locales : Service Catholique des Funérailles Paris 15<sup>ème</sup>
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
               <Link
                 to="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix"
                 className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
               >
+                <div className="aspect-[3/2] overflow-hidden">
+                  <img
+                    src={cheminDeCroixCardImg}
+                    alt="Chemin de Croix — Vendredi Saint"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="p-5 flex flex-col flex-1">
                   <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit mb-3">
                     Actualité
@@ -614,6 +622,9 @@ const AgenceParis15 = () => {
                 to="/ressources/actualites"
                 className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
               >
+                <div className="aspect-[3/2] overflow-hidden bg-primary/10 flex items-center justify-center">
+                  <Search className="w-12 h-12 text-primary opacity-40 group-hover:opacity-70 transition-opacity" />
+                </div>
                 <div className="p-5 flex flex-col flex-1">
                   <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit mb-3">
                     Ressource
