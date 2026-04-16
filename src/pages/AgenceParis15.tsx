@@ -343,7 +343,7 @@ const AgenceParis15 = () => {
                 <p className="text-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.5 }}>
                   Nous proposons l'ensemble des services nécessaires à l'<Link to="/organiser-des-obseques" className="text-primary underline hover:text-primary/80">organisation des funérailles</Link>. Un conseiller funéraire dédié vous accompagne à chaque étape :
                 </p>
-                <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.5 }}>
+                <ul className="text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.5 }}>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     Entretien initial
@@ -372,7 +372,7 @@ const AgenceParis15 = () => {
                 <p className="text-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.5 }}>
                   Nous accompagnons également toutes les personnes souhaitant <Link to="/services/prevoyance" className="text-primary underline hover:text-primary/80">anticiper leurs obsèques</Link>. La <strong className="text-foreground">prévoyance funéraire</strong> peut prendre plusieurs formes :
                 </p>
-                <ul className="space-y-1 text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.5 }}>
+                <ul className="text-foreground mb-2 ml-4" style={{ fontSize: 16, lineHeight: 1.5 }}>
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">•</span>
                     Simple dépôt de volontés
