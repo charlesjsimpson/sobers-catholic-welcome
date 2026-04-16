@@ -587,7 +587,7 @@ const AgenceParis15 = () => {
         {/* Actualités locales */}
         <section className="bg-background" style={{ paddingTop: 32, paddingBottom: 32 }}>
           <div className="container mx-auto px-6 max-w-4xl">
-            <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 600, lineHeight: 1.3, marginBottom: 20, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
+            <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginBottom: 20, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
               Actualités locales : Service Catholique des Funérailles Paris 15<sup>ème</sup>
             </h2>
             <div className="grid sm:grid-cols-2 gap-6">
