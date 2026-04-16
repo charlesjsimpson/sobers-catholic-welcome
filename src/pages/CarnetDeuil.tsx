@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Search, Cross, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import carnetHeroBg from "@/assets/carnet-hero-bg.jpg";
 
 interface DeathNotice {
   id: string;
@@ -61,26 +60,84 @@ const CarnetDeuil = () => {
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    name: "Le Carnet du SCF — Avis de décès",
+    "@type": "WebPage",
+    name: "Avis de décès — Le Carnet du Service Catholique des Funérailles",
     description:
-      "Avis de décès publiés par le Service Catholique des Funérailles. Hommages, condoléances et prières.",
-    url: "https://s-c-f.org/carnet-deuil/",
-    publisher: {
-      "@type": "Organization",
-      name: "Service Catholique des Funérailles",
+      "Retrouvez les avis de décès publiés par le Service Catholique des Funérailles. Unissez-vous dans la prière pour les défunts et leurs familles.",
+    url: "https://s-c-f.org/carnet",
+    mainEntity: {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Comment publier un avis de décès avec le SCF ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Nos équipes se chargent de rédiger et publier l'avis de décès en accord avec la famille. Cette prestation fait partie de notre accompagnement global lors de l'organisation des obsèques.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Les avis de décès du SCF sont-ils gratuits ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "La publication de l'avis de décès dans notre Carnet est incluse dans nos prestations funéraires. Nous nous occupons également des démarches pour la presse locale si souhaité.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Peut-on laisser un message de condoléances ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Oui, chaque avis de décès permet aux proches et connaissances de laisser un message de soutien et de partager leurs condoléances avec la famille.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Comment retrouver un avis de décès ancien ?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Utilisez notre moteur de recherche en saisissant le nom du défunt ou sélectionnez une période spécifique. Nos archives remontent à la création du Carnet.",
+          },
+        },
+      ],
+    },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Accueil",
+          item: "https://s-c-f.org/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Le Carnet du SCF",
+          item: "https://s-c-f.org/carnet",
+        },
+      ],
     },
   };
 
   return (
     <>
       <Helmet>
-        <title>Le Carnet du SCF — Avis de décès et hommages</title>
+        <title>Avis de décès — Le Carnet du Service Catholique des Funérailles | SCF</title>
         <meta
           name="description"
-          content="Retrouvez les avis de décès publiés par le Service Catholique des Funérailles. Rendez hommage à vos proches, laissez un message de condoléances et unissez-vous dans la prière."
+          content="Consultez les avis de décès publiés par le Service Catholique des Funérailles. Rendez hommage aux défunts, laissez vos condoléances et unissez-vous dans la prière. Recherchez un avis par nom, ville ou date."
         />
-        <link rel="canonical" href="https://s-c-f.org/carnet-deuil/" />
+        <meta
+          name="keywords"
+          content="avis de décès, carnet de deuil, obsèques catholiques, hommage défunt, condoléances, SCF, Service Catholique des Funérailles, pompes funèbres Paris"
+        />
+        <link rel="canonical" href="https://s-c-f.org/carnet" />
+        <meta property="og:title" content="Avis de décès — Le Carnet du Service Catholique des Funérailles" />
+        <meta property="og:description" content="Retrouvez les avis de décès publiés par le SCF. Hommages, condoléances et prières pour les défunts et leurs familles." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://s-c-f.org/carnet" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -89,7 +146,7 @@ const CarnetDeuil = () => {
       {/* Hero with blue background */}
       <section className="relative overflow-hidden bg-[hsl(var(--scf-blue))]" style={{ minHeight: 340 }}>
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-6" style={{ minHeight: 340, paddingTop: 48, paddingBottom: 48 }}>
-          <nav className="text-white/70 mb-6" style={{ fontSize: 13 }}>
+          <nav aria-label="Fil d'Ariane" className="text-white/70 mb-6" style={{ fontSize: 13 }}>
             <Link to="/" className="hover:text-white transition-colors">
               Accueil
             </Link>
@@ -113,7 +170,7 @@ const CarnetDeuil = () => {
               letterSpacing: "0.01em",
             }}
           >
-            Le Carnet du SCF
+            Avis de décès — Le Carnet du Service Catholique des Funérailles
           </h1>
           <p
             className="text-white/80 max-w-xl mx-auto"
@@ -126,9 +183,26 @@ const CarnetDeuil = () => {
         </div>
       </section>
 
+      {/* Introduction section */}
+      <section className="bg-background" style={{ paddingTop: 40, paddingBottom: 8 }}>
+        <div className="container mx-auto px-6 max-w-3xl">
+          <div className="prose prose-sm max-w-none text-muted-foreground" style={{ fontSize: 15, lineHeight: 1.8 }}>
+            <p>
+              Le Carnet du <strong>Service Catholique des Funérailles</strong> rassemble les hommages aux défunts accompagnés par nos équipes à travers la France. Plus qu'un simple registre, ce carnet témoigne de l'accompagnement spirituel et humain que nous offrons aux familles dans l'épreuve du deuil.
+            </p>
+            <p style={{ marginTop: 12 }}>
+              Chaque <strong>avis de décès</strong> publié ici reflète notre engagement à honorer la mémoire des défunts selon la tradition catholique, en proposant des <strong>obsèques dignes</strong> et des célébrations qui respectent les volontés du défunt et de sa famille. Nos agences, présentes à <strong>Paris</strong> et dans toute la France, veillent à ce que chaque départ soit accompagné avec respect et recueillement.
+            </p>
+            <p style={{ marginTop: 12 }}>
+              Vous pouvez parcourir les avis récents, rechercher un proche disparu ou découvrir les témoignages de familles qui nous ont fait confiance. Pour chaque défunt, nous vous invitons à vous unir dans la prière et à partager vos <strong>condoléances</strong> avec les proches.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Search – floating card overlapping hero */}
-      <section className="relative z-20 bg-background" style={{ paddingBottom: 8 }}>
-        <div className="container mx-auto px-6 max-w-3xl" style={{ marginTop: -36 }}>
+      <section className="relative z-20 bg-background" style={{ paddingBottom: 8, paddingTop: 24 }}>
+        <div className="container mx-auto px-6 max-w-3xl">
           <div
             className="bg-card border border-border/40 shadow-lg backdrop-blur-sm"
             style={{ borderRadius: 14, padding: "28px 32px" }}
@@ -229,10 +303,9 @@ const CarnetDeuil = () => {
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {paginated.map((n) => (
-                  <Link
+                  <article
                     key={n.id}
-                    to={n.slug ? `/avis/${n.slug}` : "#"}
-                    className="group block bg-card border border-border/40 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
+                    className="group bg-card border border-border/40 hover:border-primary/30 transition-all duration-300 hover:shadow-lg"
                     style={{ borderRadius: 12, overflow: "hidden" }}
                   >
                     {/* Gold accent top bar */}
@@ -255,7 +328,7 @@ const CarnetDeuil = () => {
                           Avis de décès
                         </span>
                       </div>
-                      <p
+                      <h3
                         className="text-foreground font-display group-hover:text-primary transition-colors"
                         style={{
                           fontSize: 19,
@@ -264,14 +337,16 @@ const CarnetDeuil = () => {
                           lineHeight: 1.3,
                         }}
                       >
-                        {n.name}
-                      </p>
+                        <Link to={n.slug ? `/avis/${n.slug}` : "#"}>
+                          {n.name}
+                        </Link>
+                      </h3>
                       {n.date_of_death && (
                         <p
                           className="text-muted-foreground"
                           style={{ fontSize: 13, marginBottom: 2 }}
                         >
-                          {n.date_of_death}
+                          <time dateTime={n.date_of_death}>Survenu le {n.date_of_death}</time>
                         </p>
                       )}
                       <p
@@ -280,7 +355,7 @@ const CarnetDeuil = () => {
                       >
                         Paris
                       </p>
-                      <div className="flex items-center justify-between mt-4 pt-3 border-t border-border/30">
+                      <footer className="flex items-center justify-between mt-4 pt-3 border-t border-border/30">
                         <span
                           className="text-primary/70"
                           style={{ fontSize: 12, fontWeight: 500 }}
@@ -288,26 +363,28 @@ const CarnetDeuil = () => {
                           SCF {n.agency_name}
                         </span>
                         {n.slug && (
-                          <span
-                            className="text-primary text-xs font-medium group-hover:translate-x-1 transition-transform duration-200"
+                          <Link
+                            to={`/avis/${n.slug}`}
+                            className="text-primary text-xs font-medium group-hover:translate-x-1 transition-transform duration-200 inline-block"
                           >
                             Voir l'hommage →
-                          </span>
+                          </Link>
                         )}
-                      </div>
+                      </footer>
                     </div>
-                  </Link>
+                  </article>
                 ))}
               </div>
 
               {/* Pagination */}
               {totalPages > 1 && (
-                <div className="flex items-center justify-center gap-2 mt-10">
+                <nav aria-label="Pagination des avis de décès" className="flex items-center justify-center gap-2 mt-10">
                   <Button
                     variant="ghost"
                     size="icon"
                     disabled={page === 1}
                     onClick={() => setPage((p) => p - 1)}
+                    aria-label="Page précédente"
                   >
                     <ChevronLeft className="w-4 h-4" />
                   </Button>
@@ -316,6 +393,7 @@ const CarnetDeuil = () => {
                       <button
                         key={p}
                         onClick={() => setPage(p)}
+                        aria-current={p === page ? "page" : undefined}
                         className={`w-9 h-9 rounded-full text-sm font-medium transition-colors ${
                           p === page
                             ? "bg-primary text-primary-foreground"
@@ -331,10 +409,11 @@ const CarnetDeuil = () => {
                     size="icon"
                     disabled={page === totalPages}
                     onClick={() => setPage((p) => p + 1)}
+                    aria-label="Page suivante"
                   >
                     <ChevronRight className="w-4 h-4" />
                   </Button>
-                </div>
+                </nav>
               )}
             </>
           )}
@@ -373,9 +452,64 @@ const CarnetDeuil = () => {
               asChild
               className="border-white/40 text-white hover:bg-white/10"
             >
-              <Link to="/contacter-une-agence">Contacter une agence</Link>
+              <Link to="/ressources/prieres#defunts">Prière pour les défunts</Link>
             </Button>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-background" style={{ paddingTop: 48, paddingBottom: 48 }}>
+        <div className="container mx-auto px-6 max-w-3xl">
+          <h2
+            className="font-display text-foreground text-center"
+            style={{ fontSize: 22, fontWeight: 600, marginBottom: 28 }}
+          >
+            Questions fréquentes sur nos avis de décès
+          </h2>
+
+          <dl className="space-y-5">
+            <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+                Comment publier un avis de décès avec le SCF ?
+              </dt>
+              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                Nos équipes se chargent de rédiger et publier l'avis de décès en accord avec la famille. Cette prestation fait partie de notre accompagnement global lors de l'organisation des obsèques.
+              </dd>
+              {/* sr-only duplicate for SEO */}
+              <dd className="sr-only">Nos équipes se chargent de rédiger et publier l'avis de décès en accord avec la famille. Cette prestation fait partie de notre accompagnement global lors de l'organisation des obsèques.</dd>
+            </div>
+
+            <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+                Les avis de décès du SCF sont-ils gratuits ?
+              </dt>
+              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                La publication de l'avis de décès dans notre Carnet est incluse dans nos prestations funéraires. Nous nous occupons également des démarches pour la presse locale si souhaité.
+              </dd>
+              <dd className="sr-only">La publication de l'avis de décès dans notre Carnet est incluse dans nos prestations funéraires. Nous nous occupons également des démarches pour la presse locale si souhaité.</dd>
+            </div>
+
+            <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+                Peut-on laisser un message de condoléances ?
+              </dt>
+              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                Oui, chaque avis de décès permet aux proches et connaissances de laisser un message de soutien et de partager leurs condoléances avec la famille.
+              </dd>
+              <dd className="sr-only">Oui, chaque avis de décès permet aux proches et connaissances de laisser un message de soutien et de partager leurs condoléances avec la famille.</dd>
+            </div>
+
+            <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+                Comment retrouver un avis de décès ancien ?
+              </dt>
+              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
+                Utilisez notre moteur de recherche en saisissant le nom du défunt ou sélectionnez une période spécifique. Nos archives remontent à la création du Carnet.
+              </dd>
+              <dd className="sr-only">Utilisez notre moteur de recherche en saisissant le nom du défunt ou sélectionnez une période spécifique. Nos archives remontent à la création du Carnet.</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
@@ -391,7 +525,7 @@ const CarnetDeuil = () => {
           >
             Voir aussi
           </h3>
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
+          <nav className="flex flex-wrap gap-x-6 gap-y-2">
             <Link
               to="/organiser-des-obseques"
               className="text-primary hover:underline"
@@ -418,9 +552,16 @@ const CarnetDeuil = () => {
               className="text-primary hover:underline"
               style={{ fontSize: 14 }}
             >
+              Nos prières
+            </Link>
+            <Link
+              to="/ressources"
+              className="text-primary hover:underline"
+              style={{ fontSize: 14 }}
+            >
               Ressources
             </Link>
-          </div>
+          </nav>
         </div>
       </section>
 

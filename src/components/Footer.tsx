@@ -15,7 +15,7 @@ const Footer = () => {
               className="h-16 w-auto mb-6 brightness-0 invert"
             />
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              Association loi 1901 au service des familles endeuillées depuis 1947. Un accompagnement humain, digne et respectueux.
+              Association loi 1901 au service des familles endeuillées depuis 1999. Un accompagnement humain, digne et respectueux.
             </p>
           </div>
 
