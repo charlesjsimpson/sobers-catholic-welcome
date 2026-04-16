@@ -330,10 +330,10 @@ const AgenceParis15 = () => {
                   </Link>
                   <Link
                     to="/services/prevoyance"
-                    className="inline-flex items-center justify-center gap-2 text-center bg-primary text-primary-foreground font-medium py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
+                    className="inline-flex items-start justify-center gap-2 text-center bg-primary text-primary-foreground font-medium py-2 px-4 rounded-lg hover:bg-primary/90 transition-colors"
                     style={{ fontSize: 15 }}
                   >
-                    <ClipboardCheck className="w-5 h-5 shrink-0" />
+                    <ClipboardCheck className="w-5 h-5 shrink-0 mt-0.5" />
                     Préfinancer mes obsèques
                   </Link>
                 </div>
