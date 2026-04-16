@@ -324,7 +324,6 @@ const AgenceParis15 = () => {
                     to="/organiser-des-obseques"
                     className="text-center font-medium py-2 px-4 rounded-lg transition-colors"
                     style={{ fontSize: 15, backgroundColor: '#DCF4FF', color: '#000', border: '2px solid #DCF4FF' }}
-                    style={{ fontSize: 15 }}
                   >
                     Organiser des obsèques catholiques
                   </Link>
