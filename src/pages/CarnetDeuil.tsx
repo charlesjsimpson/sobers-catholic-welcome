@@ -86,16 +86,8 @@ const CarnetDeuil = () => {
 
       <Header />
 
-      {/* Hero with background image */}
-      <section className="relative overflow-hidden" style={{ minHeight: 340 }}>
-        <img
-          src={carnetHeroBg}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={800}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
+      {/* Hero with blue background */}
+      <section className="relative overflow-hidden bg-[hsl(var(--scf-blue))]" style={{ minHeight: 340 }}>
         <div className="relative z-10 flex flex-col items-center justify-center text-center px-6" style={{ minHeight: 340, paddingTop: 48, paddingBottom: 48 }}>
           <nav className="text-white/70 mb-6" style={{ fontSize: 13 }}>
             <Link to="/" className="hover:text-white transition-colors">
