@@ -475,7 +475,7 @@ const AgenceParis15 = () => {
                 { role: "Responsable prévoyance", prenom: "Jean-Philippe", nom: "Rabaroux", photo: collabJeanPhilippe },
                 { role: "Maître de cérémonie", prenom: "Stéphanie", nom: "d'Hébrail", photo: collabStephanie },
               ].map((collab, i) => (
-                <div key={i} className="flex flex-col items-center text-center w-[calc(50%-12px)] sm:w-[calc(33.333%-16px)] lg:w-[calc(25%-18px)]">
+                <div key={i} className="flex flex-col items-center text-center">
                   <div className="w-40 h-52 rounded-lg overflow-hidden bg-muted mb-3 shrink-0 shadow-sm">
                     {collab.photo ? (
                       <img src={collab.photo} alt={`${collab.prenom} ${collab.nom}`} className="w-full h-full object-cover object-top" />
