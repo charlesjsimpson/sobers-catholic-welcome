@@ -190,17 +190,9 @@ const CarnetDeuil = () => {
       {/* Introduction section */}
       <section className="bg-background" style={{ paddingTop: 40, paddingBottom: 8 }}>
         <div className="container mx-auto px-6 max-w-3xl">
-          <div className="prose prose-sm max-w-none text-muted-foreground" style={{ fontSize: 15, lineHeight: 1.8 }}>
-            <p>
-              Le Carnet du <strong>Service Catholique des Funérailles</strong> rassemble les hommages aux défunts accompagnés par nos équipes à travers la France. Plus qu'un simple registre, ce carnet témoigne de l'accompagnement spirituel et humain que nous offrons aux familles dans l'épreuve du deuil.
-            </p>
-            <p style={{ marginTop: 12 }}>
-              Chaque <strong>avis de décès</strong> publié ici reflète notre engagement à honorer la mémoire des défunts selon la tradition catholique, en proposant des <strong>obsèques dignes</strong> et des célébrations qui respectent les volontés du défunt et de sa famille. Nos agences, présentes à <strong>Paris</strong> et dans toute la France, veillent à ce que chaque départ soit accompagné avec respect et recueillement.
-            </p>
-            <p style={{ marginTop: 12 }}>
-              Vous pouvez parcourir les avis récents, rechercher un proche disparu ou découvrir les témoignages de familles qui nous ont fait confiance. Pour chaque défunt, nous vous invitons à vous unir dans la prière et à partager vos <strong>condoléances</strong> avec les proches.
-            </p>
-          </div>
+          <p className="text-muted-foreground" style={{ fontSize: 15, lineHeight: 1.8 }}>
+            Le <strong>Carnet du Service Catholique des Funérailles</strong> rassemble les hommages aux défunts accompagnés par nos agences à travers la France. Recherchez un proche disparu ou unissez-vous dans la prière pour les familles.
+          </p>
         </div>
       </section>
 
