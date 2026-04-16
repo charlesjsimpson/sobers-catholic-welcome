@@ -124,7 +124,7 @@ const HalfStarRating = () => (
 
 const AgenceParis15 = () => {
   const [currentImage, setCurrentImage] = useState(0);
-  const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null; slug: string | null }[]>([]);
+  const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null; slug: string | null; agency_name: string | null }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [noticePage, setNoticePage] = useState(1);
   const NOTICES_PER_PAGE = 6;
