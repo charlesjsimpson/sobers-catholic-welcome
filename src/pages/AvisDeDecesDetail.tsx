@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Clock, Church, Flame, Facebook, Mail, Copy, Share2 } from "lucide-react";
+import { Facebook, Mail, Copy, Share2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -220,8 +220,8 @@ const AvisDeDecesDetail = () => {
             <div className="flex-1 lg:w-[65%] space-y-6">
 
               {/* Faire-part — contenu intégral */}
-              <div
-                className="bg-card border-2 border-[hsl(var(--scf-blue)/0.2)]"
+              <article
+                className="bg-card border-2 border-[hsl(var(--scf-blue)/0.15)]"
                 style={{ borderRadius: 12, padding: "36px 40px" }}
               >
                 {notice.content ? (
@@ -233,14 +233,53 @@ const AvisDeDecesDetail = () => {
                     {notice.name}
                   </p>
                 )}
-              </div>
 
-              {/* Agency credit */}
-              <div className="text-muted-foreground" style={{ fontSize: 15 }}>
-                Service Catholique des Funérailles —{" "}
-                <Link to={agenceUrl} className="text-primary hover:underline font-medium">
-                  Agence {agenceLabel}
+                <div className="border-t border-border/40 mt-6 pt-4">
+                  <p className="text-center text-foreground" style={{ fontSize: 15 }}>
+                    Service Catholique des Funérailles –{" "}
+                    <Link to={agenceUrl} className="text-primary hover:underline font-medium">
+                      Agence {agenceLabel}
+                    </Link>
+                  </p>
+                </div>
+              </article>
+
+              {/* CTA buttons */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <Link
+                  to="/ressources/prieres"
+                  className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
+                  style={{ borderRadius: 10, fontSize: 13 }}
+                >
+                  <span style={{ fontSize: 28 }}>🙏</span>
+                  <span className="text-foreground font-medium">Unissez-vous par la prière</span>
                 </Link>
+                <a
+                  href="https://www.agitateur-floral.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
+                  style={{ borderRadius: 10, fontSize: 13 }}
+                >
+                  <span style={{ fontSize: 28 }}>🌸</span>
+                  <span className="text-foreground font-medium">Offrir des fleurs</span>
+                </a>
+                <a
+                  href="#condoleances"
+                  className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
+                  style={{ borderRadius: 10, fontSize: 13 }}
+                >
+                  <span style={{ fontSize: 28 }}>💝</span>
+                  <span className="text-foreground font-medium">Faire un don</span>
+                </a>
+                <a
+                  href="#condoleances"
+                  className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
+                  style={{ borderRadius: 10, fontSize: 13 }}
+                >
+                  <span style={{ fontSize: 28 }}>✍️</span>
+                  <span className="text-foreground font-medium">Présenter ses condoléances</span>
+                </a>
               </div>
 
               {/* Partager */}
@@ -252,31 +291,22 @@ const AvisDeDecesDetail = () => {
                   Partager sur :
                 </h2>
                 <div className="flex flex-wrap gap-3">
-                  <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label="Partager sur Facebook"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={`https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label="Partager sur WhatsApp"
-                  >
-                    <Share2 className="w-5 h-5" />
-                  </a>
-                  <a
-                    href={`mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`}
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label="Partager par email"
-                  >
-                    <Mail className="w-5 h-5" />
-                  </a>
+                  {[
+                    { href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, icon: Facebook, label: "Facebook" },
+                    { href: `https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`, icon: Share2, label: "WhatsApp" },
+                    { href: `mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`, icon: Mail, label: "Email" },
+                  ].map(({ href, icon: Icon, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+                      aria-label={`Partager sur ${label}`}
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  ))}
                   <button
                     onClick={handleCopyLink}
                     className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
@@ -292,53 +322,48 @@ const AvisDeDecesDetail = () => {
             <div className="lg:w-[35%]">
               <div className="lg:sticky lg:top-24 space-y-5">
 
-                {/* Condolences form */}
+                {/* Livre de condoléances */}
                 <div
+                  id="condoleances"
                   className="bg-card border border-border/50 shadow-sm"
                   style={{ borderRadius: 10, padding: 20 }}
                 >
                   <h3 className="font-display text-foreground" style={{ fontSize: 17, fontWeight: 600, marginBottom: 12 }}>
-                    Laisser un message de condoléances
+                    Livre de condoléances
                   </h3>
                   <form onSubmit={handleCondolSubmit} className="space-y-3">
-                    <Input
-                      placeholder="Votre prénom et nom"
-                      value={condolName}
-                      onChange={(e) => setCondolName(e.target.value)}
-                      required
-                    />
-                    <Textarea
-                      placeholder="Exprimez vos condoléances à la famille…"
-                      rows={4}
-                      value={condolMessage}
-                      onChange={(e) => setCondolMessage(e.target.value)}
-                      required
-                    />
+                    <div>
+                      <label htmlFor="condol-name" className="text-muted-foreground block mb-1" style={{ fontSize: 13 }}>
+                        Votre nom
+                      </label>
+                      <Input
+                        id="condol-name"
+                        placeholder="Prénom et nom"
+                        value={condolName}
+                        onChange={(e) => setCondolName(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="condol-msg" className="text-muted-foreground block mb-1" style={{ fontSize: 13 }}>
+                        Votre message
+                      </label>
+                      <Textarea
+                        id="condol-msg"
+                        placeholder="Exprimez vos condoléances à la famille…"
+                        rows={5}
+                        value={condolMessage}
+                        onChange={(e) => setCondolMessage(e.target.value)}
+                        required
+                      />
+                    </div>
                     <Button type="submit" className="w-full">
-                      Envoyer mon hommage
+                      Envoyer mes condoléances
                     </Button>
                   </form>
                   <p className="text-muted-foreground mt-2" style={{ fontSize: 12 }}>
                     Votre message sera transmis à la famille par l'agence SCF.
                   </p>
-                </div>
-
-                {/* Hommage actions */}
-                <div
-                  className="bg-card border border-border/50 shadow-sm"
-                  style={{ borderRadius: 10, padding: 20 }}
-                >
-                  <h3 className="font-display text-foreground" style={{ fontSize: 17, fontWeight: 600, marginBottom: 12 }}>
-                    Rendre hommage
-                  </h3>
-                  <div className="flex flex-col gap-2">
-                    <Button variant="outline" className="w-full justify-start" asChild>
-                      <Link to="/ressources/prieres">🙏 S'unir dans la prière</Link>
-                    </Button>
-                    <Button variant="outline" className="w-full justify-start">
-                      💐 Envoyer des fleurs
-                    </Button>
-                  </div>
                 </div>
 
                 {/* Agency compact */}
