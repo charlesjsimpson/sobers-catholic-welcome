@@ -590,7 +590,7 @@ const AgenceParis15 = () => {
             <h2 className="font-display text-primary" style={{ fontSize: 26, fontWeight: 600, lineHeight: 1.3, marginBottom: 20, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
               Actualités locales : Service Catholique des Funérailles Paris 15<sup>ème</sup>
             </h2>
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4 max-w-2xl">
               <Link
                 to="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix"
                 className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
