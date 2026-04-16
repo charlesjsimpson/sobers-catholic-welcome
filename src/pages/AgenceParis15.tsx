@@ -127,7 +127,7 @@ const AgenceParis15 = () => {
   const [deathNotices, setDeathNotices] = useState<{ id: string; name: string; date_of_death: string | null; link: string | null; slug: string | null; agency_name: string | null }[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [noticePage, setNoticePage] = useState(1);
-  const NOTICES_PER_PAGE = 6;
+  const NOTICES_PER_PAGE = 4;
 
   const nextImage = useCallback(() => {
     setCurrentImage((prev) => (prev + 1) % agenceImages.length);
