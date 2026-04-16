@@ -523,12 +523,12 @@ const AgenceParis15 = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                       {paginated.map((notice) => (
                         <div key={notice.id} className="bg-card border border-border/40 rounded-xl px-4 py-4 flex flex-col gap-1.5 shadow-sm">
-                          <div className="flex items-center gap-1.5 text-muted-foreground uppercase tracking-wider" style={{ fontSize: 11 }}>
+                          <div className="flex items-center gap-1.5 text-foreground uppercase tracking-wider" style={{ fontSize: 11 }}>
                             <span className="text-primary">✝</span>
                             <span className="font-semibold">Avis de décès</span>
                           </div>
                           <p className="font-display text-foreground font-bold" style={{ fontSize: 16 }}>{notice.name}</p>
-                          <p className="text-muted-foreground" style={{ fontSize: 13 }}>
+                          <p className="text-foreground" style={{ fontSize: 13 }}>
                             {notice.date_of_death
                               ? (notice.date_of_death.toLowerCase().startsWith("survenu") ? notice.date_of_death : `Survenu le ${notice.date_of_death}`)
                               : "Date non communiquée"}
