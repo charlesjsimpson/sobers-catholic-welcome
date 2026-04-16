@@ -448,9 +448,8 @@ const CarnetDeuil = () => {
               <Link to="/ressources/prieres">Découvrir nos prières</Link>
             </Button>
             <Button
-              variant="outline"
               asChild
-              className="border-white/40 text-white hover:bg-white/10"
+              className="bg-[#DCF4FF] text-[hsl(var(--scf-blue-dark))] hover:bg-[#c8ecff] border-0"
             >
               <Link to="/ressources/prieres#defunts">Prière pour les défunts</Link>
             </Button>
