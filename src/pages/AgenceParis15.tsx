@@ -527,7 +527,9 @@ const AgenceParis15 = () => {
                           </div>
                           <p className="font-display text-foreground font-bold" style={{ fontSize: 16 }}>{notice.name}</p>
                           <p className="text-muted-foreground" style={{ fontSize: 13 }}>
-                            {notice.date_of_death ? `Survenu le ${notice.date_of_death}` : "Date non communiquée"}
+                            {notice.date_of_death
+                              ? (notice.date_of_death.toLowerCase().startsWith("survenu") ? notice.date_of_death : `Survenu le ${notice.date_of_death}`)
+                              : "Date non communiquée"}
                           </p>
                           {notice.slug ? (
                             <Link to={`/avis/${notice.slug}`} className="inline-flex items-center gap-1 border border-border rounded-full px-3 py-1.5 text-foreground font-medium hover:bg-muted transition-colors mt-1 w-fit" style={{ fontSize: 13 }}>
