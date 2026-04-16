@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, ChevronDown, ChevronRight } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
-import logoScf from "@/assets/logo-scf-blanc.png";
+import logoScf from "@/assets/logo-scf-horizontal-blanc.png";
 import { cn } from "@/lib/utils";
 
 interface NavChild {
