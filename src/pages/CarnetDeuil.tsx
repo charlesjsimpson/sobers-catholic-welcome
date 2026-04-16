@@ -468,45 +468,32 @@ const CarnetDeuil = () => {
             Questions fréquentes sur nos avis de décès
           </h2>
 
-          <dl className="space-y-5">
+          <dl className="space-y-4">
             <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
-              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600 }}>
                 Comment publier un avis de décès avec le SCF ?
               </dt>
-              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
-                Nos équipes se chargent de rédiger et publier l'avis de décès en accord avec la famille. Cette prestation fait partie de notre accompagnement global lors de l'organisation des obsèques.
-              </dd>
-              {/* sr-only duplicate for SEO */}
               <dd className="sr-only">Nos équipes se chargent de rédiger et publier l'avis de décès en accord avec la famille. Cette prestation fait partie de notre accompagnement global lors de l'organisation des obsèques.</dd>
             </div>
 
             <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
-              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600 }}>
                 Les avis de décès du SCF sont-ils gratuits ?
               </dt>
-              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
-                La publication de l'avis de décès dans notre Carnet est incluse dans nos prestations funéraires. Nous nous occupons également des démarches pour la presse locale si souhaité.
-              </dd>
               <dd className="sr-only">La publication de l'avis de décès dans notre Carnet est incluse dans nos prestations funéraires. Nous nous occupons également des démarches pour la presse locale si souhaité.</dd>
             </div>
 
             <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
-              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600 }}>
                 Peut-on laisser un message de condoléances ?
               </dt>
-              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
-                Oui, chaque avis de décès permet aux proches et connaissances de laisser un message de soutien et de partager leurs condoléances avec la famille.
-              </dd>
               <dd className="sr-only">Oui, chaque avis de décès permet aux proches et connaissances de laisser un message de soutien et de partager leurs condoléances avec la famille.</dd>
             </div>
 
             <div className="bg-card border border-border/40 p-5" style={{ borderRadius: 10 }}>
-              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600, marginBottom: 8 }}>
+              <dt className="font-display text-foreground" style={{ fontSize: 16, fontWeight: 600 }}>
                 Comment retrouver un avis de décès ancien ?
               </dt>
-              <dd className="text-muted-foreground" style={{ fontSize: 14, lineHeight: 1.7 }}>
-                Utilisez notre moteur de recherche en saisissant le nom du défunt ou sélectionnez une période spécifique. Nos archives remontent à la création du Carnet.
-              </dd>
               <dd className="sr-only">Utilisez notre moteur de recherche en saisissant le nom du défunt ou sélectionnez une période spécifique. Nos archives remontent à la création du Carnet.</dd>
             </div>
           </dl>
