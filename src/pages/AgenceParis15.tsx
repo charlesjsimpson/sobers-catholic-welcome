@@ -319,7 +319,7 @@ const AgenceParis15 = () => {
                 </p>
 
                 {/* Boutons maillage interne */}
-                <div className="flex flex-col sm:flex-row gap-3 mb-5 max-w-md">
+                <div className="flex flex-col sm:flex-row gap-3 mb-5 justify-center">
                   <Link
                     to="/organiser-des-obseques"
                     className="inline-flex items-center justify-center gap-2 text-center font-medium py-2 px-4 rounded-lg transition-colors"
