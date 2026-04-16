@@ -154,10 +154,10 @@ const CarnetDeuil = () => {
             <span className="text-white/90">Le Carnet du SCF</span>
           </nav>
 
-          <div className="flex items-center gap-3 mb-5">
-            <div className="h-px w-12 bg-white/30" />
-            <span className="text-white/80" style={{ fontSize: 22 }}>✝</span>
-            <div className="h-px w-12 bg-white/30" />
+          <div className="flex items-center gap-4 mb-6">
+            <div className="h-px w-16 bg-white/40" />
+            <span className="text-white" style={{ fontSize: 32 }}>✝</span>
+            <div className="h-px w-16 bg-white/40" />
           </div>
 
           <h1
