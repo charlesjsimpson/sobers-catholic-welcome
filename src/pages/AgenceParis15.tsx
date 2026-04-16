@@ -322,8 +322,8 @@ const AgenceParis15 = () => {
                 <div className="flex flex-col sm:flex-row gap-3 mb-5 max-w-md">
                   <Link
                     to="/organiser-des-obseques"
-                    className="text-center bg-primary/15 text-primary border-2 border-primary font-medium py-2 px-4 rounded-lg hover:bg-primary/25 transition-colors"
-                    style={{ fontSize: 15 }}
+                    className="text-center font-medium py-2 px-4 rounded-lg transition-colors"
+                    style={{ fontSize: 15, backgroundColor: '#DCF4FF', color: '#000', border: '2px solid #DCF4FF' }}
                   >
                     Organiser des obsèques catholiques
                   </Link>
