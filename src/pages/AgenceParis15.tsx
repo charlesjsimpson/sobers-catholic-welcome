@@ -145,7 +145,7 @@ const AgenceParis15 = () => {
   useEffect(() => {
     supabase
       .from("death_notices")
-      .select("id, name, date_of_death, link, slug")
+      .select("id, name, date_of_death, link, slug, agency_name")
       .eq("agency_slug", "paris-15")
       .order("display_order", { ascending: true })
       .then(({ data }) => {
