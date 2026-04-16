@@ -170,7 +170,11 @@ const CarnetDeuil = () => {
               letterSpacing: "0.01em",
             }}
           >
-            Avis de décès — Le Carnet du Service Catholique des Funérailles
+            Avis de décès
+            <br />
+            <span style={{ fontSize: 28, fontWeight: 400, opacity: 0.85 }}>
+              Le Carnet du Service Catholique des Funérailles
+            </span>
           </h1>
           <p
             className="text-white/80 max-w-xl mx-auto"
