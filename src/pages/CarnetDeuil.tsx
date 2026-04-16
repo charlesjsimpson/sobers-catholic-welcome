@@ -191,7 +191,7 @@ const CarnetDeuil = () => {
       <section className="bg-background" style={{ paddingTop: 40, paddingBottom: 8 }}>
         <div className="container mx-auto px-6 max-w-3xl">
           <p className="text-muted-foreground" style={{ fontSize: 15, lineHeight: 1.8 }}>
-            Le <strong>Carnet du Service Catholique des Funérailles</strong> rassemble les hommages aux défunts accompagnés par nos agences à travers la France. Recherchez un proche disparu ou unissez-vous dans la prière pour les familles.
+            Le <strong>Carnet du Service Catholique des Funérailles</strong> rassemble les hommages aux défunts accompagnés par nos agences à travers la France. Chaque nom inscrit dans ce carnet est une vie qui mérite d'être honorée. Recherchez un proche disparu et unissez-vous dans la prière pour les familles.
           </p>
         </div>
       </section>
