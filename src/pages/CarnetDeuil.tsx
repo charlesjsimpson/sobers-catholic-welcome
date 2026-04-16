@@ -180,9 +180,7 @@ const CarnetDeuil = () => {
             className="text-white/80 max-w-xl mx-auto"
             style={{ fontSize: 17, lineHeight: 1.7 }}
           >
-            Chaque nom inscrit dans ce carnet est une vie qui mérite d'être
-            honorée. Retrouvez ici les avis de décès et unissez-vous dans la
-            prière.
+            Le Carnet du Service Catholique des Funérailles rassemble les hommages aux défunts accompagnés par nos agences à travers la France. Chaque nom inscrit dans ce carnet est une vie qui mérite d'être honorée. Recherchez un proche disparu et unissez-vous dans la prière pour les familles.
           </p>
         </div>
       </section>
