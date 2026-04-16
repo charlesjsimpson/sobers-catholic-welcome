@@ -583,6 +583,57 @@ const AgenceParis15 = () => {
           </div>
         </section>
 
+        {/* Actualités locales */}
+        <section className="bg-background" style={{ paddingTop: 32, paddingBottom: 32 }}>
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="font-display text-primary" style={{ fontSize: 22, fontWeight: 600, lineHeight: 1.3, marginBottom: 20, borderLeft: '3px solid hsl(var(--primary))', paddingLeft: 12 }}>
+              Actualités locales
+            </h2>
+            <div className="grid sm:grid-cols-2 gap-6">
+              <Link
+                to="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix"
+                className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
+              >
+                <div className="p-5 flex flex-col flex-1">
+                  <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit mb-3">
+                    Actualité
+                  </span>
+                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
+                    Vendredi Saint : les assistants funéraires au Chemin de Croix
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 flex-1">
+                    Ce Vendredi Saint, les assistants funéraires du SCF ont participé au Chemin de Croix. Une démarche de foi qui résonne avec leur mission d'accompagnement.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-3 group-hover:gap-2 transition-all">
+                    Lire la suite
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+              <Link
+                to="/ressources/actualites"
+                className="group bg-card rounded-xl overflow-hidden shadow-sm border-2 border-primary transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex flex-col"
+              >
+                <div className="p-5 flex flex-col flex-1">
+                  <span className="bg-primary/10 text-primary px-2.5 py-0.5 rounded-full font-semibold text-xs w-fit mb-3">
+                    Ressource
+                  </span>
+                  <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors leading-snug mb-2">
+                    Toutes nos actualités & articles
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed line-clamp-3 flex-1">
+                    Retrouvez l'ensemble des actualités, articles et ressources du Service Catholique des Funérailles.
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-primary text-sm font-semibold mt-3 group-hover:gap-2 transition-all">
+                    Voir toutes les actualités
+                    <ArrowRight className="w-4 h-4" />
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="bg-secondary" style={{ paddingTop: 24, paddingBottom: 48 }}>
           <div className="container mx-auto px-6 max-w-4xl">
