@@ -145,7 +145,7 @@ const CarnetDeuil = () => {
 
       {/* Hero with blue background */}
       <section className="relative overflow-hidden bg-[hsl(var(--scf-blue))]" style={{ minHeight: 340 }}>
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6" style={{ minHeight: 340, paddingTop: 48, paddingBottom: 48 }}>
+        <div className="relative z-10 flex flex-col items-center justify-center text-center px-6" style={{ minHeight: 340, paddingTop: 96, paddingBottom: 48 }}>
           <nav aria-label="Fil d'Ariane" className="text-white/70 mb-6" style={{ fontSize: 13 }}>
             <Link to="/" className="hover:text-white transition-colors">
               Accueil
