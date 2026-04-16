@@ -312,7 +312,7 @@ const AgenceParis15 = () => {
                   Notre agence de pompes funèbres à Paris 15
                 </h2>
                 <p className="text-foreground mb-2" style={{ fontSize: 16, lineHeight: 1.5 }}>
-                  Le Service Catholique des Funérailles de Paris, <strong className="text-foreground">coopérative à gestion désintéressée</strong>, accompagne chaque famille avec bienveillance. Basée dans le 15ᵉ arrondissement, notre agence funéraire conçoit des parcours adaptés à chaque situation, dans le respect de la dignité humaine et avec une espérance chrétienne.
+                  Depuis l'ouverture de son agence en 2000, avec le soutien du cardinal Jean-Marie Lustiger, le Service Catholique des Funérailles a accompagné plus de 3 000 familles dans Paris. <strong className="text-foreground">Coopérative à gestion désintéressée</strong>, notre agence du 15e arrondissement conçoit des parcours adaptés à chaque situation, dans le respect de la dignité humaine et avec une espérance chrétienne.
                 </p>
                 <p className="text-foreground mb-5" style={{ fontSize: 16, lineHeight: 1.5 }}>
                   Nos conseillers funéraires accueillent toutes les familles, quelle que soit leur confession, et organisent tous types d'obsèques dans Paris et sa région.
