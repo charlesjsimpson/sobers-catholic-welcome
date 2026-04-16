@@ -71,6 +71,7 @@ import ActualiteVendrediSaint from "./pages/ActualiteVendrediSaint";
 import Videos from "./pages/Videos";
 import NotFound from "./pages/NotFound";
 import AvisDeDecesDetail from "./pages/AvisDeDecesDetail";
+import AvisJeanneBrisou from "./pages/AvisJeanneBrisou";
 import CarnetDeuil from "./pages/CarnetDeuil";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";
