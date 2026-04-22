@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Facebook, Mail, Copy, Share2 } from "lucide-react";
+import { Facebook, Mail, Copy, Twitter, Linkedin, MessageCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -297,54 +297,61 @@ const AvisDeDecesDetail = () => {
             <div className="lg:w-[35%]">
               <div className="lg:sticky lg:top-24 space-y-5">
 
-                {/* Partager sur — colored icons */}
+                {/* Partager sur — navy icons */}
                 <div>
                   <h3
-                    className="font-display text-foreground"
-                    style={{ fontSize: 17, fontWeight: 600, marginBottom: 12 }}
+                    className="font-display"
+                    style={{ fontSize: 20, fontWeight: 700, marginBottom: 14, color: "#1F3D5C" }}
                   >
                     Partager sur :
                   </h3>
-                  <div className="flex gap-3">
+                  <div className="flex items-center gap-4">
                     {[
                       {
                         href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
                         icon: Facebook,
                         label: "Facebook",
-                        bg: "#1877F2",
+                      },
+                      {
+                        href: `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(`Avis de décès de ${notice.name}`)}`,
+                        icon: Twitter,
+                        label: "Twitter",
+                      },
+                      {
+                        href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+                        icon: Linkedin,
+                        label: "LinkedIn",
                       },
                       {
                         href: `https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`,
-                        icon: Share2,
+                        icon: MessageCircle,
                         label: "WhatsApp",
-                        bg: "#25D366",
                       },
                       {
                         href: `mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`,
                         icon: Mail,
                         label: "Email",
-                        bg: "#4B8EB3",
                       },
-                    ].map(({ href, icon: Icon, label, bg }) => (
+                    ].map(({ href, icon: Icon, label }) => (
                       <a
                         key={label}
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
-                        style={{ backgroundColor: bg }}
+                        className="hover:opacity-70 transition-opacity"
+                        style={{ color: "#1F3D5C" }}
                         aria-label={`Partager sur ${label}`}
                       >
-                        <Icon className="w-5 h-5" />
+                        <Icon className="w-7 h-7" fill="currentColor" strokeWidth={0} />
                       </a>
                     ))}
                     <button
                       onClick={handleCopyLink}
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
-                      style={{ backgroundColor: "#64748B" }}
+                      className="hover:opacity-70 transition-opacity"
+                      style={{ color: "#1F3D5C" }}
                       aria-label="Copier le lien"
                     >
-                      <Copy className="w-5 h-5" />
+                      <Copy className="w-7 h-7" strokeWidth={2.2} />
                     </button>
                   </div>
                 </div>
