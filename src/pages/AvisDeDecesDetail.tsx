@@ -317,8 +317,8 @@ const AvisDeDecesDetail = () => {
                 {/* Livre de condoléances */}
                 <div
                   id="condoleances"
-                  className="bg-card border border-border/50 shadow-sm"
-                  style={{ borderRadius: 10, padding: 20 }}
+                  className="bg-card border-2 shadow-sm"
+                  style={{ borderRadius: 10, padding: 20, borderColor: "hsl(var(--scf-blue))" }}
                 >
                   <h3 className="font-display text-foreground" style={{ fontSize: 17, fontWeight: 600, marginBottom: 12 }}>
                     Livre de condoléances
