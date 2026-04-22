@@ -252,33 +252,26 @@ export const PrestationTemplate = ({
 
       <main id={`prestation-${slug}`}>
         {/* ─────────── 1. HERO ─────────── */}
-        <section className="relative bg-secondary pt-28 pb-20 overflow-hidden">
-          {heroBackgroundImage && (
-            <div
-              className="absolute inset-0 opacity-10 bg-center bg-cover"
-              style={{ backgroundImage: `url(${heroBackgroundImage})` }}
-              aria-hidden="true"
-            />
-          )}
-          <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
-            <svg viewBox="0 0 200 200" className="w-64 h-64 text-primary/[0.06]" fill="currentColor" aria-hidden="true">
-              <circle cx="100" cy="100" r="30" />
-              {[...Array(12)].map((_, i) => (
-                <rect key={i} x="96" y="20" width="8" height="40" rx="4" transform={`rotate(${i * 30} 100 100)`} />
-              ))}
+        <section className="relative bg-primary pt-28 pb-24 overflow-hidden">
+          {/* Croix décorative en filigrane, à droite */}
+          <div className="absolute right-6 md:right-16 top-1/2 -translate-y-1/2 pointer-events-none" aria-hidden="true">
+            <svg viewBox="0 0 100 140" className="w-32 h-44 md:w-48 md:h-64 text-primary-foreground/15" fill="none" stroke="currentColor" strokeWidth="2">
+              <line x1="50" y1="10" x2="50" y2="130" />
+              <line x1="20" y1="50" x2="80" y2="50" />
             </svg>
           </div>
-          <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+
+          <div className="container mx-auto px-6 relative z-10 max-w-5xl">
             <nav aria-label="Fil d'Ariane" className="mb-8">
-              <ol className="flex items-center justify-center flex-wrap gap-2 text-sm text-muted-foreground">
+              <ol className="flex items-center flex-wrap gap-2 text-sm text-primary-foreground/75">
                 {breadcrumb.map((b, i) => (
                   <li key={`${b.label}-${i}`} className="flex items-center gap-2">
                     {b.href ? (
-                      <Link to={b.href} className="hover:text-foreground transition-colors">
+                      <Link to={b.href} className="hover:text-primary-foreground transition-colors">
                         {b.label}
                       </Link>
                     ) : (
-                      <span className="text-foreground font-medium">{b.label}</span>
+                      <span className="text-primary-foreground font-medium">{b.label}</span>
                     )}
                     {i < breadcrumb.length - 1 && <ChevronRight className="w-3 h-3" aria-hidden="true" />}
                   </li>
@@ -286,18 +279,22 @@ export const PrestationTemplate = ({
               </ol>
             </nav>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display leading-tight mb-6 text-foreground">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-primary-foreground/80 mb-5">
+              <span className="inline-block w-6 h-px bg-primary-foreground/60" aria-hidden="true" />
+              Prestation
+            </span>
+
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display leading-tight mb-6 text-primary-foreground max-w-3xl">
               {titreH1}
             </h1>
-            <div className="mx-auto mb-6 h-1 w-20 rounded-full bg-primary" aria-hidden="true" />
-            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic">
+            <p className="text-primary-foreground/85 text-lg md:text-xl leading-relaxed max-w-2xl">
               {sousTitreHero}
             </p>
 
             <div className="mt-8">
               <a
                 href="#contact-agence"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:gap-3 transition-all border-b border-primary-foreground/40 pb-1"
               >
                 Être accompagné(e) par une agence
                 <ArrowRight className="w-4 h-4" />
