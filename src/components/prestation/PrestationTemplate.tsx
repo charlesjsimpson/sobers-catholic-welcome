@@ -156,6 +156,8 @@ export const PrestationTemplate = ({
   ogImage,
   breadcrumb,
   heroBackgroundImage,
+  accroche,
+  accrochePost,
   introTitre,
   introContenu,
   sousCategoriesTitre = "Nos différentes options",
