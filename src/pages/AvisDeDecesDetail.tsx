@@ -308,41 +308,6 @@ const AvisDeDecesDetail = () => {
                   <span className="text-foreground font-medium">Présenter ses condoléances</span>
                 </a>
               </div>
-
-              {/* Partager */}
-              <div>
-                <h2
-                  className="font-display text-foreground"
-                  style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}
-                >
-                  Partager sur :
-                </h2>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    { href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, icon: Facebook, label: "Facebook" },
-                    { href: `https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`, icon: Share2, label: "WhatsApp" },
-                    { href: `mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`, icon: Mail, label: "Email" },
-                  ].map(({ href, icon: Icon, label }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                      aria-label={`Partager sur ${label}`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </a>
-                  ))}
-                  <button
-                    onClick={handleCopyLink}
-                    className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-                    aria-label="Copier le lien"
-                  >
-                    <Copy className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
             </div>
 
             {/* Right column — sticky */}
