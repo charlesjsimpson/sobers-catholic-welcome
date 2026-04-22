@@ -276,14 +276,6 @@ const AvisDeDecesDetail = () => {
                   </p>
                 )}
 
-                <div className="border-t border-border/40 mt-6 pt-4">
-                  <p className="text-center text-foreground" style={{ fontSize: 15 }}>
-                    Service Catholique des Funérailles –{" "}
-                    <Link to={agenceUrl} className="text-primary hover:underline font-medium">
-                      Agence {agenceLabel}
-                    </Link>
-                  </p>
-                </div>
               </article>
 
               {/* CTA buttons */}
