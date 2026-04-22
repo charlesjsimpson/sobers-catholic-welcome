@@ -321,7 +321,7 @@ const AvisDeDecesDetail = () => {
                     {[
                       {
                         href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
-                        icon: Facebook,
+                        icon: FacebookBrand,
                         label: "Facebook",
                       },
                       {
@@ -331,7 +331,7 @@ const AvisDeDecesDetail = () => {
                       },
                       {
                         href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
-                        icon: Linkedin,
+                        icon: LinkedinBrand,
                         label: "LinkedIn",
                       },
                       {
