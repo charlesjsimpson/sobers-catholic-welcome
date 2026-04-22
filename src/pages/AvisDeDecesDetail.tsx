@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Mail, Copy, Twitter, MessageCircle } from "lucide-react";
+import { Mail, Copy, Twitter, MessageCircle, HandHeart, Flower2, HeartHandshake, PenLine } from "lucide-react";
 
 const FacebookBrand = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
@@ -286,7 +286,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <span style={{ fontSize: 28 }}>🙏</span>
+                  <HandHeart className="w-8 h-8" style={{ color: "#4B8EB3" }} fill="#4B8EB3" strokeWidth={1.5} />
                   <span className="text-foreground font-medium">Unissez-vous par la prière</span>
                 </Link>
                 <a
@@ -296,7 +296,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <span style={{ fontSize: 28 }}>🌸</span>
+                  <Flower2 className="w-8 h-8" style={{ color: "#E8A5B8" }} fill="#F4C7D2" strokeWidth={1.5} />
                   <span className="text-foreground font-medium">Offrir des fleurs</span>
                 </a>
                 <a
@@ -304,7 +304,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <span style={{ fontSize: 28 }}>💝</span>
+                  <HeartHandshake className="w-8 h-8" style={{ color: "#C94B6D" }} fill="#E8849C" strokeWidth={1.5} />
                   <span className="text-foreground font-medium">Faire un don</span>
                 </a>
                 <a
@@ -312,7 +312,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <span style={{ fontSize: 28 }}>✍️</span>
+                  <PenLine className="w-8 h-8" style={{ color: "#1F3D5C" }} strokeWidth={2} />
                   <span className="text-foreground font-medium">Présenter ses condoléances</span>
                 </a>
               </div>
