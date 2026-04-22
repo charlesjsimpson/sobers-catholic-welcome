@@ -221,9 +221,36 @@ const AvisDeDecesDetail = () => {
 
               {/* Faire-part — contenu intégral */}
               <article
-                className="bg-card border-2 border-[hsl(var(--scf-blue)/0.15)]"
+                className="relative bg-card border-2 border-[hsl(var(--scf-blue)/0.15)]"
                 style={{ borderRadius: 12, padding: "36px 40px" }}
               >
+                {/* Share icons — top right */}
+                <div className="absolute top-4 right-4 flex gap-2">
+                  {[
+                    { href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, icon: Facebook, label: "Facebook" },
+                    { href: `https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`, icon: Share2, label: "WhatsApp" },
+                    { href: `mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`, icon: Mail, label: "Email" },
+                  ].map(({ href, icon: Icon, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors bg-background"
+                      aria-label={`Partager sur ${label}`}
+                    >
+                      <Icon className="w-4 h-4" />
+                    </a>
+                  ))}
+                  <button
+                    onClick={handleCopyLink}
+                    className="w-9 h-9 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors bg-background"
+                    aria-label="Copier le lien"
+                  >
+                    <Copy className="w-4 h-4" />
+                  </button>
+                </div>
+
                 {notice.content ? (
                   <div className="whitespace-pre-line text-foreground" style={{ fontSize: 16, lineHeight: 1.8 }}>
                     {notice.content}
