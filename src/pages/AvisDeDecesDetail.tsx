@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { Mail, Copy, Twitter, MessageCircle } from "lucide-react";
+import { Mail, Copy, Twitter, MessageCircle, HandHeart, Flower2, HeartHandshake, PenLine } from "lucide-react";
 
 const FacebookBrand = (props: React.SVGProps<SVGSVGElement>) => (
   <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
