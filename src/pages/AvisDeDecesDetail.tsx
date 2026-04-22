@@ -296,7 +296,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <Flower2 className="w-8 h-8" style={{ color: "#E8A5B8" }} fill="#F4C7D2" strokeWidth={1.5} />
+                  <Flower className="w-8 h-8" style={{ color: "#E8A5B8" }} fill="#F4C7D2" strokeWidth={1.5} />
                   <span className="text-foreground font-medium">Offrir des fleurs</span>
                 </a>
                 <a
