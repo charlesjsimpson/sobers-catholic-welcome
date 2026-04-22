@@ -289,6 +289,7 @@ export const PrestationTemplate = ({
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-display leading-tight mb-6 text-foreground">
               {titreH1}
             </h1>
+            <div className="mx-auto mb-6 h-1 w-20 rounded-full bg-primary" aria-hidden="true" />
             <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic">
               {sousTitreHero}
             </p>
