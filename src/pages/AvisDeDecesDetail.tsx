@@ -244,7 +244,7 @@ const AvisDeDecesDetail = () => {
                     style={{
                       fontSize: 18,
                       lineHeight: 1.7,
-                      color: "#1F3D5C",
+                      color: "#000000",
                       letterSpacing: "0.01em",
                     }}
                   >
