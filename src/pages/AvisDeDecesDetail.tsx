@@ -221,8 +221,8 @@ const AvisDeDecesDetail = () => {
 
               {/* Faire-part — contenu intégral */}
               <article
-                className="relative bg-card border-2 border-[hsl(var(--scf-blue)/0.15)]"
-                style={{ borderRadius: 12, padding: "36px 40px" }}
+                className="relative bg-card border-2"
+                style={{ borderRadius: 12, padding: "36px 40px", borderColor: "#336480" }}
               >
                 {/* Share icons — top right */}
                 <div className="absolute top-4 right-4 flex gap-2">
