@@ -297,7 +297,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <Sparkles className="w-12 h-12" style={{ color: "#1E6FB8" }} fill="#3B9BE0" strokeWidth={1.5} />
+                  <PrayingHands className="w-12 h-12" style={{ color: "#1E6FB8" }} />
                   <span className="text-foreground font-medium">Unissez-vous par la prière</span>
                 </Link>
                 <a
