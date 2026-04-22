@@ -73,6 +73,7 @@ import NotFound from "./pages/NotFound";
 import AvisDeDecesDetail from "./pages/AvisDeDecesDetail";
 import AvisJeanneBrisou from "./pages/AvisJeanneBrisou";
 import CarnetDeuil from "./pages/CarnetDeuil";
+import Cercueils from "./pages/Cercueils";
 import AdminLogin from "./pages/admin/AdminLogin";
 import { AdminLayout } from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/admin/AdminDashboard";
@@ -161,6 +162,7 @@ const App = () => (
               <Route path="/ressources/actualites/vendredi-saint-les-assistants-funeraires-au-chemin-de-croix" element={<ActualiteVendrediSaint />} />
               <Route path="/ressources/videos" element={<Videos />} />
               <Route path="/carnet-deuil" element={<CarnetDeuil />} />
+              <Route path="/cercueils" element={<Cercueils />} />
               <Route path="/carnet/jeanne-brisou-paris-17-2026" element={<AvisJeanneBrisou />} />
               <Route path="/avis/:slug" element={<AvisDeDecesDetail />} />
 
