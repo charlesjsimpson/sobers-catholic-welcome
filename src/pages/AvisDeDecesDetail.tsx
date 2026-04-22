@@ -222,7 +222,7 @@ const AvisDeDecesDetail = () => {
               {/* Faire-part — contenu intégral */}
               <article
                 className="relative bg-card border-2"
-                style={{ borderRadius: 12, padding: "36px 40px", borderColor: "#336480" }}
+                style={{ borderRadius: 12, padding: "36px 40px", borderColor: "#4B8EB3" }}
               >
                 {/* Share icons — top right */}
                 <div className="absolute top-4 right-4 flex gap-2">
