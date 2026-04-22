@@ -252,7 +252,15 @@ const AvisDeDecesDetail = () => {
                 </div>
 
                 {notice.content ? (
-                  <div className="whitespace-pre-line text-foreground" style={{ fontSize: 16, lineHeight: 1.8 }}>
+                  <div
+                    className="font-display whitespace-pre-line text-center"
+                    style={{
+                      fontSize: 18,
+                      lineHeight: 1.7,
+                      color: "#1F3D5C",
+                      letterSpacing: "0.01em",
+                    }}
+                  >
                     {notice.content}
                   </div>
                 ) : (
