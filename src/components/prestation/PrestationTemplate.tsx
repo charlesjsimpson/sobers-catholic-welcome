@@ -91,9 +91,13 @@ export interface PrestationTemplateProps {
   // Hero
   heroBackgroundImage?: string;
 
-  // Intro éditoriale
-  introTitre: string;
-  introContenu: ReactNode;
+  // Intro éditoriale (version épurée)
+  // Soit on passe une accroche courte mise en valeur (recommandé),
+  // soit on passe un titre + contenu riche (legacy / pages plus denses).
+  accroche?: string;
+  accrochePost?: ReactNode;
+  introTitre?: string;
+  introContenu?: ReactNode;
 
   // Sous-catégories / produits (2 à 6)
   sousCategoriesTitre?: string;
@@ -152,6 +156,8 @@ export const PrestationTemplate = ({
   ogImage,
   breadcrumb,
   heroBackgroundImage,
+  accroche,
+  accrochePost,
   introTitre,
   introContenu,
   sousCategoriesTitre = "Nos différentes options",
@@ -252,9 +258,9 @@ export const PrestationTemplate = ({
 
       <main id={`prestation-${slug}`}>
         {/* ─────────── 1. HERO ─────────── */}
-        <section className="relative bg-primary pt-28 pb-20 overflow-hidden">
+        <section className="relative bg-primary pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
-            <nav aria-label="Fil d'Ariane" className="mb-8">
+            <nav aria-label="Fil d'Ariane" className="mb-10">
               <ol className="flex items-center justify-center flex-wrap gap-2 text-sm text-primary-foreground/70">
                 {breadcrumb.map((b, i) => (
                   <li key={`${b.label}-${i}`} className="flex items-center gap-2">
@@ -271,15 +277,15 @@ export const PrestationTemplate = ({
               </ol>
             </nav>
 
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display leading-tight mb-6 text-primary-foreground">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display leading-tight mb-6 text-primary-foreground">
               {titreH1}
             </h1>
-            <div className="mx-auto mb-6 h-1 w-20 rounded-full bg-primary-foreground/80" aria-hidden="true" />
+            <div className="mx-auto mb-8 h-1 w-20 rounded-full bg-primary-foreground/80" aria-hidden="true" />
             <p className="text-primary-foreground/85 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic">
               {sousTitreHero}
             </p>
 
-            <div className="mt-8">
+            <div className="mt-10">
               <a
                 href="#contact-agence"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary-foreground hover:gap-3 transition-all"
@@ -292,16 +298,35 @@ export const PrestationTemplate = ({
         </section>
 
         {/* ─────────── 2. INTRO ÉDITORIALE ─────────── */}
-        <section className="py-20 bg-background">
-          <article className="container mx-auto px-6 max-w-3xl">
-            <h2 className="text-2xl md:text-4xl font-display text-foreground mb-8 text-center">
-              {introTitre}
-            </h2>
-            <div className="prose-scf text-foreground/90 leading-relaxed space-y-5 text-base md:text-lg">
-              {introContenu}
-            </div>
-          </article>
-        </section>
+        {(accroche || introContenu) && (
+          <section className="py-24 md:py-32 bg-background">
+            <article className="container mx-auto px-6 max-w-3xl text-center">
+              {accroche ? (
+                <>
+                  <p className="font-display text-3xl md:text-5xl leading-[1.2] text-foreground mb-10">
+                    « {accroche} »
+                  </p>
+                  {accrochePost && (
+                    <div className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
+                      {accrochePost}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <>
+                  {introTitre && (
+                    <h2 className="text-2xl md:text-4xl font-display text-foreground mb-8">
+                      {introTitre}
+                    </h2>
+                  )}
+                  <div className="prose-scf text-foreground/90 leading-relaxed space-y-5 text-base md:text-lg text-left">
+                    {introContenu}
+                  </div>
+                </>
+              )}
+            </article>
+          </section>
+        )}
 
         {/* ─────────── 3. SOUS-CATÉGORIES ─────────── */}
         <section className="py-20 bg-secondary/40">
