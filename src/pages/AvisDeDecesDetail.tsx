@@ -248,7 +248,27 @@ const AvisDeDecesDetail = () => {
                       letterSpacing: "0.01em",
                     }}
                   >
-                    {notice.content}
+                    {notice.content.split("\n").map((line, idx) => {
+                      const trimmed = line.trim();
+                      const isName = trimmed === notice.name.trim();
+                      const isNee = /^née?\s+/i.test(trimmed);
+                      if (isName || isNee) {
+                        return (
+                          <div
+                            key={idx}
+                            style={{
+                              fontSize: isName ? 30 : 24,
+                              fontWeight: 700,
+                              lineHeight: 1.3,
+                              margin: isName ? "12px 0 4px" : "0 0 12px",
+                            }}
+                          >
+                            {line}
+                          </div>
+                        );
+                      }
+                      return <div key={idx}>{line || "\u00A0"}</div>;
+                    })}
                   </div>
                 ) : (
                   <p className="font-display text-primary font-semibold text-center" style={{ fontSize: 28 }}>
