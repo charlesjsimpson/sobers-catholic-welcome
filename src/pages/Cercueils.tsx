@@ -13,7 +13,7 @@ const Cercueils = () => {
     <PrestationTemplate
       slug="cercueils"
       titreH1="Nos cercueils"
-      sousTitreHero="Inhumation ou crémation, deux réponses sobres et dignes."
+      sousTitreHero="Des cercueils sobres, fabriqués en France, à des prix publiés."
       metaTitle="Nos cercueils catholiques — Inhumation et crémation | SCF"
       metaDescription="Découvrez les cercueils du Service Catholique des Funérailles : sobres, dignes, aux tarifs maîtrisés. Inhumation et crémation. Conseil en agence."
       canonicalUrl="https://s-c-f.org/cercueils/"
