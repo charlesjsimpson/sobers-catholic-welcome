@@ -91,9 +91,13 @@ export interface PrestationTemplateProps {
   // Hero
   heroBackgroundImage?: string;
 
-  // Intro éditoriale
-  introTitre: string;
-  introContenu: ReactNode;
+  // Intro éditoriale (version épurée)
+  // Soit on passe une accroche courte mise en valeur (recommandé),
+  // soit on passe un titre + contenu riche (legacy / pages plus denses).
+  accroche?: string;
+  accrochePost?: ReactNode;
+  introTitre?: string;
+  introContenu?: ReactNode;
 
   // Sous-catégories / produits (2 à 6)
   sousCategoriesTitre?: string;
