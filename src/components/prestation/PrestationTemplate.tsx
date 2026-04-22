@@ -258,7 +258,7 @@ export const PrestationTemplate = ({
 
       <main id={`prestation-${slug}`}>
         {/* ─────────── 1. HERO ─────────── */}
-        <section className="relative bg-primary pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+        <section className="relative bg-primary pt-24 pb-12 md:pt-28 md:pb-16 overflow-hidden">
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
             <nav aria-label="Fil d'Ariane" className="mb-10">
               <ol className="flex items-center justify-center flex-wrap gap-2 text-sm text-primary-foreground/70">
