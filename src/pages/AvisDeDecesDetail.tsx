@@ -156,16 +156,6 @@ const AvisDeDecesDetail = () => {
     toast({ title: "Lien copié", description: "Le lien a été copié dans le presse-papier." });
   };
 
-  const handleCondolSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Message envoyé",
-      description: "Votre message de condoléances sera transmis à la famille.",
-    });
-    setCondolName("");
-    setCondolMessage("");
-  };
-
   return (
     <>
       <Helmet>
