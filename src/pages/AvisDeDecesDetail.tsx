@@ -79,8 +79,6 @@ const AvisDeDecesDetail = () => {
   const { toast } = useToast();
   const [notice, setNotice] = useState<DeathNotice | null>(null);
   const [loading, setLoading] = useState(true);
-  const [condolName, setCondolName] = useState("");
-  const [condolMessage, setCondolMessage] = useState("");
 
   useEffect(() => {
     if (!slug) return;
