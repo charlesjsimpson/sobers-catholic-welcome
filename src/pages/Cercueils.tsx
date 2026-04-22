@@ -25,7 +25,6 @@ const Cercueils = () => {
         { label: "Fournir un cercueil" },
       ]}
       // ── Intro éditoriale ultra-épurée ──
-      accroche="Choisir un cercueil, c'est poser un acte de foi autant qu'un geste pratique."
       accrochePost={
         <p>
           Au SCF, nous refusons la surenchère commerciale. Quelques modèles sobres,
