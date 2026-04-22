@@ -14,6 +14,17 @@ const LinkedinBrand = (props: React.SVGProps<SVGSVGElement>) => (
     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
   </svg>
 );
+
+const PrayingHands = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    {/* Main gauche */}
+    <path d="M11 3.2c-.8 0-1.5.7-1.5 1.5v7.5c0 .3-.1.5-.3.7l-3.4 3.4c-.5.5-.6 1.3-.2 1.9l1.8 2.7c.3.4.7.6 1.2.6H11V3.2z" fill="currentColor" fillOpacity="0.85" />
+    {/* Main droite (miroir) */}
+    <path d="M13 3.2c.8 0 1.5.7 1.5 1.5v7.5c0 .3.1.5.3.7l3.4 3.4c.5.5.6 1.3.2 1.9l-1.8 2.7c-.3.4-.7.6-1.2.6H13V3.2z" fill="currentColor" fillOpacity="0.85" />
+    {/* Ligne centrale */}
+    <line x1="12" y1="3.5" x2="12" y2="21.5" stroke="white" strokeWidth="0.8" />
+  </svg>
+);
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -286,7 +297,7 @@ const AvisDeDecesDetail = () => {
                   className="flex flex-col items-center gap-2 bg-card border border-border/40 hover:border-primary/30 transition-colors text-center py-5 px-3"
                   style={{ borderRadius: 10, fontSize: 13 }}
                 >
-                  <Sparkles className="w-12 h-12" style={{ color: "#1E6FB8" }} fill="#3B9BE0" strokeWidth={1.5} />
+                  <PrayingHands className="w-12 h-12" style={{ color: "#1E6FB8" }} />
                   <span className="text-foreground font-medium">Unissez-vous par la prière</span>
                 </Link>
                 <a
