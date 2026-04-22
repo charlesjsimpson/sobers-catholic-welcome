@@ -93,9 +93,9 @@ export const WhatsAppIcon = (props: IconProps) => (
 );
 
 export const MailIcon = (props: IconProps) => (
-  <svg {...base(props)}>
-    <rect x="3" y="5" width="18" height="14" rx="2" fill="currentColor" fillOpacity="0.06" />
-    <path d="m3.5 7 8.5 6 8.5-6" />
+  <svg viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M2 6.4A2.4 2.4 0 0 1 4.4 4h15.2A2.4 2.4 0 0 1 22 6.4v.3l-10 6.05L2 6.7v-.3Z" />
+    <path d="M22 8.83v8.77A2.4 2.4 0 0 1 19.6 20H4.4A2.4 2.4 0 0 1 2 17.6V8.83l9.48 5.74a1 1 0 0 0 1.04 0L22 8.83Z" />
   </svg>
 );
 
