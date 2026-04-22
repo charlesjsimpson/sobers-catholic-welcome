@@ -256,14 +256,15 @@ const AvisDeDecesDetail = () => {
                         return (
                           <div
                             key={idx}
+                            className="font-bold"
                             style={{
                               fontSize: isName ? 30 : 24,
-                              fontWeight: 700,
+                              fontWeight: 800,
                               lineHeight: 1.3,
                               margin: isName ? "12px 0 4px" : "0 0 12px",
                             }}
                           >
-                            {line}
+                            <strong style={{ fontWeight: 800 }}>{line}</strong>
                           </div>
                         );
                       }
