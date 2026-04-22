@@ -253,14 +253,6 @@ export const PrestationTemplate = ({
       <main id={`prestation-${slug}`}>
         {/* ─────────── 1. HERO ─────────── */}
         <section className="relative bg-primary pt-28 pb-20 overflow-hidden">
-          <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
-            <svg viewBox="0 0 200 200" className="w-64 h-64 text-primary-foreground/[0.08]" fill="currentColor" aria-hidden="true">
-              <circle cx="100" cy="100" r="30" />
-              {[...Array(12)].map((_, i) => (
-                <rect key={i} x="96" y="20" width="8" height="40" rx="4" transform={`rotate(${i * 30} 100 100)`} />
-              ))}
-            </svg>
-          </div>
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
             <nav aria-label="Fil d'Ariane" className="mb-8">
               <ol className="flex items-center justify-center flex-wrap gap-2 text-sm text-primary-foreground/70">
