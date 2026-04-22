@@ -1,16 +1,15 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Phone, MapPin } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { BandeauUrgence } from "@/components/avis/BandeauUrgence";
-import heroImage from "@/assets/cercueils-hero.jpg";
 import inhumationImg from "@/assets/cercueil-inhumation.jpg";
 import cremationImg from "@/assets/cercueil-cremation.jpg";
 
 /**
  * Page "Nos cercueils" — équivalent de https://s-c-f.org/cercueils/
  * URL conservée à l'identique pour le SEO : /cercueils
+ * Style harmonisé avec les autres pages du site (cf. Prevoyance, OrganiserDesObseques).
  */
 const Cercueils = () => {
   const cercueils = [
@@ -18,7 +17,7 @@ const Cercueils = () => {
       tag: "Produits",
       title: "Cercueils inhumation",
       description:
-        "Découvrez notre gamme de cercueils en bois massif adaptés à l'inhumation, dans le respect de la liturgie catholique.",
+        "Découvrez notre gamme de cercueils en bois massif adaptés à l'inhumation, dans le respect de la liturgie catholique et de la dignité du défunt.",
       href: "/cercueils/cercueils-inhumation",
       image: inhumationImg,
     },
@@ -26,7 +25,7 @@ const Cercueils = () => {
       tag: "Produits",
       title: "Cercueils crémation",
       description:
-        "Notre sélection de cercueils conçus spécifiquement pour la crémation, dans le respect des normes en vigueur.",
+        "Notre sélection de cercueils conçus spécifiquement pour la crémation, dans le respect des normes en vigueur et de la sobriété chrétienne.",
       href: "/cercueils/cercueils-cremation",
       image: cremationImg,
     },
@@ -42,7 +41,7 @@ const Cercueils = () => {
   };
 
   return (
-    <>
+    <div className="min-h-screen">
       <Helmet>
         <title>Nos cercueils — Service Catholique des Funérailles</title>
         <meta
@@ -64,51 +63,53 @@ const Cercueils = () => {
       <Header />
 
       <main>
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden" style={{ minHeight: 460 }}>
-          {/* Image de fond */}
-          <img
-            src={heroImage}
-            alt="Cercueil orné de fleurs dans une église"
-            className="absolute inset-0 w-full h-full object-cover"
-            width={1920}
-            height={800}
-          />
-          {/* Overlay sombre pour lisibilité */}
-          <div
-            className="absolute inset-0 bg-[hsl(var(--scf-blue))]/55"
-            aria-hidden="true"
-          />
-
-          <div
-            className="relative z-10 container mx-auto px-6 flex flex-col items-center justify-center text-center"
-            style={{ minHeight: 460, paddingTop: 96, paddingBottom: 64 }}
-          >
-            <nav aria-label="Fil d'Ariane" className="text-white/80 mb-7 font-sans" style={{ fontSize: 13 }}>
-              <Link to="/" className="hover:text-white transition-colors">Accueil</Link>
-              <span className="mx-2" aria-hidden="true">›</span>
-              <span className="text-white/95">Nos cercueils</span>
+        {/* Hero — même structure que Prevoyance */}
+        <section className="relative bg-secondary pt-28 pb-20 overflow-hidden">
+          <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
+            <svg viewBox="0 0 200 200" className="w-64 h-64 text-primary/[0.07]" fill="currentColor">
+              <circle cx="100" cy="100" r="30" />
+              {[...Array(12)].map((_, i) => (
+                <rect
+                  key={i}
+                  x="96"
+                  y="20"
+                  width="8"
+                  height="40"
+                  rx="4"
+                  transform={`rotate(${i * 30} 100 100)`}
+                />
+              ))}
+            </svg>
+          </div>
+          <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+            <nav aria-label="Fil d'Ariane" className="mb-8">
+              <ol className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <li>
+                  <Link to="/" className="hover:text-foreground transition-colors">Accueil</Link>
+                </li>
+                <li><ChevronRight className="w-3 h-3 inline" /></li>
+                <li className="text-foreground font-medium">Nos cercueils</li>
+              </ol>
             </nav>
-
-            <h1
-              className="font-display text-white"
-              style={{ fontSize: 48, fontWeight: 600, lineHeight: 1.15, letterSpacing: "-0.01em" }}
-            >
-              Nos cercueils
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display leading-tight mb-8">
+              <span className="text-foreground">Nos </span>
+              <span className="text-primary">cercueils</span>
             </h1>
+            <p className="text-muted-foreground text-lg md:text-xl leading-relaxed max-w-2xl mx-auto italic">
+              Une sélection sobre et digne, pensée dans le respect de la liturgie catholique et de la mémoire du défunt.
+            </p>
           </div>
         </section>
 
-        {/* ── Liste des cercueils ── */}
-        <section className="bg-background" style={{ paddingTop: 72, paddingBottom: 80 }}>
-          <div className="container mx-auto px-6 max-w-6xl">
+        {/* Liste des cercueils */}
+        <section className="py-20 bg-background">
+          <div className="container mx-auto px-6 max-w-5xl">
             <div className="text-center mb-14">
-              <h2
-                className="font-display text-foreground"
-                style={{ fontSize: 38, fontWeight: 600, lineHeight: 1.2, letterSpacing: "-0.01em" }}
-              >
-                Nos différents{" "}
-                <span className="text-[hsl(var(--scf-blue))]">cercueils</span>
+              <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-3">
+                Nos produits
+              </span>
+              <h2 className="text-2xl md:text-4xl font-display text-foreground">
+                Nos différents <span className="text-primary">cercueils</span>
               </h2>
             </div>
 
@@ -117,10 +118,9 @@ const Cercueils = () => {
                 <Link
                   key={c.title}
                   to={c.href}
-                  className="group block bg-card border border-border/60 overflow-hidden shadow-sm hover:shadow-[0_10px_40px_-12px_hsl(var(--scf-blue)/0.25)] transition-all duration-300"
-                  style={{ borderRadius: 12 }}
+                  className="group block bg-card border border-border rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="relative overflow-hidden bg-muted" style={{ aspectRatio: "4 / 3" }}>
+                  <div className="relative overflow-hidden bg-muted aspect-[4/3]">
                     <img
                       src={c.image}
                       alt={c.title}
@@ -130,31 +130,19 @@ const Cercueils = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div style={{ padding: "28px 28px 32px" }}>
-                    <p
-                      className="text-[hsl(var(--scf-blue))] font-sans uppercase tracking-wider"
-                      style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", marginBottom: 10 }}
-                    >
+                  <div className="p-7">
+                    <span className="inline-block text-xs font-semibold tracking-widest uppercase text-primary mb-2">
                       {c.tag}
-                    </p>
-                    <h3
-                      className="font-display text-foreground"
-                      style={{ fontSize: 24, fontWeight: 600, lineHeight: 1.25, marginBottom: 12 }}
-                    >
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-display text-foreground mb-3">
                       {c.title}
                     </h3>
-                    <p
-                      className="font-sans text-muted-foreground"
-                      style={{ fontSize: 15, lineHeight: 1.65, marginBottom: 18 }}
-                    >
+                    <p className="text-muted-foreground leading-relaxed mb-5">
                       {c.description}
                     </p>
-                    <span
-                      className="inline-flex items-center gap-1.5 text-[hsl(var(--scf-blue))] font-medium group-hover:gap-2.5 transition-all"
-                      style={{ fontSize: 14.5 }}
-                    >
+                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
                       En savoir plus
-                      <ChevronRight style={{ width: 16, height: 16 }} aria-hidden="true" />
+                      <ChevronRight className="w-4 h-4" />
                     </span>
                   </div>
                 </Link>
@@ -162,12 +150,36 @@ const Cercueils = () => {
             </div>
           </div>
         </section>
+
+        {/* CTA urgence — identique à Prevoyance */}
+        <section className="py-14 bg-primary">
+          <div className="container mx-auto px-6 text-center">
+            <p className="text-primary-foreground font-display text-xl md:text-2xl mb-2">
+              Si le décès a déjà eu lieu, il est impératif de nous contacter par téléphone
+            </p>
+            <p className="text-primary-foreground/80 mb-6">Disponible 24h/24 et 7j/7</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:0144388080"
+                className="inline-flex items-center gap-3 bg-primary-foreground text-primary px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-primary-foreground/90 shadow-lg"
+              >
+                <Phone className="w-5 h-5" />
+                Appeler maintenant
+              </a>
+              <Link
+                to="/contacter-une-agence"
+                className="inline-flex items-center gap-3 border-2 border-primary-foreground text-primary-foreground px-8 py-4 rounded-md font-semibold transition-all duration-300 hover:bg-primary-foreground hover:text-primary"
+              >
+                <MapPin className="w-5 h-5" />
+                Contacter une agence
+              </Link>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <BandeauUrgence />
-
       <Footer />
-    </>
+    </div>
   );
 };
 
