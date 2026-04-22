@@ -258,7 +258,7 @@ const AvisDeDecesDetail = () => {
                             key={idx}
                             className="font-black"
                             style={{
-                              fontSize: isName ? 30 : 24,
+                              fontSize: 24,
                               fontWeight: 900,
                               lineHeight: 1.3,
                               margin: isName ? "12px 0 4px" : "0 0 12px",
