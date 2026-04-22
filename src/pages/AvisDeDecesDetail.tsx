@@ -297,6 +297,58 @@ const AvisDeDecesDetail = () => {
             <div className="lg:w-[35%]">
               <div className="lg:sticky lg:top-24 space-y-5">
 
+                {/* Partager sur — colored icons */}
+                <div>
+                  <h3
+                    className="font-display text-foreground"
+                    style={{ fontSize: 17, fontWeight: 600, marginBottom: 12 }}
+                  >
+                    Partager sur :
+                  </h3>
+                  <div className="flex gap-3">
+                    {[
+                      {
+                        href: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+                        icon: Facebook,
+                        label: "Facebook",
+                        bg: "#1877F2",
+                      },
+                      {
+                        href: `https://wa.me/?text=${encodeURIComponent(`Avis de décès de ${notice.name} — ${shareUrl}`)}`,
+                        icon: Share2,
+                        label: "WhatsApp",
+                        bg: "#25D366",
+                      },
+                      {
+                        href: `mailto:?subject=${encodeURIComponent(`Avis de décès de ${notice.name}`)}&body=${encodeURIComponent(shareUrl)}`,
+                        icon: Mail,
+                        label: "Email",
+                        bg: "#4B8EB3",
+                      },
+                    ].map(({ href, icon: Icon, label, bg }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                        style={{ backgroundColor: bg }}
+                        aria-label={`Partager sur ${label}`}
+                      >
+                        <Icon className="w-5 h-5" />
+                      </a>
+                    ))}
+                    <button
+                      onClick={handleCopyLink}
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-white hover:opacity-90 transition-opacity"
+                      style={{ backgroundColor: "#64748B" }}
+                      aria-label="Copier le lien"
+                    >
+                      <Copy className="w-5 h-5" />
+                    </button>
+                  </div>
+                </div>
+
                 {/* Livre de condoléances */}
                 <div
                   id="condoleances"
