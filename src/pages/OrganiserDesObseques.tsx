@@ -41,8 +41,8 @@ const sections = [
     tag: "Nos services",
     title: "Découvrez nos services",
     description:
-      "Les démarches à remplir lors de l'organisation d'obsèques peuvent représenter une source de confusion et de frustration, d'autant plus lorsque le décès de l'être cher est arrivé de manière inattendue.",
-    cta: { label: "En savoir plus", href: "#services" },
+      "Du transport du défunt à la cérémonie religieuse, en passant par les soins de présentation et le choix du cercueil, le Service Catholique des Funérailles vous accompagne sur l'ensemble des prestations funéraires, dans la sobriété et le respect de la foi catholique.",
+    cta: { label: "En savoir plus", href: "/services" },
     icon: Wrench,
   },
   {
