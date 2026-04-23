@@ -3,6 +3,7 @@ import { Phone, MapPin, ChevronRight, HandHeart, Church, Landmark, FileText, Wre
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import logoScfSymbole from "@/assets/logo-scf-symbole.png";
 
 const steps = [
   {
