@@ -78,10 +78,10 @@ const OrganiserDesObseques = () => {
           {/* Decorative watermark */}
           <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
             <img
-              src="/src/assets/logo-scf-bleu.gif"
+              src={logoScfSymbole}
               alt=""
               aria-hidden="true"
-              className="w-64 h-64 object-contain opacity-[0.07]"
+              className="w-64 h-64 object-contain opacity-[0.12]"
             />
           </div>
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
