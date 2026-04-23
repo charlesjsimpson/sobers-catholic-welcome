@@ -81,7 +81,7 @@ const OrganiserDesObseques = () => {
               src={logoScfSymbole}
               alt=""
               aria-hidden="true"
-              className="w-64 h-64 object-contain opacity-[0.12]"
+              className="w-72 h-72 object-contain"
             />
           </div>
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
