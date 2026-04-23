@@ -84,7 +84,7 @@ const OrganiserDesObseques = () => {
               className="w-72 h-72 object-contain opacity-20"
             />
           </div>
-          <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
+          <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl pt-20">
             <nav aria-label="Fil d'Ariane" className="mb-8">
               <ol className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
                 <li>
