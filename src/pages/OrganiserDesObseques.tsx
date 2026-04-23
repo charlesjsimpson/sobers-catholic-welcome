@@ -75,13 +75,13 @@ const OrganiserDesObseques = () => {
       <main>
         {/* Hero */}
         <section className="relative bg-secondary pt-28 pb-20 overflow-hidden">
-          {/* Decorative watermark */}
-          <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
+          {/* Decorative watermark - centered behind title */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
             <img
               src={logoScfSymbole}
               alt=""
               aria-hidden="true"
-              className="w-72 h-72 object-contain"
+              className="w-[28rem] h-[28rem] object-contain -translate-y-8"
             />
           </div>
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
