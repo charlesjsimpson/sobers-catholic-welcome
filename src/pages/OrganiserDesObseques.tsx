@@ -76,20 +76,12 @@ const OrganiserDesObseques = () => {
         <section className="relative bg-secondary pt-28 pb-20 overflow-hidden">
           {/* Decorative watermark */}
           <div className="absolute inset-0 flex items-start justify-center pt-16 pointer-events-none">
-            <svg viewBox="0 0 200 200" className="w-64 h-64 text-primary/[0.07]" fill="currentColor">
-              <circle cx="100" cy="100" r="30" />
-              {[...Array(12)].map((_, i) => (
-                <rect
-                  key={i}
-                  x="96"
-                  y="20"
-                  width="8"
-                  height="40"
-                  rx="4"
-                  transform={`rotate(${i * 30} 100 100)`}
-                />
-              ))}
-            </svg>
+            <img
+              src="/src/assets/logo-scf-bleu.gif"
+              alt=""
+              aria-hidden="true"
+              className="w-64 h-64 object-contain opacity-[0.07]"
+            />
           </div>
           <div className="container mx-auto px-6 relative z-10 text-center max-w-4xl">
             <nav aria-label="Fil d'Ariane" className="mb-8">
